@@ -1,0 +1,52 @@
+import { programs, countriesFor } from './programs'
+import { countries } from './countries'
+import { services } from './services'
+import { guides, guideGroups, guidesForProgram } from './guides'
+import { documents } from './documents'
+import { packages } from './packages'
+
+export type NavLink = { label: string; to: string; note?: string }
+
+export const programMenu = programs.map((p) => ({
+  key: p.key,
+  label: p.name,
+  short: p.short,
+  to: `/${p.slug}`,
+  lead: p.lead,
+  image: p.image,
+  countries: countriesFor(p.key).map((c) => ({ label: p.countryTitle(c), to: `/${p.slug}/${c.slug}`, code: c.code })),
+  guides: guidesForProgram(p.key).slice(0, 5).map((g) => ({ label: g.title, to: `/bilgi-bankasi/${g.slug}` })),
+}))
+
+export const regions = ['Avrupa', 'Kuzey Amerika', 'Okyanusya', 'Asya & Orta Doğu', 'Latin Amerika'] as const
+
+export const countryMenu = regions.map((r) => ({
+  region: r,
+  items: countries.filter((c) => c.region === r).map((c) => ({ label: c.name, to: `/ulkeler/${c.slug}`, code: c.code })),
+}))
+
+export const serviceMenu: NavLink[] = [
+  ...services.map((s) => ({ label: s.name, to: s.path, note: s.short })),
+  { label: 'Tampa Akademi', to: '/tampa-akademi', note: 'Akademi' },
+]
+
+export const packageMenu: NavLink[] = [
+  { label: 'Tüm her şey dahil paketler', to: '/her-sey-dahil-paketler' },
+  ...packages.map((p) => ({ label: `${p.city} dil eğitimi paketi`, to: `/her-sey-dahil-paketler/${p.slug}`, note: `${p.currencySymbol}${p.prices[0].price.toLocaleString('tr-TR')}’den` })),
+]
+
+export const resourceMenu = {
+  groups: guideGroups.map((gr) => ({ label: gr, count: guides.filter((g) => g.group === gr).length, to: `/bilgi-bankasi#${gr.toLocaleLowerCase('tr').replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ş/g, 's').replace(/ü/g, 'u').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}` })),
+  exams: guides.filter((g) => g.group === 'Sınavlar').map((g) => ({ label: g.title, to: `/bilgi-bankasi/${g.slug}` })),
+  documents: documents.map((d) => ({ label: d.title, to: `/kaynaklar/${d.slug}` })),
+}
+
+export const corporateMenu: NavLink[] = [
+  { label: 'Hakkımızda', to: '/hakkimizda' },
+  { label: 'Ekibimiz', to: '/ekibimiz' },
+  { label: 'Ofislerimiz', to: '/ofislerimiz' },
+  { label: 'Müşteri yorumları', to: '/musteri-yorumlari' },
+  { label: 'Kariyer', to: '/kariyer' },
+  { label: 'Blog', to: '/blog' },
+  { label: 'İletişim', to: '/iletisim' },
+]

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /lp/
+Disallow: /tesekkurler
+
+Sitemap: https://tampaegitim.com.tr/sitemap.xml

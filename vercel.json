@@ -1,0 +1,43 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/universite-basvuru-rehberi",
+      "destination": "/bilgi-bankasi/universite-basvuru-rehberi",
+      "permanent": true
+    },
+    {
+      "source": "/ornek-cv",
+      "destination": "/kaynaklar/ornek-cv",
+      "permanent": true
+    },
+    {
+      "source": "/ornek-niyet-mektubu-2",
+      "destination": "/kaynaklar/ornek-niyet-mektubu",
+      "permanent": true
+    },
+    {
+      "source": "/ornek-muvaffakatname",
+      "destination": "/kaynaklar/ornek-muvaffakatname",
+      "permanent": true
+    },
+    {
+      "source": "/ornek-banka-mektubu",
+      "destination": "/kaynaklar/ornek-banka-mektubu",
+      "permanent": true
+    },
+    {
+      "source": "/ornek-sponsor-mektubu",
+      "destination": "/kaynaklar/ornek-sponsor-mektubu",
+      "permanent": true
+    },
+    {
+      "source": "/ornek-taahhutname",
+      "destination": "/kaynaklar/ornek-taahhutname",
+      "permanent": true
+    }
+  ]
+}

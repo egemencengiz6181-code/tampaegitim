@@ -1,0 +1,648 @@
+import { Link, useParams } from 'react-router-dom'
+import { Seo, Btn, SectionHead, FaqList, CheckList, RouteCode } from '../components/ui'
+import { Icon } from '../components/Icon'
+import { BoardingPass, RouteSteps, ReadMore } from '../components/signature'
+import { PageHero, CtaBand } from '../components/layouts'
+import { LeadForm } from '../components/LeadForm'
+import { programs, programByKey, countriesFor, type Program } from '../data/programs'
+import { countries, countryBySlug, type Country, type ProgramKey } from '../data/countries'
+import { packages } from '../data/packages'
+import { cities } from '../data/cities'
+import { guidesForProgram, guidesForCountry } from '../data/guides'
+import { deep, countryDeep, type DeepSection } from '../data/deep'
+import { postsForCountry, postsForProgram, formatDate, type Post } from '../data/blog'
+import { Rich } from '../components/Rich'
+import NotFound from './NotFound'
+import { cardImg } from '../lib/img'
+
+const formProgram: Record<ProgramKey, string> = {
+  dil: 'Dil okulu',
+  yaz: 'Yaz okulu',
+  lise: 'Lise',
+  lisans: 'Üniversite',
+  'yuksek-lisans': 'Yüksek lisans',
+  'work-study': 'Work and study',
+}
+
+/* ---------- /yurtdisi-egitim ---------- */
+export function ProgramsOverview() {
+  return (
+    <>
+      <Seo title="Yurtdışı Eğitim Programları" description="Yurtdışında üniversite, yüksek lisans, dil okulu, yaz okulu, lise ve work and study programlarımıza göz atın." path="/yurtdisi-egitim" />
+      <PageHero
+        tone="mist"
+        crumbs={[{ label: 'Yurtdışı eğitim programları' }]}
+        title="Yurtdışı eğitim programlarımız"
+        lead="Yurtdışında üniversite, yüksek lisans, dil okulu, yaz okulu, lise ve work and study programlarımıza göz atın. Her program için ülke, şehir ve okul seçiminden vizeye kadar yanınızdayız."
+      >
+        <Btn to="/basvuru" icon="arrow">Hangi program bana uygun?</Btn>
+      </PageHero>
+      <section className="section">
+        <div className="container progrid">
+          {programs.map((p, i) => (
+            <Link key={p.key} to={`/${p.slug}`} className={`procard ${i === 0 ? 'procard--wide' : ''}`}>
+              <img {...cardImg(p.image, '(max-width: 600px) 92vw, 640px')} alt="" loading={i < 2 ? 'eager' : 'lazy'} width="800" height="560" />
+              <div className="procard__tx">
+                <span className="procard__trait">{p.trait}</span>
+                <h2>{p.name}</h2>
+                <p>{p.lead}</p>
+                <span className="procard__meta">{countriesFor(p.key).length} ülke <Icon name="arrow" size={16} /></span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+      <section className="section section--mist">
+        <div className="container">
+          <SectionHead title="Programları karşılaştırın" intro="Süre, yaş grubu ve başlangıç dönemlerine hızlı bir bakış." />
+          <div className="tablewrap">
+            <table className="ctable">
+              <thead>
+                <tr><th scope="col">Program</th><th scope="col" colSpan={4}>Temel bilgiler</th></tr>
+              </thead>
+              <tbody>
+                {programs.map((p) => (
+                  <tr key={p.key}>
+                    <th scope="row"><Link to={`/${p.slug}`}>{p.name}</Link></th>
+                    {p.facts.map((f) => <td key={f.label}><small>{f.label}</small>{f.value}</td>)}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <CtaBand />
+    </>
+  )
+}
+
+/* ---------- Program hub ---------- */
+export function ProgramHub({ programKey }: { programKey: ProgramKey }) {
+  const p = programByKey[programKey]
+  const list = countriesFor(p.key)
+  const showPackages = p.key === 'dil' || p.key === 'yaz'
+  return (
+    <>
+      <Seo title={p.name} description={`${p.lead} ${list.length} ülkede ${p.short.toLowerCase()} seçenekleri, başvuru süreci, gerekli belgeler ve sık sorulan sorular.`} path={`/${p.slug}`} />
+      <PageHero
+        image={p.image}
+        crumbs={[{ label: 'Programlar', to: '/yurtdisi-egitim' }, { label: p.name }]}
+        kicker={p.trait}
+        title={p.name}
+        lead={p.lead}
+        aside={<FactCard facts={p.facts} title={`${list.length} ülkede ${p.short.toLowerCase()}`} />}
+      >
+        <Btn to="/basvuru" size="lg" icon="arrow">Ücretsiz danışmanlık al</Btn>
+        {showPackages && <Btn to="/her-sey-dahil-paketler" variant="light" size="lg">Her şey dahil paketler</Btn>}
+      </PageHero>
+
+      <section className="section">
+        <div className="container twocol twocol--wide">
+          <div className="prose prose--lead">
+            <p className="lead-strong">{p.promise}</p>
+            {p.intro.map((t) => <p key={t.slice(0, 20)}>{t}</p>)}
+          </div>
+          <aside className="panel">
+            <h2 className="panel__h">Kimler için uygun?</h2>
+            <CheckList items={p.audience} />
+          </aside>
+        </div>
+      </section>
+
+      <section className="section section--mist" aria-labelledby="c-h">
+        <div className="container">
+          <SectionHead id="c-h" title={`Ülkeye göre ${p.short.toLowerCase()} seçenekleri`} intro="Ülke kartına tıklayarak şehirleri, vize koşullarını, yaşam maliyetini ve sık sorulan soruları inceleyin." />
+          <div className="passgrid">
+            {list.map((c, i) => (
+              <BoardingPass key={c.slug} country={c} to={`/${p.slug}/${c.slug}`} title={p.countryTitle(c)} programs={false} priority={i < 3} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="f-h">
+        <div className="container">
+          <SectionHead id="f-h" title="Program seçenekleri" intro="Hedefinize göre farklı yoğunluk ve içerikte programlar." />
+          <dl className="featlist">
+            {p.features.map((f) => (
+              <div key={f.title}><dt>{f.title}</dt><dd>{f.text}</dd></div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+      <GuideStrip items={guidesForProgram(p.key)} title={`${p.short} bilgi bankası`} intro="Karar vermeden önce okumanızı önerdiğimiz rehberler." />
+
+      {postsForProgram(p.key).length > 0 && (
+        <section className="section section--mist">
+          <div className="container">
+            <SectionHead title={`${p.name} blog yazıları`} action={{ label: 'Tüm yazılar', to: '/blog' }} />
+            <PostList items={postsForProgram(p.key).slice(0, 6)} grid />
+          </div>
+        </section>
+      )}
+
+      <section className="section section--deep" aria-labelledby="s-h">
+        <div className="container">
+          <SectionHead id="s-h" title="Süreç nasıl ilerler?" intro="Her adımda ne olacağını ve sizden ne beklendiğini en baştan bilirsiniz." />
+          <RouteSteps steps={p.steps} dark />
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container twocol">
+          <div className="panel panel--line">
+            <h2 className="panel__h">Gerekli belgeler</h2>
+            <CheckList items={p.requirements} />
+            <Link to="/kaynaklar" className="textlink">Örnek belgeleri inceleyin <Icon name="arrow" size={15} /></Link>
+          </div>
+          <div className="panel panel--line">
+            <h2 className="panel__h">Fiyatı neler belirler?</h2>
+            <CheckList items={p.costFactors} />
+            <p className="muted small">Güncel okul fiyatları ve kampanyalar için ücretsiz ön görüşmede yazılı teklif hazırlıyoruz.</p>
+          </div>
+        </div>
+      </section>
+
+      {showPackages && (
+        <section className="section section--mist">
+          <div className="container">
+            <SectionHead title="Her şey dahil dil paketleri" intro="Konaklama, vize, sigorta ve aktiviteler tek fiyatta." action={{ label: 'Tüm paketler', to: '/her-sey-dahil-paketler' }} />
+            <div className="minipkgs">
+              {packages.map((pk) => (
+                <Link key={pk.slug} to={`/her-sey-dahil-paketler/${pk.slug}`} className="minipkg">
+                  <span className="code">{pk.code}</span>
+                  <strong>{pk.city}</strong>
+                  <span>{pk.prices[0].weeks} haftadan, {pk.currencySymbol}{pk.prices[0].price.toLocaleString('tr-TR')}</span>
+                  <Icon name="arrow" size={16} />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section className="section">
+        <div className="container twocol">
+          <div>
+            <h2 className="h2">Sıkça sorulan sorular</h2>
+            <FaqList items={p.faqs} />
+          </div>
+          <div>
+            <h2 className="h2">{p.seo.title}</h2>
+            <ReadMore>{p.seo.body.map((t) => <p key={t.slice(0, 20)}>{t}</p>)}</ReadMore>
+          </div>
+        </div>
+      </section>
+
+      <CtaBand title={`${p.name} için yol haritanızı çıkaralım.`} />
+    </>
+  )
+}
+
+function FactCard({ facts, title }: { facts: { label: string; value: string }[]; title: string }) {
+  return (
+    <div className="factcard">
+      <p className="factcard__h">{title}</p>
+      <dl>
+        {facts.map((f) => (<div key={f.label}><dt>{f.label}</dt><dd>{f.value}</dd></div>))}
+      </dl>
+    </div>
+  )
+}
+
+/* ---------- Program × country ---------- */
+export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
+  const { country: slug = '' } = useParams()
+  const p = programByKey[programKey]
+  const c = countryBySlug[slug]
+  if (!c || !c.programs.includes(programKey)) return <NotFound />
+  const title = p.countryTitle(c)
+  const note = c.notes?.[programKey]
+  const d = deep[`${p.key}:${c.slug}`]
+  const faqs = [...(d?.faqs ?? []), ...countryFaqs(p, c)]
+  const relPosts = postsForCountry(c.slug).filter((x) => x.programs?.includes(p.key)).concat(postsForProgram(p.key).filter((x) => !x.countries?.includes(c.slug))).slice(0, 3)
+  const siblings = countriesFor(p.key).filter((x) => x.slug !== c.slug)
+  const otherPrograms = c.programs.filter((k) => k !== programKey).map((k) => programByKey[k])
+  const path = `/${p.slug}/${c.slug}`
+  const relGuides = [...guidesForCountry(c.slug), ...guidesForProgram(p.key)].filter((g, i, a) => a.findIndex((x) => x.slug === g.slug) === i).slice(0, 6)
+
+  return (
+    <>
+      <Seo title={d?.seoTitle ?? title} description={d?.description ?? `${p.countryLead(c)} ${c.name} için vize, şehirler, yaşam maliyeti ve başvuru süreci.`} path={path} image={c.image} jsonLd={serviceLd(d?.h1 ?? title, d?.description ?? p.countryLead(c), path)} />
+      <PageHero
+        image={c.image}
+        crumbs={[{ label: p.name, to: `/${p.slug}` }, { label: c.name }]}
+        kicker={<RouteCode to={c.code} light />}
+        title={d?.h1 ?? title}
+        lead={d?.lead ?? p.countryLead(c)}
+        aside={
+          <div className="factcard">
+            <p className="factcard__h">{c.name} kısaca</p>
+            <dl>
+              <div><dt>Dil</dt><dd>{c.language}</dd></div>
+              <div><dt>Para birimi</dt><dd>{c.currency}</dd></div>
+              <div><dt>Uçuş</dt><dd>{c.flightHours}</dd></div>
+              <div><dt>Popüler şehir</dt><dd>{c.cities.slice(0, 3).join(', ')}</dd></div>
+            </dl>
+          </div>
+        }
+      >
+        <Btn href="#form" size="lg" icon="arrow">Ücretsiz bilgi al</Btn>
+      </PageHero>
+
+      <nav className="anchors" aria-label="Sayfa içi">
+        <div className="container">
+          <a href="#genel">Genel bakış</a>
+          <a href="#neden">Neden {c.name}?</a>
+          <a href="#program">Program</a>
+          <a href="#sehirler">Şehirler</a>
+          <a href="#vize">Vize ve yaşam</a>
+          <a href="#sss">SSS</a>
+        </div>
+      </nav>
+
+      <div className="container detail">
+        <article className="detail__main">
+          <section id="genel" className="dsec">
+            <h2>{c.loc} {p.short.toLowerCase()}</h2>
+            <p className="lead-strong">{c.intro}</p>
+            {note ? <p>{note}</p> : <p>{p.intro[0]}</p>}
+            <p>{p.promise}</p>
+          </section>
+
+          {d?.sections.map((sec, i) => <DeepBlock key={sec.h} sec={sec} id={i === 0 ? 'detay' : undefined} />)}
+
+          <section id="neden" className="dsec">
+            <h2>Neden {c.name}?</h2>
+            <dl className="featlist featlist--2">
+              {c.highlights.map((h) => (<div key={h.title}><dt>{h.title}</dt><dd>{h.text}</dd></div>))}
+            </dl>
+          </section>
+
+          <section id="program" className="dsec">
+            <h2>Program seçenekleri</h2>
+            <dl className="facts facts--row">
+              {p.facts.map((f) => (<div key={f.label}><dt>{f.label}</dt><dd>{f.value}</dd></div>))}
+            </dl>
+            <ul className="optlist">
+              {p.features.map((f) => (<li key={f.title}><strong>{f.title}</strong><span>{f.text}</span></li>))}
+            </ul>
+          </section>
+
+          <section id="sehirler" className="dsec">
+            <h2>Popüler şehirler</h2>
+            <CityList country={c} />
+          </section>
+
+          <section id="vize" className="dsec">
+            <h2>Vize, yaşam ve çalışma</h2>
+            <div className="infogrid">
+              <div><h3><Icon name="file" size={18} /> Vize</h3><p>{c.visa}</p></div>
+              <div><h3><Icon name="globe" size={18} /> Yaşam maliyeti</h3><p>{c.living}</p></div>
+              <div><h3><Icon name="user" size={18} /> Çalışma hakkı</h3><p>{c.work}</p></div>
+            </div>
+            <p className="muted small">Vize ve çalışma koşulları ülkelerin göç mevzuatına göre değişebilir. Başvuru öncesinde güncel koşulları birlikte kontrol ediyoruz.</p>
+          </section>
+
+          <section className="dsec">
+            <h2>Süreç</h2>
+            <RouteSteps steps={p.steps} />
+          </section>
+
+          <section className="dsec">
+            <h2>Gerekli belgeler</h2>
+            <CheckList items={p.requirements} cols={2} />
+          </section>
+
+          {relGuides.length > 0 && (
+            <section className="dsec">
+              <h2>Okumanızı önerdiğimiz rehberler</h2>
+              <ul className="klist klist--compact">
+                {relGuides.map((g) => (
+                  <li key={g.slug}><Link to={`/bilgi-bankasi/${g.slug}`}><strong>{g.title}</strong><span>{g.summary}</span><Icon name="arrow" size={18} /></Link></li>
+                ))}
+              </ul>
+            </section>
+          )}
+
+          {relPosts.length > 0 && (
+            <section className="dsec">
+              <h2>Blogdan: {title}</h2>
+              <PostList items={relPosts} />
+            </section>
+          )}
+
+          <section id="sss" className="dsec">
+            <h2>{d?.h1 ?? title} hakkında sık sorulanlar</h2>
+            <FaqList items={faqs} />
+          </section>
+        </article>
+
+        <aside className="detail__side" id="form">
+          <div className="sticky">
+            <LeadForm variant="compact" source={`program:${p.key}:${c.slug}`} defaultProgram={formProgram[p.key]} defaultCountry={c.name} title={`${title} için ücretsiz bilgi alın`} note="Formu doldurun, danışmanımız aynı gün içinde size dönsün." />
+          </div>
+        </aside>
+      </div>
+
+      <section className="section section--mist">
+        <div className="container">
+          {otherPrograms.length > 0 && (
+            <div className="related">
+              <h2 className="h3">{c.loc} diğer programlar</h2>
+              <ul className="chips">
+                {otherPrograms.map((op) => <li key={op.key}><Link to={`/${op.slug}/${c.slug}`}>{op.countryTitle(c)}</Link></li>)}
+                <li><Link to={`/ulkeler/${c.slug}`}>{c.name} ülke rehberi</Link></li>
+              </ul>
+            </div>
+          )}
+          <div className="related">
+            <h2 className="h3">Diğer ülkelerde {p.short.toLowerCase()}</h2>
+            <ul className="chips">
+              {siblings.map((s) => <li key={s.slug}><Link to={`/${p.slug}/${s.slug}`}>{p.countryTitle(s)}</Link></li>)}
+            </ul>
+          </div>
+        </div>
+      </section>
+      <CtaBand />
+    </>
+  )
+}
+
+function countryFaqs(p: Program, c: Country) {
+  return [
+    { q: `${c.loc} ${p.short.toLowerCase()} için vize gerekiyor mu?`, a: c.visa },
+    { q: `${c.loc} öğrenciyken çalışabilir miyim?`, a: c.work },
+    { q: `${c.name} için hangi şehirleri önerirsiniz?`, a: `${c.cities.join(', ')} öğrencilerimizin tercih ettiği şehirler arasında. ${c.living}` },
+    ...p.faqs.slice(0, 3),
+  ]
+}
+
+/* ---------- /ulkeler ---------- */
+export function CountriesIndex() {
+  const regions = Array.from(new Set(countries.map((c) => c.region)))
+  return (
+    <>
+      <Seo title="Ülkeler" description="Yurtdışı eğitim için 20’den fazla ülke: İngiltere, Amerika, Kanada, Almanya, Malta, İrlanda, Polonya ve daha fazlası." path="/ulkeler" />
+      <PageHero tone="mist" crumbs={[{ label: 'Ülkeler' }]} title="Nerede okumak istersin?" lead="20’den fazla ülkede dil okulu, yaz okulu, lise, üniversite, yüksek lisans ve work and study programları. Her ülke kartında dil, uçuş süresi ve sunduğumuz programlar." />
+      {regions.map((r) => (
+        <section key={r} className="section section--tight">
+          <div className="container">
+            <h2 className="regionh">{r}</h2>
+            <div className="passgrid">
+              {countries.filter((c) => c.region === r).map((c) => <BoardingPass key={c.slug} country={c} to={`/ulkeler/${c.slug}`} />)}
+            </div>
+          </div>
+        </section>
+      ))}
+      <CtaBand title="Hangi ülkenin size uygun olduğunu birlikte belirleyelim." />
+    </>
+  )
+}
+
+/* ---------- /ulkeler/:slug ---------- */
+export function CountryPage() {
+  const { slug = '' } = useParams()
+  const c = countryBySlug[slug]
+  if (!c) return <NotFound />
+  const progs = c.programs.map((k) => programByKey[k])
+  const cGuides = guidesForCountry(c.slug)
+  const cd = countryDeep[c.slug]
+  const cPosts = postsForCountry(c.slug).slice(0, 6)
+  return (
+    <>
+      <Seo title={cd?.seoTitle ?? `${c.loc} Eğitim`} description={cd?.description ?? c.intro} path={`/ulkeler/${c.slug}`} image={c.image} />
+      <PageHero
+        image={c.image}
+        crumbs={[{ label: 'Ülkeler', to: '/ulkeler' }, { label: c.name }]}
+        kicker={<RouteCode to={c.code} light />}
+        title={cd?.h1 ?? `${c.loc} eğitim`}
+        lead={c.tagline}
+      >
+        <Btn to="/basvuru" size="lg" icon="arrow">Ücretsiz danışmanlık al</Btn>
+      </PageHero>
+
+      <section className="section">
+        <div className="container twocol twocol--wide">
+          <div className="prose prose--lead"><p className="lead-strong">{c.intro}</p></div>
+          <div className="factcard factcard--light">
+            <p className="factcard__h">{c.name} kısaca</p>
+            <dl>
+              <div><dt>Dil</dt><dd>{c.language}</dd></div>
+              <div><dt>Para birimi</dt><dd>{c.currency}</dd></div>
+              <div><dt>Uçuş süresi</dt><dd>{c.flightHours}</dd></div>
+              <div><dt>Şehirler</dt><dd>{c.cities.slice(0, 4).join(', ')}</dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section--mist">
+        <div className="container">
+          <SectionHead title={`${c.loc} sunduğumuz programlar`} />
+          <div className="cprogs">
+            {progs.map((p) => (
+              <Link key={p.key} to={`/${p.slug}/${c.slug}`} className="cprog">
+                <span className="cprog__trait">{p.trait}</span>
+                <h3>{p.countryTitle(c)}</h3>
+                <p>{c.notes?.[p.key] ?? p.countryLead(c)}</p>
+                <span className="textlink">İncele <Icon name="arrow" size={15} /></span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {cd && (
+        <section className="section">
+          <div className="container narrowcol">
+            {cd.sections.map((sec) => <DeepBlock key={sec.h} sec={sec} />)}
+          </div>
+        </section>
+      )}
+
+      <section className="section">
+        <div className="container">
+          <SectionHead title={`Neden ${c.name}?`} />
+          <dl className="featlist featlist--2">
+            {c.highlights.map((h) => (<div key={h.title}><dt>{h.title}</dt><dd>{h.text}</dd></div>))}
+          </dl>
+        </div>
+      </section>
+
+      {cPosts.length > 0 && (
+        <section className="section">
+          <div className="container">
+            <SectionHead title={`${c.name} hakkında blog yazıları`} action={{ label: 'Tüm yazılar', to: '/blog' }} />
+            <PostList items={cPosts} grid />
+          </div>
+        </section>
+      )}
+
+      {cities[c.slug] && (
+        <section className="section section--mist">
+          <div className="container">
+            <SectionHead title={`${c.name} şehir rehberi`} intro="Öğrencilerimizin en çok tercih ettiği şehirler ve öne çıkan yönleri." />
+            <CityList country={c} grid />
+          </div>
+        </section>
+      )}
+
+      <section className="section section--deep">
+        <div className="container">
+          <SectionHead title="Vize, yaşam ve çalışma" />
+          <div className="infogrid infogrid--dark">
+            <div><h3>Vize</h3><p>{c.visa}</p></div>
+            <div><h3>Yaşam maliyeti</h3><p>{c.living}</p></div>
+            <div><h3>Çalışma hakkı</h3><p>{c.work}</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container twocol">
+          <div>
+            <h2 className="h2">{c.name} hakkında sık sorulanlar</h2>
+            <FaqList items={countryOnlyFaqs(c)} />
+          </div>
+          <div>
+            <h2 className="h2">{c.name} rehberleri</h2>
+            {cGuides.length > 0 ? (
+              <ul className="klist klist--compact">
+                {cGuides.map((g) => (
+                  <li key={g.slug}><Link to={`/bilgi-bankasi/${g.slug}`}><strong>{g.title}</strong><span>{g.summary}</span><Icon name="arrow" size={18} /></Link></li>
+                ))}
+              </ul>
+            ) : (
+              <p className="muted">Bu ülke için hazırladığımız rehberler yakında burada. Genel rehberler için <Link to="/bilgi-bankasi">bilgi bankamıza</Link> göz atın.</p>
+            )}
+            <h3 className="h3 related-h">Aynı bölgedeki diğer ülkeler</h3>
+            <ul className="chips">
+              {countries.filter((x) => x.region === c.region && x.slug !== c.slug).map((x) => <li key={x.slug}><Link to={`/ulkeler/${x.slug}`}>{x.name}</Link></li>)}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section--mist">
+        <div className="container contactsplit">
+          <div>
+            <h2 className="h2">{c.name} için ücretsiz ön görüşme</h2>
+            <p className="muted">Hedefinizi ve bütçenizi paylaşın; {c.name} için en uygun okul ve programları yazılı olarak gönderelim.</p>
+            <ul className="chips">{c.cities.map((x) => <li key={x}><span>{x}</span></li>)}</ul>
+          </div>
+          <LeadForm source={`ulke:${c.slug}`} defaultCountry={c.name} />
+        </div>
+      </section>
+    </>
+  )
+}
+
+function countryOnlyFaqs(c: Country) {
+  return [
+    { q: `${c.loc} eğitim için vize gerekiyor mu?`, a: c.visa },
+    { q: `${c.loc} öğrenciler çalışabilir mi?`, a: c.work },
+    { q: `${c.loc} yaşam maliyeti nasıl?`, a: c.living },
+    { q: `${c.loc} hangi dilde eğitim alabilirim?`, a: `${c.name}’nin resmi dili/dilleri: ${c.language}. Programa göre ${c.language.split(',')[0]} veya İngilizce eğitim seçenekleri bulunur; dil seviyenize uygun programı birlikte belirliyoruz.` },
+    { q: `${c.name} için hangi programları sunuyorsunuz?`, a: `${c.loc} ${c.programs.map((k) => programByKey[k].short.toLowerCase()).join(', ')} programlarında danışmanlık veriyoruz.` },
+    { q: `Türkiye’den ${c.hub} ne kadar uzakta?`, a: `İstanbul’dan ${c.hub} uçuşu yaklaşık ${c.flightHours} sürer; aktarmalı uçuşlarda süre değişebilir.` },
+  ]
+}
+
+function CityList({ country, grid }: { country: Country; grid?: boolean }) {
+  const list = cities[country.slug]
+  if (!list) {
+    return (
+      <>
+        <ul className="chips chips--lg">{country.cities.map((city) => <li key={city}><span>{city}</span></li>)}</ul>
+        <p className="muted">{country.living}</p>
+      </>
+    )
+  }
+  return (
+    <ul className={`citylist ${grid ? 'citylist--grid' : ''}`}>
+      {list.map((ci) => (
+        <li key={ci.name}>
+          <h3>{ci.name}</h3>
+          <p>{ci.text}</p>
+          <ul className="citylist__tags">{ci.tags.map((t) => <li key={t}>{t}</li>)}</ul>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+function GuideStrip({ items, title, intro }: { items: { slug: string; title: string; summary: string }[]; title: string; intro: string }) {
+  if (!items.length) return null
+  return (
+    <section className="section">
+      <div className="container">
+        <SectionHead title={title} intro={intro} action={{ label: 'Tüm rehberler', to: '/bilgi-bankasi' }} />
+        <ul className="guidegrid">
+          {items.map((g) => (
+            <li key={g.slug}>
+              <Link to={`/bilgi-bankasi/${g.slug}`}>
+                <Icon name="file" size={22} />
+                <strong>{g.title}</strong>
+                <span>{g.summary}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )
+}
+
+function DeepBlock({ sec, id }: { sec: DeepSection; id?: string }) {
+  return (
+    <section className="dsec" id={id}>
+      <h2>{sec.h}</h2>
+      {sec.p?.map((t) => <p key={t.slice(0, 32)}><Rich text={t} /></p>)}
+      {sec.list && (
+        <ul className="article__list">{sec.list.map((t) => <li key={t.slice(0, 32)}><Rich text={t} /></li>)}</ul>
+      )}
+      {sec.table && (
+        <div className="tablewrap">
+          <table className="ctable ctable--auto">
+            <thead><tr>{sec.table.head.map((h) => <th key={h} scope="col">{h}</th>)}</tr></thead>
+            <tbody>{sec.table.rows.map((r) => <tr key={r[0]}>{r.map((cell, i) => (i === 0 ? <th key={i} scope="row">{cell}</th> : <td key={i} data-label={sec.table!.head[i]}>{cell}</td>))}</tr>)}</tbody>
+          </table>
+        </div>
+      )}
+    </section>
+  )
+}
+
+function PostList({ items, grid }: { items: Post[]; grid?: boolean }) {
+  return (
+    <ul className={`postlist ${grid ? 'postlist--grid' : ''}`}>
+      {items.map((x) => (
+        <li key={x.slug}>
+          <Link to={`/blog/${x.slug}`}>
+            <img src={x.image.replace('.jpg', '-800.jpg')} alt="" loading="lazy" width="160" height="100" />
+            <span>
+              <small>{x.category} · {formatDate(x.date)}</small>
+              <strong>{x.title}</strong>
+            </span>
+          </Link>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+function serviceLd(name: string, description: string, path: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name,
+    description,
+    serviceType: 'Yurt dışı eğitim danışmanlığı',
+    url: `https://tampaegitim.com.tr${path}`,
+    areaServed: { '@type': 'Country', name: 'Türkiye' },
+    provider: { '@id': 'https://tampaegitim.com.tr/#organization' },
+  }
+}
