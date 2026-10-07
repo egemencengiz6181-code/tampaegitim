@@ -36,7 +36,7 @@ export const landings: Landing[] = [
     bullets: ['Haftada 15 ders saati İngilizce, seviyeye göre sınıflar', 'Spor, sanat ve proje atölyeleri', 'Hafta sonu Londra, Oxford ve Cambridge gezileri', 'Kampüs içi konaklama, tam pansiyon ve 7/24 gözetim'],
     why: [
       { title: 'Velilerin tercihi', text: '“İlk günden Türkiye’ye dönene kadar tüm süreçleri titizlikle takip etti.” Serap B., veli' },
-      { title: 'İngiltere temsilciliği', text: 'Okul ortaklarımızla yerinde iletişim ve öğrenci takibi.' },
+      { title: 'İngiltere Üniversite Temsilciliği', text: 'Okul ortaklarımızla doğrudan iletişim ve program boyunca öğrenci takibi.' },
       { title: 'Vize dosyası bizde', text: '18 yaş altı vize başvurusu, muvafakatname ve belgeler eksiksiz.' },
     ],
     included: ['İngilizce dersleri ve materyaller', 'Kampüs konaklaması (tam pansiyon)', 'Aktivite ve akşam programları', 'Programdaki geziler', 'Havalimanı karşılama (programa göre)', 'Seviye sertifikası'],
@@ -89,7 +89,7 @@ export const landings: Landing[] = [
     slug: 'ingiltere-yurt-disi-egitim',
     label: 'İngiltere’de eğitim',
     headline: 'İngiltere’de yurt dışı eğitim: dil okulundan yüksek lisansa tek danışman.',
-    sub: 'Dil okulu, yaz okulu, lise, üniversite ve 1 yıllık yüksek lisans. İngiltere temsilciliğimizle başvurudan varışa kadar yanınızdayız.',
+    sub: 'Dil okulu, yaz okulu, lise, üniversite ve 1 yıllık yüksek lisans. İngiltere Üniversite Temsilciliğimizle başvurudan varışa kadar yanınızdayız.',
     image: '/img/dest/ingiltere.jpg',
     code: 'LHR',
     program: '',
@@ -98,7 +98,7 @@ export const landings: Landing[] = [
     why: [
       { title: 'İngiltere ortakları', text: 'Queen Mary University of London, Manchester Met, University of Liverpool ve EC English.' },
       { title: 'Mentörlü başvuru', text: 'Her okula özel motivasyon mektubu ve referans desteği.' },
-      { title: 'Yerinde destek', text: 'İngiltere temsilciliğimizle varıştan sonra da iletişim.' },
+      { title: 'Varış sonrası destek', text: 'Okula yerleştikten sonra da iletişimimiz sürer.' },
     ],
     steps: ['Formu doldurun', 'Hedefinize uygun program ve okulları birlikte belirleyelim', 'Başvuru, vize ve konaklamayı biz yönetelim'],
     faqs: [
@@ -191,7 +191,7 @@ export const landings: Landing[] = [
     bullets: ['Londra, Brighton, Oxford ve Cambridge’de okullar', 'Haftada 15–30 ders saati seçeneği', 'IELTS ve Cambridge hazırlık modülleri', 'Vize dosyası ve VIP havalimanı karşılama'],
     why: [
       { title: '15 yıllık tecrübe', text: 'Her yıl yüzlerce öğrenciyi İngiltere’ye gönderen, okulları yerinde tanıyan bir ekip.' },
-      { title: 'İngiltere temsilciliği', text: 'İngiltere’deki iş birliklerimizle varıştan sonra da yanınızdayız.' },
+      { title: 'İngiltere Üniversite Temsilciliği', text: 'İngiltere’deki okul ortaklarımızla varıştan sonra da yanınızdayız.' },
       { title: 'Şeffaf fiyat', text: 'Okulların resmi fiyatları ve dönemsel kampanyalarla net teklif.' },
     ],
     steps: ['Formu doldur, 24 saat içinde arayalım', 'Seviyene ve bütçene uygun 3 okul teklifini karşılaştır', 'Kaydını yapalım, vize dosyanı birlikte hazırlayalım'],
@@ -321,7 +321,7 @@ export const landingBySlug = Object.fromEntries(landings.map((l) => [l.slug, l])
 
 export const generalFaqs: Faq[] = [
   { q: 'Tampa Yurtdışı Eğitim hangi hizmetleri sunuyor?', a: 'Yurtdışında dil okulu, yaz okulu, lise, üniversite, yüksek lisans ve work and study programlarında danışmanlık; üniversite başvuru ve mentörlük paketi, kariyer rehberliği, vize ve konaklama danışmanlığı sunuyoruz.' },
-  { q: 'Ofisleriniz nerede?', a: 'İzmir Karşıyaka’daki merkez ofisimiz, Aydın Efeler ofisimiz, Florida Boca Raton’daki Amerika ofisimiz ve İngiltere temsilciliğimizle hizmet veriyoruz. Online görüşme de planlayabilirsiniz.' },
+  { q: 'Ofisleriniz nerede?', a: 'İzmir Karşıyaka’daki merkez ofisimiz, Aydın Efeler ofisimiz ve İzmir ofisimizin hemen yanındaki İngiltere Üniversite Temsilciliğimizle hizmet veriyoruz. Online görüşme de planlayabilirsiniz.' },
   { q: 'Yurtdışı eğitim için ne zaman başvurmalıyım?', a: 'Dil okulları için 1–3 ay, yaz okulları için 4–6 ay, üniversite ve yüksek lisans için ise eğitimin başlamasından 9–12 ay önce planlamaya başlamanızı öneriyoruz.' },
   { q: 'Hangi ülke bana uygun?', a: 'Hedefiniz, bütçeniz, dil seviyeniz ve mezuniyet sonrası planınız ülke seçimini belirler. Ücretsiz ön görüşmede size uygun ülkeleri karşılaştırmalı olarak sunuyoruz.' },
   { q: 'Vize garantisi veriyor musunuz?', a: 'Vize onayı tamamen ilgili konsolosluğun takdirindedir; bu nedenle kesin vize garantisi verilmez. Biz dosyanızın eksiksiz ve en doğru şekilde hazırlanmasını sağlıyoruz.' },

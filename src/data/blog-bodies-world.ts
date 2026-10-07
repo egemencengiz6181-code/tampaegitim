@@ -46,7 +46,7 @@ export const worldBodies: Record<string, PostSection[]> = {
 
   'amerika-yaz-okulu': [
     { h: 'Amerika’da yaz programları', p: ['Amerika’daki yaz programları, dil okullarının kampüs programlarından üniversitelerin lise öğrencilerine yönelik akademik yaz okullarına kadar uzanır. Öğrenciler kampüs hayatını erken yaşta deneyimleme fırsatı bulur.'] },
-    { h: 'Hangi şehir?', p: ['Boston akademik atmosferiyle, Los Angeles ve San Diego Kaliforniya yaşam tarzıyla, New York ise şehir hayatıyla öne çıkar. Florida’daki Boca Raton ofisimiz sayesinde Amerika’daki öğrencilerimize yerinde destek veriyoruz.'] },
+    { h: 'Hangi şehir?', p: ['Boston akademik atmosferiyle, Los Angeles ve San Diego Kaliforniya yaşam tarzıyla, New York ise şehir hayatıyla öne çıkar.'] },
     { h: 'Vize', p: ['Kısa süreli yaz programları için programın yapısına göre ziyaretçi vizesi veya öğrenci vizesi gerekir; Amerika vizelerinde konsolosluk mülakatı yapılır. [Vize danışmanlığı](/hizmetler/vize-danismanligi) kapsamında mülakat hazırlığı yapıyoruz.'] },
     { h: 'Sonraki adım', p: ['Programlar: [Amerika yaz okulları](/yurtdisi-yaz-okullari/amerika). Diğer ülkelerle karşılaştırma için [İngiltere yaz okulu rehberi](/blog/ingiltere-yaz-okulu-rehberi).'] },
   ],
@@ -68,7 +68,7 @@ export const worldBodies: Record<string, PostSection[]> = {
   'yurtdisi-egitim-danismanligi-nasil-secilir': [
     { h: 'Neden danışmanlık?', p: ['Yurt dışı eğitim; ülke, okul, program, vize ve konaklama gibi birbirine bağlı kararlardan oluşur. Doğru danışman bu kararları sizin hedefinize ve bütçenize göre bir araya getirir, hatalı bir adımın maliyetinden korur.'] },
     { h: 'Dikkat edilmesi gerekenler', list: ['**Tecrübe:** Sektörde kaç yıldır hizmet veriyor?', '**Şeffaflık:** Ücretler ve hizmet kapsamı yazılı olarak paylaşılıyor mu?', '**Referanslar:** Gerçek öğrenci ve veli yorumları var mı?', '**Fiziki ofis:** Yüz yüze görüşebileceğiniz bir ofis var mı?', '**Süreç takibi:** Varıştan sonra da iletişim sürüyor mu?', '**Tanınır kurumlar:** Akredite ve YÖK tarafından tanınan kurumlarla mı çalışıyor?'] },
-    { h: 'Tampa Yurtdışı Eğitim', p: ['15 yıllık tecrübe, Google’da 4.9 puan, 5.000’den fazla öğrenci ve İzmir, Aydın, Florida ve İngiltere’deki ofislerimizle hizmet veriyoruz. Öğrencilerimizin yorumları için [müşteri yorumları](/musteri-yorumlari), ekibimiz için [hakkımızda](/hakkimizda) sayfalarımıza göz atabilirsiniz.'] },
+    { h: 'Tampa Yurtdışı Eğitim', p: ['15 yıllık tecrübe, Google’da 89 yorumla 5.0 puan, 5.000’den fazla öğrenci, İzmir ve Aydın ofislerimiz ve İngiltere Üniversite Temsilciliğimizle hizmet veriyoruz. Öğrencilerimizin yorumları için [müşteri yorumları](/musteri-yorumlari), ekibimiz için [hakkımızda](/hakkimizda) sayfalarımıza göz atabilirsiniz.'] },
     { h: 'İlk görüşmede sorulacak sorular', list: ['Hangi ülke ve programlarda deneyiminiz var?', 'Hizmet kapsamınız ve ücretlendirme nasıl?', 'Vize sürecinde nasıl destek veriyorsunuz?', 'Varıştan sonra kime ulaşacağım?'], p: ['Bu soruları bize de sorabilirsiniz: [ücretsiz ön görüşme](/basvuru).'] },
   ],
 

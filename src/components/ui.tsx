@@ -3,6 +3,7 @@ import type { ReactNode } from 'react'
 import { Icon } from './Icon'
 import { site } from '../data/site'
 import type { Faq } from '../data/programs'
+import { titleNode } from '../lib/text'
 
 /* ---------- Button ---------- */
 type BtnProps = {
@@ -113,7 +114,7 @@ export function Breadcrumbs({ items, tone = 'dark' }: { items: Crumb[]; tone?: '
 export function SectionHead({ title, intro, action, align = 'split', id }: { title: ReactNode; intro?: ReactNode; action?: { label: string; to: string }; align?: 'split' | 'stack'; id?: string }) {
   return (
     <div className={`shead shead--${align}`}>
-      <h2 id={id} className="shead__title">{title}</h2>
+      <h2 id={id} className="shead__title">{titleNode(title)}</h2>
       {(intro || action) && (
         <div className="shead__side">
           {intro && <p className="shead__intro">{intro}</p>}

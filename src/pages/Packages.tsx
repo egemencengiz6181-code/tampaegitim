@@ -50,7 +50,7 @@ export function PackagesIndex() {
       <section className="section">
         <div className="container twocol">
           <div>
-            <h2 className="h2">Sık sorulan sorular</h2>
+            <h2 className="h2">Sık Sorulan Sorular</h2>
             <FaqList items={pkgFaqs} />
           </div>
           <LeadForm source="paketler" defaultProgram="Her şey dahil paket" title="Paket teklifi isteyin" note="Sınırlı kontenjanlarımız dolmadan yerinizi ayırtın." />
@@ -156,15 +156,15 @@ export function PackageDetail() {
             {p.notes.map((n) => <p key={n} className="note"><Icon name="bolt" size={16} /> {n}</p>)}
           </section>
           <section className="dsec">
-            <h2>Neler dahil?</h2>
+            <h2>Neler Dahil?</h2>
             <CheckList items={p.includes} cols={2} />
           </section>
           <section className="dsec">
-            <h2>{p.city} eğlence paketi</h2>
+            <h2>{p.city} Eğlence Paketi</h2>
             <ul className="chips chips--lg">{p.fun.map((f) => <li key={f}><span>{f}</span></li>)}</ul>
           </section>
           <section className="dsec">
-            <h2>Sık sorulan sorular</h2>
+            <h2>Sık Sorulan Sorular</h2>
             <FaqList items={pkgFaqs} />
           </section>
         </article>

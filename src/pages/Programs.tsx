@@ -14,6 +14,7 @@ import { postsForCountry, postsForProgram, formatDate, type Post } from '../data
 import { Rich } from '../components/Rich'
 import NotFound from './NotFound'
 import { cardImg } from '../lib/img'
+import { titleCase } from '../lib/text'
 
 const formProgram: Record<ProgramKey, string> = {
   dil: 'Dil okulu',
@@ -104,7 +105,7 @@ export function ProgramHub({ programKey }: { programKey: ProgramKey }) {
             {p.intro.map((t) => <p key={t.slice(0, 20)}>{t}</p>)}
           </div>
           <aside className="panel">
-            <h2 className="panel__h">Kimler için uygun?</h2>
+            <h2 className="panel__h">Kimler İçin Uygun?</h2>
             <CheckList items={p.audience} />
           </aside>
         </div>
@@ -153,12 +154,12 @@ export function ProgramHub({ programKey }: { programKey: ProgramKey }) {
       <section className="section">
         <div className="container twocol">
           <div className="panel panel--line">
-            <h2 className="panel__h">Gerekli belgeler</h2>
+            <h2 className="panel__h">Gerekli Belgeler</h2>
             <CheckList items={p.requirements} />
             <Link to="/kaynaklar" className="textlink">Örnek belgeleri inceleyin <Icon name="arrow" size={15} /></Link>
           </div>
           <div className="panel panel--line">
-            <h2 className="panel__h">Fiyatı neler belirler?</h2>
+            <h2 className="panel__h">Fiyatı Neler Belirler?</h2>
             <CheckList items={p.costFactors} />
             <p className="muted small">Güncel okul fiyatları ve kampanyalar için ücretsiz ön görüşmede yazılı teklif hazırlıyoruz.</p>
           </div>
@@ -186,7 +187,7 @@ export function ProgramHub({ programKey }: { programKey: ProgramKey }) {
       <section className="section">
         <div className="container twocol">
           <div>
-            <h2 className="h2">Sıkça sorulan sorular</h2>
+            <h2 className="h2">Sıkça Sorulan Sorular</h2>
             <FaqList items={p.faqs} />
           </div>
           <div>
@@ -282,7 +283,7 @@ export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
           </section>
 
           <section id="program" className="dsec">
-            <h2>Program seçenekleri</h2>
+            <h2>Program Seçenekleri</h2>
             <dl className="facts facts--row">
               {p.facts.map((f) => (<div key={f.label}><dt>{f.label}</dt><dd>{f.value}</dd></div>))}
             </dl>
@@ -292,12 +293,12 @@ export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
           </section>
 
           <section id="sehirler" className="dsec">
-            <h2>Popüler şehirler</h2>
+            <h2>Popüler Şehirler</h2>
             <CityList country={c} />
           </section>
 
           <section id="vize" className="dsec">
-            <h2>Vize, yaşam ve çalışma</h2>
+            <h2>Vize, Yaşam ve Çalışma</h2>
             <div className="infogrid">
               <div><h3><Icon name="file" size={18} /> Vize</h3><p>{c.visa}</p></div>
               <div><h3><Icon name="globe" size={18} /> Yaşam maliyeti</h3><p>{c.living}</p></div>
@@ -312,13 +313,13 @@ export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
           </section>
 
           <section className="dsec">
-            <h2>Gerekli belgeler</h2>
+            <h2>Gerekli Belgeler</h2>
             <CheckList items={p.requirements} cols={2} />
           </section>
 
           {relGuides.length > 0 && (
             <section className="dsec">
-              <h2>Okumanızı önerdiğimiz rehberler</h2>
+              <h2>Okumanızı Önerdiğimiz Rehberler</h2>
               <ul className="klist klist--compact">
                 {relGuides.map((g) => (
                   <li key={g.slug}><Link to={`/bilgi-bankasi/${g.slug}`}><strong>{g.title}</strong><span>{g.summary}</span><Icon name="arrow" size={18} /></Link></li>
@@ -335,7 +336,7 @@ export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
           )}
 
           <section id="sss" className="dsec">
-            <h2>{d?.h1 ?? title} hakkında sık sorulanlar</h2>
+            <h2>{d?.h1 ?? title} Hakkında Sık Sorulanlar</h2>
             <FaqList items={faqs} />
           </section>
         </article>
@@ -351,7 +352,7 @@ export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
         <div className="container">
           {otherPrograms.length > 0 && (
             <div className="related">
-              <h2 className="h3">{c.loc} diğer programlar</h2>
+              <h2 className="h3">{c.loc} Diğer Programlar</h2>
               <ul className="chips">
                 {otherPrograms.map((op) => <li key={op.key}><Link to={`/${op.slug}/${c.slug}`}>{op.countryTitle(c)}</Link></li>)}
                 <li><Link to={`/ulkeler/${c.slug}`}>{c.name} ülke rehberi</Link></li>
@@ -359,7 +360,7 @@ export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
             </div>
           )}
           <div className="related">
-            <h2 className="h3">Diğer ülkelerde {p.short.toLowerCase()}</h2>
+            <h2 className="h3">Diğer Ülkelerde {titleCase(p.short)}</h2>
             <ul className="chips">
               {siblings.map((s) => <li key={s.slug}><Link to={`/${p.slug}/${s.slug}`}>{p.countryTitle(s)}</Link></li>)}
             </ul>
@@ -504,11 +505,11 @@ export function CountryPage() {
       <section className="section">
         <div className="container twocol">
           <div>
-            <h2 className="h2">{c.name} hakkında sık sorulanlar</h2>
+            <h2 className="h2">{c.name} Hakkında Sık Sorulanlar</h2>
             <FaqList items={countryOnlyFaqs(c)} />
           </div>
           <div>
-            <h2 className="h2">{c.name} rehberleri</h2>
+            <h2 className="h2">{c.name} Rehberleri</h2>
             {cGuides.length > 0 ? (
               <ul className="klist klist--compact">
                 {cGuides.map((g) => (
@@ -529,7 +530,7 @@ export function CountryPage() {
       <section className="section section--mist">
         <div className="container contactsplit">
           <div>
-            <h2 className="h2">{c.name} için ücretsiz ön görüşme</h2>
+            <h2 className="h2">{c.name} İçin Ücretsiz Ön Görüşme</h2>
             <p className="muted">Hedefinizi ve bütçenizi paylaşın; {c.name} için en uygun okul ve programları yazılı olarak gönderelim.</p>
             <ul className="chips">{c.cities.map((x) => <li key={x}><span>{x}</span></li>)}</ul>
           </div>

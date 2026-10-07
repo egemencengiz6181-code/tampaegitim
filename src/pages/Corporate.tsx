@@ -11,7 +11,7 @@ import { generalFaqs } from '../data/landings'
 export function About() {
   return (
     <>
-      <Seo title="Hakkımızda" description="Tampa Yurtdışı Eğitim; İzmir merkez ofisi, Aydın ve Amerika şubeleriyle 15 yıllık tecrübeyle yurtdışı eğitim danışmanlığı sunar." path="/hakkimizda" />
+      <Seo title="Hakkımızda" description="Tampa Yurtdışı Eğitim; İzmir merkez ofisi, Aydın şubesi ve İngiltere Üniversite Temsilciliğiyle 15 yıllık tecrübeyle yurtdışı eğitim danışmanlığı sunar." path="/hakkimizda" />
       <PageHero
         image="/img/misc/office-1.jpg"
         crumbs={[{ label: 'Kurumsal' }, { label: 'Hakkımızda' }]}
@@ -23,7 +23,7 @@ export function About() {
         <div className="container twocol twocol--wide">
           <div className="prose prose--lead">
             <p className="lead-strong">Ekibimiz, tüm sorularınız ve danışmanlık ihtiyaçlarınız için hızla yanınızda olacak; size en iyi çözümleri sunmaktan büyük memnuniyet duyacaktır.</p>
-            <p>İzmir merkez ofisimiz başta olmak üzere Aydın ve Amerika şubelerimizle, siz değerli danışanlarımıza mükemmel hizmet sunmayı taahhüt ediyoruz.</p>
+            <p>İzmir merkez ofisimiz başta olmak üzere Aydın şubemiz ve İngiltere Üniversite Temsilciliğimizle, siz değerli danışanlarımıza mükemmel hizmet sunmayı taahhüt ediyoruz.</p>
             <p>Tampa Yurtdışı Eğitim ailesi olarak, her öğrencinin hayallerini gerçekleştirmesi için eşsiz bir rehber olmayı amaçlıyoruz. Sadece yurtdışı eğitim sürecinde değil, aynı zamanda geleceğinizi şekillendiren bu önemli yolculukta sizinle omuz omuza yürümek için buradayız. Hayalini kurduğunuz eğitime, kültürel zenginliklere ve kişisel gelişime adım atmanızı sağlamak adına tüm kapıları ardına kadar açıyoruz.</p>
             <h2>Vizyonumuz</h2>
             <p>Her bireyin potansiyelini keşfetmesine yardımcı olmayı ve dünya standartlarında eğitim fırsatları sunarak onları küresel bir vizyona ulaştırmayı hedefliyoruz. Amacımız, dünyanın dört bir yanında Tampa Yurtdışı Eğitim’in izlerini bırakmak. Öğrencilerimizi geleceğe hazırlarken yalnızca bir eğitim danışmanı değil, uluslararası başarı hikâyelerine yön veren bir ilham kaynağı olmayı hayal ediyoruz.</p>
@@ -37,7 +37,7 @@ export function About() {
       </section>
       <section className="section section--deep">
         <div className="container">
-          <SectionHead title="Dört ofis, tek ekip" intro="İzmir, Aydın, Florida ve İngiltere’de öğrencilerimizin yanındayız." action={{ label: 'Ofislerimiz', to: '/ofislerimiz' }} />
+          <SectionHead title="İki Ofis, Tek Ekip" intro="İzmir ve Aydın ofislerimiz ile İzmir’deki İngiltere Üniversite Temsilciliğimizde öğrencilerimizin yanındayız." action={{ label: 'Ofislerimiz', to: '/ofislerimiz' }} />
           <div className="officestrip">
             {offices.map((o) => (
               <figure key={o.slug}>
@@ -66,7 +66,7 @@ export function Team() {
     { title: 'Vize danışmanlığı', text: 'Evrak hazırlığından randevu takibine kadar vize dosyalarını yöneten ekibimiz.' },
     { title: 'Hukuki danışmanlık', text: 'Sözleşme, oturum izni ve resmi belgelerle ilgili süreçlerde destek.' },
     { title: 'Kariyer rehberliği', text: 'Test ve analiz araçlarıyla meslek ve bölüm seçimine rehberlik eden uzmanlarımız.' },
-    { title: 'Yurtdışı koordinasyon', text: 'Florida ve İngiltere’de öğrencilerimize yerinde destek veren ekip arkadaşlarımız.' },
+    { title: 'Yurtdışı koordinasyon', text: 'Okul ortaklarımızla iletişimi yürüten, varış sonrasında da öğrencilerimizi takip eden ekip arkadaşlarımız.' },
   ]
   return (
     <>
@@ -90,7 +90,7 @@ export function Team() {
       <section className="section">
         <div className="container twocol">
           <div className="prose">
-            <h2>Öğrencilerimiz ekibimizi anlatıyor</h2>
+            <h2>Öğrencilerimiz Ekibimizi Anlatıyor</h2>
             <p>Danışanlarımızın yorumlarında en sık geçen ifadeler: ilgili, güler yüzlü, deneyimli ve süreç bittikten sonra da iletişimi koparmayan bir ekip.</p>
             <Btn to="/kariyer" variant="line" icon="arrow">Ekibimize katılın</Btn>
           </div>
@@ -109,7 +109,7 @@ export function Team() {
 export function Reviews() {
   return (
     <>
-      <Seo title="Müşteri Yorumları" description="Kusursuz hizmet kalitesi: Tampa Yurtdışı Eğitim’i bir de öğrencilerimizin ve velilerimizin gözünden görün. Google’da 4.9 puan." path="/musteri-yorumlari" />
+      <Seo title="Müşteri Yorumları" description="Kusursuz hizmet kalitesi: Tampa Yurtdışı Eğitim’i bir de öğrencilerimizin ve velilerimizin gözünden görün. Google’da 89 yorumla 5.0 puan." path="/musteri-yorumlari" />
       <PageHero
         tone="deep"
         crumbs={[{ label: 'Kurumsal' }, { label: 'Müşteri yorumları' }]}
@@ -139,7 +139,7 @@ export function Reviews() {
         <div className="container twocol">
           <div>
             <p className="bignum">{site.studentCount}</p>
-            <h2 className="h2">öğrenci bize güvendi.</h2>
+            <h2 className="h2">Öğrenci Bize Güvendi.</h2>
             <p className="muted">Tek bir paket ile sizleri yurt dışı eğitime gönderdiğimiz uygun fiyatlı tekliflere göz atın.</p>
             <Btn to="/her-sey-dahil-paketler" icon="arrow">Her şey dahil paketlere göz atın</Btn>
           </div>
@@ -163,7 +163,7 @@ export function Careers() {
       <section className="section">
         <div className="container twocol twocol--wide">
           <div className="prose prose--lead">
-            <h2>Aramıza katılmaya hazır mısınız?</h2>
+            <h2>Aramıza Katılmaya Hazır Mısınız?</h2>
             <p>Tampa Eğitim ailesi olarak, yetenekli, enerjik ve yaratıcı bireylerle bir arada çalışmayı önemsiyoruz. Siz de büyüyen ekibimizin bir parçası olabilir, yeteneklerinizi geliştirebilir ve birlikte büyük başarılara imza atabiliriz. Hedefimiz sadece çalışmak değil, birlikte üretmek ve değer katmaktır.</p>
           </div>
           <div className="gallery gallery--2">
@@ -196,7 +196,7 @@ export function Careers() {
       <section className="section">
         <div className="container twocol">
           <div>
-            <h2 className="h2">Başvuru süreci</h2>
+            <h2 className="h2">Başvuru Süreci</h2>
             <ol className="bigsteps">
               <li><span className="bigsteps__n" aria-hidden="true">1</span><div><h3>CV gönderin</h3><p>Özgeçmişinizi ve ilgilendiğiniz pozisyonu {site.email} adresine iletin.</p></div></li>
               <li><span className="bigsteps__n" aria-hidden="true">2</span><div><h3>Ön görüşme</h3><p>Uygun adaylarla telefon veya online kısa bir tanışma görüşmesi yapıyoruz.</p></div></li>
@@ -204,7 +204,7 @@ export function Careers() {
             </ol>
           </div>
           <div className="panel">
-            <h2 className="panel__h">Aradığımız özellikler</h2>
+            <h2 className="panel__h">Aradığımız Özellikler</h2>
             <CheckList items={['İnsan odaklı, iletişimi güçlü olmak', 'İyi derecede İngilizce (ek bir dil artı)', 'Yurtdışı eğitim veya yaşam deneyimi (tercihen)', 'Detaylara dikkat ve takip disiplini', 'Öğrenmeye ve gelişmeye açık olmak']} />
           </div>
         </div>
@@ -216,8 +216,8 @@ export function Careers() {
 export function Offices() {
   return (
     <>
-      <Seo title="Ofislerimiz" description="İzmir Karşıyaka merkez ofis, Aydın Efeler ofisi, Florida Boca Raton Amerika ofisi ve İngiltere temsilciliği." path="/ofislerimiz" />
-      <PageHero tone="mist" crumbs={[{ label: 'Kurumsal' }, { label: 'Ofislerimiz' }]} title="İzmir, Aydın ve Amerika’da bizi ziyaret edin." lead="Ofislerimizde sizi ağırlamaktan memnuniyet duyarız. Randevu almak için arayabilir veya online görüşme planlayabilirsiniz." />
+      <Seo title="Ofislerimiz" description="İzmir Karşıyaka merkez ofis, Aydın Efeler ofisi ve İzmir’deki İngiltere Üniversite Temsilciliği." path="/ofislerimiz" />
+      <PageHero tone="mist" crumbs={[{ label: 'Kurumsal' }, { label: 'Ofislerimiz' }]} title="İzmir ve Aydın’da Bizi Ziyaret Edin." lead="Ofislerimizde sizi ağırlamaktan memnuniyet duyarız. Randevu almak için arayabilir veya online görüşme planlayabilirsiniz." />
       <section className="section">
         <div className="container officecards">
           {offices.map((o) => (
@@ -242,8 +242,8 @@ export function Offices() {
 export function Contact() {
   return (
     <>
-      <Seo title="İletişim" description="Tampa Yurtdışı Eğitim ve Danışmanlık iletişim bilgileri: İzmir, Aydın ve Amerika ofisleri, telefon, e-posta ve online başvuru formu." path="/iletisim" />
-      <PageHero tone="mist" crumbs={[{ label: 'İletişim' }]} kicker="Tampa Yurtdışı Eğitim ve Danışmanlık" title="Bizimle iletişime geçin." lead="İzmir, Aydın ve Amerika ofislerimizde sizleri ağırlamaktan memnuniyet duyarız." />
+      <Seo title="İletişim" description="Tampa Yurtdışı Eğitim ve Danışmanlık iletişim bilgileri: İzmir ve Aydın ofisleri, telefon, e-posta ve online başvuru formu." path="/iletisim" />
+      <PageHero tone="mist" crumbs={[{ label: 'İletişim' }]} kicker="Tampa Yurtdışı Eğitim ve Danışmanlık" title="Bizimle iletişime geçin." lead="İzmir ve Aydın ofislerimizde sizleri ağırlamaktan memnuniyet duyarız." />
       <section className="section">
         <div className="container contactsplit">
           <div>
@@ -279,7 +279,7 @@ export function Apply() {
         <div className="container apply__in">
           <div className="apply__copy">
             <p className="hero__kicker"><Icon name="bolt" size={16} /> Online başvuru formu</p>
-            <h1 className="apply__title">Ücretsiz ön görüşmenizi planlayalım.</h1>
+            <h1 className="apply__title">Ücretsiz Ön Görüşmenizi Planlayalım.</h1>
             <p className="phero__lead">Bize mesaj gönderin, sizi en kısa süre içerisinde arayalım ve ücretsiz danışmanlık verelim.</p>
             <ol className="apply__steps">
               <li><strong>Formu doldurun</strong><span>1 dakikadan kısa sürer.</span></li>
@@ -296,8 +296,8 @@ export function Apply() {
       </section>
       <section className="section section--mist">
         <div className="container twocol">
-          <div><h2 className="h2">Sık sorulan sorular</h2><FaqList items={generalFaqs.slice(0, 4)} /></div>
-          <div><h2 className="h2">Danışanlarımız ne diyor?</h2><ReviewRail /></div>
+          <div><h2 className="h2">Sık Sorulan Sorular</h2><FaqList items={generalFaqs.slice(0, 4)} /></div>
+          <div><h2 className="h2">Danışanlarımız Ne Diyor?</h2><ReviewRail /></div>
         </div>
       </section>
     </>
@@ -312,7 +312,7 @@ export function Thanks() {
       <section className="thanks">
         <div className="container thanks__in">
           <span className="thanks__icon"><Icon name="check" size={36} /></span>
-          <h1>{state?.name ? `Teşekkürler ${state.name}, başvurunuz bize ulaştı.` : 'Teşekkürler, başvurunuz bize ulaştı.'}</h1>
+          <h1>{state?.name ? `Teşekkürler ${state.name}, Başvurunuz Bize Ulaştı.` : 'Teşekkürler, Başvurunuz Bize Ulaştı.'}</h1>
           <p>Danışmanımız mesai saatleri içinde en kısa sürede sizi arayacak. Beklemek istemezseniz hemen WhatsApp’tan yazabilir veya online görüşme saatinizi seçebilirsiniz.</p>
           <div className="phero__actions">
             <Btn href={site.whatsapp} iconLeft="chat">WhatsApp’tan yazın</Btn>
@@ -337,9 +337,9 @@ export function Legal({ kind }: { kind: 'kvkk' | 'cerez' }) {
           {isK ? (
             <>
               <p>Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında veri sorumlusu sıfatıyla {site.legalName} tarafından kişisel verilerinizin işlenmesine ilişkin olarak sizi bilgilendirmek amacıyla hazırlanmıştır.</p>
-              <h2>İşlenen kişisel veriler</h2>
+              <h2>İşlenen Kişisel Veriler</h2>
               <p>Formlar aracılığıyla paylaştığınız ad, soyad, telefon, e-posta, ilgilendiğiniz program ve ülke bilgileri ile mesaj içeriğiniz.</p>
-              <h2>İşleme amaçları</h2>
+              <h2>İşleme Amaçları</h2>
               <ul><li>Talebinize dönüş yapılması ve danışmanlık hizmetinin sunulması</li><li>Okul, konaklama ve vize süreçlerinin yürütülmesi</li><li>Yasal yükümlülüklerin yerine getirilmesi</li></ul>
               <h2>Aktarım</h2>
               <p>Kişisel verileriniz, yalnızca hizmetin gerektirdiği ölçüde ve açık rızanız doğrultusunda başvuru yapılan eğitim kurumları, konaklama sağlayıcıları ve ilgili resmi kurumlarla paylaşılabilir.</p>
@@ -350,9 +350,9 @@ export function Legal({ kind }: { kind: 'kvkk' | 'cerez' }) {
           ) : (
             <>
               <p>Web sitemizde, deneyiminizi iyileştirmek ve site trafiğini analiz etmek amacıyla çerezler kullanılabilir.</p>
-              <h2>Kullanılan çerez türleri</h2>
+              <h2>Kullanılan Çerez Türleri</h2>
               <ul><li>Zorunlu çerezler: sitenin çalışması için gereklidir.</li><li>Analitik çerezler: ziyaret istatistiklerini anonim olarak ölçer.</li><li>Pazarlama çerezleri: reklam kampanyalarının performansını ölçer.</li></ul>
-              <h2>Çerezleri yönetme</h2>
+              <h2>Çerezleri Yönetme</h2>
               <p>Tarayıcınızın ayarlarından çerezleri silebilir veya engelleyebilirsiniz.</p>
               <p className="muted small">Bu metin bilgilendirme amaçlı bir taslaktır; yayına alınmadan önce hukuk danışmanınız tarafından gözden geçirilmelidir.</p>
             </>

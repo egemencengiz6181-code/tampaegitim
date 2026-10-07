@@ -32,7 +32,7 @@ export const organizationLd = {
       '@type': 'LocalBusiness',
       name: `${site.name} – ${o.title}`,
       telephone: o.phone,
-      address: { '@type': 'PostalAddress', streetAddress: o.address, addressCountry: o.slug === 'florida' ? 'US' : 'TR' },
+      address: { '@type': 'PostalAddress', streetAddress: o.address, addressCountry: 'TR' },
       openingHours: 'Mo-Fr 10:00-18:00',
     })),
 }

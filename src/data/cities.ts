@@ -13,7 +13,7 @@ export const cities: Record<string, City[]> = {
     { name: 'New York', text: 'Finans, sanat ve medyanın merkezi. Yoğun tempolu, enerjik ve çok kültürlü bir öğrenci deneyimi.', tags: ['Dil okulu', 'Yüksek lisans'] },
     { name: 'Boston', text: 'Üniversiteler şehri. Akademik atmosferi ve güvenli yapısıyla öğrencilerin gözdesi.', tags: ['Üniversite', 'Dil okulu'] },
     { name: 'Los Angeles ve San Diego', text: 'Kaliforniya güneşi altında sahil yaşamı, film ve teknoloji sektörüne yakınlık.', tags: ['Dil okulu', 'Üniversite'] },
-    { name: 'Miami ve Boca Raton', text: 'Florida’nın sıcak iklimi ve uluslararası atmosferi. Boca Raton’daki ofisimizle yerinde destek.', tags: ['Dil okulu', 'Lise'] },
+    { name: 'Miami ve Boca Raton', text: 'Florida’nın sıcak iklimi ve uluslararası atmosferi.', tags: ['Dil okulu', 'Lise'] },
   ],
   kanada: [
     { name: 'Toronto', text: 'Kanada’nın en büyük şehri; finans ve teknoloji merkezi, çok kültürlü yapısıyla uluslararası öğrenciler için doğal bir başlangıç.', tags: ['Dil okulu', 'Work & Study', 'Üniversite'] },

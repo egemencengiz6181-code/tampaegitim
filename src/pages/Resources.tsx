@@ -69,7 +69,7 @@ export function KnowledgeHub() {
             ))}
             {!term && (
               <div className="kgroup" id="ornek-belgeler">
-                <h2 className="kgroup__h">Örnek belgeler</h2>
+                <h2 className="kgroup__h">Örnek Belgeler</h2>
                 <ul className="klist">
                   {documents.map((d) => (
                     <li key={d.slug}><Link to={`/kaynaklar/${d.slug}`}><strong>{d.title}</strong><span>{d.usage}</span><Icon name="arrow" size={18} /></Link></li>
@@ -118,7 +118,7 @@ export function GuidePage() {
           ))}
           {(program || relCountries.length > 0) && (
             <section className="dsec">
-              <h2 className="h3">İlgili sayfalar</h2>
+              <h2 className="h3">İlgili Sayfalar</h2>
               <ul className="chips">
                 {program && <li><Link to={`/${program.slug}`}>{program.name}</Link></li>}
                 {relCountries.map((c) => <li key={c.slug}><Link to={`/ulkeler/${c.slug}`}>{c.loc} eğitim</Link></li>)}
@@ -127,7 +127,7 @@ export function GuidePage() {
           )}
           {related.length > 0 && (
             <section className="dsec">
-              <h2 className="h3">{g.group} hakkında diğer rehberler</h2>
+              <h2 className="h3">{g.group} Hakkında Diğer Rehberler</h2>
               <ul className="klist klist--compact">
                 {related.map((r) => (
                   <li key={r.slug}><Link to={`/bilgi-bankasi/${r.slug}`}><strong>{r.title}</strong><span>{r.summary}</span><Icon name="arrow" size={18} /></Link></li>
@@ -164,7 +164,7 @@ export function DocumentsHub() {
           ))}
           <Link to="/bilgi-bankasi/universite-basvuru-rehberi" className="doccard doccard--alt">
             <Icon name="cap" size={28} />
-            <h2 className="h3">Üniversite başvuru rehberi</h2>
+            <h2 className="h3">Üniversite Başvuru Rehberi</h2>
             <p>Lisans ve yüksek lisans başvurusunun adım adım yol haritası.</p>
             <span className="textlink">Rehberi oku <Icon name="arrow" size={15} /></span>
           </Link>
@@ -213,11 +213,11 @@ export function DocumentPage() {
             <pre className="doc__body">{d.body}</pre>
           </div>
           <section className="dsec">
-            <h2>Hazırlarken dikkat edin</h2>
+            <h2>Hazırlarken Dikkat Edin</h2>
             <CheckList items={d.tips} cols={2} />
           </section>
           <section className="dsec">
-            <h2 className="h3">Diğer şablonlar</h2>
+            <h2 className="h3">Diğer Şablonlar</h2>
             <ul className="chips">{documents.filter((x) => x.slug !== d.slug).map((x) => <li key={x.slug}><Link to={`/kaynaklar/${x.slug}`}>{x.title}</Link></li>)}</ul>
           </section>
         </article>
@@ -360,7 +360,7 @@ export function BlogPost() {
             <img src="/img/brand/emblem.png" alt="" width="56" height="66" loading="lazy" />
             <div>
               <strong>Tampa Yurtdışı Eğitim</strong>
-              <p>15 yıldır öğrencilerin yurt dışı eğitim yolculuğunda rehberlik eden danışmanlık ekibi. İzmir, Aydın, Florida ve İngiltere ofisleri.</p>
+              <p>15 yıldır öğrencilerin yurt dışı eğitim yolculuğunda rehberlik eden danışmanlık ekibi. İzmir ve Aydın ofisleri, İzmir’de İngiltere Üniversite Temsilciliği.</p>
             </div>
           </div>
         </article>
@@ -399,7 +399,7 @@ export function Sitemap() {
             <ul>{countries.map((c) => <li key={c.slug}><Link to={`/ulkeler/${c.slug}`}>{c.name}</Link></li>)}</ul>
           </div>
           <div>
-            <h2 className="h3">Paketler ve hizmetler</h2>
+            <h2 className="h3">Paketler ve Hizmetler</h2>
             <ul>
               {packages.map((p) => <li key={p.slug}><Link to={`/her-sey-dahil-paketler/${p.slug}`}>{p.title}</Link></li>)}
               {services.map((s) => <li key={s.slug}><Link to={s.path}>{s.name}</Link></li>)}
@@ -415,7 +415,7 @@ export function Sitemap() {
             </ul>
           </div>
           <div>
-            <h2 className="h3">Kampanya sayfaları</h2>
+            <h2 className="h3">Kampanya Sayfaları</h2>
             <ul>{landings.map((l) => <li key={l.slug}><Link to={`/lp/${l.slug}`}>{l.label}</Link></li>)}</ul>
           </div>
           <div>

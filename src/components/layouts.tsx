@@ -6,6 +6,7 @@ import { Breadcrumbs, Btn, type Crumb } from './ui'
 import { Icon } from './Icon'
 import { site } from '../data/site'
 import { organizationLd, websiteLd } from '../seo/schema'
+import { titleCase, titleNode } from '../lib/text'
 
 export function SiteLayout() {
   return (
@@ -42,7 +43,7 @@ export function LandingLayout() {
       </main>
       <footer className="lp-footer">
         <div className="container">
-          <p>© {new Date().getFullYear()} {site.legalName} · {site.experienceYears} yıllık tecrübe · İzmir, Aydın, Florida, İngiltere</p>
+          <p>© {new Date().getFullYear()} {site.legalName} · {site.experienceYears} yıllık tecrübe · İzmir, Aydın</p>
           <p><Link to="/kvkk">KVKK</Link> · <Link to="/cerez-politikasi">Çerez politikası</Link> · <Link to="/">tampaegitim.com.tr</Link></p>
         </div>
       </footer>
@@ -75,7 +76,7 @@ export function PageHero({ title, lead, crumbs, image, kicker, children, aside, 
         <div className="phero__main">
           {crumbs && <Breadcrumbs items={crumbs} tone={tone === 'mist' ? 'dark' : 'light'} />}
           {kicker && <p className="phero__kicker">{kicker}</p>}
-          <h1 className="phero__title">{title}</h1>
+          <h1 className="phero__title">{titleNode(title)}</h1>
           {lead && <p className="phero__lead">{lead}</p>}
           {children && <div className="phero__actions">{children}</div>}
         </div>
@@ -91,7 +92,7 @@ export function CtaBand({ title = 'Yurtdışı eğitim planınızı birlikte kur
     <section className="ctaband">
       <div className="container ctaband__in">
         <div className="ctaband__tx">
-          <h2>{title}</h2>
+          <h2>{titleCase(title)}</h2>
           <p>{text}</p>
         </div>
         <div className="ctaband__actions">

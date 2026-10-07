@@ -12,7 +12,8 @@ export const site = {
   hours: 'Pazartesi – Cuma, 10.00 – 18.00',
   experienceYears: 15,
   studentCount: '5.000+',
-  googleRating: '4.9',
+  googleRating: '5.0',
+  googleReviewCount: 89,
   tagline: 'Güvenli. Güçlü. Modern. Yenilikçi. Küresel.',
   footerAbout:
     'Tampa Yurtdışı Eğitim her yıl binlerce kişinin yurtdışı eğitim hayallerini gerçekleştirmekte olup sektörde 15 yıllık tecrübesi ile siz değerli danışanlarına hizmet vermektedir.',
@@ -61,28 +62,21 @@ export const offices: Office[] = [
     note: 'Aydın ve çevre illerdeki öğrenci ve velilerimiz için randevulu görüşme.',
   },
   {
-    slug: 'florida',
-    city: 'Florida',
-    title: 'Amerika Ofisi',
-    address: '1200 N Federal Hwy, Ste. 200, Boca Raton, Florida 33432, USA',
-    image: '/img/misc/florida.jpg',
-    mapQuery: '1200 N Federal Hwy Boca Raton FL 33432',
-    note: 'Amerika’daki öğrencilerimize varış sonrası destek ve yerinde koordinasyon.',
-  },
-  {
-    slug: 'ingiltere',
-    city: 'İngiltere',
-    title: 'İngiltere Temsilciliği',
-    address: 'Birleşik Krallık',
+    slug: 'ingiltere-universite-temsilciligi',
+    city: 'İngiltere Üniversite Temsilciliği',
+    title: 'İngiltere Üniversite Temsilciliği',
+    address: 'Yalı Mah., Park Yaşam Ofisleri, 6523. Sk. No:32 A2 Kat:5 Daire:509, 35550 Karşıyaka / İzmir',
+    phone: '+90 530 881 07 09',
+    phoneHref: 'tel:+905308810709',
     image: '/img/misc/uk-office.jpg',
-    mapQuery: 'London UK',
-    note: 'İngiltere’deki okul ortaklarımızla yerinde iletişim ve öğrenci takibi.',
+    mapQuery: 'Park Yaşam Ofisleri Karşıyaka İzmir',
+    note: 'İzmir merkez ofisimizin hemen yanında. İngiltere üniversitelerine başvuru, bilgilendirme ve kabul süreçleri.',
   },
 ]
 
 export const values = [
   { title: 'Tecrübe', text: 'Sektörde 15 yılı aşkın deneyimle her ülkenin başvuru dilini, takvimini ve inceliklerini biliyoruz.' },
-  { title: 'Memnuniyet', text: 'Google’da 4.9 puanla değerlendirilen danışmanlık; bizi en iyi öğrencilerimiz anlatıyor.' },
+  { title: 'Memnuniyet', text: 'Google’da 89 yorumla 5.0 puan alan danışmanlık; bizi en iyi öğrencilerimiz anlatıyor.' },
   { title: 'Güven', text: 'Şeffaf süreç, yazılı yol haritası ve her adımda kime ulaşacağınızı bildiğiniz bir ekip.' },
   { title: 'Hızlı iletişim', text: 'WhatsApp, telefon ve online görüşme ile sorularınıza aynı gün dönüş hedefliyoruz.' },
 ]
@@ -90,6 +84,6 @@ export const values = [
 export const stats = [
   { value: '15', suffix: 'yıl', label: 'sektör tecrübesi' },
   { value: '5.000', suffix: '+', label: 'öğrenci bize güvendi' },
-  { value: '4.9', suffix: '/5', label: 'Google değerlendirmesi' },
+  { value: '5.0', suffix: '/5', label: 'Google değerlendirmesi' },
   { value: '20', suffix: '+', label: 'ülkede program' },
 ]

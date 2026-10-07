@@ -79,7 +79,7 @@ export const deep: Record<string, Deep> = {
         h: 'Neden Tampa ile İngiltere yaz okulu?',
         list: [
           '15 yıllık tecrübe ve 5.000’den fazla öğrenci',
-          'İngiltere temsilciliği ile yerinde iletişim',
+          'İngiltere Üniversite Temsilciliği ile okullarla doğrudan iletişim',
           'Çocuğunuzun yaşına ve karakterine göre kampüs seçimi',
           'Muvafakatname, vize ve uçuş sürecinin tek elden yönetimi',
           'Program boyunca veliyle düzenli iletişim',
@@ -178,7 +178,7 @@ export const deep: Record<string, Deep> = {
 export const countryDeep: Record<string, Deep> = {
   ingiltere: {
     seoTitle: 'İngiltere’de Yurt Dışı Eğitim: Dil Okulu, Yaz Okulu, Master',
-    description: 'İngiltere’de yurt dışı eğitim: dil okulları, 7–17 yaş yaz okulları, yatılı liseler, üniversite ve 1 yıllık yüksek lisans. Vize, şehirler, maliyet ve Tampa İngiltere temsilciliği.',
+    description: 'İngiltere’de yurt dışı eğitim: dil okulları, 7–17 yaş yaz okulları, yatılı liseler, üniversite ve 1 yıllık yüksek lisans. Vize, şehirler, maliyet ve Tampa İngiltere Üniversite Temsilciliği.',
     h1: 'İngiltere’de Yurt Dışı Eğitim',
     sections: [
       {

@@ -68,7 +68,7 @@ export function ServicePage({ slug }: { slug: string }) {
           {s.blocks.map((b, i) => <Block key={i} b={b} />)}
           {s.faqs && (
             <section className="dsec">
-              <h2>Sık sorulan sorular</h2>
+              <h2>Sık Sorulan Sorular</h2>
               <FaqList items={s.faqs} />
             </section>
           )}
@@ -82,7 +82,7 @@ export function ServicePage({ slug }: { slug: string }) {
 
       <section className="section section--mist">
         <div className="container">
-          <h2 className="h3">Diğer hizmetler</h2>
+          <h2 className="h3">Diğer Hizmetler</h2>
           <ul className="chips">
             {services.filter((x) => x.slug !== s.slug).map((x) => <li key={x.slug}><Link to={x.path}>{x.name}</Link></li>)}
             <li><Link to="/tampa-akademi">Tampa Akademi</Link></li>
@@ -199,7 +199,7 @@ export function Academy() {
       <section className="section" id="form">
         <div className="container contactsplit">
           <div>
-            <h2 className="h2">Danışmanlık al</h2>
+            <h2 className="h2">Danışmanlık Al</h2>
             <p className="muted">Lise veya üniversite öğrencisiysen, hedeflerine en doğru adımlarla ulaşman için birebir yol haritanı birlikte hazırlayalım.</p>
           </div>
           <LeadForm source="akademi" defaultProgram="Mentörlük / kariyer rehberliği" />

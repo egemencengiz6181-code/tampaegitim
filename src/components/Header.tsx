@@ -74,7 +74,7 @@ export function Header() {
     <>
       <div className="topbar">
         <div className="container topbar__in">
-          <p className="topbar__offices"><Icon name="pin" size={15} /> İzmir, Aydın, Florida ve İngiltere ofisleri</p>
+          <p className="topbar__offices"><Icon name="pin" size={15} /> İzmir ve Aydın ofisleri · İngiltere Üniversite Temsilciliği</p>
           <div className="topbar__links">
             <a href={site.calendly} target="_blank" rel="noopener noreferrer"><Icon name="calendar" size={15} /> Online görüşme planlayın</a>
             <a href={`mailto:${site.email}`}><Icon name="mail" size={15} /> {site.email}</a>

@@ -295,7 +295,7 @@ export const ukBodies: Record<string, PostSection[]> = {
     },
     {
       h: 'İngiltere’de çalıştığımız kurumlar',
-      p: ['Queen Mary University of London, Manchester Metropolitan University, University of Liverpool ve EC English gibi kurumlarla öğrencilerimizi yerleştiriyoruz. İngiltere temsilciliğimiz sayesinde varış sonrasında da öğrencilerimizin yanındayız.'],
+      p: ['Queen Mary University of London, Manchester Metropolitan University, University of Liverpool ve EC English gibi kurumlarla öğrencilerimizi yerleştiriyoruz. İzmir’deki İngiltere Üniversite Temsilciliğimiz ve okul ortaklarımızla kurduğumuz yakın iletişim sayesinde varış sonrasında da öğrencilerimizin yanındayız.'],
     },
     {
       h: 'Adım adım İngiltere’de eğitim',

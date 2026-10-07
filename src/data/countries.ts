@@ -75,12 +75,12 @@ export const countries: Country[] = [
     image: '/img/dest/amerika.jpg',
     tagline: 'Kampüs kültürü, sınırsız bölüm seçeneği ve dünya çapında kariyer ağı.',
     intro:
-      'Amerika Birleşik Devletleri, dünyanın en geniş üniversite yelpazesine ve en güçlü kampüs kültürüne sahip ülkesi. Esnek müfredat yapısı sayesinde öğrenciler ilk yıllarda farklı alanları deneyip bölümlerini sonradan seçebilir. Florida ofisimizle Amerika’daki öğrencilerimize yerinde destek veriyoruz.',
+      'Amerika Birleşik Devletleri, dünyanın en geniş üniversite yelpazesine ve en güçlü kampüs kültürüne sahip ülkesi. Esnek müfredat yapısı sayesinde öğrenciler ilk yıllarda farklı alanları deneyip bölümlerini sonradan seçebilir.',
     highlights: [
       { title: 'Esnek eğitim sistemi', text: 'Major/minor yapısıyla birden fazla alanda uzmanlaşma ve bölüm değişikliği imkânı.' },
       { title: 'Burs olanakları', text: 'Akademik, sportif ve sanatsal başarıya dayalı geniş burs ve finansal destek seçenekleri.' },
       { title: 'OPT ile iş deneyimi', text: 'Mezuniyet sonrası Optional Practical Training ile alanınızda çalışma deneyimi.' },
-      { title: 'Yerinde destek', text: 'Boca Raton, Florida ofisimiz varış sonrası her adımda öğrencilerimizin yanında.' },
+      { title: 'Varış sonrası destek', text: 'Okula yerleştikten sonra da iletişimimiz sürer; her adımda öğrencilerimizin yanındayız.' },
     ],
     visa:
       'Dil okulu ve üniversite eğitimi için F-1 öğrenci vizesi gerekir. Okulun düzenlediği I-20 belgesi, SEVIS ücreti, DS-160 formu ve konsolosluk mülakatı sürecin ana adımlarıdır. Mülakat hazırlığı danışmanlığımızın kapsamındadır.',

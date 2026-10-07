@@ -21,7 +21,7 @@ const journey = [
   { title: 'Başvuru', text: 'Kayıt veya üniversite başvurularını; motivasyon mektubu ve belgelerle birlikte biz yönetiriz.' },
   { title: 'Vize', text: 'Evrak listesinden randevuya, gerekirse mülakat provasına kadar dosyanı hazırlarız.' },
   { title: 'Kalkış', text: 'Konaklama, sigorta ve uçuş planlanır; havalimanında karşılanırsın.' },
-  { title: 'Yanındayız', text: 'Eğitimin boyunca ve sonrasında iletişimimiz sürer; Amerika ve İngiltere’de yerinde destek.' },
+  { title: 'Yanındayız', text: 'Eğitimin boyunca ve sonrasında iletişimimiz sürer; her sorunda bir mesaj uzağındayız.' },
 ]
 
 
@@ -30,7 +30,7 @@ export default function Home() {
     <>
       <Seo
         title="Yurt Dışı Eğitim Danışmanlığı | İngiltere Yaz Okulu, Dil Okulu | Tampa"
-        description="Tampa Yurtdışı Eğitim: İngiltere yaz okulları, dil okulları, yurt dışında üniversite ve yüksek lisans. 15 yıllık tecrübe, 5.000+ öğrenci; İzmir, Aydın, Florida ve İngiltere ofisleri."
+        description="Tampa Yurtdışı Eğitim: İngiltere yaz okulları, dil okulları, yurt dışında üniversite ve yüksek lisans. 15 yıllık tecrübe, 5.000+ öğrenci; İzmir ve Aydın ofisleri, İngiltere Üniversite Temsilciliği."
         path="/"
       />
 
@@ -43,7 +43,7 @@ export default function Home() {
         <div className="container hero__in">
           <div className="hero__copy">
             <p className="hero__kicker"><Icon name="bolt" size={16} /> {site.experienceYears} yıldır yurtdışı eğitimde</p>
-            <h1 className="hero__title">Geleceğine yurtdışında yön ver.</h1>
+            <h1 className="hero__title">Geleceğine Yurtdışında Yön Ver.</h1>
             <p className="hero__lead">
               Dil okulundan yüksek lisansa, 20’den fazla ülkede okul seçimi, başvuru, vize ve konaklama. Tek danışman, tek yol haritası, baştan sona Tampa.
             </p>
@@ -52,9 +52,9 @@ export default function Home() {
               <Btn to="/yurtdisi-egitim" variant="line" size="lg">Programları keşfet</Btn>
             </div>
             <ul className="hero__proof">
-              <li><Stars size={15} /><span><strong>{site.googleRating}</strong> Google puanı</span></li>
+              <li><Stars size={15} /><span><strong>{site.googleRating}</strong> Google puanı · {site.googleReviewCount} yorum</span></li>
               <li><strong>{site.studentCount}</strong><span>öğrenci bize güvendi</span></li>
-              <li><strong>4 ofis</strong><span>İzmir, Aydın, Florida, İngiltere</span></li>
+              <li><strong>2 ofis</strong><span>İzmir, Aydın + İngiltere Üniversite Temsilciliği</span></li>
             </ul>
           </div>
           <DepartureBoard />
@@ -78,8 +78,8 @@ export default function Home() {
           </div>
           <div className="ukband__body">
             <p className="hero__kicker"><Icon name="bolt" size={16} /> En çok tercih edilen ülke</p>
-            <h2 id="uk-h" className="h2">İngiltere’de yurt dışı eğitim</h2>
-            <p className="muted">İngiltere yaz okullarından Londra’da dil eğitimine, yatılı liselerden 1 yıllık yüksek lisansa; İngiltere temsilciliğimizle başvurudan varışa kadar yanınızdayız.</p>
+            <h2 id="uk-h" className="h2">İngiltere’de Yurt Dışı Eğitim</h2>
+            <p className="muted">İngiltere yaz okullarından Londra’da dil eğitimine, yatılı liselerden 1 yıllık yüksek lisansa; İngiltere Üniversite Temsilciliğimizle başvurudan varışa kadar yanınızdayız.</p>
             <ul className="uklinks">
               <li><Link to="/yurtdisi-yaz-okullari/ingiltere"><strong>İngiltere yaz okulları</strong><span>7–17 yaş, kampüs konaklamalı</span></Link></li>
               <li><Link to="/yurtdisi-dil-okullari/ingiltere"><strong>İngiltere dil okulları</strong><span>Londra, Brighton, Oxford</span></Link></li>
@@ -111,7 +111,7 @@ export default function Home() {
       <section className="section section--deep" aria-labelledby="pkg-h">
         <div className="container">
           <div className="pkghead">
-            <h2 id="pkg-h">Her şey dahil, tek fiyat.</h2>
+            <h2 id="pkg-h">Her Şey Dahil, Tek Fiyat.</h2>
             <p>Eğitim, konaklama, vize, sağlık sigortası, VIP karşılama ve eğlence paketi. 18 yaş üstü için 2–10 haftalık dil eğitimi paketleri.</p>
           </div>
           <div className="tickets">
@@ -138,7 +138,7 @@ export default function Home() {
       <section className="section" aria-labelledby="why-h">
         <div className="container why">
           <div className="why__lead">
-            <h2 id="why-h">Tecrübe, memnuniyet, güven ve hızlı iletişim.</h2>
+            <h2 id="why-h">Tecrübe, Memnuniyet, Güven ve Hızlı İletişim.</h2>
             <p>
               Tampa Yurtdışı Eğitim ailesi olarak, her öğrencinin hayallerini gerçekleştirmesi için eşsiz bir rehber olmayı amaçlıyoruz. Sadece yurtdışı eğitim sürecinde değil, geleceğinizi şekillendiren bu önemli yolculukta sizinle omuz omuza yürüyoruz.
             </p>
@@ -198,7 +198,7 @@ export default function Home() {
       {/* PARTNERS */}
       <section className="section section--tight" aria-labelledby="partners-h">
         <div className="container">
-          <h2 id="partners-h" className="partners__h">Birlikte çalıştığımız okul ve üniversitelerden bazıları</h2>
+          <h2 id="partners-h" className="partners__h">Birlikte Çalıştığımız Okul ve Üniversitelerden Bazıları</h2>
         </div>
         <LogoMarquee />
       </section>
@@ -207,10 +207,10 @@ export default function Home() {
       <section className="section section--deep" aria-labelledby="rev-h">
         <div className="container">
           <div className="revhead">
-            <h2 id="rev-h">Danışanlarımızın gözünden</h2>
+            <h2 id="rev-h">Danışanlarımızın Gözünden</h2>
             <div className="revhead__score">
               <strong>{site.googleRating}</strong>
-              <span><Stars size={18} /><small>Google değerlendirmeleri</small></span>
+              <span><Stars size={18} /><small>{site.googleReviewCount} Google yorumu</small></span>
               <Link to="/musteri-yorumlari" className="textlink textlink--light">Tüm yorumlar <Icon name="arrow" size={15} /></Link>
             </div>
           </div>
@@ -222,10 +222,10 @@ export default function Home() {
       <section className="section" aria-labelledby="faq-h">
         <div className="container twocol">
           <div>
-            <h2 className="h2">Yurtdışı eğitim danışmanlığı neden önemli?</h2>
+            <h2 className="h2">Yurtdışı Eğitim Danışmanlığı Neden Önemli?</h2>
             <ReadMore lines={7}>
               <p>Yurtdışında eğitim almak, pek çok öğrencinin hayalini süsleyen bir deneyimdir. Ancak bu süreçte doğru kararlar vermek, karmaşık prosedürleri anlamak ve hedeflenen eğitime ulaşmak için profesyonel destek büyük fark yaratır. Ülke, şehir, okul ve program seçimi; hem zaman hem de maliyet açısından geri dönüşü zor kararlardır.</p>
-              <p>Tampa Yurtdışı Eğitim, İzmir merkez ofisi başta olmak üzere Aydın ve Amerika şubeleriyle 15 yılı aşkın süredir öğrencilerin yurtdışı eğitim yolculuğunda rehberlik ediyor. Dil okulları, yaz okulları, lise, lisans, yüksek lisans ve work and study programlarında; öğrenci profilinin değerlendirilmesinden okul seçimine, başvuru yönetiminden vize ve konaklamaya kadar tüm adımları birlikte planlıyoruz.</p>
+              <p>Tampa Yurtdışı Eğitim, İzmir merkez ofisi başta olmak üzere Aydın şubesiyle 15 yılı aşkın süredir öğrencilerin yurtdışı eğitim yolculuğunda rehberlik ediyor. Dil okulları, yaz okulları, lise, lisans, yüksek lisans ve work and study programlarında; öğrenci profilinin değerlendirilmesinden okul seçimine, başvuru yönetiminden vize ve konaklamaya kadar tüm adımları birlikte planlıyoruz.</p>
               <h3>Neler yapıyoruz?</h3>
               <ul>
                 <li>Öğrenci profilini değerlendirip size en uygun programı belirliyoruz.</li>
@@ -240,7 +240,7 @@ export default function Home() {
             </ReadMore>
           </div>
           <div>
-            <h2 id="faq-h" className="h2">Sıkça sorulan sorular</h2>
+            <h2 id="faq-h" className="h2">Sıkça Sorulan Sorular</h2>
             <FaqList items={generalFaqs} />
           </div>
         </div>
@@ -266,7 +266,7 @@ export default function Home() {
       <section className="section" aria-labelledby="contact-h">
         <div className="container contactsplit">
           <div>
-            <h2 id="contact-h" className="h2">Bize her zaman yazabilirsiniz.</h2>
+            <h2 id="contact-h" className="h2">Bize Her Zaman Yazabilirsiniz.</h2>
             <p className="muted">Formu doldurun, sizi en kısa sürede arayalım ve ücretsiz danışmanlık verelim. Dilerseniz ofislerimizde yüz yüze görüşelim.</p>
             <ul className="offices-mini">
               {offices.slice(0, 3).map((o) => (
