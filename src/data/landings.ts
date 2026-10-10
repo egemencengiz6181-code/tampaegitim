@@ -61,7 +61,7 @@ export const landings: Landing[] = [
     label: 'Londra yaz okulu',
     headline: 'Bu yaz Londra’da: İngilizce, müzeler ve yeni arkadaşlar.',
     sub: '13–17 yaş gençler için Londra kampüslerinde yaz programları. Sabah İngilizce dersleri, öğleden sonra şehir keşfi, hafta sonu Oxford ve Cambridge.',
-    image: '/img/misc/london-student.jpg',
+    image: '/img/misc/london-package.jpg',
     code: 'LHR',
     program: 'Yaz Okulu',
     country: 'İngiltere',
@@ -72,7 +72,7 @@ export const landings: Landing[] = [
       { title: 'Uçtan uca takip', text: 'Kayıttan dönüşe kadar ailenizle sürekli iletişim.' },
     ],
     schedule: [
-      { time: 'Pazartesi', text: 'Westminster ve Big Ben yürüyüş turu' },
+      { time: 'Pazartesi', text: 'Westminster ve Big Ben yürüyüş gezisi' },
       { time: 'Salı', text: 'British Museum proje çalışması' },
       { time: 'Perşembe', text: 'Covent Garden ve West End' },
       { time: 'Cumartesi', text: 'Oxford veya Cambridge tam gün gezi' },
@@ -152,7 +152,7 @@ export const landings: Landing[] = [
       { q: 'ALES veya GRE gerekiyor mu?', a: 'İngiliz üniversiteleri ALES istemez; GRE/GMAT çoğu programda şart değildir (MBA istisna olabilir).' },
       { q: 'Mezuniyetten sonra çalışabilir miyim?', a: 'Graduate Route ile İngiltere’de iş deneyimi kazanma imkânı vardır; güncel koşulları birlikte kontrol ediyoruz.' },
     ],
-    urgency: 'Popüler programlar ve burslar için ilk turda başvurun.',
+    urgency: 'Popüler programlar ve burslar için ilk dönemde başvurun.',
     learnMore: { label: 'İngiltere’de yüksek lisans rehberi', to: '/yurtdisi-yuksek-lisans/ingiltere' },
   },
   {
@@ -187,7 +187,7 @@ export const landings: Landing[] = [
     code: 'LHR',
     program: 'Dil Okulu',
     country: 'İngiltere',
-    offer: { title: 'Her şey dahil Londra paketi', price: '2.950 £', caption: '2 hafta, konaklama, uçak, vize ve sigorta dahil' },
+    offer: { title: 'Her Şey Dahil Londra paketi', price: '2.950 £', caption: '2 hafta, konaklama, uçak, vize ve sigorta dahil' },
     bullets: ['Londra, Brighton, Oxford ve Cambridge’de okullar', 'Haftada 15–30 ders saati seçeneği', 'IELTS ve Cambridge hazırlık modülleri', 'Vize dosyası ve VIP havalimanı karşılama'],
     why: [
       { title: '15 yıllık tecrübe', text: 'Her yıl yüzlerce öğrenciyi İngiltere’ye gönderen, okulları yerinde tanıyan bir ekip.' },
@@ -197,7 +197,7 @@ export const landings: Landing[] = [
     steps: ['Formu doldur, 24 saat içinde arayalım', 'Seviyene ve bütçene uygun 3 okul teklifini karşılaştır', 'Kaydını yapalım, vize dosyanı birlikte hazırlayalım'],
     faqs: [
       { q: 'İngiltere dil okulu için vize gerekiyor mu?', a: 'Türk vatandaşları için 6 aya kadar dil kursları Standard Visitor vizesiyle, 11 aya kadar İngilizce kursları Short-term Study vizesiyle yapılır. Vize dosyanızı birlikte hazırlıyoruz.' },
-      { q: 'En kısa kaç haftalık program var?', a: 'Programlar 1 haftadan başlar; her şey dahil Londra paketimiz 2 haftadan itibaren planlanabilir.' },
+      { q: 'En kısa kaç haftalık program var?', a: 'Programlar 1 haftadan başlar; Her Şey Dahil Londra paketimiz 2 haftadan itibaren planlanabilir.' },
       { q: 'Hiç İngilizcem yok, katılabilir miyim?', a: 'Evet. Okullar ilk gün seviye tespit sınavı yapar ve sizi başlangıç seviyesindeki sınıfa yerleştirir.' },
     ],
     urgency: 'Yaz dönemi kontenjanları erken doluyor; şimdi ön görüşme planlayın.',
@@ -205,10 +205,10 @@ export const landings: Landing[] = [
   },
   {
     slug: 'her-sey-dahil-londra',
-    label: 'Her şey dahil Londra',
+    label: 'Her Şey Dahil Londra',
     headline: 'Uçak, yurt, vize, sigorta ve İngilizce: Londra’da tek fiyat.',
-    sub: '18 yaş üstü için 2–10 haftalık her şey dahil Londra dil paketi. London Eye, Thames cruise ve şehir turu da pakette.',
-    image: '/img/misc/london-student.jpg',
+    sub: '18 yaş üstü için 2–10 haftalık Her Şey Dahil Londra dil paketi. London Eye, Thames cruise ve şehir gezisi de pakette.',
+    image: '/img/misc/london-package.jpg',
     code: 'LHR',
     program: 'Her Şey Dahil Paket',
     country: 'İngiltere',

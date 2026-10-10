@@ -150,7 +150,7 @@ export const programs: Program[] = [
       body: [
         'Yaz okulu seçiminde ilk kriter öğrencinin yaşı ve bağımsızlık düzeyidir. İlk kez yurtdışına çıkacak küçük yaştaki öğrenciler için kampüs içi konaklamalı, kapalı programlar daha uygundur; daha büyük öğrenciler şehir merkezindeki programlarda daha fazla serbestlik bulur.',
         'Programın milliyet dağılımı, dersler dışında İngilizce konuşma fırsatını belirler. Danışmanlarımız okulların geçmiş yıllardaki milliyet oranlarını paylaşarak bilinçli bir seçim yapmanıza yardımcı olur.',
-        'Ders saatleri, aktivite programı, gezi sayısı ve konaklama tipi fiyatları doğrudan etkiler. Her şey dahil paketlerimizde bu kalemler tek fiyat altında birleştirilir.',
+        'Ders saatleri, aktivite programı, gezi sayısı ve konaklama tipi fiyatları doğrudan etkiler. Her Şey Dahil paketlerimizde bu kalemler tek fiyat altında birleştirilir.',
       ],
     },
     countryTitle: (c) => `${c.name} Yaz Okulları`,
@@ -252,7 +252,7 @@ export const programs: Program[] = [
       { q: 'Türkiye’de lise mezunu olarak doğrudan yurtdışında üniversiteye başvurabilir miyim?', a: 'Ülkeye göre değişir. Polonya, Macaristan, İtalya ve Amerika’da doğrudan başvuru yaygındır. İngiltere ve Almanya’da çoğunlukla Foundation veya Studienkolleg gibi bir hazırlık yılı gerekir.' },
       { q: 'Yurtdışı diplomam Türkiye’de geçerli olur mu?', a: 'YÖK tarafından tanınan üniversitelerden alınan diplomalar için denklik başvurusu yapılabilir. Yalnızca tanınırlığı olan kurumlarla çalışıyoruz.' },
       { q: 'YKS puanı gerekiyor mu?', a: 'Birçok ülkede YKS puanı istenmez. Ancak Türkiye’de denklik sürecinde bazı bölümler için belirli koşullar aranabilir; başvuru öncesinde bunu birlikte değerlendiriyoruz.' },
-      { q: 'Başvurular ne zaman yapılmalı?', a: 'Eylül dönemi için başvurular genellikle bir önceki yılın ekim ayından itibaren açılır. Burs ve popüler bölümler için ilk turda başvurmak avantaj sağlar.' },
+      { q: 'Başvurular ne zaman yapılmalı?', a: 'Eylül dönemi için başvurular genellikle bir önceki yılın ekim ayından itibaren açılır. Burs ve popüler bölümler için ilk dönemde başvurmak avantaj sağlar.' },
     ],
     seo: {
       title: 'Yurtdışında üniversite okumak için yol haritası',

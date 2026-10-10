@@ -17,7 +17,7 @@ export const ukBodies: Record<string, PostSection[]> = {
         '**7–11 yaş:** Daha korunaklı, kapalı kampüs programları; ağırlık oyun temelli İngilizce, el sanatları ve spor aktivitelerinde.',
         '**12–14 yaş:** Dil dersleri ile proje çalışmalarının dengelendiği, haftada 2 tam gün gezi içeren programlar.',
         '**15–17 yaş:** Daha fazla bağımsızlık; şehir merkezlerinde kampüsler, akademik İngilizce, liderlik ve sınav hazırlık seçenekleri.',
-        '**18 yaş ve üzeri:** Yaz okulu yerine yetişkin [dil okulu programları](/yurtdisi-dil-okullari/ingiltere) veya [her şey dahil Londra paketi](/her-sey-dahil-paketler/londra) tercih edilir.',
+        '**18 yaş ve üzeri:** Yaz okulu yerine yetişkin [dil okulu programları](/yurtdisi-dil-okullari/ingiltere) veya [Her Şey Dahil Londra paketi](/her-sey-dahil-paketler/londra) tercih edilir.',
       ],
     },
     {
@@ -95,7 +95,7 @@ export const ukBodies: Record<string, PostSection[]> = {
     },
     {
       h: 'Kişiye özel teklif alın',
-      p: ['Okulların güncel fiyatlarını ve kampanyalarını takip ediyor, çocuğunuzun yaşına uygun 2–3 seçeneği yazılı ve karşılaştırmalı olarak sunuyoruz. [İngiltere yaz okulları](/yurtdisi-yaz-okullari/ingiltere) sayfamızdan programları inceleyebilir veya [ücretsiz danışmanlık formunu](/basvuru) doldurabilirsiniz. 18 yaş üstü için sabit fiyatlı [her şey dahil Londra paketimiz](/her-sey-dahil-paketler/londra) de bir seçenek.'],
+      p: ['Okulların güncel fiyatlarını ve kampanyalarını takip ediyor, çocuğunuzun yaşına uygun 2–3 seçeneği yazılı ve karşılaştırmalı olarak sunuyoruz. [İngiltere yaz okulları](/yurtdisi-yaz-okullari/ingiltere) sayfamızdan programları inceleyebilir veya [ücretsiz danışmanlık formunu](/basvuru) doldurabilirsiniz. 18 yaş üstü için sabit fiyatlı [Her Şey Dahil Londra paketimiz](/her-sey-dahil-paketler/londra) de bir seçenek.'],
     },
   ],
 
@@ -117,7 +117,7 @@ export const ukBodies: Record<string, PostSection[]> = {
     },
     {
       h: 'Örnek bir hafta',
-      list: ['Pazartesi – Cuma sabah: İngilizce dersleri', 'Pazartesi öğleden sonra: Westminster ve Big Ben yürüyüş turu', 'Salı: British Museum proje çalışması', 'Çarşamba: Spor turnuvası ve akşam disko', 'Perşembe: Covent Garden ve West End', 'Cumartesi: Oxford veya Cambridge tam gün gezi', 'Pazar: Dinlenme ve kampüs aktiviteleri'],
+      list: ['Pazartesi – Cuma sabah: İngilizce dersleri', 'Pazartesi öğleden sonra: Westminster ve Big Ben yürüyüş gezisi', 'Salı: British Museum proje çalışması', 'Çarşamba: Spor turnuvası ve akşam disko', 'Perşembe: Covent Garden ve West End', 'Cumartesi: Oxford veya Cambridge tam gün gezi', 'Pazar: Dinlenme ve kampüs aktiviteleri'],
     },
     {
       h: 'Londra yaz okulu için ilk adım',
@@ -262,7 +262,7 @@ export const ukBodies: Record<string, PostSection[]> = {
   'yetiskinler-icin-ingiltere-yaz-dil-programlari': [
     { h: 'Yaz okulu yetişkinler için de var', p: ['18 yaş üstü katılımcılar için İngiltere’deki dil okulları yaz aylarında yoğun programlar düzenler. Yıllık izninizi 2–4 haftalık bir dil programıyla birleştirerek hem İngilizcenizi geliştirebilir hem de tatil yapabilirsiniz.'] },
     { h: 'Seçenekler', list: ['Genel İngilizce (haftada 15–30 ders saati)', 'İş İngilizcesi ve sunum becerileri', '30 yaş üstü özel sınıflar', 'IELTS veya Cambridge sınav hazırlık', 'Birebir dersler'], p: ['30 yaş üstü programlar hakkında daha fazla bilgi için [rehberimize](/bilgi-bankasi/30-yas-ustu-dil-programlari) göz atın.'] },
-    { h: 'Her şey dahil Londra paketi', p: ['Konaklama, uçak bileti, vize, sigorta ve Londra eğlence paketini tek fiyatta birleştiren [her şey dahil Londra paketimiz](/her-sey-dahil-paketler/londra) 2 haftadan itibaren planlanabilir.'] },
+    { h: 'Her Şey Dahil Londra paketi', p: ['Konaklama, uçak bileti, vize, sigorta ve Londra eğlence paketini tek fiyatta birleştiren [Her Şey Dahil Londra paketimiz](/her-sey-dahil-paketler/londra) 2 haftadan itibaren planlanabilir.'] },
     { h: 'Hangi şehir?', p: ['Londra kültürel imkânlarıyla, Brighton sahil atmosferiyle, Bournemouth ise sakinliği ve uygun fiyatlarıyla öne çıkar. Ayrıntılı karşılaştırma için [İngiltere’de dil okulu şehir seçimi](/blog/ingilterede-dil-okulu-sehir-secimi) yazımızı okuyun. Tüm seçenekler: [İngiltere dil okulları](/yurtdisi-dil-okullari/ingiltere).'] },
   ],
 
@@ -282,7 +282,7 @@ export const ukBodies: Record<string, PostSection[]> = {
         '**[Lise](/yurtdisi-lise-egitimi/ingiltere):** Yatılı okullarda GCSE ve A-Level.',
         '**[Üniversite](/lisans-programlari/ingiltere):** UCAS üzerinden başvuru, gerekirse Foundation yılı.',
         '**[Yüksek lisans](/yurtdisi-yuksek-lisans/ingiltere):** Çoğunlukla 12 ay süren master programları.',
-        '**[Her şey dahil Londra paketi](/her-sey-dahil-paketler/londra):** 18 yaş üstü için tek fiyatlı dil eğitimi paketi.',
+        '**[Her Şey Dahil Londra paketi](/her-sey-dahil-paketler/londra):** 18 yaş üstü için tek fiyatlı dil eğitimi paketi.',
       ],
     },
     {
@@ -350,14 +350,14 @@ export const ukBodies: Record<string, PostSection[]> = {
     { h: 'Londra mı, diğer şehirler mi?', p: ['İngiltere’de yaşam maliyetini en çok belirleyen faktör şehirdir. Londra’da konaklama ve ulaşım giderleri diğer şehirlere göre belirgin şekilde yüksektir. Manchester, Liverpool, Leeds, Brighton veya Bournemouth gibi şehirlerde aynı bütçeyle daha konforlu bir yaşam mümkündür.'] },
     { h: 'Konaklama türleri', list: ['**Aile yanı:** Dil öğrencileri için popüler; genellikle kahvaltı ve akşam yemeği dahil.', '**Öğrenci rezidansı:** Özel banyolu odalar, ortak mutfak, 7/24 güvenlik.', '**Üniversite yurtları:** Birinci sınıf öğrencilerine öncelik tanınır.', '**Paylaşımlı öğrenci evi:** Uzun dönem için ekonomik seçenek.'], p: ['Ayrıntılar için [konaklama seçenekleri](/bilgi-bankasi/konaklama-secenekleri) rehberimize bakın.'] },
     { h: 'Günlük giderler', list: ['Toplu taşıma (öğrenci indirimli kartlar)', 'Market ve yemek', 'Telefon ve internet', 'Ders materyalleri', 'Sosyal aktiviteler'] },
-    { h: 'Bütçe ipuçları', list: ['Öğrenci indirim kartlarından yararlanın', 'Haftalık market alışverişi planlayın', 'Ücretsiz müzeleri ve etkinlikleri takip edin', 'Uzun dönem programlarda öğrenci evine geçmeyi değerlendirin'], p: ['Sürprizsiz bir bütçe isteyenler için [her şey dahil Londra paketimiz](/her-sey-dahil-paketler/londra) konaklama dahil tek fiyat sunar.'] },
+    { h: 'Bütçe ipuçları', list: ['Öğrenci indirim kartlarından yararlanın', 'Haftalık market alışverişi planlayın', 'Ücretsiz müzeleri ve etkinlikleri takip edin', 'Uzun dönem programlarda öğrenci evine geçmeyi değerlendirin'], p: ['Sürprizsiz bir bütçe isteyenler için [Her Şey Dahil Londra paketimiz](/her-sey-dahil-paketler/londra) konaklama dahil tek fiyat sunar.'] },
   ],
 
   'brighton-dil-okulu': [
     { h: 'Brighton’ı özel kılan nedir?', p: ['Brighton, İngiltere’nin güney sahilinde, Londra’ya trenle yaklaşık bir saat uzaklıkta bir şehir. Ünlü iskelesi, renkli sokakları, kafeleri ve genç nüfusuyla dil öğrencilerinin en sevdiği şehirlerden biri.'] },
     { h: 'Kimler için uygun?', list: ['Londra’nın kalabalığından uzak ama sosyal bir şehir isteyenler', 'Sahil yaşamını sevenler', 'Kısa ve orta süreli dil programı planlayanlar', 'Yaz aylarında İngilizce öğrenmek isteyen gençler'] },
     { h: 'Konaklama', p: ['Aile yanı konaklama Brighton’da yaygındır ve dil pratiği için büyük avantaj sağlar. Öğrenci rezidansları da mevcuttur.'] },
-    { h: 'Londra’ya yakınlık', p: ['Hafta sonları Londra’ya günübirlik gitmek kolaydır. [Her şey dahil Londra paketimizde](/her-sey-dahil-paketler/londra) Londra – Brighton çift yön otobüs bileti de bulunur.'] },
+    { h: 'Londra’ya yakınlık', p: ['Hafta sonları Londra’ya günübirlik gitmek kolaydır. [Her Şey Dahil Londra paketimizde](/her-sey-dahil-paketler/londra) Londra – Brighton çift yön otobüs bileti de bulunur.'] },
     { h: 'Brighton’da dil okulu için', p: ['Programlar ve okullar: [İngiltere dil okulları](/yurtdisi-dil-okullari/ingiltere). Şehir karşılaştırması: [İngiltere’de dil okulu için hangi şehir?](/blog/ingilterede-dil-okulu-sehir-secimi)'] },
   ],
 

@@ -11,7 +11,7 @@ export function Footer() {
       <div className="container">
         <div className="footer__top">
           <div className="footer__brand">
-            <img src="/img/brand/logo-horizontal-white.png" alt="Tampa Yurtdışı Eğitim" width="180" height="70" loading="lazy" />
+            <img src="/img/brand/logo-wordmark-white.png" alt="Tampa Yurtdışı Eğitim" width="121" height="64" loading="lazy" />
             <p>{site.footerAbout}</p>
             <div className="footer__social">
               {site.socials.map((s) => (
@@ -30,7 +30,7 @@ export function Footer() {
         <div className="footer__grid">
           <div>
             <p className="footer__h">Programlar</p>
-            <ul>{programs.map((p) => <li key={p.key}><Link to={`/${p.slug}`}>{p.name}</Link></li>)}<li><Link to="/her-sey-dahil-paketler">Her şey dahil paketler</Link></li></ul>
+            <ul>{programs.map((p) => <li key={p.key}><Link to={`/${p.slug}`}>{p.name}</Link></li>)}<li><Link to="/her-sey-dahil-paketler">Her Şey Dahil Paketler</Link></li></ul>
           </div>
           <div>
             <p className="footer__h">Popüler sayfalar</p>
@@ -61,7 +61,7 @@ export function Footer() {
             <ul>
               <li><Link to="/hakkimizda">Hakkımızda</Link></li>
               <li><Link to="/ekibimiz">Ekibimiz</Link></li>
-              <li><Link to="/musteri-yorumlari">Müşteri yorumları</Link></li>
+              <li><Link to="/musteri-yorumlari">Gidenler anlatıyor</Link></li>
               <li><Link to="/kariyer">Kariyer</Link></li>
               <li><Link to="/tampa-akademi">Tampa Akademi</Link></li>
               <li><Link to="/blog">Blog</Link></li>

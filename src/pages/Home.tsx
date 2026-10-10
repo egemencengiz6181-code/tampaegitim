@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Seo, Btn, SectionHead, FaqList, Stars, RouteCode } from '../components/ui'
 import { Icon } from '../components/Icon'
-import { DepartureBoard, BoardingPass, RouteSteps, LogoMarquee, ReviewRail, ReadMore } from '../components/signature'
+import { DepartureBoard, BoardingPass, RouteSteps, LogoMarquee, ReviewRail, ReadMore, StudentWall } from '../components/signature'
 import { LeadForm } from '../components/LeadForm'
 import { programs, countriesFor } from '../data/programs'
 import { countryBySlug } from '../data/countries'
@@ -82,14 +82,33 @@ export default function Home() {
             <p className="muted">İngiltere yaz okullarından Londra’da dil eğitimine, yatılı liselerden 1 yıllık yüksek lisansa; İngiltere Üniversite Temsilciliğimizle başvurudan varışa kadar yanınızdayız.</p>
             <ul className="uklinks">
               <li><Link to="/yurtdisi-yaz-okullari/ingiltere"><strong>İngiltere yaz okulları</strong><span>7–17 yaş, kampüs konaklamalı</span></Link></li>
-              <li><Link to="/yurtdisi-dil-okullari/ingiltere"><strong>İngiltere dil okulları</strong><span>Londra, Brighton, Oxford</span></Link></li>
-              <li><Link to="/her-sey-dahil-paketler/londra"><strong>Her şey dahil Londra</strong><span>2 hafta 2.950 £’dan</span></Link></li>
+              <li><Link to="/yurtdisi-dil-okullari/ingiltere"><strong>İngiltere dil okulları</strong><span>4 hafta 650 £’dan başlayan fiyatlarla</span></Link></li>
+              <li><Link to="/her-sey-dahil-paketler/londra"><strong>Her Şey Dahil Londra</strong><span>2 hafta 2.950 £’dan</span></Link></li>
               <li><Link to="/lisans-programlari/ingiltere"><strong>İngiltere’de üniversite</strong><span>UCAS ve Foundation</span></Link></li>
               <li><Link to="/yurtdisi-yuksek-lisans/ingiltere"><strong>İngiltere’de yüksek lisans</strong><span>12 aylık master</span></Link></li>
               <li><Link to="/yurtdisi-lise-egitimi/ingiltere"><strong>İngiltere’de lise</strong><span>Yatılı okullar, A-Level</span></Link></li>
             </ul>
             <Link to="/ulkeler/ingiltere" className="textlink">İngiltere rehberinin tamamı <Icon name="arrow" size={15} /></Link>
           </div>
+        </div>
+      </section>
+
+      {/* GİDENLER ANLATIYOR */}
+      <section className="section section--deep" aria-labelledby="rev-h">
+        <div className="container">
+          <div className="revhead">
+            <div>
+              <p className="hero__kicker"><Icon name="bolt" size={16} /> Gidenler anlatıyor</p>
+              <h2 id="rev-h">Öğrencilerimiz ve Velilerimizin Gözünden</h2>
+            </div>
+            <div className="revhead__score">
+              <strong>{site.googleRating}</strong>
+              <span><Stars size={18} /><small>{site.googleReviewCount} Google yorumu</small></span>
+              <Link to="/musteri-yorumlari" className="textlink textlink--light">Tüm yorumlar <Icon name="arrow" size={15} /></Link>
+            </div>
+          </div>
+          <StudentWall dark />
+          <ReviewRail dark />
         </div>
       </section>
 
@@ -201,21 +220,6 @@ export default function Home() {
           <h2 id="partners-h" className="partners__h">Birlikte Çalıştığımız Okul ve Üniversitelerden Bazıları</h2>
         </div>
         <LogoMarquee />
-      </section>
-
-      {/* REVIEWS */}
-      <section className="section section--deep" aria-labelledby="rev-h">
-        <div className="container">
-          <div className="revhead">
-            <h2 id="rev-h">Danışanlarımızın Gözünden</h2>
-            <div className="revhead__score">
-              <strong>{site.googleRating}</strong>
-              <span><Stars size={18} /><small>{site.googleReviewCount} Google yorumu</small></span>
-              <Link to="/musteri-yorumlari" className="textlink textlink--light">Tüm yorumlar <Icon name="arrow" size={15} /></Link>
-            </div>
-          </div>
-          <ReviewRail dark />
-        </div>
       </section>
 
       {/* SEO + FAQ */}

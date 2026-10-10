@@ -1,11 +1,11 @@
 import { Link, useLocation } from 'react-router-dom'
 import { Seo, Btn, SectionHead, Stars, FaqList, CheckList } from '../components/ui'
 import { Icon } from '../components/Icon'
-import { ReviewRail } from '../components/signature'
+import { ReviewRail, StudentWall } from '../components/signature'
 import { PageHero, CtaBand } from '../components/layouts'
 import { LeadForm } from '../components/LeadForm'
 import { site, offices, values, stats } from '../data/site'
-import { reviews } from '../data/social'
+import { reviews, studentPhotos } from '../data/social'
 import { generalFaqs } from '../data/landings'
 
 export function About() {
@@ -112,15 +112,18 @@ export function Reviews() {
       <Seo title="Müşteri Yorumları" description="Kusursuz hizmet kalitesi: Tampa Yurtdışı Eğitim’i bir de öğrencilerimizin ve velilerimizin gözünden görün. Google’da 89 yorumla 5.0 puan." path="/musteri-yorumlari" />
       <PageHero
         tone="deep"
-        crumbs={[{ label: 'Kurumsal' }, { label: 'Müşteri yorumları' }]}
+        crumbs={[{ label: 'Kurumsal' }, { label: 'Gidenler anlatıyor' }]}
         kicker={<><Stars size={16} /> Google’da {site.googleRating} puan</>}
-        title="Kusursuz hizmet kalitesi"
-        lead="Bizi bir de müşterilerimizin gözünden görün."
+        title="Gidenler Anlatıyor"
+        lead="Bizi bir de öğrencilerimizin ve velilerimizin gözünden görün."
       >
         <Btn href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x14bbd98637fc0fcd:0x60b19c327d500f27" variant="light" iconLeft="external">Tüm incelemeleri Google’da görün</Btn>
       </PageHero>
       <section className="section">
         <div className="container">
+          <h2 className="h2">Öğrencilerimizden Kareler</h2>
+          <StudentWall />
+          <h2 className="h2">Google Yorumları</h2>
           <div className="revgrid">
             {reviews.map((r) => (
               <figure key={r.name} className="review review--card">
@@ -141,11 +144,11 @@ export function Reviews() {
             <p className="bignum">{site.studentCount}</p>
             <h2 className="h2">Öğrenci Bize Güvendi.</h2>
             <p className="muted">Tek bir paket ile sizleri yurt dışı eğitime gönderdiğimiz uygun fiyatlı tekliflere göz atın.</p>
-            <Btn to="/her-sey-dahil-paketler" icon="arrow">Her şey dahil paketlere göz atın</Btn>
+            <Btn to="/her-sey-dahil-paketler" icon="arrow">Her Şey Dahil Paketlere göz atın</Btn>
           </div>
           <div className="gallery" aria-label="Öğrencilerimizden kareler">
-            {['/img/misc/london-student.jpg', '/img/misc/student-bridge.jpg', '/img/misc/masters.jpg', '/img/misc/work-study.jpg'].map((src) => (
-              <img key={src} src={src} alt="" loading="lazy" width="320" height="320" />
+            {studentPhotos.slice(0, 4).map((p) => (
+              <img key={p.image} src={p.image} alt={p.alt} loading="lazy" width="320" height="320" />
             ))}
           </div>
         </div>

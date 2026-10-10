@@ -34,10 +34,10 @@ export const deep: Record<string, Deep> = {
             ['7–11 yaş', 'Kırsal veya kapalı kampüs programları', 'Oyun temelli İngilizce, yüksek gözetmen oranı'],
             ['12–14 yaş', 'Kampüs + şehir gezileri', 'Proje çalışmaları, haftada 2 tam gün gezi'],
             ['15–17 yaş', 'Londra, Oxford, Cambridge şehir kampüsleri', 'Akademik İngilizce, liderlik, sınav hazırlık'],
-            ['18 yaş ve üzeri', 'Yetişkin dil okulları / her şey dahil Londra paketi', 'Esnek süre, şehir hayatı'],
+            ['18 yaş ve üzeri', 'Yetişkin dil okulları / Her Şey Dahil Londra paketi', 'Esnek süre, şehir hayatı'],
           ],
         },
-        p: ['18 yaş üstü katılımcılar için [İngiltere dil okulları](/yurtdisi-dil-okullari/ingiltere) ve [her şey dahil Londra paketimiz](/her-sey-dahil-paketler/londra) daha uygun seçeneklerdir.'],
+        p: ['18 yaş üstü katılımcılar için [İngiltere dil okulları](/yurtdisi-dil-okullari/ingiltere) ve [Her Şey Dahil Londra paketimiz](/her-sey-dahil-paketler/londra) daha uygun seçeneklerdir.'],
       },
       {
         h: 'İngiltere yaz okulunda bir gün',
@@ -125,7 +125,7 @@ export const deep: Record<string, Deep> = {
       },
       {
         h: 'Konaklama',
-        p: ['Aile yanı konaklama dil pratiği için en etkili seçenektir; öğrenci rezidansları ise daha bağımsız bir yaşam sunar. [Her şey dahil Londra paketimizde](/her-sey-dahil-paketler/londra) tek kişilik, özel banyolu yurt odası fiyata dahildir.'],
+        p: ['Aile yanı konaklama dil pratiği için en etkili seçenektir; öğrenci rezidansları ise daha bağımsız bir yaşam sunar. [Her Şey Dahil Londra paketimizde](/her-sey-dahil-paketler/londra) tek kişilik, özel banyolu yurt odası fiyata dahildir.'],
       },
       {
         h: 'Vize',
@@ -133,7 +133,7 @@ export const deep: Record<string, Deep> = {
       },
     ],
     faqs: [
-      { q: 'İngiltere dil okulu için en kısa süre ne kadar?', a: 'Programlar 1 haftadan başlar. Her şey dahil Londra paketimiz 2 haftadan itibaren planlanabilir.' },
+      { q: 'İngiltere dil okulu için en kısa süre ne kadar?', a: 'Programlar 1 haftadan başlar. Her Şey Dahil Londra paketimiz 2 haftadan itibaren planlanabilir.' },
       { q: 'İngiltere’de dil okulunda çalışabilir miyim?', a: 'Hayır. Dil kursları için verilen Standard Visitor ve Short-term Study vizeleri çalışma hakkı tanımaz. Çalışarak dil öğrenmek isteyenler İrlanda veya Malta gibi ülkeleri değerlendirebilir.' },
       { q: 'İngiltere dil okulları her hafta mı başlıyor?', a: 'Genel İngilizce programlarında başlangıç genellikle her pazartesidir. Sınav hazırlık programlarının belirli başlangıç tarihleri vardır.' },
     ],
@@ -188,7 +188,7 @@ export const countryDeep: Record<string, Deep> = {
           '**14–18 yaş:** [İngiltere’de lise](/yurtdisi-lise-egitimi/ingiltere): yatılı okullar ve A-Level',
           '**Lise mezunları:** [İngiltere’de üniversite](/lisans-programlari/ingiltere): Foundation ve UCAS',
           '**Üniversite mezunları:** [İngiltere’de yüksek lisans](/yurtdisi-yuksek-lisans/ingiltere): 12 aylık master',
-          '**Her yaş:** [İngiltere dil okulları](/yurtdisi-dil-okullari/ingiltere) ve [her şey dahil Londra paketi](/her-sey-dahil-paketler/londra)',
+          '**Her yaş:** [İngiltere dil okulları](/yurtdisi-dil-okullari/ingiltere) ve [Her Şey Dahil Londra paketi](/her-sey-dahil-paketler/londra)',
         ],
       },
       {
@@ -196,5 +196,76 @@ export const countryDeep: Record<string, Deep> = {
         p: ['Karar vermeden önce okumanızı önerdiğimiz yazılar: [İngiltere’de yurt dışı eğitim rehberi](/blog/ingilterede-yurt-disi-egitim-rehberi), [İngiltere yaz okulu rehberi 2027](/blog/ingiltere-yaz-okulu-rehberi), [İngiltere öğrenci vizesi](/blog/ingiltere-ogrenci-vizesi-rehberi) ve [İngiltere’de öğrenci olarak yaşamak](/blog/ingilterede-ogrenci-yasam-maliyeti).'],
       },
     ],
+  },
+  'lisans:japonya': {
+    seoTitle: 'Japonya’da Üniversite: Japonca Hazırlık ve Lisans Başvurusu',
+    description: 'Japonya’da üniversite okumak: Japonca dil okulunda hazırlık, İngilizce lisans programları, EJU ve JLPT, öğrenci vizesi ve başvuru süreci.',
+    lead: 'Japonca hazırlık programından lisans başvurusuna kadar Japonya’da üniversite yolculuğunuzu birlikte planlıyoruz.',
+    sections: [
+      {
+        h: 'Japonya’da üniversiteye giden iki yol',
+        list: [
+          '**Japonca hazırlık + Japonca lisans:** Japonya’da bir dil okulunda 1–2 yıl Japonca eğitimi, ardından Japonca eğitim veren bölümlere başvuru',
+          '**İngilizce lisans programları:** Seçili üniversitelerin İngilizce yürütülen bölümlerine IELTS/TOEFL ile doğrudan başvuru',
+        ],
+      },
+      {
+        h: 'Başvuruda neler istenir?',
+        list: ['Lise diploması ve transkript', 'Dil yeterliliği: JLPT (Japonca bölümler) veya IELTS/TOEFL (İngilizce bölümler)', 'Birçok üniversitede EJU (Examination for Japanese University Admission) sonuçları', 'Motivasyon mektubu ve gerekirse mülakat'],
+      },
+    ],
+  },
+  'lisans:kore': {
+    seoTitle: 'Güney Kore’de Üniversite: Korece Hazırlık, TOPIK ve Burslar',
+    description: 'Güney Kore’de üniversite okumak: üniversite dil enstitülerinde Korece hazırlık, TOPIK şartı, İngilizce programlar, GKS bursu ve D-2 öğrenci vizesi.',
+    lead: 'Üniversite dil enstitüsünde Korece hazırlıktan lisans başvurusuna ve D-2 öğrenci vizesine kadar Güney Kore’de üniversite sürecinizi yönetiyoruz.',
+    sections: [
+      {
+        h: 'Güney Kore’de lisans eğitimi nasıl işler?',
+        list: [
+          '**Korece hazırlık:** Üniversitelerin dil enstitülerinde dönemlik yoğun Korece programları (D-4 vizesi)',
+          '**Korece lisans:** Çoğu bölüm için TOPIK 3 veya üzeri seviye',
+          '**İngilizce lisans:** Seçili bölümlerde IELTS/TOEFL ile başvuru',
+          '**Burslar:** GKS (Kore Hükümeti Bursu) ve üniversitelerin başarı bursları',
+        ],
+      },
+    ],
+  },
+  'lisans:dubai': {
+    seoTitle: 'Dubai’de Üniversite: İngilizce Lisans ve Uluslararası Kampüsler',
+    description: 'Dubai’de üniversite okumak: İngiliz, Amerikan ve Avustralya üniversitelerinin Dubai kampüsleri, İngilizce lisans programları, foundation ve öğrenci oturum izni.',
+    lead: 'Dünyaca tanınan üniversitelerin Dubai kampüslerinde İngilizce lisans eğitimi; Türkiye’ye 4,5 saat uzaklıkta, güvenli ve uluslararası bir şehirde.',
+    sections: [
+      {
+        h: 'Dubai’de lisans eğitiminin öne çıkan yanları',
+        list: [
+          'İngiliz, Amerikan ve Avustralya üniversitelerinin Dubai kampüslerinde, çoğu programda ana kampüsle aynı diploma',
+          'Tüm eğitim İngilizce; yeterli seviyesi olmayan öğrenciler için foundation (hazırlık) programları',
+          'İşletme, mühendislik, bilgisayar bilimleri, medya ve turizm işletmeciliği gibi popüler bölümler',
+          'Okul sponsorluğunda öğrenci oturum izni',
+        ],
+      },
+    ],
+  },
+  'lisans:arjantin': {
+    seoTitle: 'Arjantin’de Üniversite: İspanyolca Hazırlık ve Lisans Eğitimi',
+    description: 'Arjantin’de üniversite okumak: Buenos Aires ve Córdoba’da İspanyolca hazırlık programları, lisans başvurusu, denklik ve öğrenci oturum izni.',
+    lead: 'İspanyolca hazırlık programıyla başlayıp Arjantin’de üniversite eğitimine geçiş; okul seçiminden kayda ve oturum iznine kadar yanınızdayız.',
+    sections: [
+      {
+        h: 'Hazırlıktan üniversiteye adım adım',
+        list: [
+          '**İspanyolca hazırlık:** Üniversitede derslere katılabilecek akademik İspanyolca seviyesine ulaşmak için yoğun dil programı',
+          '**Üniversite başvurusu:** Lise diploması denkliği, İspanyolca yeterliliği ve okulun istediği belgelerle başvuru',
+          '**Oturum izni:** Kabul belgesiyle öğrenci oturum izni (residencia) başvurusu',
+        ],
+      },
+    ],
+  },
+  'dil:arjantin': {
+    seoTitle: 'Arjantin’de İspanyolca Dil Okulları ve Üniversite Hazırlık',
+    description: 'Arjantin’de İspanyolca eğitimi: Buenos Aires’te kısa süreli dil kursları ve üniversiteye hazırlık programları, konaklama ve vize bilgileri.',
+    lead: 'Buenos Aires’te İspanyolca: kısa süreli dil kurslarından üniversiteye hazırlık programlarına kadar.',
+    sections: [],
   },
 }

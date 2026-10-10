@@ -10,7 +10,7 @@ type MenuKey = 'programs' | 'countries' | 'packages' | 'services' | 'resources' 
 const topItems: { key: MenuKey; label: string; to: string }[] = [
   { key: 'programs', label: 'Programlar', to: '/yurtdisi-egitim' },
   { key: 'countries', label: 'Ülkeler', to: '/ulkeler' },
-  { key: 'packages', label: 'Her şey dahil', to: '/her-sey-dahil-paketler' },
+  { key: 'packages', label: 'Her Şey Dahil', to: '/her-sey-dahil-paketler' },
   { key: 'services', label: 'Hizmetler', to: '/hizmetler' },
   { key: 'resources', label: 'Kaynaklar', to: '/bilgi-bankasi' },
   { key: 'corporate', label: 'Kurumsal', to: '/hakkimizda' },
@@ -90,7 +90,7 @@ export function Header() {
       <header className={`header ${scrolled ? 'is-scrolled' : ''} ${open ? 'has-open' : ''}`}>
         <div className="container header__in">
           <Link to="/" className="logo" aria-label="Tampa Yurtdışı Eğitim ana sayfa">
-            <img src="/img/brand/logo-horizontal.png" alt="Tampa Yurtdışı Eğitim" width="164" height="64" />
+            <img src="/img/brand/logo-wordmark.png" alt="Tampa Yurtdışı Eğitim" width="98" height="52" />
           </Link>
 
           <nav className="mainnav" ref={navRef} aria-label="Ana menü" onMouseLeave={leave}>
@@ -145,9 +145,9 @@ export function Header() {
                   )}
                 </div>
                 <Link to="/her-sey-dahil-paketler" className="mega__promo">
-                  <img src="/img/misc/london-student-800.jpg" alt="" loading="lazy" width="320" height="220" />
+                  <img src="/img/misc/london-package-800.jpg" alt="" loading="lazy" width="320" height="220" />
                   <span className="mega__promo-tx">
-                    <strong>Her şey dahil paketler</strong>
+                    <strong>Her Şey Dahil Paketler</strong>
                     <span>Tek fiyat yurtdışı deneyimi: Londra, Dubai, Malta</span>
                   </span>
                 </Link>
@@ -266,7 +266,7 @@ function MobileDrawer({ open, onClose }: { open: boolean; onClose: () => void })
       <div className="drawer__backdrop" onClick={onClose} />
       <div className="drawer__panel" role="dialog" aria-modal="true" aria-label="Menü">
         <div className="drawer__head">
-          <img src="/img/brand/logo-horizontal.png" alt="Tampa Yurtdışı Eğitim" width="140" height="55" />
+          <img src="/img/brand/logo-wordmark.png" alt="Tampa Yurtdışı Eğitim" width="91" height="48" />
           <button type="button" onClick={onClose} aria-label="Menüyü kapat" className="drawer__close"><Icon name="close" size={24} /></button>
         </div>
         <nav className="drawer__nav" aria-label="Mobil menü">
@@ -281,7 +281,7 @@ function MobileDrawer({ open, onClose }: { open: boolean; onClose: () => void })
             </ul>
           </details>
           <details>
-            <summary>Her şey dahil paketler <Icon name="chevronDown" size={18} /></summary>
+            <summary>Her Şey Dahil Paketler <Icon name="chevronDown" size={18} /></summary>
             <ul>{packageMenu.map((p) => <li key={p.to}><NavLink to={p.to}>{p.label}</NavLink></li>)}</ul>
           </details>
           <details>

@@ -1091,3 +1091,65 @@
     height: 22px;
   }
 }
+
+/* ---------- Gidenler anlatıyor (öğrenci fotoğrafları) ---------- */
+.stwall {
+  list-style: none;
+  margin: 0 0 2.5rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.stwall__item {
+  position: relative;
+  margin: 0;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background: var(--teal-900);
+}
+.stwall__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 72%;
+  transition: transform 0.6s var(--ease);
+}
+.stwall__item:hover img {
+  transform: scale(1.04);
+}
+.stwall__item figcaption {
+  position: absolute;
+  inset: auto 0 0;
+  display: grid;
+  gap: 0.15rem;
+  padding: 2.5rem 1rem 1rem;
+  color: #fff;
+  background: linear-gradient(to top, rgb(6 40 48 / 0.92), rgb(6 40 48 / 0));
+}
+.stwall__item figcaption strong {
+  font-family: var(--f-display);
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+.stwall__item figcaption span:last-child {
+  font-size: var(--fs-xs);
+  color: var(--teal-100);
+}
+.stwall__item .route {
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+@media (max-width: 560px) {
+  .stwall {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+  }
+  .stwall__item figcaption {
+    padding: 2rem 0.7rem 0.7rem;
+  }
+  .stwall__item figcaption strong {
+    font-size: 0.98rem;
+  }
+}

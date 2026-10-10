@@ -6,7 +6,7 @@ import { PageHero, CtaBand } from '../components/layouts'
 import { LeadForm } from '../components/LeadForm'
 import { programs, programByKey, countriesFor, type Program } from '../data/programs'
 import { countries, countryBySlug, type Country, type ProgramKey } from '../data/countries'
-import { packages } from '../data/packages'
+import { languageFromPrices, languageFromByCountry, languageFromLabel } from '../data/packages'
 import { cities } from '../data/cities'
 import { guidesForProgram, guidesForCountry } from '../data/guides'
 import { deep, countryDeep, type DeepSection } from '../data/deep'
@@ -82,7 +82,7 @@ export function ProgramsOverview() {
 export function ProgramHub({ programKey }: { programKey: ProgramKey }) {
   const p = programByKey[programKey]
   const list = countriesFor(p.key)
-  const showPackages = p.key === 'dil' || p.key === 'yaz'
+  const showPackages = p.key === 'dil'
   return (
     <>
       <Seo title={p.name} description={`${p.lead} ${list.length} ülkede ${p.short.toLowerCase()} seçenekleri, başvuru süreci, gerekli belgeler ve sık sorulan sorular.`} path={`/${p.slug}`} />
@@ -95,7 +95,7 @@ export function ProgramHub({ programKey }: { programKey: ProgramKey }) {
         aside={<FactCard facts={p.facts} title={`${list.length} ülkede ${p.short.toLowerCase()}`} />}
       >
         <Btn to="/basvuru" size="lg" icon="arrow">Ücretsiz danışmanlık al</Btn>
-        {showPackages && <Btn to="/her-sey-dahil-paketler" variant="light" size="lg">Her şey dahil paketler</Btn>}
+        {showPackages && <Btn to="/her-sey-dahil-paketler" variant="light" size="lg">Her Şey Dahil Paketler</Btn>}
       </PageHero>
 
       <section className="section">
@@ -169,13 +169,17 @@ export function ProgramHub({ programKey }: { programKey: ProgramKey }) {
       {showPackages && (
         <section className="section section--mist">
           <div className="container">
-            <SectionHead title="Her şey dahil dil paketleri" intro="Konaklama, vize, sigorta ve aktiviteler tek fiyatta." action={{ label: 'Tüm paketler', to: '/her-sey-dahil-paketler' }} />
+            <SectionHead
+              title="Dil Eğitimi Başlangıç Fiyatları"
+              intro="Dil eğitimlerinde 1 haftadan 52 haftaya kadar dilediğiniz süreyi seçebilir, programı yalnızca eğitim ve konaklama olarak da planlayabilirsiniz. Uçak bileti, vize ve aktivitelerin tek fiyatta olduğu seçenekler için Her Şey Dahil Paketlerimize göz atın."
+              action={{ label: 'Her Şey Dahil Paketler', to: '/her-sey-dahil-paketler' }}
+            />
             <div className="minipkgs">
-              {packages.map((pk) => (
-                <Link key={pk.slug} to={`/her-sey-dahil-paketler/${pk.slug}`} className="minipkg">
-                  <span className="code">{pk.code}</span>
-                  <strong>{pk.city}</strong>
-                  <span>{pk.prices[0].weeks} haftadan, {pk.currencySymbol}{pk.prices[0].price.toLocaleString('tr-TR')}</span>
+              {languageFromPrices.map((l) => (
+                <Link key={l.country} to={`/${p.slug}/${l.country}`} className="minipkg">
+                  <span className="code">{l.code}</span>
+                  <strong>{l.city}</strong>
+                  <span>{languageFromLabel(l)}</span>
                   <Icon name="arrow" size={16} />
                 </Link>
               ))}
@@ -246,6 +250,9 @@ export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
               <div><dt>Para birimi</dt><dd>{c.currency}</dd></div>
               <div><dt>Uçuş</dt><dd>{c.flightHours}</dd></div>
               <div><dt>Popüler şehir</dt><dd>{c.cities.slice(0, 3).join(', ')}</dd></div>
+              {programKey === 'dil' && languageFromByCountry[c.slug]?.price && (
+                <div><dt>Başlangıç</dt><dd>{languageFromLabel(languageFromByCountry[c.slug])}</dd></div>
+              )}
             </dl>
           </div>
         }

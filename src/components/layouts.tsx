@@ -31,7 +31,7 @@ export function LandingLayout() {
     <>
       <header className="lp-header">
         <div className="container lp-header__in">
-          <Link to="/" aria-label="Tampa Yurtdışı Eğitim"><img src="/img/brand/logo-horizontal.png" alt="Tampa Yurtdışı Eğitim" width="150" height="58" /></Link>
+          <Link to="/" aria-label="Tampa Yurtdışı Eğitim"><img src="/img/brand/logo-wordmark.png" alt="Tampa Yurtdışı Eğitim" width="91" height="48" /></Link>
           <div className="lp-header__actions">
             <a href={site.whatsapp} target="_blank" rel="noopener noreferrer" className="lp-header__wa"><Icon name="chat" size={18} /><span>WhatsApp</span></a>
             <a href={site.phoneHref} className="btn btn--teal btn--sm"><Icon name="phone" size={16} /><span>{site.phone}</span></a>

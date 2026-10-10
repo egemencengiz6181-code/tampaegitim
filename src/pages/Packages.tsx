@@ -9,7 +9,7 @@ import NotFound from './NotFound'
 import { cardImg } from '../lib/img'
 
 const pkgFaqs = [
-  { q: 'Paketler kimler için uygun?', a: 'Her şey dahil dil paketlerimiz 18 yaş ve üzeri katılımcılar içindir. Daha küçük yaş grupları için yaz okulu programlarımızı inceleyebilirsiniz.' },
+  { q: 'Paketler kimler için uygun?', a: 'Her Şey Dahil dil paketlerimiz 18 yaş ve üzeri katılımcılar içindir. Daha küçük yaş grupları için yaz okulu programlarımızı inceleyebilirsiniz.' },
   { q: 'Paket süresini sonradan uzatabilir miyim?', a: 'Okul ve konaklama uygunluğuna bağlı olarak süre uzatımı mümkündür. Uzatma talebinizi mümkün olduğunca erken iletmenizi öneriyoruz.' },
   { q: 'Fiyatlar neden döviz cinsinden?', a: 'Okul, konaklama ve hizmet bedelleri ilgili ülkenin para birimiyle belirlendiği için paket fiyatları GBP, USD veya EUR olarak sunulur.' },
   { q: 'Tek kişilik oda alabilir miyim?', a: 'Londra paketinde tek kişilik özel banyolu oda standarttır. Dubai ve Malta paketlerinde uygunluğa göre single upgrade yapılabilir.' },
@@ -18,12 +18,12 @@ const pkgFaqs = [
 export function PackagesIndex() {
   return (
     <>
-      <Seo title="Her Şey Dahil Yurtdışı Dil Eğitimi Paketleri" description="Londra, Dubai ve Malta’da 2–10 haftalık her şey dahil dil eğitimi paketleri: eğitim, konaklama, vize, sigorta, VIP karşılama ve eğlence paketi tek fiyatta." path="/her-sey-dahil-paketler" />
+      <Seo title="Her Şey Dahil Yurtdışı Dil Eğitimi Paketleri" description="Londra, Dubai ve Malta’da 2–10 haftalık Her Şey Dahil dil eğitimi paketleri: eğitim, konaklama, vize, sigorta, VIP karşılama ve eğlence paketi tek fiyatta." path="/her-sey-dahil-paketler" />
       <PageHero
-        image="/img/misc/london-student.jpg"
-        crumbs={[{ label: 'Her şey dahil paketler' }]}
-        kicker="Her şey dahil paketler ile tasarruf edin"
-        title="Tam kapsamlı, her şey dahil paketler"
+        image="/img/misc/london-package.jpg"
+        crumbs={[{ label: 'Her Şey Dahil Paketler' }]}
+        kicker="Her Şey Dahil Paketler ile tasarruf edin"
+        title="Tam Kapsamlı, Her Şey Dahil Paketler"
         lead="Yurt dışında dil öğrenirken unutulmaz bir tatil yapmak ister misiniz? İngilizceyi Londra’nın tarihi atmosferinde, Dubai’nin büyüleyici modernliğinde veya Malta’nın eşsiz Akdeniz sahillerinde öğrenin."
       >
         <Btn href="#paketler" size="lg" icon="arrow">Fiyatlara göz atın</Btn>
@@ -53,7 +53,7 @@ export function PackagesIndex() {
             <h2 className="h2">Sık Sorulan Sorular</h2>
             <FaqList items={pkgFaqs} />
           </div>
-          <LeadForm source="paketler" defaultProgram="Her şey dahil paket" title="Paket teklifi isteyin" note="Sınırlı kontenjanlarımız dolmadan yerinizi ayırtın." />
+          <LeadForm source="paketler" defaultProgram="Her Şey Dahil paket" title="Paket teklifi isteyin" note="Sınırlı kontenjanlarımız dolmadan yerinizi ayırtın." />
         </div>
       </section>
       <CtaBand title="Dil öğrenmenin ve dünyayı keşfetmenin tam zamanı." />
@@ -120,7 +120,7 @@ export function PackageDetail() {
       />
       <PageHero
         image={p.image}
-        crumbs={[{ label: 'Her şey dahil paketler', to: '/her-sey-dahil-paketler' }, { label: p.city }]}
+        crumbs={[{ label: 'Her Şey Dahil Paketler', to: '/her-sey-dahil-paketler' }, { label: p.city }]}
         kicker={<RouteCode to={p.code} light />}
         title={p.title}
         lead={p.lead}
@@ -170,7 +170,7 @@ export function PackageDetail() {
         </article>
         <aside className="detail__side" id="form">
           <div className="sticky">
-            <LeadForm variant="compact" source={`paket:${p.slug}`} defaultProgram="Her şey dahil paket" title={`${p.city} paketi için bilgi alın`} note="Uygun tarihleri ve kontenjan durumunu hemen paylaşalım." />
+            <LeadForm variant="compact" source={`paket:${p.slug}`} defaultProgram="Her Şey Dahil paket" title={`${p.city} paketi için bilgi alın`} note="Uygun tarihleri ve kontenjan durumunu hemen paylaşalım." />
           </div>
         </aside>
       </div>

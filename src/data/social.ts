@@ -51,3 +51,13 @@ export const universities = [
   { name: 'Poznan University of Technology', file: 'images-1.png' },
   { name: 'Think Poland', file: 'images.png' },
 ]
+
+// "Gidenler Anlatıyor" köşesi: Tampa'nın paylaştığı gerçek öğrenci fotoğrafları. Yeni fotoğraflar public/img/students/ altına eklenip buraya yazılır.
+export type StudentPhoto = { image: string; code: string; city: string; school: string; note: string; alt: string }
+
+export const studentPhotos: StudentPhoto[] = [
+  { image: '/img/students/ogrenci-1.jpg', code: 'LHR', city: 'Londra', school: 'ES London', note: 'Sertifika töreni', alt: 'Tampa öğrencisi Londra’daki dil okulunda sertifikasını öğretmenleri ve sınıf arkadaşlarıyla birlikte alıyor' },
+  { image: '/img/students/ogrenci-2.jpg', code: 'LHR', city: 'Londra', school: 'ES London', note: 'Mezuniyet günü', alt: 'Mezuniyet kepi takan Tampa öğrencisi Londra’daki okulunda sertifikasını gösteriyor' },
+  { image: '/img/students/ogrenci-3.jpg', code: 'LHR', city: 'Londra', school: 'ES London', note: 'Kurs tamamlandı', alt: 'Tampa öğrencisi Londra’daki dil kursunu tamamladıktan sonra sertifikasıyla' },
+  { image: '/img/students/ogrenci-4.jpg', code: 'LHR', city: 'Londra', school: 'ES London', note: 'Okulda bir gün', alt: 'Tampa öğrencisi Londra’daki dil okulunda okul personeliyle birlikte' },
+]

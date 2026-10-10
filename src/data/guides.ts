@@ -94,7 +94,7 @@ export const guides: Guide[] = [
     sections: [
       { h: 'Uygun maliyet', p: ['Malta’daki dil okulları ve konaklama seçenekleri, İngiltere ve İrlanda’ya kıyasla genellikle daha ekonomiktir. Bu da aynı bütçeyle daha uzun süre eğitim almayı mümkün kılar.'] },
       { h: 'İngilizce resmi dil', p: ['Malta’da İngilizce, Maltacayla birlikte resmi dildir. Günlük hayatta, resmi işlemlerde ve iş dünyasında yaygın olarak kullanılır.'] },
-      { h: 'Yakınlık ve iklim', p: ['İstanbul’dan direkt uçuşlarla yaklaşık 2,5 saatte ulaşılan Malta, yılın büyük bölümünde güneşli ve ılıman bir iklime sahiptir. Plaj, tekne turları ve ada gezileri sosyal programın doğal bir parçasıdır.'] },
+      { h: 'Yakınlık ve iklim', p: ['İstanbul’dan direkt uçuşlarla yaklaşık 2,5 saatte ulaşılan Malta, yılın büyük bölümünde güneşli ve ılıman bir iklime sahiptir. Plaj, tekne gezileri ve ada gezileri sosyal programın doğal bir parçasıdır.'] },
       { h: 'Schengen vizesi', p: ['Malta bir Schengen ülkesidir. 90 güne kadar programlar Schengen vizesiyle yapılır ve bu vize süresince diğer Schengen ülkelerine seyahat edilebilir.'] },
     ],
   },
@@ -641,7 +641,7 @@ export const guides: Guide[] = [
     summary: 'Eğitim ücreti dışında hesaba katılması gereken kalemler.',
     sections: [
       { h: 'Bütçe kalemleri', list: ['Okul ücreti ve kayıt ücreti', 'Konaklama', 'Vize ve sigorta', 'Uçak bileti', 'Yerel ulaşım', 'Yemek ve günlük giderler', 'Ders materyalleri', 'Sosyal aktiviteler ve seyahat'] },
-      { h: 'İpuçları', p: ['Şehir seçimi bütçeyi en çok etkileyen faktördür. Aynı ülkede başkent yerine ikinci büyük şehri seçmek konaklama giderlerini ciddi oranda düşürebilir. Her şey dahil paketlerimiz bütçe sürprizlerini ortadan kaldırmak için tasarlandı.'] },
+      { h: 'İpuçları', p: ['Şehir seçimi bütçeyi en çok etkileyen faktördür. Aynı ülkede başkent yerine ikinci büyük şehri seçmek konaklama giderlerini ciddi oranda düşürebilir. Her Şey Dahil paketlerimiz bütçe sürprizlerini ortadan kaldırmak için tasarlandı.'] },
       { h: 'Kur riski', p: ['Okul ücretleri genellikle döviz cinsindendir. Ödemeleri planlarken kur dalgalanmalarını hesaba katmak ve ödeme takvimini önceden netleştirmek önemlidir.'] },
     ],
   },

@@ -6,7 +6,7 @@ export const worldBodies: Record<string, PostSection[]> = {
     { h: 'Programlar', list: ['Genel İngilizce (haftada 20–30 ders saati)', 'IELTS ve Cambridge sınav hazırlık', '30 yaş üstü programlar', 'Yaz aylarında genç ve aile programları', 'Uzun dönem akademik yıl programları'] },
     { h: 'Hangi bölge?', p: ['Okulların büyük bölümü St. Julian’s ve Sliema’dadır. St. Julian’s sosyal hayatıyla, Sliema sahil yürüyüş yolu ve ulaşım kolaylığıyla öne çıkar.'] },
     { h: 'Vize', p: ['Malta bir Schengen ülkesidir. 90 güne kadar programlar Schengen vizesiyle, daha uzun programlar ulusal vizeyle yapılır.'] },
-    { h: 'Her şey dahil Malta paketi', p: ['Konaklama, sağlık sigortası, vize ücretleri, VIP karşılama, SIM kart ve okul aktivitelerini içeren [her şey dahil Malta paketimiz](/her-sey-dahil-paketler/malta) 2 haftadan itibaren planlanabilir. Tüm okullar: [Malta dil okulları](/yurtdisi-dil-okullari/malta).'] },
+    { h: 'Her Şey Dahil Malta paketi', p: ['Konaklama, sağlık sigortası, vize ücretleri, VIP karşılama, SIM kart ve okul aktivitelerini içeren [Her Şey Dahil Malta paketimiz](/her-sey-dahil-paketler/malta) 2 haftadan itibaren planlanabilir. Tüm okullar: [Malta dil okulları](/yurtdisi-dil-okullari/malta).'] },
   ],
 
   'irlanda-work-and-study-rehberi': [
@@ -54,7 +54,7 @@ export const worldBodies: Record<string, PostSection[]> = {
   'dubai-dil-okulu': [
     { h: 'Neden Dubai?', list: ['Türkiye’ye yakınlık (yaklaşık 4,5 saat)', 'Güvenli ve modern şehir yaşamı', 'Uluslararası iş dünyası ve ağ kurma fırsatı', 'Kış aylarında sıcak iklim'] },
     { h: 'Programlar', p: ['Dubai’deki dil okulları genel İngilizce, iş İngilizcesi ve sınav hazırlık programları sunar. Uluslararası üniversite kampüsleri sayesinde dil eğitiminin ardından [Dubai’de yüksek lisans](/yurtdisi-yuksek-lisans/dubai) da mümkündür.'] },
-    { h: 'Her şey dahil Dubai paketi', p: ['Konaklama, sağlık sigortası, vize ücretleri, VIP karşılama, SIM kart ile Burj Khalifa, Ferrari Müzesi, Dubai Müzesi, çöl safarisi ve Ski Dubai biletlerini içeren [her şey dahil Dubai paketimiz](/her-sey-dahil-paketler/dubai) 2 haftadan itibaren planlanabilir.'] },
+    { h: 'Her Şey Dahil Dubai paketi', p: ['Konaklama, sağlık sigortası, vize ücretleri, VIP karşılama, SIM kart ile Burj Khalifa, Ferrari Müzesi, Dubai Müzesi, çöl safarisi ve Ski Dubai biletlerini içeren [Her Şey Dahil Dubai paketimiz](/her-sey-dahil-paketler/dubai) 2 haftadan itibaren planlanabilir.'] },
     { h: 'Sonraki adım', p: ['Okullar: [Dubai dil okulları](/yurtdisi-dil-okullari/dubai).'] },
   ],
 

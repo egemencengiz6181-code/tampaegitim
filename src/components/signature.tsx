@@ -4,7 +4,7 @@ import { Icon } from './Icon'
 import { RouteCode, Stars } from './ui'
 import type { Country } from '../data/countries'
 import { programByKey } from '../data/programs'
-import { reviews, universities } from '../data/social'
+import { reviews, universities, studentPhotos } from '../data/social'
 import { cardImg } from '../lib/img'
 
 /* ---------- Split-flap departure board ---------- */
@@ -158,6 +158,27 @@ export function ReviewRail({ dark }: { dark?: boolean }) {
         <button type="button" onClick={() => scroll(1)} aria-label="Sonraki yorumlar"><Icon name="chevronRight" /></button>
       </div>
     </div>
+  )
+}
+
+/* ---------- Gidenler anlatıyor: gerçek öğrenci fotoğrafları ---------- */
+export function StudentWall({ dark, limit }: { dark?: boolean; limit?: number }) {
+  const items = limit ? studentPhotos.slice(0, limit) : studentPhotos
+  return (
+    <ul className={`stwall ${dark ? 'stwall--dark' : ''}`} aria-label="Öğrencilerimizden kareler">
+      {items.map((p) => (
+        <li key={p.image}>
+          <figure className="stwall__item">
+            <img src={p.image} alt={p.alt} loading="lazy" width="480" height="600" />
+            <figcaption>
+              <RouteCode to={p.code} light />
+              <strong>{p.note}</strong>
+              <span>{p.school}, {p.city}</span>
+            </figcaption>
+          </figure>
+        </li>
+      ))}
+    </ul>
   )
 }
 

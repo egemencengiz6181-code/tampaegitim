@@ -12,7 +12,7 @@ export default function Landing() {
   const { slug = '' } = useParams()
   const l = landingBySlug[slug]
   if (!l) return <NotFound />
-  const formProgram = ({ 'Dil Okulu': 'Dil okulu', 'Her Şey Dahil Paket': 'Her şey dahil paket', 'Yaz Okulu': 'Yaz okulu', 'Yüksek Lisans': 'Yüksek lisans', 'Üniversite': 'Üniversite', 'Work and Study': 'Work and study', 'Yüksek lisans': 'Yüksek lisans', Lise: 'Lise' } as Record<string, string>)[l.program] ?? ''
+  const formProgram = ({ 'Dil Okulu': 'Dil okulu', 'Her Şey Dahil Paket': 'Her Şey Dahil paket', 'Yaz Okulu': 'Yaz okulu', 'Yüksek Lisans': 'Yüksek lisans', 'Üniversite': 'Üniversite', 'Work and Study': 'Work and study', 'Yüksek lisans': 'Yüksek lisans', Lise: 'Lise' } as Record<string, string>)[l.program] ?? ''
   return (
     <>
       <Seo title={`${l.label} | Tampa Yurtdışı Eğitim`} description={l.sub} path={`/lp/${l.slug}`} image={l.image} noindex />

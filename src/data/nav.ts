@@ -31,7 +31,7 @@ export const serviceMenu: NavLink[] = [
 ]
 
 export const packageMenu: NavLink[] = [
-  { label: 'Tüm her şey dahil paketler', to: '/her-sey-dahil-paketler' },
+  { label: 'Tüm Her Şey Dahil Paketler', to: '/her-sey-dahil-paketler' },
   ...packages.map((p) => ({ label: `${p.city} dil eğitimi paketi`, to: `/her-sey-dahil-paketler/${p.slug}`, note: `${p.currencySymbol}${p.prices[0].price.toLocaleString('tr-TR')}’den` })),
 ]
 
@@ -45,7 +45,7 @@ export const corporateMenu: NavLink[] = [
   { label: 'Hakkımızda', to: '/hakkimizda' },
   { label: 'Ekibimiz', to: '/ekibimiz' },
   { label: 'Ofislerimiz', to: '/ofislerimiz' },
-  { label: 'Müşteri yorumları', to: '/musteri-yorumlari' },
+  { label: 'Gidenler anlatıyor', to: '/musteri-yorumlari' },
   { label: 'Kariyer', to: '/kariyer' },
   { label: 'Blog', to: '/blog' },
   { label: 'İletişim', to: '/iletisim' },
