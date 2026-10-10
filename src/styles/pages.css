@@ -48,7 +48,6 @@
   letter-spacing: -0.045em;
   color: var(--teal-900);
   margin-bottom: 1.5rem;
-  max-width: 11ch;
 }
 .hero__lead {
   font-size: var(--fs-lead);
@@ -92,9 +91,6 @@
 @media (max-width: 960px) {
   .hero__in {
     grid-template-columns: 1fr;
-  }
-  .hero__title {
-    max-width: 14ch;
   }
 }
 
@@ -798,7 +794,7 @@
 
 .minipkgs {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
   gap: 1rem;
 }
 .minipkg {
@@ -2729,4 +2725,14 @@ a.filter {
   .resgallery {
     grid-template-columns: 1fr 1fr;
   }
+}
+.hero__title--slogan {
+  font-size: clamp(2.3rem, 1.1rem + 4.2vw, 4.6rem);
+}
+.hero__title--slogan span {
+  display: block;
+  white-space: nowrap;
+}
+.hero__title--slogan span:last-child {
+  color: var(--teal);
 }

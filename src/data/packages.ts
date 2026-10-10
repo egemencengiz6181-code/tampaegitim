@@ -127,14 +127,14 @@ export const formatPrice = (n: number) => n.toLocaleString('tr-TR')
 /**
  * Yurt dışı dil eğitimi başlangıç fiyatları. Dil eğitimleri 1–52 hafta arası ve yalnızca
  * eğitim + konaklama olarak da alınabildiği için burada sabit paket fiyatı değil "başlayan fiyat" gösterilir.
- * price: null olanların fiyatı Tampa'dan gelince girilecek.
  */
 export type LanguageFrom = { country: string; city: string; code: string; weeks: number; price: number | null; currencySymbol: string }
 
 export const languageFromPrices: LanguageFrom[] = [
-  { country: 'ingiltere', city: 'Londra', code: 'LHR', weeks: 4, price: 650, currencySymbol: '£' },
-  { country: 'dubai', city: 'Dubai', code: 'DXB', weeks: 4, price: null, currencySymbol: '$' },
-  { country: 'malta', city: 'Malta', code: 'MLA', weeks: 4, price: null, currencySymbol: '€' },
+  { country: 'ingiltere', city: 'İngiltere', code: 'LHR', weeks: 4, price: 1000, currencySymbol: '£' },
+  { country: 'malta', city: 'Malta', code: 'MLA', weeks: 4, price: 750, currencySymbol: '€' },
+  { country: 'dubai', city: 'Dubai', code: 'DXB', weeks: 4, price: 980, currencySymbol: '$' },
+  { country: 'amerika', city: 'Amerika', code: 'JFK', weeks: 4, price: 1000, currencySymbol: '$' },
 ]
 
 export const languageFromByCountry = Object.fromEntries(languageFromPrices.map((l) => [l.country, l])) as Record<string, LanguageFrom>

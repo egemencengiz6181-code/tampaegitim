@@ -9,6 +9,8 @@ export type Program = {
   short: string
   trait: string
   image: string
+  /** Ana sayfa program kartı için dikey görsel (opsiyonel) */
+  portrait?: string
   lead: string
   promise: string
   intro: string[]
@@ -32,6 +34,7 @@ export const programs: Program[] = [
     short: 'Dil okulu',
     trait: 'Yenilikçi',
     image: '/img/misc/language.jpg',
+    portrait: '/img/misc/london-portrait.jpg',
     lead: 'Yurtdışında dil eğitimi almak, yalnızca bir dili öğrenmenin ötesine geçerek, farklı kültürleri deneyimlemek ve global bir vizyon kazanmak için eşsiz bir fırsattır.',
     promise: 'Tampa Eğitim olarak, bu deneyimi sizin için unutulmaz ve verimli bir hale getirmek için buradayız.',
     intro: [

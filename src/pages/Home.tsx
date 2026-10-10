@@ -43,7 +43,7 @@ export default function Home() {
         <div className="container hero__in">
           <div className="hero__copy">
             <p className="hero__kicker"><Icon name="bolt" size={16} /> {site.experienceYears} yıldır yurtdışı eğitimde</p>
-            <h1 className="hero__title">{site.slogan}.</h1>
+            <h1 className="hero__title hero__title--slogan"><span>Dünyaya Açılan</span> <span>Her Adımda</span> <span>Tampa</span></h1>
             <p className="hero__lead">
               Dil okulundan yüksek lisansa, 20’den fazla ülkede okul seçimi, başvuru, vize ve konaklama. Tek danışman, tek yol haritası, baştan sona Tampa.
             </p>
@@ -82,7 +82,7 @@ export default function Home() {
             <p className="muted">İngiltere yaz okullarından Londra’da dil eğitimine, yatılı liselerden 1 yıllık yüksek lisansa; İngiltere Üniversite Temsilciliğimizle başvurudan varışa kadar yanınızdayız.</p>
             <ul className="uklinks">
               <li><Link to="/yurtdisi-yaz-okullari/ingiltere"><strong>İngiltere yaz okulları</strong><span>7–17 yaş, kampüs konaklamalı</span></Link></li>
-              <li><Link to="/yurtdisi-dil-okullari/ingiltere"><strong>İngiltere dil okulları</strong><span>4 hafta 650 £’dan başlayan fiyatlarla</span></Link></li>
+              <li><Link to="/yurtdisi-dil-okullari/ingiltere"><strong>İngiltere dil okulları</strong><span>4 hafta 1.000 £’dan başlayan fiyatlarla</span></Link></li>
               <li><Link to="/her-sey-dahil-paketler/londra"><strong>Her Şey Dahil Londra</strong><span>2 hafta 2.950 £’dan</span></Link></li>
               <li><Link to="/lisans-programlari/ingiltere"><strong>İngiltere’de üniversite</strong><span>UCAS ve Foundation</span></Link></li>
               <li><Link to="/yurtdisi-yuksek-lisans/ingiltere"><strong>İngiltere’de yüksek lisans</strong><span>12 aylık master</span></Link></li>
@@ -319,7 +319,7 @@ function ProgramFinder() {
         ))}
       </div>
       <div className="finder__panel" role="tabpanel" id="finder-panel" aria-labelledby={`tab-${p.key}`} key={p.key}>
-        <div className="finder__img"><img {...cardImg(p.image, '(max-width: 760px) 92vw, 460px')} alt="" loading="lazy" width="720" height="520" /></div>
+        <div className="finder__img"><img {...cardImg(p.portrait ?? p.image, '(max-width: 760px) 92vw, 460px')} alt="" loading="lazy" width="720" height="520" /></div>
         <div className="finder__body">
           <h3>{p.name}</h3>
           <p>{p.lead}</p>
