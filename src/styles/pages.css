@@ -2450,3 +2450,283 @@ a.filter {
     color: var(--ink);
   }
 }
+
+/* ---------- Online eğitim ---------- */
+.onlinecards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
+  gap: 1.5rem;
+}
+.onlinecard {
+  display: grid;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.onlinecard:hover {
+  border-color: var(--teal);
+  box-shadow: var(--shadow-1);
+}
+.onlinecard__img img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.onlinecard__body {
+  display: grid;
+  gap: 0.85rem;
+  padding: 1.5rem 1.6rem 1.75rem;
+}
+.onlinecard__body h2 {
+  font-size: var(--fs-h3);
+}
+.onlinecard__body > p {
+  color: var(--ink-2);
+}
+.courselist {
+  display: grid;
+  gap: 1rem;
+}
+.course {
+  padding: 1.4rem 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--paper);
+  display: grid;
+  gap: 0.6rem;
+}
+.course__level {
+  font-size: var(--fs-xs);
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--coral);
+}
+.course h3 {
+  font-size: 1.2rem;
+}
+.course__careers {
+  font-size: var(--fs-sm);
+  color: var(--ink-2);
+}
+
+/* ---------- Öğrenci konaklaması ---------- */
+.filterbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.chipbtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 42px;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  background: var(--paper);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.chipbtn span {
+  font-size: var(--fs-xs);
+  color: var(--ink-3);
+}
+.chipbtn.is-on {
+  background: var(--teal-900);
+  border-color: var(--teal-900);
+  color: #fff;
+}
+.chipbtn.is-on span {
+  color: var(--teal-200);
+}
+.rescards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr));
+  gap: 1.25rem;
+}
+.rescard {
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.rescard:hover {
+  border-color: var(--teal);
+  box-shadow: var(--shadow-1);
+}
+.rescard__img {
+  position: relative;
+}
+.rescard__img img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+.rescard__city {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--r-pill);
+  background: var(--paper);
+  font-size: var(--fs-xs);
+  font-weight: 650;
+  color: var(--teal-900);
+}
+.rescard__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.15rem 1.25rem 1.3rem;
+  flex: 1;
+}
+.rescard__body h3 {
+  font-size: 1.2rem;
+}
+.rescard__body > p {
+  font-size: var(--fs-sm);
+  color: var(--ink-2);
+}
+.rescard__addr {
+  display: flex;
+  gap: 0.35rem;
+  align-items: flex-start;
+  color: var(--ink-3) !important;
+  font-size: var(--fs-xs) !important;
+}
+.rescard__addr svg {
+  flex: none;
+  margin-top: 0.15rem;
+}
+.rescard__price {
+  margin-top: auto;
+  padding-top: 0.6rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  border-top: 1px solid var(--line-2);
+}
+.rescard__price strong {
+  font-family: var(--f-display);
+  font-size: 1.5rem;
+  color: var(--teal-900);
+}
+.rescard__price small {
+  font-size: var(--fs-xs);
+  color: var(--ink-3);
+}
+.rescard__price .rescard__ask {
+  font-size: 1rem;
+  color: var(--coral);
+}
+.resgallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+.resgallery img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: var(--r-md);
+}
+.ptable td small {
+  display: block;
+  font-family: var(--f-body);
+  font-weight: 450;
+  font-size: var(--fs-xs);
+  color: var(--ink-3);
+}
+.steps-plain {
+  display: grid;
+  gap: 0.6rem;
+  padding-left: 1.25rem;
+}
+
+/* ---------- Dil okulu fiyat listesi ---------- */
+.citycards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+  gap: 1rem;
+}
+.citycard {
+  position: relative;
+  display: block;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  text-decoration: none;
+  color: #fff;
+}
+.citycard img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+.citycard:hover img {
+  transform: scale(1.04);
+}
+.citycard__tx {
+  position: absolute;
+  inset: auto 0 0;
+  display: grid;
+  gap: 0.1rem;
+  padding: 2.5rem 1.1rem 1rem;
+  background: linear-gradient(to top, rgb(6 40 48 / 0.9), rgb(6 40 48 / 0));
+}
+.citycard__code {
+  font-family: var(--f-mono);
+  font-size: 0.75rem;
+  color: var(--teal-100);
+}
+.citycard__tx strong {
+  font-family: var(--f-display);
+  font-size: 1.5rem;
+}
+.citycard__tx small {
+  color: var(--teal-100);
+}
+.ptable--prices {
+  min-width: 980px;
+}
+.ptable--prices td {
+  font-size: 1rem;
+  white-space: nowrap;
+}
+.ptable--prices thead th {
+  text-align: center;
+}
+.ptable--prices tbody th small {
+  display: block;
+  font-weight: 450;
+  font-size: var(--fs-xs);
+  color: var(--ink-3);
+}
+.tag--coral {
+  margin-left: 0.4rem;
+  background: var(--coral-50);
+  color: var(--coral-600);
+}
+.notes {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.3rem;
+  padding-left: 1.2rem;
+  font-size: var(--fs-sm);
+  color: var(--ink-2);
+}
+@media (max-width: 600px) {
+  .resgallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}

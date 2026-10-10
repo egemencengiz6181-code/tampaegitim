@@ -6,6 +6,9 @@ import { guides } from '../data/guides'
 import { documents } from '../data/documents'
 import { posts, postCategories, categorySlug } from '../data/blog'
 import { landings } from '../data/landings'
+import { onlinePrograms } from '../data/online'
+import { residences } from '../data/accommodation'
+import { ukPriceCities } from '../data/schoolPrices'
 
 export type SitePath = { path: string; priority: number; changefreq: 'daily' | 'weekly' | 'monthly' | 'yearly'; lastmod?: string; index?: boolean }
 
@@ -21,6 +24,12 @@ export function sitemapPaths(): SitePath[] {
     ...countries.map((c) => p(`/ulkeler/${c.slug}`, c.slug === 'ingiltere' ? 0.9 : 0.7)),
     p('/her-sey-dahil-paketler', 0.8, 'weekly'),
     ...packages.map((pk) => p(`/her-sey-dahil-paketler/${pk.slug}`, 0.8, 'weekly')),
+    p('/online-egitim', 0.8),
+    ...onlinePrograms.map((o) => p(`/online-egitim/${o.slug}`, 0.8)),
+    p('/ogrenci-konaklama', 0.8, 'weekly'),
+    ...residences.map((r) => p(`/ogrenci-konaklama/${r.slug}`, 0.6, 'weekly')),
+    p('/ingiltere-dil-okullari-fiyat-listesi', 0.8),
+    ...ukPriceCities.filter((c) => c.schools.length).map((c) => p(`/ingiltere-dil-okullari-fiyat-listesi/${c.slug}`, 0.7)),
     p('/hizmetler', 0.7),
     ...services.map((s) => p(s.path, 0.7)),
     p('/tampa-akademi', 0.6),
@@ -37,5 +46,6 @@ export function sitemapPaths(): SitePath[] {
     // İndekslenmeyen ama prerender edilen sayfalar
     ...landings.map((l) => ({ path: `/lp/${l.slug}`, priority: 0, changefreq: 'monthly' as const, index: false })),
     { path: '/tesekkurler', priority: 0, changefreq: 'yearly', index: false },
+    ...ukPriceCities.filter((c) => !c.schools.length).map((c) => ({ path: `/ingiltere-dil-okullari-fiyat-listesi/${c.slug}`, priority: 0, changefreq: 'monthly' as const, index: false })),
   ]
 }

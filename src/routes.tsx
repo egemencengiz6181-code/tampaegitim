@@ -27,6 +27,7 @@ const corpMod = () => import('./pages/Corporate')
 const resMod = () => import('./pages/Resources')
 const landingMod = () => import('./pages/Landing')
 const notFoundMod = () => import('./pages/NotFound')
+const extrasMod = () => import('./pages/Extras')
 
 const programRoutes: RouteObject[] = programs.flatMap((p) => [
   { path: p.slug, ...page(programsMod, 'ProgramHub', { programKey: p.key }) },
@@ -57,6 +58,12 @@ export const routes: RouteObject[] = [
       { path: 'ulkeler/:slug', ...page(programsMod, 'CountryPage') },
       { path: 'her-sey-dahil-paketler', ...page(packagesMod, 'PackagesIndex') },
       { path: 'her-sey-dahil-paketler/:slug', ...page(packagesMod, 'PackageDetail') },
+      { path: 'online-egitim', ...page(extrasMod, 'OnlineHub') },
+      { path: 'online-egitim/:slug', ...page(extrasMod, 'OnlineProgramPage') },
+      { path: 'ogrenci-konaklama', ...page(extrasMod, 'AccommodationPage') },
+      { path: 'ogrenci-konaklama/:slug', ...page(extrasMod, 'ResidencePage') },
+      { path: 'ingiltere-dil-okullari-fiyat-listesi', ...page(extrasMod, 'SchoolPricesHub') },
+      { path: 'ingiltere-dil-okullari-fiyat-listesi/:city', ...page(extrasMod, 'SchoolPricesCity') },
       { path: 'hizmetler', ...page(servicesMod, 'ServicesIndex') },
       ...serviceRoutes,
       { path: 'tampa-akademi', ...page(servicesMod, 'Academy') },

@@ -12,6 +12,7 @@ export function Footer() {
         <div className="footer__top">
           <div className="footer__brand">
             <img src="/img/brand/logo-wordmark-white.png" alt="Tampa Yurtdışı Eğitim" width="121" height="64" loading="lazy" />
+            <p className="footer__slogan">{site.slogan}</p>
             <p>{site.footerAbout}</p>
             <div className="footer__social">
               {site.socials.map((s) => (
@@ -30,7 +31,7 @@ export function Footer() {
         <div className="footer__grid">
           <div>
             <p className="footer__h">Programlar</p>
-            <ul>{programs.map((p) => <li key={p.key}><Link to={`/${p.slug}`}>{p.name}</Link></li>)}<li><Link to="/her-sey-dahil-paketler">Her Şey Dahil Paketler</Link></li></ul>
+            <ul>{programs.map((p) => <li key={p.key}><Link to={`/${p.slug}`}>{p.name}</Link></li>)}<li><Link to="/online-egitim">Online eğitim</Link></li><li><Link to="/ogrenci-konaklama">Öğrenci konaklaması</Link></li><li><Link to="/her-sey-dahil-paketler">Her Şey Dahil Paketler</Link></li></ul>
           </div>
           <div>
             <p className="footer__h">Popüler sayfalar</p>

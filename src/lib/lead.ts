@@ -24,4 +24,4 @@ export async function submitLead(lead: Lead): Promise<void> {
   if (!res.ok) throw new Error(`Form gönderilemedi (${res.status})`)
 }
 
-export const programOptions = ['Dil okulu', 'Yaz okulu', 'Lise', 'Üniversite', 'Yüksek lisans', 'Work and study', 'Her Şey Dahil paket', 'Mentörlük / kariyer rehberliği', 'Diğer']
+export const programOptions = ['Dil okulu', 'Yaz okulu', 'Lise', 'Üniversite', 'Yüksek lisans', 'Work and study', 'Online eğitim', 'Öğrenci konaklaması', 'Her Şey Dahil paket', 'Mentörlük / kariyer rehberliği', 'Diğer']

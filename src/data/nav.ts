@@ -25,8 +25,16 @@ export const countryMenu = regions.map((r) => ({
   items: countries.filter((c) => c.region === r).map((c) => ({ label: c.name, to: `/ulkeler/${c.slug}`, code: c.code })),
 }))
 
+/** Program menüsünde ülke matrisine girmeyen ek bağlantılar. */
+export const programExtras: NavLink[] = [
+  { label: 'Online eğitim', to: '/online-egitim', note: 'Kanada online lise, İngiltere online lisans ve MBA' },
+  { label: 'İngiltere dil okulları fiyat listesi', to: '/ingiltere-dil-okullari-fiyat-listesi', note: 'Şehirlere göre' },
+  { label: 'Öğrenci konaklaması', to: '/ogrenci-konaklama', note: 'Londra yurtları' },
+]
+
 export const serviceMenu: NavLink[] = [
   ...services.map((s) => ({ label: s.name, to: s.path, note: s.short })),
+  { label: 'Öğrenci konaklaması', to: '/ogrenci-konaklama', note: 'Konaklama' },
   { label: 'Tampa Akademi', to: '/tampa-akademi', note: 'Akademi' },
 ]
 

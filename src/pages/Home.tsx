@@ -43,7 +43,7 @@ export default function Home() {
         <div className="container hero__in">
           <div className="hero__copy">
             <p className="hero__kicker"><Icon name="bolt" size={16} /> {site.experienceYears} yıldır yurtdışı eğitimde</p>
-            <h1 className="hero__title">Geleceğine Yurtdışında Yön Ver.</h1>
+            <h1 className="hero__title">{site.slogan}.</h1>
             <p className="hero__lead">
               Dil okulundan yüksek lisansa, 20’den fazla ülkede okul seçimi, başvuru, vize ve konaklama. Tek danışman, tek yol haritası, baştan sona Tampa.
             </p>
@@ -87,6 +87,8 @@ export default function Home() {
               <li><Link to="/lisans-programlari/ingiltere"><strong>İngiltere’de üniversite</strong><span>UCAS ve Foundation</span></Link></li>
               <li><Link to="/yurtdisi-yuksek-lisans/ingiltere"><strong>İngiltere’de yüksek lisans</strong><span>12 aylık master</span></Link></li>
               <li><Link to="/yurtdisi-lise-egitimi/ingiltere"><strong>İngiltere’de lise</strong><span>Yatılı okullar, A-Level</span></Link></li>
+              <li><Link to="/ingiltere-dil-okullari-fiyat-listesi"><strong>Dil okulları fiyat listesi</strong><span>Şehirlere göre karşılaştırın</span></Link></li>
+              <li><Link to="/ogrenci-konaklama"><strong>Londra öğrenci yurtları</strong><span>Faturalar dahil, haftalık fiyatlarla</span></Link></li>
             </ul>
             <Link to="/ulkeler/ingiltere" className="textlink">İngiltere rehberinin tamamı <Icon name="arrow" size={15} /></Link>
           </div>

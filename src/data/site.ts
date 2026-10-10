@@ -14,6 +14,7 @@ export const site = {
   studentCount: '5.000+',
   googleRating: '5.0',
   googleReviewCount: 89,
+  slogan: 'Dünyaya Açılan Her Adımda Tampa',
   tagline: 'Güvenli. Güçlü. Modern. Yenilikçi. Küresel.',
   footerAbout:
     'Tampa Yurtdışı Eğitim her yıl binlerce kişinin yurtdışı eğitim hayallerini gerçekleştirmekte olup sektörde 15 yıllık tecrübesi ile siz değerli danışanlarına hizmet vermektedir.',

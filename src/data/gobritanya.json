@@ -1,0 +1,2567 @@
+{
+  "source": "https://www.gobritanya.com",
+  "syncedAt": "2026-10-10",
+  "residences": [
+    {
+      "slug": "brighton-residence",
+      "city": "brighton",
+      "name": "Brighton Residence",
+      "address": "7 The Furlong, Lewes Road, Brighton, BN2 4FR",
+      "priceFrom": null,
+      "rooms": [],
+      "features": [
+        "City Center",
+        "All Bills Included",
+        "Short & Long Term Stay",
+        "Flexible Start Dates",
+        "No Guarantor",
+        "Excellent Facilities",
+        "24/7 Reception",
+        "Airport Transfer",
+        "Instalment Plan",
+        "24/7 Security",
+        "Student Insurance",
+        "Free Cancellation",
+        "On-site Laundry",
+        "On-site Gym",
+        "Study Spaces",
+        "Private Studios",
+        "On-site Management",
+        "Cinema Room",
+        "Library",
+        "Craft Room",
+        "Communal Kitchen"
+      ],
+      "about": "The University of Brighton’s campus is right on the Brighton Residence’s doorstep. The Residence is perfectly located for the language schools and Sussex University.",
+      "description": "Brighton Residence offers a vibrant living experience in one of the UK’s most iconic coastal cities. With flexible booking options, 24/7 Reception, and all-inclusive bills, students can focus on their studies and enjoy the seaside lifestyle by GoBritanya.",
+      "url": "https://www.gobritanya.com/student-residences/brighton/brighton-residence",
+      "images": [
+        "/img/konaklama/brighton-residence-1.jpg",
+        "/img/konaklama/brighton-residence-2.jpg",
+        "/img/konaklama/brighton-residence-3.jpg"
+      ]
+    },
+    {
+      "slug": "point-campus-dublin",
+      "city": "dublin",
+      "name": "Point Campus Dublin",
+      "address": "Mayor Street Upper, Point Village Dublin D01 W2R1",
+      "priceFrom": null,
+      "rooms": [],
+      "features": [],
+      "about": "Point Campus Dublin offers contemporary student accommodation near Dublin’s tech hub. With superfast Wi-Fi, all-inclusive bills, 24/7 Reception, students can thrive in a supportive and secure environment by GoBritanya.",
+      "description": "Point Campus Dublin offers contemporary student accommodation near Dublin’s tech hub. With superfast Wi-Fi, all-inclusive bills, 24/7 Reception, students can thrive in a supportive and secure environment by GoBritanya.",
+      "url": "https://www.gobritanya.com/student-residences/dublin/point-campus-dublin",
+      "images": [
+        "/img/konaklama/point-campus-dublin-1.jpg",
+        "/img/konaklama/point-campus-dublin-2.jpg",
+        "/img/konaklama/point-campus-dublin-3.jpg"
+      ]
+    },
+    {
+      "slug": "briggate-studios",
+      "city": "leeds",
+      "name": "Briggate Studios - City Centre",
+      "address": "12 Briggate LS1 6AA",
+      "priceFrom": 179,
+      "rooms": [
+        {
+          "name": "Twin Studio",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 179
+            }
+          ]
+        },
+        {
+          "name": "Classic Studio Ground Floor",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 255
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 265
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 270
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 275
+            }
+          ]
+        },
+        {
+          "name": "Classic Studio Mid Floor",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 265
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 275
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 280
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 285
+            }
+          ]
+        },
+        {
+          "name": "Classic Studio Upper Floor",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 275
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 285
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 290
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 295
+            }
+          ]
+        },
+        {
+          "name": "Classic Studio Terrace Upper Floor",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 285
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 295
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 299
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 304
+            }
+          ]
+        },
+        {
+          "name": "Large Studio Ground Floor",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 265
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 275
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 280
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 285
+            }
+          ]
+        },
+        {
+          "name": "Large Studio Mid Floor",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 275
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 285
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 290
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 295
+            }
+          ]
+        },
+        {
+          "name": "Large Studio Upper Floor",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 279
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 289
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 294
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 299
+            }
+          ]
+        },
+        {
+          "name": "Large Studio Terrace Upper Floor",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 285
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 295
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 300
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 305
+            }
+          ]
+        },
+        {
+          "name": "Premium Social Studio Mid Floor",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 325
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 330
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 335
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 340
+            }
+          ]
+        },
+        {
+          "name": "Premium Studio Ground Floor",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 289
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 299
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 305
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 310
+            }
+          ]
+        },
+        {
+          "name": "Premium Studio Mid Floor",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 294
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 304
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 309
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 314
+            }
+          ]
+        },
+        {
+          "name": "Premium Studio Terrace Upper Floor",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 298
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 308
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 313
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 318
+            }
+          ]
+        },
+        {
+          "name": "Social Studio Mid Floor",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 309
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 319
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 324
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 329
+            }
+          ]
+        },
+        {
+          "name": "Social Studio Plus Mid Floor",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 315
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 325
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 329
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 334
+            }
+          ]
+        }
+      ],
+      "features": [
+        "All Bills Included",
+        "Short & Long Term Stay",
+        "Flexible Start Dates",
+        "No Guarantor",
+        "Excellent Facilities",
+        "24/7 Reception",
+        "Airport Transfer",
+        "Instalment Plan",
+        "24/7 Security",
+        "Student Insurance",
+        "Free Cancellation",
+        "On-site Laundry",
+        "Study Spaces",
+        "Social Spaces",
+        "Private Studios",
+        "On-site Management",
+        "Cinema Room",
+        "Private Dining Room",
+        "Games Area",
+        "TV Snug",
+        "Bike Storage",
+        "Lounges",
+        "Free Breakfast"
+      ],
+      "about": "City Center",
+      "description": "Modern Living in the Heart of Leeds",
+      "url": "https://www.gobritanya.com/student-residences/leeds/briggate-studios",
+      "images": [
+        "/img/konaklama/briggate-studios-1.jpg",
+        "/img/konaklama/briggate-studios-2.jpg",
+        "/img/konaklama/briggate-studios-3.jpg"
+      ]
+    },
+    {
+      "slug": "your-tribe-southwark",
+      "city": "london",
+      "name": "Your TRIBE Southwark",
+      "address": "28 Ruby Street, SE15 1LL",
+      "priceFrom": 238,
+      "rooms": [
+        {
+          "name": "Premium En-Suite",
+          "stays": [
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 238
+            }
+          ]
+        }
+      ],
+      "features": [],
+      "about": "Discover Peckham Student Accommodation in London: A vibrant, design-focused residence with premium amenities, sustainable living, and a thriving community lifestyle. Your perfect home awaits.",
+      "description": "Discover Peckham Student Accommodation in London: A vibrant, design-focused residence with premium amenities, sustainable living, and a thriving community lifestyle. Your perfect home awaits.",
+      "url": "https://www.gobritanya.com/student-residences/london/your-tribe-southwark",
+      "images": [
+        "/img/konaklama/your-tribe-southwark-1.jpg",
+        "/img/konaklama/your-tribe-southwark-2.jpg",
+        "/img/konaklama/your-tribe-southwark-3.jpg"
+      ]
+    },
+    {
+      "slug": "sterling-court-wembley",
+      "city": "london",
+      "name": "Sterling Court (Wembley)",
+      "address": "6 Lakeside Way, London, HA9 0BU",
+      "priceFrom": 253,
+      "rooms": [
+        {
+          "name": "Bronze En-Suite",
+          "stays": [
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 253
+            }
+          ]
+        }
+      ],
+      "features": [],
+      "about": "Located near Wembley, Sterling Court offers a dynamic student living experience by GoBritanya. With all-inclusive bills, superfast Wi-Fi, and a 24/7 On-Site Team, you’ll find everything you need for a comfortable stay.",
+      "description": "Located near Wembley, Sterling Court offers a dynamic student living experience by GoBritanya. With all-inclusive bills, superfast Wi-Fi, and a 24/7 On-Site Team, you’ll find everything you need for a comfortable stay.",
+      "url": "https://www.gobritanya.com/student-residences/london/sterling-court-wembley",
+      "images": [
+        "/img/konaklama/sterling-court-wembley-1.jpg",
+        "/img/konaklama/sterling-court-wembley-2.jpg",
+        "/img/konaklama/sterling-court-wembley-3.jpg"
+      ]
+    },
+    {
+      "slug": "mcmillan-residence",
+      "city": "london",
+      "name": "McMillan Residence",
+      "address": "Creek Rd, London, SE8 3BU",
+      "priceFrom": 280,
+      "rooms": [
+        {
+          "name": "Silver Plus Studio",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 325
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 335
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 345
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 355
+            }
+          ]
+        },
+        {
+          "name": "Silver Studio Deluxe",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 338
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 348
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 358
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 368
+            }
+          ]
+        },
+        {
+          "name": "Gold Plus Studio",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 355
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 365
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 375
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 385
+            }
+          ]
+        },
+        {
+          "name": "Premium Silver Ensuite",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 280
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 290
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 300
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 310
+            }
+          ]
+        }
+      ],
+      "features": [
+        "City Center",
+        "All Bills Included",
+        "Short & Long Term Stay",
+        "Flexible Start Dates",
+        "No Guarantor",
+        "Excellent Facilities",
+        "24/7 Reception",
+        "Airport Transfer",
+        "Instalment Plan",
+        "24/7 Security",
+        "Student Insurance",
+        "Free Cancellation",
+        "On-site Laundry",
+        "Social Spaces",
+        "Ensuite Rooms",
+        "Private Studios",
+        "Nearby Shops and Cafes",
+        "Zone 2/3"
+      ],
+      "about": "Enjoy fully furnished en-suite rooms and private studios just a 10-minute walk from Greenwich Station and Cutty Sark DLR (Zone 2/3). Close to the University of Greenwich, Ravensbourne University, and Goldsmiths University, our accommodation offers an study areas, and social lounges. With all-inclusive bills, high-speed Wi-Fi, 24/7 security, and a prime location near Greenwich Park, shops, cafes, and cultural landmarks, it’s the perfect blend of comfort and convenience for students.",
+      "description": "Located near Greenwich, McMillan Residence offers by GoBritanya a blend of historic charm and modern amenities. Enjoy 24/7 Reception, social spaces, and a Price Match Guarantee for a stress-free student experience.",
+      "url": "https://www.gobritanya.com/student-residences/london/mcmillan-residence",
+      "images": [
+        "/img/konaklama/mcmillan-residence-1.jpg",
+        "/img/konaklama/mcmillan-residence-2.jpg",
+        "/img/konaklama/mcmillan-residence-3.jpg"
+      ]
+    },
+    {
+      "slug": "wembley-arthur-house",
+      "city": "london",
+      "name": "Wembley Arthur House",
+      "address": "Arthur House, 1 Rutherford Way, Wembley Park, London, HA9 0BP",
+      "priceFrom": 403,
+      "rooms": [
+        {
+          "name": "Silver Studio - Standard View | Upper Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 425
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 440
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 445
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 450
+            }
+          ]
+        },
+        {
+          "name": "Silver Studio - Standard View | Mid Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 418
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 428
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 435
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 440
+            }
+          ]
+        },
+        {
+          "name": "Silver Studio - Standard View | Lower Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 403
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 418
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 423
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 428
+            }
+          ]
+        },
+        {
+          "name": "Silver Studio - Courtyard View | Lower Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 408
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 423
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 428
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 433
+            }
+          ]
+        }
+      ],
+      "features": [
+        "City Center",
+        "All Bills Included",
+        "Short & Long Term Stay",
+        "Flexible Start Dates",
+        "No Guarantor",
+        "Excellent Facilities",
+        "24/7 Reception",
+        "Airport Transfer",
+        "Instalment Plan",
+        "24/7 Security",
+        "Student Insurance",
+        "Free Cancellation",
+        "On-site Laundry",
+        "On-site Gym",
+        "Study Spaces",
+        "Social Spaces",
+        "Private Studios",
+        "Zone 4"
+      ],
+      "about": "Wembley Arthur House offers a comprehensive array of amenities designed to enhance the student living experience. Residents can relax and socialise in the comfortable lounges or engage in activities within the dedicated café and activity space. For academic pursuits, the property provides well-equipped study areas and a library, fostering a conducive environment for learning. Health and wellness are prioritised with an on-site gym and a tranquil yoga studio. Culinary enthusiasts can enjoy the private dining room, while the external gardens and podiums offer serene outdoor spaces for relaxation. Additional conveniences include all-inclusive utility bills, high-speed Wi-Fi, 24/7 on-site team and security, regular resident events, well-being support services, a laundry room, and secure cycle storage.",
+      "description": "",
+      "url": "https://www.gobritanya.com/student-residences/london/wembley-arthur-house",
+      "images": [
+        "/img/konaklama/wembley-arthur-house-1.jpg",
+        "/img/konaklama/wembley-arthur-house-2.jpg",
+        "/img/konaklama/wembley-arthur-house-3.jpg"
+      ]
+    },
+    {
+      "slug": "islington-residence",
+      "city": "london",
+      "name": "Islington Residence",
+      "address": "32-34 Market Rd, London, N7 9AW",
+      "priceFrom": 407,
+      "rooms": [
+        {
+          "name": "Gold Studio - Standard View | Upper Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 570
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 585
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 595
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 605
+            }
+          ]
+        },
+        {
+          "name": "Bronze Studio - Standard View | Lower Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 536
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 551
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 561
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 571
+            }
+          ]
+        },
+        {
+          "name": "Bronze En-Suite (Large) - Standard View | Lower Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 432
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 447
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 457
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 467
+            }
+          ]
+        },
+        {
+          "name": "Bronze En-Suite - Standard View | Lower Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 407
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 422
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 432
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 442
+            }
+          ]
+        },
+        {
+          "name": "Silver En-Suite - Standard View | Lower Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 418
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 433
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 443
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 453
+            }
+          ]
+        },
+        {
+          "name": "Bronze En-Suite (Extra Large) - Standard View | Mid Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 447
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 462
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 472
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 482
+            }
+          ]
+        },
+        {
+          "name": "Bronze En-Suite (Extra Large) - Courtyard View | Mid Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 450
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 465
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 475
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 485
+            }
+          ]
+        },
+        {
+          "name": "Bronze En-Suite - Courtyard View | Upper Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 418
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 433
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 443
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 453
+            }
+          ]
+        },
+        {
+          "name": "Bronze En-Suite (Large) - Street View | Mid Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 432
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 447
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 457
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 467
+            }
+          ]
+        },
+        {
+          "name": "Bronze En-Suite (Large) - Standard View | Mid Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 432
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 447
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 457
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 467
+            }
+          ]
+        },
+        {
+          "name": "Bronze En-Suite (Large) - Courtyard View | Mid Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 432
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 447
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 457
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 467
+            }
+          ]
+        },
+        {
+          "name": "Silver En-Suite (Large) - Courtyard View | Mid Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 442
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 457
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 467
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 477
+            }
+          ]
+        },
+        {
+          "name": "Bronze En-Suite (Extra Large) - Standard View | Upper Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 450
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 465
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 475
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 485
+            }
+          ]
+        },
+        {
+          "name": "Bronze En-Suite (Large) - Standard View | Upper Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 437
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 452
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 462
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 472
+            }
+          ]
+        },
+        {
+          "name": "Silver En-Suite (Large) - Courtyard View | Upper Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 442
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 457
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 467
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 477
+            }
+          ]
+        },
+        {
+          "name": "Bronze En-Suite - Street View | Mid Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 409
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 424
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 434
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 444
+            }
+          ]
+        },
+        {
+          "name": "Bronze En-Suite - Standard View | Mid Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 407
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 422
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 432
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 442
+            }
+          ]
+        },
+        {
+          "name": "Bronze En-Suite - Courtyard View | Mid Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 412
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 427
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 437
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 447
+            }
+          ]
+        },
+        {
+          "name": "Silver En-Suite - Courtyard View | Mid Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 424
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 439
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 449
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 459
+            }
+          ]
+        },
+        {
+          "name": "Bronze En-Suite - Standard View | Upper Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 412
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 427
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 437
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 447
+            }
+          ]
+        },
+        {
+          "name": "Silver En-Suite - Courtyard View | Upper Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 424
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 439
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 449
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 459
+            }
+          ]
+        },
+        {
+          "name": "Silver En-Suite - Standard View | Upper Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 422
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 437
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 447
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 457
+            }
+          ]
+        },
+        {
+          "name": "Bronze Studio - Standard View | Upper Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 536
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 551
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 561
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 571
+            }
+          ]
+        }
+      ],
+      "features": [
+        "City Center",
+        "All Bills Included",
+        "Short & Long Term Stay",
+        "Flexible Start Dates",
+        "No Guarantor",
+        "Excellent Facilities",
+        "24/7 Reception",
+        "Airport Transfer",
+        "Instalment Plan",
+        "24/7 Security",
+        "Student Insurance",
+        "Free Cancellation",
+        "On-site Laundry",
+        "On-site Gym",
+        "Study Spaces",
+        "Social Spaces",
+        "Ensuite Rooms",
+        "Private Studios",
+        "Communal Lounge",
+        "Nearby Shops and Cafes",
+        "Zone 2"
+      ],
+      "about": "Discover fully furnished en-suite rooms and private studios just a 5-minute walk from Caledonian Road Station (Zone 2). Ideally located near UCL, City University, and London Metropolitan University, our accommodation features an on-site gym, study spaces, a cinema room, and communal lounges. With all-inclusive bills, high-speed Wi-Fi, 24/7 security, and a lively neighbourhood full of cafes, restaurants, and shops, it’s the perfect place to live and thrive in London.",
+      "description": "Located in the lively Islington area, this residence offers flexible booking, superfast Wi-Fi, and all-inclusive bills. Enjoy secure entry and 24/7 support for a worry-free student experience by GoBritanya.",
+      "url": "https://www.gobritanya.com/student-residences/london/islington-residence",
+      "images": [
+        "/img/konaklama/islington-residence-1.jpg",
+        "/img/konaklama/islington-residence-2.jpg",
+        "/img/konaklama/islington-residence-3.jpg"
+      ]
+    },
+    {
+      "slug": "white-city-residence",
+      "city": "london",
+      "name": "White City Residence",
+      "address": "10 Westway, East Acton, London, W12 0DD",
+      "priceFrom": 445,
+      "rooms": [
+        {
+          "name": "Bronze Studio - Street View | Mid Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 450
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 465
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 470
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 475
+            }
+          ]
+        },
+        {
+          "name": "Bronze Studio (Extra Large) - Street View | Mid Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 445
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 460
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 465
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 470
+            }
+          ]
+        },
+        {
+          "name": "Bronze Studio - Courtyard View | Mid Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 450
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 465
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 470
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 475
+            }
+          ]
+        },
+        {
+          "name": "Bronze Studio - Courtyard View | Upper Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 455
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 470
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 475
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 480
+            }
+          ]
+        },
+        {
+          "name": "Bronze Studio - Street View | Upper Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 455
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 470
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 475
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 480
+            }
+          ]
+        }
+      ],
+      "features": [],
+      "about": "GoBritanya White City Residence offers student living in one of London’s most innovative areas. With all-inclusive bills, superfast Wi-Fi and secure entry systems, students can enjoy a comfortable and modern lifestyle.",
+      "description": "GoBritanya White City Residence offers student living in one of London’s most innovative areas. With all-inclusive bills, superfast Wi-Fi and secure entry systems, students can enjoy a comfortable and modern lifestyle.",
+      "url": "https://www.gobritanya.com/student-residences/london/white-city-residence",
+      "images": [
+        "/img/konaklama/white-city-residence-1.jpg",
+        "/img/konaklama/white-city-residence-2.jpg",
+        "/img/konaklama/white-city-residence-3.jpg"
+      ]
+    },
+    {
+      "slug": "shoreditch-residence",
+      "city": "london",
+      "name": "Shoreditch Residence",
+      "address": "2 Silicon Way, London, N1 6AT",
+      "priceFrom": 515,
+      "rooms": [
+        {
+          "name": "Bronze Studio Mid Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 525
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 545
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 555
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 565
+            }
+          ]
+        },
+        {
+          "name": "Silver Studio",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 555
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 575
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 30,
+              "price": 585
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 595
+            }
+          ]
+        },
+        {
+          "name": "Bronze Studio Lower Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 515
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 535
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 545
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 555
+            }
+          ]
+        }
+      ],
+      "features": [
+        "City Center",
+        "All Bills Included",
+        "Short & Long Term Stay",
+        "Flexible Start Dates",
+        "No Guarantor",
+        "Excellent Facilities",
+        "24/7 Reception",
+        "Airport Transfer",
+        "Instalment Plan",
+        "24/7 Security",
+        "Student Insurance",
+        "Free Cancellation",
+        "On-site Laundry",
+        "On-site Gym",
+        "Study Spaces",
+        "Social Spaces",
+        "Premium Studios",
+        "Ensuite Rooms",
+        "Nearby Shops and Cafes",
+        "Zone 1",
+        "Cinema Room"
+      ],
+      "about": "Experience fully furnished en-suite rooms and premium studios just a 5-minute walk from Old Street Station (Zone 1). Ideally located near City University, UCL, and LSE, our accommodation includes an on-site gym, cinema room, study areas, and social lounges. With all-inclusive bills, high-speed Wi-Fi, 24/7 security, and a vibrant Shoreditch neighbourhood filled with trendy cafes, shops, and nightlife, it’s the ultimate choice for student living in London.",
+      "description": "Shoreditch Residence puts you in the heart of London’s creative district. Benefit from a Price Match Guarantee by GoBritanya, superfast Wi-Fi, and secure entry systems, along with vibrant social spaces and all-inclusive bills.",
+      "url": "https://www.gobritanya.com/student-residences/london/shoreditch-residence",
+      "images": [
+        "/img/konaklama/shoreditch-residence-1.jpg",
+        "/img/konaklama/shoreditch-residence-2.jpg",
+        "/img/konaklama/shoreditch-residence-3.jpg"
+      ]
+    },
+    {
+      "slug": "highbury-residence-ii",
+      "city": "london",
+      "name": "Highbury Residence II",
+      "address": "295 Holloway Road, London, N7 8HS",
+      "priceFrom": 518,
+      "rooms": [
+        {
+          "name": "Bronze Studio - Street View | Upper Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 521
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 531
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 541
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 551
+            }
+          ]
+        },
+        {
+          "name": "Bronze Studio - Street View | Mid Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 518
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 528
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 538
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 548
+            }
+          ]
+        },
+        {
+          "name": "Silver Studio - Street View | Lower Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 531
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 541
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 551
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 561
+            }
+          ]
+        },
+        {
+          "name": "Silver Studio - Standard View | Lower Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 528
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 538
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 548
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 558
+            }
+          ]
+        },
+        {
+          "name": "Silver Studio - Standard View | Mid Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 542
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 552
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 562
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 572
+            }
+          ]
+        }
+      ],
+      "features": [],
+      "about": "Highbury Residence II is perfectly located on the Holloway Road, offers modern conveniences with exceptional services. You’ll be able to access the whole of London discovering a range of historical and urban landmarks and universities such as University of Westminster, City, University of London, London Metropolitan University and SOAS, University of London.",
+      "description": "Highbury Residence II is perfectly located on the Holloway Road, offers modern conveniences with exceptional services. You’ll be able to access the whole of London discovering a range of historical and urban landmarks and universities such as University of Westminster, City, University of London, London Metropolitan University and SOAS, University of London.",
+      "url": "https://www.gobritanya.com/student-residences/london/highbury-residence-ii",
+      "images": [
+        "/img/konaklama/highbury-residence-ii-1.jpg",
+        "/img/konaklama/highbury-residence-ii-2.jpg",
+        "/img/konaklama/highbury-residence-ii-3.jpg"
+      ]
+    },
+    {
+      "slug": "old-street-residence",
+      "city": "london",
+      "name": "Old Street Residence",
+      "address": "18 Paul St, London, EC2A 4JH",
+      "priceFrom": 551,
+      "rooms": [
+        {
+          "name": "Silver Studio - Standard View | Mid Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 577
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 587
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 592
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 597
+            }
+          ]
+        },
+        {
+          "name": "Silver Studio - Courtyard View | Mid Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 582
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 592
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 597
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 602
+            }
+          ]
+        },
+        {
+          "name": "Silver Studio - Courtyard View | Lower Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 551
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 561
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 566
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 571
+            }
+          ]
+        },
+        {
+          "name": "Silver Studio - Standard View | Lower Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 564
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 574
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 579
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 584
+            }
+          ]
+        },
+        {
+          "name": "Silver Studio - Courtyard View | Upper Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 587
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 597
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 602
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 607
+            }
+          ]
+        },
+        {
+          "name": "Silver Studio - Standard View | Upper Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 585
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 593
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 598
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 603
+            }
+          ]
+        }
+      ],
+      "features": [
+        "City Center",
+        "All Bills Included",
+        "Short & Long Term Stay",
+        "Flexible Start Dates",
+        "No Guarantor",
+        "Excellent Facilities",
+        "24/7 Reception",
+        "Airport Transfer",
+        "Instalment Plan",
+        "24/7 Security",
+        "Student Insurance",
+        "Free Cancellation",
+        "On-site Laundry",
+        "On-site Gym",
+        "Study Spaces",
+        "Social Spaces",
+        "Ensuite Rooms",
+        "Private Studios",
+        "On-site Management",
+        "Nearby Shops and Cafes",
+        "Zone 1"
+      ],
+      "about": "Stay in fully furnished en-suite rooms and private studios just a 5-minute walk from Old Street Station (Zone 1). Conveniently located near City University, UCL, and LSE, our accommodation features an on-site gym, cinema room, study spaces, and social lounges. With all-inclusive bills, high-speed Wi-Fi, 24/7 security, and a trendy neighbourhood filled with cafes, restaurants, and shops in Shoreditch and Hoxton, it’s the ultimate choice for students in London.",
+      "description": "Stay at Old Street Residence for an ideal student experience in one of London’s trendiest areas. With flexible booking, 24/7 Reception and all-inclusive bills, this residence offers by GoBritanya everything you need for a comfortable stay.",
+      "url": "https://www.gobritanya.com/student-residences/london/old-street-residence",
+      "images": [
+        "/img/konaklama/old-street-residence-1.jpg",
+        "/img/konaklama/old-street-residence-2.jpg",
+        "/img/konaklama/old-street-residence-3.jpg"
+      ]
+    },
+    {
+      "slug": "spitalfields-residence",
+      "city": "london",
+      "name": "Spitalfields Residence",
+      "address": "9 Frying Pan Alley, Spitalfields, E1 7HS",
+      "priceFrom": 575,
+      "rooms": [
+        {
+          "name": "Bronze Studio - Landmark View | Upper Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 595
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 615
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 625
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 635
+            }
+          ]
+        },
+        {
+          "name": "Bronze Studio - Standard View | Upper Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 575
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 585
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 595
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 605
+            }
+          ]
+        }
+      ],
+      "features": [],
+      "about": "Spitalfields Residence provides luxury student accommodation near Liverpool Street station in central London. Enjoy rooftop cafe & bar with panoramic views of the city and all-inclusive bills, all backed by GoBritanya Price Match Guarantee.",
+      "description": "Spitalfields Residence provides luxury student accommodation near Liverpool Street station in central London. Enjoy rooftop cafe & bar with panoramic views of the city and all-inclusive bills, all backed by GoBritanya Price Match Guarantee.",
+      "url": "https://www.gobritanya.com/student-residences/london/spitalfields-residence",
+      "images": [
+        "/img/konaklama/spitalfields-residence-1.jpg",
+        "/img/konaklama/spitalfields-residence-2.jpg",
+        "/img/konaklama/spitalfields-residence-3.jpg"
+      ]
+    },
+    {
+      "slug": "kings-cross-residence",
+      "city": "london",
+      "name": "King’s Cross Residence",
+      "address": "200 Pentonville Rd, London, N1 9JP",
+      "priceFrom": 595,
+      "rooms": [
+        {
+          "name": "Silver Studio - City View, Dual-View | Upper Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 755
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 770
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 780
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 790
+            }
+          ]
+        },
+        {
+          "name": "Silver Studio - Standard View, Dual-View | Upper Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 755
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 770
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 780
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 790
+            }
+          ]
+        },
+        {
+          "name": "Gold Studio (Large) - Courtyard View | Lower Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 695
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 710
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 720
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 730
+            }
+          ]
+        },
+        {
+          "name": "Silver Studio - Street View | Lower Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 610
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 625
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 635
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 645
+            }
+          ]
+        },
+        {
+          "name": "Bronze Studio - Standard View | Lower Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 595
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 610
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 620
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 630
+            }
+          ]
+        },
+        {
+          "name": "Bronze Studio - Street View | Lower Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 605
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 615
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 625
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 632
+            }
+          ]
+        },
+        {
+          "name": "Silver Studio - City View | Upper Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 630
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 645
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 655
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 665
+            }
+          ]
+        },
+        {
+          "name": "Silver Studio - Standard View | Upper Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 629
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 639
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 649
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 659
+            }
+          ]
+        },
+        {
+          "name": "Silver Studio - Landmark View | Upper Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 642
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 657
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 667
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 677
+            }
+          ]
+        },
+        {
+          "name": "Silver Studio - Standard View | Mid Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 619
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 634
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 644
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 654
+            }
+          ]
+        },
+        {
+          "name": "Silver Studio - Street View | Mid Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 610
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 625
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 635
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 645
+            }
+          ]
+        },
+        {
+          "name": "Silver Studio - Courtyard View | Mid Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 609
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 624
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 634
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 644
+            }
+          ]
+        },
+        {
+          "name": "Silver Studio (Newly Renovated) - Standard View | Mid Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 616
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 631
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 641
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 651
+            }
+          ]
+        }
+      ],
+      "features": [
+        "City Center",
+        "All Bills Included",
+        "Short & Long Term Stay",
+        "Flexible Start Dates",
+        "No Guarantor",
+        "Excellent Facilities",
+        "24/7 Reception",
+        "Airport Transfer",
+        "Instalment Plan",
+        "24/7 Security",
+        "Student Insurance",
+        "Free Cancellation",
+        "On-site Laundry",
+        "On-site Gym",
+        "Study Spaces",
+        "Premium Studios",
+        "Ensuite Rooms",
+        "Nearby Shops and Cafes",
+        "Zone 1",
+        "Cinema Room",
+        "Cultural Attractions"
+      ],
+      "about": "Enjoy fully furnished en-suite rooms and premium studios just a 5-minute walk from King’s Cross St Pancras Station (Zone 1). Ideally located near UCL, SOAS, King’s College London, and City University, our accommodation features an on-site gym, cinema room, and modern study spaces. With all-inclusive bills, high-speed Wi-Fi, 24/7 security, and a vibrant neighbourhood full of shops, restaurants, and cultural attractions, it’s the perfect place to live and study in central London.",
+      "description": "King’s Cross Residence is perfect for students looking for central London Zone 1 living. Offering contemporary accommodation facility and vivid student life in the heart of central London, secure and comfortable stay by GoBritanya.",
+      "url": "https://www.gobritanya.com/student-residences/london/kings-cross-residence",
+      "images": [
+        "/img/konaklama/kings-cross-residence-1.jpg",
+        "/img/konaklama/kings-cross-residence-2.jpg",
+        "/img/konaklama/kings-cross-residence-3.jpg"
+      ]
+    },
+    {
+      "slug": "westminster-residence",
+      "city": "london",
+      "name": "Westminster Residence",
+      "address": "200A Lambeth Road, Lambeth, London SE1 7LR",
+      "priceFrom": 598,
+      "rooms": [
+        {
+          "name": "Silver Studio - Standard View | Lower Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 598
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 618
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 628
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 638
+            }
+          ]
+        },
+        {
+          "name": "Silver Studio - Standard View | Penthouse Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 607
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 622
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 632
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 642
+            }
+          ]
+        },
+        {
+          "name": "Silver Studio - Standard View | Upper Level",
+          "stays": [
+            {
+              "label": "All Year Stay",
+              "minWeeks": 42,
+              "price": 607
+            },
+            {
+              "label": "Academic Stay",
+              "minWeeks": 30,
+              "price": 622
+            },
+            {
+              "label": "Semester Stay",
+              "minWeeks": 13,
+              "price": 632
+            },
+            {
+              "label": "Short Stay",
+              "minWeeks": 2,
+              "price": 642
+            }
+          ]
+        }
+      ],
+      "features": [],
+      "about": "Westminster Residence by GoBritanya provides luxury student accommodation near iconic London landmarks. With all-inclusive bills, superfast Wi-Fi, and 24/7 Reception, you’ll have everything you need at your fingertips.",
+      "description": "Westminster Residence by GoBritanya provides luxury student accommodation near iconic London landmarks. With all-inclusive bills, superfast Wi-Fi, and 24/7 Reception, you’ll have everything you need at your fingertips.",
+      "url": "https://www.gobritanya.com/student-residences/london/westminster-residence",
+      "images": [
+        "/img/konaklama/westminster-residence-1.jpg",
+        "/img/konaklama/westminster-residence-2.jpg",
+        "/img/konaklama/westminster-residence-3.jpg"
+      ]
+    },
+    {
+      "slug": "hammersmith-residence",
+      "city": "london",
+      "name": "Hammersmith Residence",
+      "address": "230 Shepherds Bush Road, Hammersmith London W6 7NL",
+      "priceFrom": null,
+      "rooms": [],
+      "features": [
+        "with a gym, games room, dining room, cinema and fitness studio all part of the mix.",
+        "Residents also get to meet at regular social events organised by the onsite team.",
+        "City Center",
+        "All Bills Included",
+        "Short & Long Term Stay",
+        "Flexible Start Dates",
+        "No Guarantor",
+        "Excellent Facilities",
+        "24/7 Reception",
+        "Airport Transfer",
+        "Instalment Plan",
+        "24/7 Security",
+        "Student Insurance",
+        "Free Cancellation",
+        "On-site Laundry",
+        "On-site Gym",
+        "Study Spaces",
+        "Ensuite Rooms",
+        "Private Studios",
+        "On-site Management",
+        "Nearby Shops and Cafes",
+        "Zone 2",
+        "Cinema Room"
+      ],
+      "about": "A range of social and study spaces are there for you to enjoy at Hammersmith,",
+      "description": "Located in the vibrant area of Hammersmith, this residence provides everything you need for a successful student life. Benefit from 24/7 On-Site Team, Security Entry System, and Laundry Facilities, all included in your stay with GoBritanya Price Match Guarantee.",
+      "url": "https://www.gobritanya.com/student-residences/london/hammersmith-residence",
+      "images": [
+        "/img/konaklama/hammersmith-residence-1.jpg",
+        "/img/konaklama/hammersmith-residence-2.jpg",
+        "/img/konaklama/hammersmith-residence-3.jpg"
+      ]
+    }
+  ]
+}

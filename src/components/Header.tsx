@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { Icon } from './Icon'
 import { site } from '../data/site'
-import { programMenu, countryMenu, serviceMenu, packageMenu, resourceMenu, corporateMenu } from '../data/nav'
+import { programMenu, programExtras, countryMenu, serviceMenu, packageMenu, resourceMenu, corporateMenu } from '../data/nav'
 import { posts } from '../data/blog'
 
 type MenuKey = 'programs' | 'countries' | 'packages' | 'services' | 'resources' | 'corporate'
@@ -123,6 +123,14 @@ export function Header() {
                       <Link to={p.to} className={`mega__tab ${i === activeProgram ? 'is-active' : ''}`} onMouseEnter={() => setActiveProgram(i)} onFocus={() => setActiveProgram(i)}>
                         <span>{p.label}</span>
                         <small>{p.countries.length} ülke</small>
+                      </Link>
+                    </li>
+                  ))}
+                  {programExtras.map((x) => (
+                    <li key={x.to}>
+                      <Link to={x.to} className="mega__tab mega__tab--extra">
+                        <span>{x.label}</span>
+                        <small>{x.note}</small>
                       </Link>
                     </li>
                   ))}
@@ -272,7 +280,10 @@ function MobileDrawer({ open, onClose }: { open: boolean; onClose: () => void })
         <nav className="drawer__nav" aria-label="Mobil menü">
           <details>
             <summary>Programlar <Icon name="chevronDown" size={18} /></summary>
-            <ul>{programMenu.map((p) => <li key={p.key}><NavLink to={p.to}>{p.label}</NavLink></li>)}</ul>
+            <ul>
+              {programMenu.map((p) => <li key={p.key}><NavLink to={p.to}>{p.label}</NavLink></li>)}
+              {programExtras.map((x) => <li key={x.to}><NavLink to={x.to}>{x.label}</NavLink></li>)}
+            </ul>
           </details>
           <details>
             <summary>Ülkeler <Icon name="chevronDown" size={18} /></summary>

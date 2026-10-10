@@ -16,6 +16,17 @@ import NotFound from './NotFound'
 import { cardImg } from '../lib/img'
 import { titleCase } from '../lib/text'
 
+/** Program × ülke sayfalarında öne çıkan ek bağlantılar (online programlar, fiyat listesi, konaklama). */
+const crossLinks: Record<string, { text: string; to: string; label: string }[]> = {
+  'lise:kanada': [{ text: 'Türkiye’den ayrılmadan Kanada lise diploması almak ister misiniz?', to: '/online-egitim/kanada-online-lise-diplomasi', label: 'Kanada Online Lise Diploması (OSSD)' }],
+  'lisans:ingiltere': [{ text: 'İşinizi bırakmadan, %100 online İngiliz lisans diploması:', to: '/online-egitim/ingiltere-online-lisans-yuksek-lisans', label: 'İngiltere Online Lisans ve Top-up' }],
+  'yuksek-lisans:ingiltere': [{ text: 'Çalışırken, vize gerektirmeden İngiliz yüksek lisans diploması:', to: '/online-egitim/ingiltere-online-lisans-yuksek-lisans', label: 'İngiltere Online MBA' }],
+  'dil:ingiltere': [
+    { text: 'Okulları ve fiyatları şehir şehir karşılaştırın:', to: '/ingiltere-dil-okullari-fiyat-listesi', label: 'İngiltere Dil Okulları Fiyat Listesi' },
+    { text: 'Konaklamanızı da birlikte planlayalım:', to: '/ogrenci-konaklama', label: 'Londra Öğrenci Yurtları' },
+  ],
+}
+
 const formProgram: Record<ProgramKey, string> = {
   dil: 'Dil okulu',
   yaz: 'Yaz okulu',
@@ -51,6 +62,16 @@ export function ProgramsOverview() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+      <section className="section section--tight">
+        <div className="container">
+          <SectionHead title="Online eğitim: Türkiye’den uluslararası diploma" intro="Kanada lise diplomasını evden alın ya da işinizi bırakmadan İngiliz lisans ve MBA diplomasına uzanın." action={{ label: 'Online eğitim', to: '/online-egitim' }} />
+          <div className="minipkgs">
+            <Link to="/online-egitim/kanada-online-lise-diplomasi" className="minipkg"><span className="code">YYZ</span><strong>Kanada online lise (OSSD)</strong><span>14–20 yaş, 8–12 ders ile mezuniyet</span><Icon name="arrow" size={16} /></Link>
+            <Link to="/online-egitim/ingiltere-online-lisans-yuksek-lisans" className="minipkg"><span className="code">LHR</span><strong>İngiltere online lisans ve MBA</strong><span>%100 online, vize gerekmez</span><Icon name="arrow" size={16} /></Link>
+            <Link to="/ogrenci-konaklama" className="minipkg"><span className="code">LDN</span><strong>Öğrenci konaklaması</strong><span>Londra, Brighton, Leeds, Dublin yurtları</span><Icon name="arrow" size={16} /></Link>
+          </div>
         </div>
       </section>
       <section className="section section--mist">
@@ -278,6 +299,9 @@ export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
             <p className="lead-strong">{c.intro}</p>
             {note ? <p>{note}</p> : <p>{p.intro[0]}</p>}
             <p>{p.promise}</p>
+            {crossLinks[`${p.key}:${c.slug}`]?.map((x) => (
+              <p key={x.to} className="note"><Icon name="bolt" size={16} /> {x.text} <Link to={x.to}>{x.label}</Link></p>
+            ))}
           </section>
 
           {d?.sections.map((sec, i) => <DeepBlock key={sec.h} sec={sec} id={i === 0 ? 'detay' : undefined} />)}

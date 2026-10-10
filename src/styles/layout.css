@@ -244,6 +244,19 @@
   font-size: var(--fs-xs);
   white-space: nowrap;
 }
+.mega__tab--extra {
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.mega__tab--extra small {
+  white-space: normal;
+}
+.mega__tabs li:has(.mega__tab--extra):first-of-type,
+.mega__tabs li:nth-child(7) {
+  border-top: 1px solid var(--line-2);
+  margin-top: 0.4rem;
+  padding-top: 0.4rem;
+}
 .mega__tab.is-active {
   background: var(--teal-900);
   color: #fff;
@@ -1001,4 +1014,11 @@
   color: var(--ink-3);
   font-size: 0.8rem;
   margin-left: 0.25rem;
+}
+.footer__slogan {
+  font-family: var(--f-display);
+  font-size: 1.2rem;
+  font-weight: 650;
+  color: #fff !important;
+  margin-bottom: 0.5rem;
 }
