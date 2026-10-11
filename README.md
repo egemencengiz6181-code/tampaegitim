@@ -7,7 +7,7 @@ React 19 + Vite + TypeScript + React Router ile yazılmış, veri odaklı kurums
 ```bash
 npm install
 npm run dev      # http://localhost:5173
-npm run build    # dist/: her sayfa için statik HTML (prerender) + sitemap.xml + _redirects
+npm run build    # dist/: her sayfa için statik HTML (prerender) + sitemap.xml + rss.xml + _redirects
 npm run build:spa  # yalnızca istemci build'i (prerender olmadan)
 npm run preview  # üretim çıktısını yerelde test et
 ```
@@ -16,13 +16,19 @@ npm run preview  # üretim çıktısını yerelde test et
 
 | Klasör | İçerik |
 | --- | --- |
-| `src/data/` | Tüm içerik: `site.ts` (iletişim, ofisler), `countries.ts` (21 ülke), `programs.ts` (6 program), `packages.ts` (her şey dahil paketler), `services.ts`, `guides.ts` (bilgi bankası), `documents.ts` (örnek belgeler), `blog.ts`, `landings.ts` (reklam sayfaları), `social.ts` (yorumlar, partner logoları) |
+| `src/data/` | Tüm içerik: `site.ts` (iletişim, ofisler), `countries.ts` (21 ülke), `programs.ts` (6 program), `packages.ts` (her şey dahil paketler), `services.ts`, `guides.ts` (bilgi bankası), `documents.ts` (örnek belgeler), `blog.ts` (yazıları `content/blog/` klasöründen okur), `landings.ts` (reklam sayfaları), `social.ts` (yorumlar, partner logoları) |
 | `src/pages/` | Sayfa şablonları (her biri ayrı chunk olarak yüklenir) |
 | `src/components/` | Header + mega menü, footer, form, kalkış panosu, biniş kartı vb. |
 | `src/styles/` | `base.css` (tasarım token'ları), `layout.css`, `components.css`, `pages.css` |
 | `public/img/` | Logo varyantları, ülke ve kampanya görselleri (800px kart sürümleriyle) |
 
 Yeni bir ülke eklemek için `countries.ts`'ye bir kayıt eklemek yeterli; program × ülke sayfaları, menüler ve sitemap otomatik oluşur.
+
+## Blog yönetim paneli (`/admin`)
+
+Blog yazıları `content/blog/<adres>.json` + `<adres>.md` dosyalarında durur ve `/admin` panelinden eklenir, düzenlenir, silinir.
+Panel kayıtları Vercel fonksiyonları (`api/admin/*`) üzerinden GitHub'a commit eder; Vercel siteyi yeniden derler.
+Kurulum (Vercel ortam değişkenleri: `ADMIN_PASSWORD`, `ADMIN_SECRET`, `GITHUB_TOKEN`), kullanım ve SEO ayrıntıları: **[docs/ADMIN.md](docs/ADMIN.md)**.
 
 ## Reklam landing page'leri
 
@@ -50,7 +56,7 @@ Formlar `src/lib/lead.ts` üzerinden gönderilir. `.env` dosyasına `VITE_LEAD_E
 - **İç linkleme:** Blog ve rehber metinlerinde `[metin](/yol)` sözdizimi (`src/components/Rich.tsx`); program, ülke ve blog sayfaları birbirine bağlıdır.
 - **Denetim:** `node scripts/seo-audit.mjs` (build sonrası) başlık/açıklama uzunluğu, H1, canonical, yinelenen başlık ve kırık iç linkleri raporlar.
 
-Öncelikli anahtar kelime sayfaları (İngiltere): `/yurtdisi-yaz-okullari/ingiltere`, `/yurtdisi-dil-okullari/ingiltere`, `/ulkeler/ingiltere`, `/lisans-programlari/ingiltere`, `/yurtdisi-yuksek-lisans/ingiltere`, `/yurtdisi-lise-egitimi/ingiltere` ve `src/data/blog-bodies-uk.ts` içindeki 20 yazı.
+Öncelikli anahtar kelime sayfaları (İngiltere): `/yurtdisi-yaz-okullari/ingiltere`, `/yurtdisi-dil-okullari/ingiltere`, `/ulkeler/ingiltere`, `/lisans-programlari/ingiltere`, `/yurtdisi-yuksek-lisans/ingiltere`, `/yurtdisi-lise-egitimi/ingiltere` ve `content/blog/` içindeki İngiltere yazıları.
 
 ## İngiltere reklam landing page'leri
 

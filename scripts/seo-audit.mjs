@@ -32,7 +32,7 @@ for (const [route, html] of pages) {
   if (t.length > 70) issues.push(`${route}: title uzun (${t.length}) ${t}`)
   if (!desc) issues.push(`${route}: description yok`)
   if (desc.length < 70) issues.push(`${route}: description kısa (${desc.length})`)
-  if (h1s !== 1) issues.push(`${route}: h1 sayısı ${h1s}`)
+  if (h1s !== 1 && route !== "/admin") issues.push(`${route}: h1 sayısı ${h1s}`)
   if (!noindex && canon !== `https://tampaegitim.com.tr${route === '/' ? '/' : route}`) issues.push(`${route}: canonical hatalı ${canon}`)
   if (!noindex) titles.set(t, [...(titles.get(t) ?? []), route])
   for (const m of html.matchAll(/href="(\/[^"#?]*)/g)) {

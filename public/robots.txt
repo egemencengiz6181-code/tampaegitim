@@ -2,5 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /lp/
 Disallow: /tesekkurler
+Disallow: /admin
+Disallow: /api/
 
 Sitemap: https://tampaegitim.com.tr/sitemap.xml

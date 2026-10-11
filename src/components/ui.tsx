@@ -46,19 +46,25 @@ type SeoProps = {
   path?: string
   image?: string
   type?: 'website' | 'article'
+  /** Paylaşım görselinin alt metni */
+  imageAlt?: string
   published?: string
+  modified?: string
+  /** Makale kategorisi ve etiketleri (article:section / article:tag) */
+  section?: string
+  tags?: string[]
   jsonLd?: object | object[]
   noindex?: boolean
 }
 
 /** Arama sonuçlarında kesilmemesi için marka ekini uzunluğa göre ayarlar (~65 karakter). */
-function brandTitle(t: string) {
+export function brandTitle(t: string) {
   if (t.includes('Tampa')) return t
   for (const suffix of [' | Tampa Yurtdışı Eğitim', ' | Tampa Eğitim', ' | Tampa']) if (t.length + suffix.length <= 65) return t + suffix
   return t
 }
 
-export function Seo({ title, description, path = '', image = '/img/brand/logo-full.jpg', type = 'website', published, jsonLd, noindex }: SeoProps) {
+export function Seo({ title, description, path = '', image = '/img/brand/logo-full.jpg', imageAlt, type = 'website', published, modified, section, tags, jsonLd, noindex }: SeoProps) {
   const full = brandTitle(title)
   const url = `${site.url}${path === '/' ? '/' : path}`
   const img = image.startsWith('http') ? image : `${site.url}${image}`
@@ -75,13 +81,20 @@ export function Seo({ title, description, path = '', image = '/img/brand/logo-fu
       <meta property="og:description" content={desc} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={img} />
+      {imageAlt && <meta property="og:image:alt" content={imageAlt} />}
       <meta property="og:site_name" content="Tampa Yurtdışı Eğitim" />
       <meta property="og:locale" content="tr_TR" />
       {published && <meta property="article:published_time" content={published} />}
+      {modified && <meta property="article:modified_time" content={modified} />}
+      {modified && <meta property="og:updated_time" content={modified} />}
+      {section && <meta property="article:section" content={section} />}
+      {tags?.map((t) => <meta key={t} property="article:tag" content={t} />)}
+      {type === 'article' && <meta property="article:publisher" content="https://www.facebook.com/tampayurtdisiegitim/" />}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={full} />
       <meta name="twitter:description" content={desc} />
       <meta name="twitter:image" content={img} />
+      {imageAlt && <meta name="twitter:image:alt" content={imageAlt} />}
       {jsonLd && <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>}
     </>
   )

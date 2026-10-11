@@ -22,4 +22,4 @@ export async function render(url: string) {
   return { html, status: context.statusCode }
 }
 
-export { sitemapPaths } from './seo/paths'
+export { sitemapPaths, blogFeed } from './seo/paths'

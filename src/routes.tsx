@@ -28,6 +28,7 @@ const resMod = () => import('./pages/Resources')
 const landingMod = () => import('./pages/Landing')
 const notFoundMod = () => import('./pages/NotFound')
 const extrasMod = () => import('./pages/Extras')
+const adminMod = () => import('./pages/admin/Admin')
 
 const programRoutes: RouteObject[] = programs.flatMap((p) => [
   { path: p.slug, ...page(programsMod, 'ProgramHub', { programKey: p.key }) },
@@ -90,6 +91,8 @@ export const routes: RouteObject[] = [
       { path: '*', ...page(notFoundMod, 'default') },
     ],
   },
+  // Blog yönetim paneli: site düzeni dışında, arama motorlarına kapalı
+  { path: 'admin/*', ...page(adminMod, 'default') },
   {
     path: 'lp',
     element: <LandingLayout />,

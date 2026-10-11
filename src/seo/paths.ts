@@ -33,9 +33,9 @@ export function sitemapPaths(): SitePath[] {
     p('/hizmetler', 0.7),
     ...services.map((s) => p(s.path, 0.7)),
     p('/tampa-akademi', 0.6),
-    p('/blog', 0.8, 'daily'),
+    p('/blog', 0.8, 'daily', posts[0]?.updated),
     ...postCategories.filter((c) => posts.some((po) => po.category === c)).map((c) => p(`/blog/kategori/${categorySlug(c)}`, 0.6, 'weekly')),
-    ...posts.map((po) => p(`/blog/${po.slug}`, 0.7, 'monthly', po.date)),
+    ...posts.map((po) => p(`/blog/${po.slug}`, 0.7, 'monthly', po.updated)),
     p('/bilgi-bankasi', 0.7, 'weekly'),
     ...guides.map((g) => p(`/bilgi-bankasi/${g.slug}`, 0.6)),
     p('/sss', 0.6),
@@ -46,6 +46,13 @@ export function sitemapPaths(): SitePath[] {
     // İndekslenmeyen ama prerender edilen sayfalar
     ...landings.map((l) => ({ path: `/lp/${l.slug}`, priority: 0, changefreq: 'monthly' as const, index: false })),
     { path: '/tesekkurler', priority: 0, changefreq: 'yearly', index: false },
+    // Yönetim paneli kabuğu (istemcide açılır; noindex)
+    { path: '/admin', priority: 0, changefreq: 'yearly', index: false },
     ...ukPriceCities.filter((c) => !c.schools.length).map((c) => ({ path: `/ingiltere-dil-okullari-fiyat-listesi/${c.slug}`, priority: 0, changefreq: 'monthly' as const, index: false })),
   ]
+}
+
+/** RSS beslemesi için yayındaki blog yazıları (en yeni önce). */
+export function blogFeed() {
+  return posts.map((po) => ({ slug: po.slug, title: po.title, description: po.excerpt, date: po.date, updated: po.updated, category: po.category, image: po.image }))
 }

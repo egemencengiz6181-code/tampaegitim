@@ -7,8 +7,13 @@ import { LeadForm } from '../components/LeadForm'
 import { guides, guideBySlug, guideGroups, type Guide } from '../data/guides'
 import { documents, documentBySlug } from '../data/documents'
 import { posts, postBySlug, formatDate, postCategories, categorySlug, type Post } from '../data/blog'
-import { postBodies } from '../data/blog-bodies'
-import { Rich } from '../components/Rich'
+import { parseMarkdown, plainText, wordCount } from '../lib/markdown'
+import { Markdown } from '../components/Markdown'
+
+// Yazı metinleri yalnızca bu (lazy) sayfa paketinde yüklenir.
+const bodies = import.meta.glob<string>('../../content/blog/*.md', { eager: true, query: '?raw', import: 'default' })
+const bodyOf = (slug: string) => bodies[`../../content/blog/${slug}.md`] ?? ''
+import { plain } from '../components/Rich'
 import { ORG_ID, abs } from '../seo/schema'
 import { programs, countriesFor, programByKey } from '../data/programs'
 import { countries, countryBySlug } from '../data/countries'
@@ -298,7 +303,9 @@ export function BlogPost() {
   const { slug = '' } = useParams()
   const p = postBySlug[slug]
   if (!p) return <NotFound />
-  const body = postBodies[slug] ?? []
+  const blocks = parseMarkdown(bodyOf(slug))
+  const toc = blocks.flatMap((b) => (b.type === 'h2' ? [b] : []))
+  const words = wordCount(plainText(blocks))
   const related = posts
     .filter((x) => x.slug !== p.slug)
     .map((x) => ({ x, score: (x.countries ?? []).filter((c) => p.countries?.includes(c)).length * 2 + (x.programs ?? []).filter((k) => p.programs?.includes(k)).length + (x.category === p.category ? 1 : 0) }))
@@ -316,9 +323,11 @@ export function BlogPost() {
     '@type': 'BlogPosting',
     headline: p.title,
     description: p.excerpt,
-    image: [abs(p.image)],
+    image: [{ '@type': 'ImageObject', url: abs(p.image), caption: p.imageAlt }],
     datePublished: p.date,
-    dateModified: p.date,
+    dateModified: p.updated,
+    wordCount: words,
+    timeRequired: `PT${p.readMin}M`,
     inLanguage: 'tr-TR',
     keywords: p.keywords?.join(', '),
     articleSection: p.category,
@@ -328,28 +337,26 @@ export function BlogPost() {
   }
   return (
     <>
-      <Seo title={p.metaTitle ?? p.title} description={p.excerpt} path={path} image={p.image} type="article" published={p.date} jsonLd={ld} />
-      <PageHero image={p.image} crumbs={[{ label: 'Blog', to: '/blog' }, { label: p.category, to: `/blog/kategori/${categorySlug(p.category)}` }, { label: p.title }]} kicker={`${p.category} · ${formatDate(p.date)} · ${p.readMin} dk okuma`} title={p.title} />
+      <Seo title={p.metaTitle ?? p.title} description={p.excerpt} path={path} image={p.image} imageAlt={p.imageAlt} type="article" published={p.date} modified={p.updated} section={p.category} tags={p.keywords} jsonLd={ld} />
+      <PageHero image={p.image} crumbs={[{ label: 'Blog', to: '/blog' }, { label: p.category, to: `/blog/kategori/${categorySlug(p.category)}` }, { label: p.title }]} kicker={<>{p.category} · <time dateTime={p.date}>{formatDate(p.date)}</time>{p.updated !== p.date && <> · Güncelleme: <time dateTime={p.updated}>{formatDate(p.updated)}</time></>} · {p.readMin} dk okuma</>} title={p.title} />
       <div className="container detail">
         <article className="detail__main article">
           <p className="lead-strong">{p.excerpt}</p>
-          {body.length > 2 && (
+          {toc.length > 2 && (
             <nav className="toc" aria-label="İçindekiler">
               <p className="toc__h">İçindekiler</p>
-              <ol>{body.map((s, i) => <li key={s.h}><a href={`#s${i}`}>{s.h}</a></li>)}</ol>
+              <ol>{toc.map((h) => <li key={h.id}><a href={`#${h.id}`}>{plain(h.text)}</a></li>)}</ol>
             </nav>
           )}
-          {body.map((s, i) => (
-            <section key={s.h} id={`s${i}`} className="article__sec">
-              <h2>{s.h}</h2>
-              {s.p?.map((t) => <p key={t.slice(0, 32)}><Rich text={t} /></p>)}
-              {s.list && (
-                <ul className="article__list">
-                  {s.list.map((t) => <li key={t.slice(0, 32)}><Rich text={t} /></li>)}
-                </ul>
-              )}
+          <div className="article__body">
+            <Markdown blocks={blocks} />
+          </div>
+          {p.faqs.length > 0 && (
+            <section className="article__faq" aria-labelledby="sss">
+              <h2 id="sss">Sık Sorulan Sorular</h2>
+              <FaqList items={p.faqs} />
             </section>
-          ))}
+          )}
           {relPrograms.length > 0 && (
             <aside className="relbox" aria-label="İlgili programlar">
               <p className="relbox__h">Bu yazıyla ilgili programlar</p>
