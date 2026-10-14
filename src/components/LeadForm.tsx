@@ -1,8 +1,9 @@
-import { useId, useState, type FormEvent } from 'react'
+import { useEffect, useId, useRef, useState, type FormEvent } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { submitLead, programOptions } from '../lib/lead'
 import { countries } from '../data/countries'
 import { Icon } from './Icon'
+import { site } from '../data/site'
 
 type Props = {
   variant?: 'full' | 'compact'
@@ -24,6 +25,11 @@ export function LeadForm({ variant = 'full', source, defaultProgram = '', defaul
   const [errors, setErrors] = useState<Errors>({})
   const [status, setStatus] = useState<'idle' | 'sending' | 'error'>('idle')
   const compact = variant === 'compact'
+  // Bot koruması: formun ekranda kalma süresi
+  const shownAt = useRef(0)
+  useEffect(() => {
+    shownAt.current = Date.now()
+  }, [])
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -42,7 +48,10 @@ export function LeadForm({ variant = 'full', source, defaultProgram = '', defaul
     }
     setStatus('sending')
     try {
-      await submitLead({ name: v('name'), phone: v('phone'), email: v('email'), program: v('program'), country: v('country'), message: v('message'), source })
+      await submitLead(
+        { name: v('name'), phone: v('phone'), email: v('email'), program: v('program'), country: v('country'), message: v('message'), source },
+        { hp: v('website'), elapsed: Date.now() - shownAt.current },
+      )
       nav('/tesekkurler', { state: { name: v('name').split(' ')[0], program: v('program') } })
     } catch {
       setStatus('error')
@@ -55,6 +64,11 @@ export function LeadForm({ variant = 'full', source, defaultProgram = '', defaul
     <form className={`lead lead--${variant} lead--${tone}`} onSubmit={onSubmit} noValidate>
       {title && <h3 className="lead__title">{title}</h3>}
       {note && <p className="lead__note">{note}</p>}
+      {/* Botlar için tuzak alan: gerçek kullanıcılar görmez ve doldurmaz */}
+      <div className="lead__hp" aria-hidden="true">
+        <label htmlFor={f('website')}>Web siteniz</label>
+        <input id={f('website')} name="website" tabIndex={-1} autoComplete="off" />
+      </div>
       <div className="lead__grid">
         <div className="field">
           <label htmlFor={f('name')}>Ad soyad</label>
@@ -110,7 +124,7 @@ export function LeadForm({ variant = 'full', source, defaultProgram = '', defaul
         </span>
       </label>
       {errors.kvkk && <p className="field__err">{errors.kvkk}</p>}
-      {status === 'error' && <p className="field__err" role="alert">Form şu anda gönderilemedi. Lütfen tekrar deneyin veya bize WhatsApp’tan yazın.</p>}
+      {status === 'error' && <p className="field__err" role="alert">Form şu anda gönderilemedi. Lütfen tekrar deneyin ya da bize <a href={site.whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp’tan yazın</a> veya <a href={site.phoneHref}>{site.phone}</a> numarasından arayın.</p>}
       <button type="submit" className="btn btn--coral btn--lg lead__submit" disabled={status === 'sending'}>
         <span>{status === 'sending' ? 'Gönderiliyor…' : 'Ücretsiz danışmanlık iste'}</span>
         {status !== 'sending' && <Icon name="arrow" size={18} />}

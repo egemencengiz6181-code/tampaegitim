@@ -1153,3 +1153,12 @@
     font-size: 0.98rem;
   }
 }
+
+/* Form bot tuzağı (ekran dışı) */
+.lead__hp {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

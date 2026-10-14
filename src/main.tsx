@@ -9,8 +9,10 @@ import './styles/layout.css'
 import './styles/components.css'
 import './styles/pages.css'
 import { routes } from './routes'
+import { captureAttribution } from './lib/lead'
 
 async function start() {
+  captureAttribution()
   const container = document.getElementById('root')!
   const prerendered = !!container.firstElementChild
 

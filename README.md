@@ -38,11 +38,12 @@ Başarılı form gönderimi `/tesekkurler` sayfasına yönlenir (Google Ads / Me
 
 ## Form entegrasyonu
 
-Formlar `src/lib/lead.ts` üzerinden gönderilir. `.env` dosyasına `VITE_LEAD_ENDPOINT=https://...` eklenirse veriler JSON olarak POST edilir (CRM, Zapier, form servisi). Tanımlı değilse yerel testte başarılı kabul edilir ve konsola yazılır.
+Tüm formlar `/api/lead` sunucu fonksiyonuna gider (doğrulama, bot koruması, reklam kaynağı bilgisi). Fonksiyon başvuruyu Google Apps Script'e iletir; script Google E-Tablo'ya satır ekler ve Gmail ile bildirim gönderir.
+Kurulum (Apps Script + Vercel'de `LEAD_WEBHOOK_URL`, `LEAD_WEBHOOK_SECRET`): **[docs/FORMLAR.md](docs/FORMLAR.md)**. Script: `docs/google-apps-script/Code.gs`.
 
 ## Yayına almadan önce
 
-- `VITE_LEAD_ENDPOINT` ve analytics / reklam pikselleri eklenmeli.
+- Form bağlantısı (docs/FORMLAR.md) kurulmalı; analytics / reklam pikselleri eklenmeli.
 - KVKK ve çerez metinleri hukuk danışmanınca gözden geçirilmeli.
 - Barındırma ayarları için aşağıdaki "Yayın (hosting)" bölümüne bakın.
 - Eski WordPress adresleri (`/ornek-cv` vb.) yeni sayfalara yönlendirilir.
