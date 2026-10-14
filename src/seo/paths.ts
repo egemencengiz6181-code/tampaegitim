@@ -9,6 +9,7 @@ import { landings } from '../data/landings'
 import { onlinePrograms } from '../data/online'
 import { residences } from '../data/accommodation'
 import { ukPriceCities } from '../data/schoolPrices'
+import { germanUnis } from '../data/germanUnis'
 
 export type SitePath = { path: string; priority: number; changefreq: 'daily' | 'weekly' | 'monthly' | 'yearly'; lastmod?: string; index?: boolean }
 
@@ -30,6 +31,8 @@ export function sitemapPaths(): SitePath[] {
     ...residences.map((r) => p(`/ogrenci-konaklama/${r.slug}`, 0.6, 'weekly')),
     p('/ingiltere-dil-okullari-fiyat-listesi', 0.8),
     ...ukPriceCities.filter((c) => c.schools.length).map((c) => p(`/ingiltere-dil-okullari-fiyat-listesi/${c.slug}`, 0.7)),
+    p('/almanyadaki-ozel-universiteler', 0.8),
+    ...germanUnis.map((u) => p(`/almanyadaki-ozel-universiteler/${u.slug}`, 0.7)),
     p('/hizmetler', 0.7),
     ...services.map((s) => p(s.path, 0.7)),
     p('/tampa-akademi', 0.6),

@@ -21,6 +21,8 @@ const crossLinks: Record<string, { text: string; to: string; label: string }[]> 
   'lise:kanada': [{ text: 'Türkiye’den ayrılmadan Kanada lise diploması almak ister misiniz?', to: '/online-egitim/kanada-online-lise-diplomasi', label: 'Kanada Online Lise Diploması (OSSD)' }],
   'lisans:ingiltere': [{ text: 'İşinizi bırakmadan, %100 online İngiliz lisans diploması:', to: '/online-egitim/ingiltere-online-lisans-yuksek-lisans', label: 'İngiltere Online Lisans ve Top-up' }],
   'yuksek-lisans:ingiltere': [{ text: 'Çalışırken, vize gerektirmeden İngiliz yüksek lisans diploması:', to: '/online-egitim/ingiltere-online-lisans-yuksek-lisans', label: 'İngiltere Online MBA' }],
+  'lisans:almanya': [{ text: 'YKS şartı olmadan, İngilizce eğitim veren akredite okullar:', to: '/almanyadaki-ozel-universiteler', label: 'Almanya’daki Özel Üniversiteler' }],
+  'yuksek-lisans:almanya': [{ text: 'İngilizce yüksek lisans ve MBA programları için:', to: '/almanyadaki-ozel-universiteler', label: 'Almanya’daki Özel Üniversiteler' }],
   'dil:ingiltere': [
     { text: 'Okulları ve fiyatları şehir şehir karşılaştırın:', to: '/ingiltere-dil-okullari-fiyat-listesi', label: 'İngiltere Dil Okulları Fiyat Listesi' },
     { text: 'Konaklamanızı da birlikte planlayalım:', to: '/ogrenci-konaklama', label: 'Londra Öğrenci Yurtları' },
