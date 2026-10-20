@@ -16,8 +16,35 @@ export const ukSummer = {
   duration: '1–6 hafta',
   season: 'Haziran – Ağustos',
   supervision: '7/24 gözetim',
+  /** Önerilen son kayıt zamanı (vize başvurusu için mayısa yetişmek üzere) */
+  registrationDeadline: 'Nisan sonu',
+  /** TODO: Tampa'dan teyit: 2027 ortalama haftalık/2 haftalık fiyat aralığı (ör. "2 hafta 2.400–3.600 £"). Boşken sayfada "yazılı teklif" metni görünür. */
+  priceRange: '' as string,
   updated: ukUpdated,
 }
+
+/** İngiltere Üniversite Temsilciliği sayfası. Paket 3'te /ingiltere-universite-temsilciligi açılınca buradan değiştirilecek. */
+export const ukRepresentationPath = '/ofislerimiz#ingiltere-universite-temsilciligi'
+
+/** UCAS 2027 girişi takvimi (kaynak: ucas.com, kontrol: 20 Ekim 2026) */
+export const ukUcas2027 = {
+  updated: '2026-10-20',
+  opens: 'Eylül 2026',
+  earlyDeadline: '15 Ekim 2026',
+  equalConsideration: '13 Ocak 2027, 18.00 (İngiltere saati)',
+}
+
+/** Student vizesi yaşam gideri şartı (aylık, en fazla 9 ay). 30 Kasım 2026 ve sonrasındaki başvurular için. TODO: gov.uk'tan dönem başında teyit */
+export const ukMaintenance = {
+  updated: '2026-10-20',
+  london: 1570,
+  outside: 1203,
+  months: 9,
+  from: '30 Kasım 2026',
+}
+
+/** TODO: Tampa'dan teyit: uluslararası öğrenci yıllık lisans harcı aralığı (ör. "£16.000–£30.000"). Boşken genel metin görünür. */
+export const ukTuitionRange = '' as string
 
 /** Vize türleri: her yerde aynı cümleler kullanılır. */
 export const ukVisa = {

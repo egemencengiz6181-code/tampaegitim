@@ -12,6 +12,7 @@ import { services } from '../data/services'
 import { posts, formatDate } from '../data/blog'
 import { generalFaqs } from '../data/landings'
 import { cardImg } from '../lib/img'
+import { ukRepresentationPath } from '../data/uk'
 
 const featured = ['ingiltere', 'almanya', 'malta', 'amerika', 'irlanda', 'kanada', 'polonya', 'italya', 'dubai', 'ispanya']
 
@@ -29,8 +30,8 @@ export default function Home() {
   return (
     <>
       <Seo
-        title="Yurt Dışı Eğitim Danışmanlığı | İngiltere Yaz Okulu, Dil Okulu | Tampa"
-        description="Tampa Yurtdışı Eğitim: İngiltere yaz okulları, dil okulları, yurt dışında üniversite ve yüksek lisans. 15 yıllık tecrübe, 5.000+ öğrenci; İzmir ve Aydın ofisleri, İngiltere Üniversite Temsilciliği."
+        title="Yurt Dışı Eğitim Danışmanlığı İzmir | İngiltere Yaz Okulu, Üniversite | Tampa"
+        description="İzmir ve Aydın’da yurt dışı eğitim danışmanlığı: İngiltere yaz okulları, üniversite başvurusu, dil okulları ve yüksek lisans. 15 yıllık tecrübe."
         path="/"
       />
 
@@ -54,7 +55,7 @@ export default function Home() {
             <ul className="hero__proof">
               <li><Stars size={15} /><span><strong>{site.googleRating}</strong> Google puanı · {site.googleReviewCount} yorum</span></li>
               <li><strong>{site.studentCount}</strong><span>öğrenci bize güvendi</span></li>
-              <li><strong>2 ofis</strong><span>İzmir, Aydın + İngiltere Üniversite Temsilciliği</span></li>
+              <li><strong>2 ofis</strong><span>İzmir, Aydın + <Link to={ukRepresentationPath}>İngiltere Üniversite Temsilciliği</Link></span></li>
             </ul>
           </div>
           <DepartureBoard />
@@ -277,7 +278,7 @@ export default function Home() {
             <ul className="offices-mini">
               {offices.slice(0, 3).map((o) => (
                 <li key={o.slug}>
-                  <strong>{o.title}</strong>
+                  <strong>{o.slug === 'ingiltere-universite-temsilciligi' ? <Link to={ukRepresentationPath}>{o.title}</Link> : o.title}</strong>
                   <span>{o.address}</span>
                   {o.phone && <a href={o.phoneHref}>{o.phone}</a>}
                 </li>

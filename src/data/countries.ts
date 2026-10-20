@@ -18,6 +18,8 @@ export type Country = {
   image: string
   tagline: string
   intro: string
+  /** Ülke sayfası (/ulkeler/<slug>) arama sonucu açıklaması, 140–155 karakter */
+  metaDescription?: string
   highlights: { title: string; text: string }[]
   visa: string
   living: string
@@ -73,6 +75,7 @@ export const countries: Country[] = [
     cities: ['New York', 'Boston', 'Los Angeles', 'San Francisco', 'Miami', 'Boca Raton', 'Chicago', 'San Diego'],
     image: '/img/dest/amerika.jpg',
     tagline: 'Kampüs kültürü, sınırsız bölüm seçeneği ve dünya çapında kariyer ağı.',
+    metaDescription: 'Amerika’da eğitim: dil okulları, yaz okulları, lise, üniversite ve yüksek lisans. F-1 vizesi, New York’tan Kaliforniya’ya şehirler, burslar ve maliyet.',
     intro:
       'Amerika Birleşik Devletleri, dünyanın en geniş üniversite yelpazesine ve en güçlü kampüs kültürüne sahip ülkesi. Esnek müfredat yapısı sayesinde öğrenciler ilk yıllarda farklı alanları deneyip bölümlerini sonradan seçebilir.',
     highlights: [
@@ -106,6 +109,7 @@ export const countries: Country[] = [
     cities: ['Toronto', 'Vancouver', 'Montreal', 'Calgary', 'Ottawa', 'Victoria'],
     image: '/img/dest/kanada.jpg',
     tagline: 'Güvenli şehirler, çalışma izinli programlar ve göçmen dostu bir gelecek.',
+    metaDescription: 'Kanada’da eğitim: dil okulu, yaz okulu, lise, kolej ve üniversite, co-op ile work and study. Toronto, Vancouver, Montreal; vize, çalışma hakkı ve maliyet.',
     intro:
       'Kanada; yaşam kalitesi, güvenliği ve uluslararası öğrencilere açık politikalarıyla öne çıkar. Hem İngilizce hem Fransızca eğitim imkânı sunan ülke, dil okullarından co-op (staj içeren) kolej programlarına ve araştırma odaklı üniversitelere kadar geniş bir yelpazeye sahiptir.',
     highlights: [
@@ -138,6 +142,7 @@ export const countries: Country[] = [
     cities: ['Sidney', 'Melbourne', 'Brisbane', 'Perth', 'Gold Coast', 'Adelaide'],
     image: '/img/dest/avustralya.jpg',
     tagline: 'Okyanus kıyısında eğitim, çalışma hakkı ve güneşli bir yaşam.',
+    metaDescription: 'Avustralya’da eğitim: dil okulları, üniversite, yüksek lisans ve çalışma hakkı tanıyan work and study. Sidney, Melbourne, Brisbane; vize ve yaşam maliyeti.',
     intro:
       'Avustralya; dünya sıralamalarında üst sıralarda yer alan üniversiteleri, çalışma hakkı tanıyan öğrenci vizesi ve açık hava yaşam tarzıyla uzun dönem eğitim planlayanların gözdesidir. Dil okulu, mesleki eğitim (VET) ve üniversite programları arasında esnek geçişler mümkündür.',
     highlights: [
@@ -167,6 +172,7 @@ export const countries: Country[] = [
     cities: ['Dublin', 'Cork', 'Galway', 'Limerick'],
     image: '/img/dest/irlanda.jpg',
     tagline: 'Avrupa’nın teknoloji başkentinde İngilizce ve kariyer.',
+    metaDescription: 'İrlanda’da eğitim: dil okulları, lise, yüksek lisans ve work and study. Dublin, Cork ve Galway’de çalışma hakkı, Stamp 2 oturum izni ve yaşam maliyeti.',
     intro:
       'İrlanda, Google, Meta ve Apple gibi teknoloji devlerinin Avrupa merkezlerine ev sahipliği yapan, İngilizce konuşulan bir Avrupa Birliği ülkesi. Samimi kültürü, güvenli şehirleri ve dil öğrencilerine tanınan çalışma hakkıyla work and study denince akla gelen ilk ülkelerden biridir.',
     highlights: [
@@ -197,6 +203,7 @@ export const countries: Country[] = [
     cities: ['St. Julian’s', 'Sliema', 'Valletta', 'Gozo'],
     image: '/img/dest/malta.jpg',
     tagline: 'Akdeniz güneşi altında uygun maliyetli İngilizce.',
+    metaDescription: 'Malta’da eğitim: uygun fiyatlı dil okulları, yaz okulları, üniversite ve work and study. St. Julian’s ve Sliema’da konaklama, vize ve çalışma koşulları.',
     intro:
       'Malta, İngilizcenin resmi dil olduğu küçük ama son derece hareketli bir Akdeniz adası. Uygun fiyatlı dil okulları, Türkiye’ye yakınlığı, sıcak iklimi ve öğrenci dostu sosyal hayatıyla özellikle kısa ve orta süreli dil eğitimleri için ilk tercihlerden biridir.',
     highlights: [
@@ -227,6 +234,7 @@ export const countries: Country[] = [
     cities: ['Berlin', 'Münih', 'Hamburg', 'Frankfurt', 'Köln', 'Heidelberg', 'Düsseldorf'],
     image: '/img/dest/almanya.jpg',
     tagline: 'Harçsız devlet üniversiteleri ve güçlü bir sanayi ile kariyer.',
+    metaDescription: 'Almanya’da eğitim: harçsız devlet üniversiteleri, özel üniversiteler, yüksek lisans, lise ve Almanca dil kursları. Bloke hesap, vize ve şehir seçimi.',
     intro:
       'Almanya; devlet üniversitelerinin büyük bölümünde harç alınmaması, mühendislik ve teknoloji alanındaki gücü ve mezunlara tanıdığı iş arama izniyle Türk öğrencilerin en çok tercih ettiği ülkelerden biri. Almanca öğrenmek isteyenler için dil okulları, mesleki eğitim (Ausbildung) arayanlar için ise yönlendirme programlarımız mevcuttur.',
     highlights: [
@@ -258,6 +266,7 @@ export const countries: Country[] = [
     cities: ['Viyana', 'Salzburg', 'Graz', 'Innsbruck'],
     image: '/img/dest/avusturya.jpg',
     tagline: 'Müziğin ve sanatın başkentinde Almanca ve akademi.',
+    metaDescription: 'Avusturya’da eğitim: Viyana, Salzburg ve Graz’da Almanca dil kursları, yaz okulları ve düşük harçlı yüksek lisans programları. Vize ve yaşam maliyeti.',
     intro:
       'Avusturya, dünyanın en yaşanabilir şehirleri listesinde sıkça birinci sıraya yerleşen Viyana’sı, düşük harçlı devlet üniversiteleri ve Alp manzaralı küçük şehirleriyle sakin ama güçlü bir eğitim ortamı sunar.',
     highlights: [
@@ -284,6 +293,7 @@ export const countries: Country[] = [
     cities: ['Madrid', 'Barselona', 'Valensiya', 'Málaga', 'Sevilla', 'Salamanca'],
     image: '/img/dest/ispanya.jpg',
     tagline: 'Dünyanın en çok konuşulan ikinci anadilini güneşin altında öğrenin.',
+    metaDescription: 'İspanya’da eğitim: İspanyolca dil okulları, yaz okulları, lise, foundation ile üniversite ve yüksek lisans. Madrid, Barselona, Valensiya; vize ve maliyet.',
     intro:
       'İspanya; canlı şehir hayatı, uygun yaşam maliyeti ve 500 milyonu aşkın kişinin konuştuğu İspanyolcayla dil ve üniversite eğitimi için cazip bir Avrupa ülkesi. Foundation programları sayesinde Türkiye’de lise mezunu öğrenciler İspanyol üniversitelerine hazırlanabilir.',
     highlights: [
@@ -313,6 +323,7 @@ export const countries: Country[] = [
     cities: ['Paris', 'Lyon', 'Nice', 'Montpellier', 'Bordeaux', 'Toulouse'],
     image: '/img/dest/fransa.jpg',
     tagline: 'Moda, gastronomi ve işletme okullarının merkezinde eğitim.',
+    metaDescription: 'Fransa’da eğitim: Fransızca dil okulları, yaz okulları, lise, üniversite ve İngilizce yüksek lisans. Paris, Lyon, Nice; Campus France, vize ve maliyet.',
     intro:
       'Fransa, Sorbonne gibi tarihi üniversiteleri, grande école sistemi ve moda, sanat, gastronomi alanındaki dünya çapında okullarıyla seçkin bir eğitim destinasyonu. Devlet üniversitelerinde makul harçlar ve İngilizce yüksek lisans seçenekleri sunar.',
     highlights: [
@@ -339,6 +350,7 @@ export const countries: Country[] = [
     cities: ['Milano', 'Roma', 'Floransa', 'Bologna', 'Torino', 'Padova'],
     image: '/img/dest/italya.jpg',
     tagline: 'Tasarım, mimarlık ve sanatta asırlık üniversiteler; burs imkânlarıyla.',
+    metaDescription: 'İtalya’da eğitim: gelire göre harç ve DSU bursuyla üniversite, yüksek lisans, lise, yaz okulu ve İtalyanca kursları. Milano, Roma, Bologna ve başvuru.',
     intro:
       'İtalya; dünyanın en eski üniversitesi olan Bologna’sı, tasarım ve mimarlıkta Politecnico di Milano gibi dünya devleri ve gelire dayalı burs sistemleriyle uygun maliyetli bir Avrupa eğitimi isteyenler için güçlü bir seçenektir.',
     highlights: [
@@ -368,6 +380,7 @@ export const countries: Country[] = [
     cities: ['Moskova', 'St. Petersburg', 'Kazan'],
     image: '/img/dest/rusya.jpg',
     tagline: 'Rusçayı kendi coğrafyasında, köklü üniversitelerde öğrenin.',
+    metaDescription: 'Rusya’da Rusça eğitimi: Moskova, St. Petersburg ve Kazan’daki üniversite dil merkezlerinde yoğun Rusça programları, konaklama ve öğrenci vizesi.',
     intro:
       'Rusya, Rusça öğrenmek isteyenler için kapsamlı üniversite dil hazırlık programları ve kültürel açıdan zengin şehirler sunar. Moskova ve St. Petersburg’daki köklü üniversitelerin dil merkezleri yoğun ve yapılandırılmış programlarıyla bilinir.',
     highlights: [
@@ -394,6 +407,7 @@ export const countries: Country[] = [
     cities: ['Auckland', 'Wellington', 'Christchurch', 'Queenstown'],
     image: '/img/dest/yeni-zelanda.jpg',
     tagline: 'Doğanın ortasında, sakin ve güvenli bir İngilizce deneyimi.',
+    metaDescription: 'Yeni Zelanda’da dil eğitimi: Auckland, Wellington ve Christchurch’te küçük sınıflı dil okulları, etkinlik programları, konaklama ve öğrenci vizesi.',
     intro:
       'Yeni Zelanda, el değmemiş doğası, güvenli toplum yapısı ve kaliteli eğitim sistemiyle sakin bir yurtdışı deneyimi arayanlar için ideal. Dil okulları küçük sınıflar ve yoğun etkinlik programlarıyla öne çıkar.',
     highlights: [
@@ -420,6 +434,7 @@ export const countries: Country[] = [
     cities: ['Dubai', 'Abu Dabi'],
     image: '/img/dest/dubai.jpg',
     tagline: 'Modern bir metropolde İngilizce, kariyer ve deneyim.',
+    metaDescription: 'Dubai’de eğitim: uygun fiyatlı İngilizce dil okulları, uluslararası kampüslerde üniversite ve yüksek lisans, work and study. Vize, konaklama ve maliyet.',
     intro:
       'Dubai; gökdelenleri, güvenli şehir yapısı ve uluslararası iş dünyasıyla İngilizce eğitimini modern bir yaşamla birleştirmek isteyenlerin tercihi. İngiliz, Amerikan ve Avustralya üniversitelerinin kampüslerine ev sahipliği yapan şehir, yüksek lisans için de güçlü bir alternatiftir.',
     highlights: [
@@ -449,6 +464,7 @@ export const countries: Country[] = [
     cities: ['Buenos Aires', 'Santiago', 'Lima', 'Cusco', 'Rio de Janeiro'],
     image: '/img/dest/guney-amerika.jpg',
     tagline: 'İspanyolca ve Portekizceyi macerayla birleştirin.',
+    metaDescription: 'Güney Amerika’da İspanyolca ve Portekizce: Buenos Aires, Santiago, Lima, Cusco ve Rio’da dil okulları, kültürel geziler, konaklama ve vize bilgileri.',
     intro:
       'Arjantin, Şili, Peru ve Brezilya’daki dil okulları; uygun fiyatları, sıcak kültürü ve kültürel gezileriyle dil öğrenimini unutulmaz bir yolculuğa dönüştürür.',
     highlights: [
@@ -475,6 +491,7 @@ export const countries: Country[] = [
     cities: ['Buenos Aires', 'Córdoba', 'Mendoza', 'Rosario'],
     image: '/img/dest/arjantin.jpg',
     tagline: 'Latin Amerika’nın kültür başkentinde İspanyolca ve üniversite.',
+    metaDescription: 'Arjantin’de eğitim: Buenos Aires ve Córdoba’da İspanyolca dil okulları, İspanyolca hazırlıkla üniversite, uygun yaşam maliyeti ve öğrenci oturum izni.',
     intro:
       'Arjantin; Buenos Aires’in Avrupai atmosferi, köklü üniversiteleri ve uygun yaşam maliyetiyle İspanyolca öğrenmek ve üniversite okumak isteyenler için güçlü bir seçenek. İspanyolca hazırlık programıyla başlayan öğrenciler, dil seviyelerini tamamladıktan sonra üniversite eğitimine geçebilir.',
     highlights: [
@@ -505,6 +522,7 @@ export const countries: Country[] = [
     cities: ['Tokyo', 'Osaka', 'Kyoto', 'Fukuoka'],
     image: '/img/dest/japonya.jpg',
     tagline: 'Gelenek ve teknolojinin buluştuğu ülkede Japonca.',
+    metaDescription: 'Japonya’da eğitim: Tokyo, Osaka ve Kyoto’da Japonca dil okulları, üniversiteye hazırlık, İngilizce lisans programları, öğrenci vizesi ve yaşam maliyeti.',
     intro:
       'Japonya; güvenliği, düzeni ve gelenekle teknolojiyi buluşturan kültürüyle Japonca öğrenmek isteyenler için eşsiz bir deneyim sunar. Dil okulları kısa kültür programlarından üniversiteye hazırlık kurslarına kadar uzanır.',
     highlights: [
@@ -534,6 +552,7 @@ export const countries: Country[] = [
     cities: ['Seul', 'Busan', 'Daegu', 'Incheon'],
     image: '/img/dest/kore.jpg',
     tagline: 'Teknolojinin ve popüler kültürün merkezinde Korece.',
+    metaDescription: 'Güney Kore’de eğitim: Seul ve Busan’da üniversite dil enstitülerinde Korece, TOPIK ile lisans başvurusu, GKS bursu ve D-2/D-4 öğrenci vizesi.',
     intro:
       'Güney Kore, teknolojideki liderliği ve dünyaya yayılan popüler kültürüyle her yıl daha fazla öğrencinin gündeminde. Üniversitelerin dil enstitüleri yoğun Korece programları sunar; burs olanakları lisans ve yüksek lisans için de kapı aralar.',
     highlights: [
@@ -563,6 +582,7 @@ export const countries: Country[] = [
     cities: ['Zürih', 'Cenevre', 'Lozan', 'Montreux', 'Lucerne'],
     image: '/img/dest/isvicre.jpg',
     tagline: 'Otelcilik ve işletmede dünyanın referans okulları.',
+    metaDescription: 'İsviçre’de eğitim: otelcilik ve turizm işletmeciliği okulları, Alp manzaralı yaz okulları ve dil kursları. Zürih, Cenevre, Lozan; vize ve maliyet.',
     intro:
       'İsviçre; otelcilik ve turizm işletmeciliği okulları, yüksek eğitim kalitesi ve çok dilli yapısıyla seçkin bir eğitim ülkesidir. Yaz okulları Alp manzarası eşliğinde dil ve spor programları sunar.',
     highlights: [
@@ -589,6 +609,7 @@ export const countries: Country[] = [
     cities: ['Budapeşte', 'Debrecen', 'Pécs', 'Szeged'],
     image: '/img/dest/macaristan.jpg',
     tagline: 'Uygun maliyetli, İngilizce ve AB diplomalı eğitim.',
+    metaDescription: 'Macaristan’da üniversite: Budapeşte, Debrecen, Pécs ve Szeged’de İngilizce tıp, diş hekimliği, mühendislik ve işletme. AB diploması ve uygun maliyet.',
     intro:
       'Macaristan, köklü devlet üniversitelerinde İngilizce eğitim, uygun yaşam maliyeti ve Avrupa Birliği diploması sunan, Türkiye’ye yakın bir ülke. Tıp, diş hekimliği, mühendislik ve işletme programlarıyla özellikle öne çıkar.',
     highlights: [
@@ -615,6 +636,7 @@ export const countries: Country[] = [
     cities: ['Varşova', 'Krakov', 'Wrocław', 'Gdańsk', 'Poznań', 'Gliwice'],
     image: '/img/dest/polonya.jpg',
     tagline: 'Asırlık üniversitelerde İngilizce ve ekonomik bir Avrupa eğitimi.',
+    metaDescription: 'Polonya’da üniversite: Varşova, Krakov ve Wrocław’da İngilizce lisans ve yüksek lisans, uygun yaşam maliyeti, AB diploması ve doğrudan başvuru desteği.',
     intro:
       'Polonya; Jagiellonian ve Varşova Teknik Üniversitesi gibi köklü kurumları, yüzlerce İngilizce programı ve uygun yaşam maliyetiyle son yılların yükselen eğitim destinasyonu. Tampa olarak Polonya’da çok sayıda üniversiteyle doğrudan çalışıyoruz.',
     highlights: [
@@ -644,6 +666,7 @@ export const countries: Country[] = [
     cities: ['Brüksel', 'Leuven', 'Gent', 'Anvers', 'Liège'],
     image: '/img/dest/belcika.jpg',
     tagline: 'Avrupa’nın başkentinde uluslararası kariyer odaklı yüksek lisans.',
+    metaDescription: 'Belçika’da yüksek lisans: Brüksel, Leuven ve Gent’te uluslararası ilişkiler, hukuk, işletme ve mühendislik programları, başvuru şartları ve öğrenci vizesi.',
     intro:
       'Belçika, Avrupa Birliği kurumlarına ev sahipliği yapan Brüksel’i ve KU Leuven gibi köklü üniversiteleriyle uluslararası ilişkiler, hukuk, işletme ve mühendislikte güçlü yüksek lisans programları sunar.',
     highlights: [

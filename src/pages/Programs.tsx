@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import { ORG_ID, abs } from '../seo/schema'
-import { Seo, Btn, SectionHead, FaqList, CheckList, RouteCode } from '../components/ui'
+import { Seo, Btn, SectionHead, FaqList, CheckList, RouteCode, Stars } from '../components/ui'
 import { Icon } from '../components/Icon'
 import { BoardingPass, RouteSteps, ReadMore } from '../components/signature'
 import { PageHero, CtaBand } from '../components/layouts'
@@ -11,6 +11,7 @@ import { languageFromPrices, languageFromByCountry, languageFromLabel } from '..
 import { cities, type City } from '../data/cities'
 import { ukProgramBlocks, ukUpdated, type InfoCard, type ProgramBlocks } from '../data/uk'
 import { dedupeFaqs } from '../lib/faq'
+import { reviews, universities } from '../data/social'
 import { guidesForProgram, guidesForCountry } from '../data/guides'
 import { deep, countryDeep, type DeepSection } from '../data/deep'
 import { postsForCountry, postsForProgram, formatDate, type Post } from '../data/blog'
@@ -31,6 +32,15 @@ const crossLinks: Record<string, { text: string; to: string; label: string }[]> 
     { text: 'Konaklamanızı da birlikte planlayalım:', to: '/ogrenci-konaklama', label: 'Londra Öğrenci Yurtları' },
   ],
 }
+
+/** /yurtdisi-dil-okullari karşılaştırma tablosu (vize ve çalışma özetleri countries.ts metinleriyle uyumlu). */
+const languageCompare = [
+  { slug: 'ingiltere', level: 'Yüksek', visa: '6 aya kadar Standard Visitor; 6 aydan uzun, 11 aya kadar Short-term Study', work: 'Dil kursunda çalışma hakkı yok' },
+  { slug: 'malta', level: 'Uygun', visa: 'Schengen ülkesi: 90 güne kadar kısa süreli, daha uzun programlarda ulusal (D) vize', work: 'Uzun dönem programlarda belirli süre sonra koşullu yarı zamanlı izin' },
+  { slug: 'irlanda', level: 'Orta', visa: 'Vize gerekir; 90 günden uzun programlarda IRP kaydı ve ILEP listesindeki okullar', work: 'Uygun programlarda dönem içinde haftada 20, tatillerde 40 saate kadar' },
+  { slug: 'kanada', level: 'Orta–yüksek', visa: '6 aya kadar ziyaretçi vizesi, daha uzun programlarda Study Permit', work: 'Yalnızca dil kursunda yok; uygun Study Permit programlarında ve co-op’ta var' },
+  { slug: 'dubai', level: 'Uygun', visa: 'Kısa dönemde turist/öğrenci vizesi, uzun dönemde okul sponsorluğunda oturum izni', work: 'Öğrenci oturum izniyle belirli koşullarda part-time' },
+]
 
 const formProgram: Record<ProgramKey, string> = {
   dil: 'Dil okulu',
@@ -214,6 +224,32 @@ export function ProgramHub({ programKey }: { programKey: ProgramKey }) {
         </section>
       )}
 
+      {showPackages && (
+        <section className="section" aria-labelledby="cmp-h">
+          <div className="container">
+            <SectionHead id="cmp-h" title="Ülkelere göre dil okulu karşılaştırması" intro="Bütçe, vize ve çalışma hakkı açısından en çok tercih edilen beş ülke. Vize ve çalışma koşulları değişebilir; başvuru öncesinde güncel kuralları birlikte kontrol ediyoruz." />
+            <div className="tablewrap">
+              <table className="ctable ctable--auto">
+                <thead><tr><th scope="col">Ülke</th><th scope="col">Fiyat seviyesi</th><th scope="col">Vize</th><th scope="col">Çalışma hakkı</th></tr></thead>
+                <tbody>
+                  {languageCompare.map((r) => {
+                    const from = languageFromByCountry[r.slug]
+                    return (
+                      <tr key={r.slug}>
+                        <th scope="row"><Link to={`/${p.slug}/${r.slug}`}>{countryBySlug[r.slug].name}</Link></th>
+                        <td data-label="Fiyat seviyesi">{r.level}{from?.price ? ` · ${from.weeks} hafta ${from.price.toLocaleString('tr-TR')} ${from.currencySymbol}’dan` : ''}</td>
+                        <td data-label="Vize">{r.visa}</td>
+                        <td data-label="Çalışma hakkı">{r.work}</td>
+                      </tr>
+                    )
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      )}
+
       <section className="section">
         <div className="container twocol">
           <div>
@@ -287,6 +323,18 @@ export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
         <Btn href="#form" size="lg" icon="arrow">Ücretsiz bilgi al</Btn>
       </PageHero>
 
+      {d?.summary && (
+        <section className="container snippet" aria-labelledby="ozet-h">
+          <div className="snippet__in">
+            <h2 id="ozet-h" className="sr-only">{d.h1 ?? title}: özet</h2>
+            <p>{d.summary.text}</p>
+            <dl className="facts facts--row">
+              {d.summary.facts.map((f) => (<div key={f.label}><dt>{f.label}</dt><dd>{f.value}</dd></div>))}
+            </dl>
+          </div>
+        </section>
+      )}
+
       <nav className="anchors" aria-label="Sayfa içi">
         <div className="container">
           <a href="#genel">Genel bakış</a>
@@ -351,6 +399,22 @@ export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
             <h2>Gerekli Belgeler</h2>
             <CheckList items={p.requirements} cols={2} />
           </section>
+
+          {d?.reviewProgram && reviews.some((r) => r.program === d.reviewProgram) && (
+            <section className="dsec">
+              <h2>Veli ve Öğrenci Yorumları</h2>
+              <div className="revlist">
+                {reviews.filter((r) => r.program === d.reviewProgram).map((r) => (
+                  <figure key={r.name} className="quote">
+                    <Stars />
+                    <blockquote>{r.text}</blockquote>
+                    <figcaption>{r.name}{r.country ? ` · ${r.program}, ${r.country}` : ''} · Google yorumu</figcaption>
+                  </figure>
+                ))}
+              </div>
+              <p><Link to="/musteri-yorumlari" className="textlink">Tüm yorumlar <Icon name="arrow" size={15} /></Link></p>
+            </section>
+          )}
 
           {relGuides.length > 0 && (
             <section className="dsec">
@@ -486,7 +550,7 @@ export function CountryPage() {
   const cPosts = postsForCountry(c.slug).slice(0, 6)
   return (
     <>
-      <Seo title={cd?.seoTitle ?? `${c.loc} Eğitim`} description={cd?.description ?? c.intro} path={`/ulkeler/${c.slug}`} image={c.image} />
+      <Seo title={cd?.seoTitle ?? `${c.loc} Eğitim`} description={cd?.description ?? c.metaDescription ?? c.intro} path={`/ulkeler/${c.slug}`} image={c.image} />
       <PageHero
         image={c.image}
         crumbs={[{ label: 'Ülkeler', to: '/ulkeler' }, { label: c.name }]}
@@ -680,9 +744,25 @@ function DeepBlock({ sec, id }: { sec: DeepSection; id?: string }) {
         <div className="tablewrap">
           <table className="ctable ctable--auto">
             <thead><tr>{sec.table.head.map((h) => <th key={h} scope="col">{h}</th>)}</tr></thead>
-            <tbody>{sec.table.rows.map((r) => <tr key={r[0]}>{r.map((cell, i) => (i === 0 ? <th key={i} scope="row">{cell}</th> : <td key={i} data-label={sec.table!.head[i]}>{cell}</td>))}</tr>)}</tbody>
+            <tbody>{sec.table.rows.map((r) => <tr key={r[0]}>{r.map((cell, i) => (i === 0 ? <th key={i} scope="row"><Rich text={cell} /></th> : <td key={i} data-label={sec.table!.head[i]}><Rich text={cell} /></td>))}</tr>)}</tbody>
           </table>
         </div>
+      )}
+      {sec.box && (
+        <div className="callout callout--ok">
+          <Icon name="cap" size={20} />
+          <div>
+            <p>{sec.box.text}</p>
+            <p><Link to={sec.box.link.to} className="textlink">{sec.box.link.label} <Icon name="arrow" size={15} /></Link></p>
+          </div>
+        </div>
+      )}
+      {sec.logos && (
+        <ul className="unilogos">
+          {universities.filter((u) => sec.logos!.includes(u.name)).map((u) => (
+            <li key={u.name}><img src={`/img/logos/${u.file}`} alt={u.name} loading="lazy" decoding="async" height="48" /></li>
+          ))}
+        </ul>
       )}
     </section>
   )

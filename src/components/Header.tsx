@@ -4,6 +4,7 @@ import { Icon } from './Icon'
 import { site } from '../data/site'
 import { programMenu, programExtras, countryMenu, serviceMenu, packageMenu, resourceMenu, corporateMenu } from '../data/nav'
 import { posts } from '../data/blog'
+import { ukRepresentationPath } from '../data/uk'
 
 type MenuKey = 'programs' | 'countries' | 'packages' | 'services' | 'resources' | 'corporate'
 
@@ -74,7 +75,7 @@ export function Header() {
     <>
       <div className="topbar">
         <div className="container topbar__in">
-          <p className="topbar__offices"><Icon name="pin" size={15} /> İzmir ve Aydın ofisleri · İngiltere Üniversite Temsilciliği</p>
+          <p className="topbar__offices"><Icon name="pin" size={15} /> İzmir ve Aydın ofisleri · <Link to={ukRepresentationPath}>İngiltere Üniversite Temsilciliği</Link></p>
           <div className="topbar__links">
             <a href={site.calendly} target="_blank" rel="noopener noreferrer"><Icon name="calendar" size={15} /> Online görüşme planlayın</a>
             <a href={`mailto:${site.email}`}><Icon name="mail" size={15} /> {site.email}</a>

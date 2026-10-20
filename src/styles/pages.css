@@ -2847,3 +2847,54 @@ a.filter {
 .unilist li::marker {
   color: var(--bolt);
 }
+
+/* ---------- Program × ülke: özet kutusu, logolar ---------- */
+.snippet {
+  padding-block: clamp(1.5rem, 1rem + 2vw, 2.5rem) 0;
+}
+.snippet__in {
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: clamp(1.2rem, 1rem + 1vw, 1.8rem);
+  background: var(--paper);
+}
+.snippet__in > p {
+  color: var(--ink-2);
+  margin-bottom: 1rem;
+  max-width: 70ch;
+}
+.snippet__in .facts--row {
+  margin-bottom: 0;
+}
+.unilogos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+.unilogos img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+.revlist {
+  display: grid;
+  gap: 1rem;
+}
+.hero__proof a,
+.offices-mini strong a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+.snippet .facts > div:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+@media (min-width: 900px) {
+  .snippet .facts > div:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+}

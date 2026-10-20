@@ -277,7 +277,7 @@ export function Offices() {
       <section className="section">
         <div className="container officecards">
           {offices.map((o) => (
-            <article key={o.slug} className="officecard">
+            <article key={o.slug} id={o.slug} className="officecard">
               <img src={o.image} alt="" loading="lazy" width="560" height="360" />
               <div>
                 <h2 className="h3">{o.title}</h2>
