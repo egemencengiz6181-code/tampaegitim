@@ -14,7 +14,8 @@ import { Markdown } from '../components/Markdown'
 const bodies = import.meta.glob<string>('../../content/blog/*.md', { eager: true, query: '?raw', import: 'default' })
 const bodyOf = (slug: string) => bodies[`../../content/blog/${slug}.md`] ?? ''
 import { plain } from '../components/Rich'
-import { ORG_ID, abs } from '../seo/schema'
+import { ORG_ID, abs, personLd, authorPath } from '../seo/schema'
+import { publishedAuthor } from '../data/authors'
 import { programs, countriesFor, programByKey } from '../data/programs'
 import { countries, countryBySlug } from '../data/countries'
 import { packages } from '../data/packages'
@@ -318,6 +319,7 @@ export function BlogPost() {
     return cs.length ? cs.map((c) => ({ to: `/${pr.slug}/${c}`, label: pr.countryTitle(countryBySlug[c]) })) : [{ to: `/${pr.slug}`, label: pr.name }]
   }).slice(0, 4)
   const path = `/blog/${p.slug}`
+  const author = publishedAuthor(p.author)
   const ld = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -331,8 +333,8 @@ export function BlogPost() {
     inLanguage: 'tr-TR',
     keywords: p.keywords?.join(', '),
     articleSection: p.category,
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://tampaegitim.com.tr${path}` },
-    author: { '@type': 'Organization', name: 'Tampa Yurtdışı Eğitim', url: 'https://tampaegitim.com.tr' },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': abs(path) },
+    author: author ? personLd(author) : { '@type': 'Organization', '@id': ORG_ID, name: 'Tampa Yurtdışı Eğitim', url: abs('/') },
     publisher: { '@id': ORG_ID },
   }
   return (
@@ -364,11 +366,25 @@ export function BlogPost() {
             </aside>
           )}
           <div className="authorbox">
-            <img src="/img/brand/emblem.png" alt="" width="56" height="66" loading="lazy" />
-            <div>
-              <strong>Tampa Yurtdışı Eğitim</strong>
-              <p>15 yıldır öğrencilerin yurt dışı eğitim yolculuğunda rehberlik eden danışmanlık ekibi. İzmir ve Aydın ofisleri, İzmir’de İngiltere Üniversite Temsilciliği.</p>
-            </div>
+            {author ? (
+              <>
+                <img src={author.photo ?? '/img/brand/emblem.png'} alt={author.photo ? author.name : ''} width="56" height="66" loading="lazy" />
+                <div>
+                  <strong><Link to={authorPath(author)}>{author.name}</Link></strong>
+                  <p>{author.role}{author.years ? `, ${author.years} yıllık deneyim` : ''}. {author.bio[0]}</p>
+                  <p className="muted small">Son güncelleme: <time dateTime={p.updated}>{formatDate(p.updated)}</time></p>
+                </div>
+              </>
+            ) : (
+              <>
+                <img src="/img/brand/emblem.png" alt="" width="56" height="66" loading="lazy" />
+                <div>
+                  <strong><Link to="/ekibimiz">Tampa Yurtdışı Eğitim</Link></strong>
+                  <p>15 yıldır öğrencilerin yurt dışı eğitim yolculuğunda rehberlik eden danışmanlık ekibi. İzmir ve Aydın ofisleri, İzmir’de İngiltere Üniversite Temsilciliği.</p>
+                  <p className="muted small">Son güncelleme: <time dateTime={p.updated}>{formatDate(p.updated)}</time></p>
+                </div>
+              </>
+            )}
           </div>
         </article>
         <aside className="detail__side">

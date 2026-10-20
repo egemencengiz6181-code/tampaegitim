@@ -30,7 +30,7 @@ const AYARLAR = {
     'Merhaba {ad},\n\n' +
     'Yurtdışı eğitim başvurunuz bize ulaştı. Danışmanlarımız en kısa sürede sizi arayacak.\n\n' +
     'Acil sorularınız için +90 530 881 07 09 numarasından bize ulaşabilir veya WhatsApp’tan yazabilirsiniz.\n\n' +
-    'Sevgiler,\nTampa Yurtdışı Eğitim\nhttps://tampaegitim.com.tr',
+    'Sevgiler,\nTampa Yurtdışı Eğitim\nhttps://www.tampaegitim.com.tr',
 
   // Başvuruların yazılacağı sayfa (sekme) adı
   SAYFA_ADI: 'Başvurular',
@@ -209,7 +209,7 @@ function testGonder() {
     message: 'Bu bir kurulum testidir, silebilirsiniz.',
     form: 'Kurulum testi',
     source: 'test',
-    page: 'https://tampaegitim.com.tr/',
+    page: 'https://www.tampaegitim.com.tr/',
   }
   satirEkle_(lead)
   bildirimGonder_(lead)

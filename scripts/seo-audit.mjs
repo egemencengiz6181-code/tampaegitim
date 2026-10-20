@@ -3,6 +3,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 const dist = path.resolve('dist')
+const SITE = JSON.parse(fs.readFileSync('content/site.json', 'utf8')).url
 const files = []
 const walk = (d) => fs.readdirSync(d, { withFileTypes: true }).forEach((e) => {
   const f = path.join(d, e.name)
@@ -33,7 +34,7 @@ for (const [route, html] of pages) {
   if (!desc) issues.push(`${route}: description yok`)
   if (desc.length < 70) issues.push(`${route}: description kısa (${desc.length})`)
   if (h1s !== 1 && route !== "/admin") issues.push(`${route}: h1 sayısı ${h1s}`)
-  if (!noindex && canon !== `https://tampaegitim.com.tr${route === '/' ? '/' : route}`) issues.push(`${route}: canonical hatalı ${canon}`)
+  if (!noindex && canon !== `${SITE}${route === '/' ? '/' : route}`) issues.push(`${route}: canonical hatalı ${canon}`)
   if (!noindex) titles.set(t, [...(titles.get(t) ?? []), route])
   for (const m of html.matchAll(/href="(\/[^"#?]*)/g)) {
     const href = m[1].replace(/\/$/, '') || '/'

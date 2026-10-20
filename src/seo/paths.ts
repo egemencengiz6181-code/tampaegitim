@@ -10,11 +10,17 @@ import { onlinePrograms } from '../data/online'
 import { residences } from '../data/accommodation'
 import { ukPriceCities } from '../data/schoolPrices'
 import { germanUnis } from '../data/germanUnis'
+import { authors } from '../data/authors'
+import { redirects } from '../data/redirects'
 
 export type SitePath = { path: string; priority: number; changefreq: 'daily' | 'weekly' | 'monthly' | 'yearly'; lastmod?: string; index?: boolean }
 
 /** Prerender ve sitemap için tüm sayfa listesi. */
 export function sitemapPaths(): SitePath[] {
+  return allPaths().filter((x) => !(x.path in redirects))
+}
+
+function allPaths(): SitePath[] {
   const p = (path: string, priority: number, changefreq: SitePath['changefreq'] = 'monthly', lastmod?: string): SitePath => ({ path, priority, changefreq, lastmod, index: true })
   return [
     p('/', 1, 'weekly'),
@@ -45,10 +51,13 @@ export function sitemapPaths(): SitePath[] {
     p('/kaynaklar', 0.5),
     ...documents.map((d) => p(`/kaynaklar/${d.slug}`, 0.5)),
     ...['/hakkimizda', '/ekibimiz', '/ofislerimiz', '/musteri-yorumlari', '/kariyer', '/iletisim', '/basvuru'].map((x) => p(x, 0.6)),
+    ...authors.filter((a) => a.ready).map((a) => p(`/ekibimiz/${a.slug}`, 0.5)),
     ...['/site-haritasi', '/kvkk', '/cerez-politikasi'].map((x) => p(x, 0.2, 'yearly')),
     // İndekslenmeyen ama prerender edilen sayfalar
     ...landings.map((l) => ({ path: `/lp/${l.slug}`, priority: 0, changefreq: 'monthly' as const, index: false })),
     { path: '/tesekkurler', priority: 0, changefreq: 'yearly', index: false },
+    // Profili eksik yazarlar: prerender edilir ama noindex
+    ...authors.filter((a) => !a.ready).map((a) => ({ path: `/ekibimiz/${a.slug}`, priority: 0, changefreq: 'monthly' as const, index: false })),
     // Yönetim paneli kabuğu (istemcide açılır; noindex)
     { path: '/admin', priority: 0, changefreq: 'yearly', index: false },
     ...ukPriceCities.filter((c) => !c.schools.length).map((c) => ({ path: `/ingiltere-dil-okullari-fiyat-listesi/${c.slug}`, priority: 0, changefreq: 'monthly' as const, index: false })),

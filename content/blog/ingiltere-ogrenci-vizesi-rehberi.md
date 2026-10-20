@@ -3,7 +3,7 @@
 Vize kategorileri ve koşulları zaman zaman güncellenir; başvuru öncesinde güncel kuralları birlikte kontrol ediyoruz.
 
 - **Standard Visitor:** 6 aya kadar dil kursları ve yaz okulları. Çalışma hakkı yoktur.
-- **Short-term Study (İngilizce dil kursu):** 6–11 ay arası İngilizce kursları.
+- **Short-term Study (İngilizce dil kursu):** 6 aydan uzun, 11 aya kadar İngilizce kursları.
 - **Student vizesi:** Lisans, yüksek lisans ve diğer uzun dönem akademik programlar. Okulun düzenlediği CAS belgesi gerekir.
 
 ## Sık istenen belgeler

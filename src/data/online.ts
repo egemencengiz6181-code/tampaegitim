@@ -92,7 +92,7 @@ export const onlinePrograms: OnlineProgram[] = [
     title: 'İngiltere Online Lisans ve Yüksek Lisans',
     lead: 'Vize ve yaşam masrafı olmadan, işinizi bırakmadan İngiliz üniversite diplomasına uzanan %100 online Foundation, lisans, lisans tamamlama (top-up) ve MBA programları.',
     seoTitle: 'İngiltere Online Lisans ve Online MBA: %100 Online İngiliz Diploması',
-    description: 'GECC iş birliğiyle İngiltere online lisans (BA Hons Business Management), lisans tamamlama (top-up), foundation ve online MBA programları: süre, modüller, ücretler, başvuru şartları.',
+    description: 'İngiltere online lisans, top-up ve MBA: GECC iş birliğiyle %100 online, vize gerektirmeyen İngiliz diploma programları. Süre, modüller ve başvuru.',
     stats: [
       { value: '%100', label: 'Online eğitim' },
       { value: '12', label: 'Yıl içinde başlangıç dönemi' },

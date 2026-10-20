@@ -79,6 +79,7 @@ export function normalizePost(input) {
     countries: list(input.countries, 10, SLUG_RE, 'Ülkeler'),
     programs: list(input.programs, 6, null, 'Programlar').filter((p) => PROGRAMS.includes(p)),
     faqs,
+    author: SLUG_RE.test(String(input.author ?? '')) ? String(input.author) : '',
     draft: Boolean(input.draft),
     readMin: Math.max(1, Math.round(words / 200)),
     words,

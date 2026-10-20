@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
 import { Seo, Btn, SectionHead, Stars, FaqList, CheckList } from '../components/ui'
 import { Icon } from '../components/Icon'
 import { ReviewRail, StudentWall } from '../components/signature'
@@ -7,6 +7,10 @@ import { LeadForm } from '../components/LeadForm'
 import { site, offices, values, stats } from '../data/site'
 import { reviews, studentPhotos } from '../data/social'
 import { generalFaqs } from '../data/landings'
+import { authorBySlug } from '../data/authors'
+import { posts, formatDate } from '../data/blog'
+import { personLd, authorPath } from '../seo/schema'
+import NotFound from './NotFound'
 
 export function About() {
   return (
@@ -101,6 +105,55 @@ export function Team() {
           </figure>
         </div>
       </section>
+      <CtaBand />
+    </>
+  )
+}
+
+/* ---------- /ekibimiz/:slug (blog yazarı profili) ---------- */
+export function AuthorPage() {
+  const { slug = '' } = useParams()
+  const a = authorBySlug[slug]
+  if (!a) return <NotFound />
+  const written = posts.filter((p) => p.author === a.slug)
+  const path = authorPath(a)
+  return (
+    <>
+      <Seo
+        title={`${a.name}, ${a.role}`}
+        description={`${a.name}, Tampa Yurtdışı Eğitim ${a.role.toLocaleLowerCase('tr')}. Uzmanlık alanları: ${a.expertise.join(', ')}. Yazıları ve danışmanlık için iletişim bilgileri.`}
+        path={path}
+        image={a.photo}
+        noindex={!a.ready}
+        jsonLd={{ '@context': 'https://schema.org', '@type': 'ProfilePage', mainEntity: personLd(a) }}
+      />
+      <PageHero tone="mist" crumbs={[{ label: 'Ekibimiz', to: '/ekibimiz' }, { label: a.name }]} kicker={a.role} title={a.name} lead={a.years ? `${a.years} yıllık yurt dışı eğitim danışmanlığı deneyimi` : undefined}>
+        <Btn to="/basvuru" icon="arrow">Ücretsiz danışmanlık al</Btn>
+      </PageHero>
+      <section className="section">
+        <div className="container twocol twocol--wide">
+          <div className="prose">
+            {a.photo && <img src={a.photo} alt={`${a.name}, ${a.role}`} width="320" height="400" loading="lazy" />}
+            {a.bio.map((t) => <p key={t.slice(0, 24)}>{t}</p>)}
+          </div>
+          <aside className="panel">
+            <h2 className="panel__h">Uzmanlık Alanları</h2>
+            <CheckList items={a.expertise} />
+          </aside>
+        </div>
+      </section>
+      {written.length > 0 && (
+        <section className="section section--mist">
+          <div className="container">
+            <SectionHead title={`${a.name} yazıları`} action={{ label: 'Tüm yazılar', to: '/blog' }} />
+            <ul className="klist klist--compact">
+              {written.map((p) => (
+                <li key={p.slug}><Link to={`/blog/${p.slug}`}><strong>{p.title}</strong><span>Son güncelleme: {formatDate(p.updated)}</span><Icon name="arrow" size={18} /></Link></li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
       <CtaBand />
     </>
   )
@@ -277,7 +330,7 @@ export function Contact() {
 export function Apply() {
   return (
     <>
-      <Seo title="Ücretsiz Danışmanlık Başvurusu" description="Yurtdışı eğitim için ücretsiz ön görüşme talep edin. Formu doldurun, danışmanımız sizi arasın." path="/basvuru" />
+      <Seo title="Ücretsiz Danışmanlık Başvurusu" description="Yurtdışı eğitim için ücretsiz ön görüşme talep edin. Formu doldurun, danışmanımız sizi arasın." path="/basvuru" jsonLd={{ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Ana sayfa', item: `${site.url}/` }, { '@type': 'ListItem', position: 2, name: 'Ücretsiz danışmanlık başvurusu', item: `${site.url}/basvuru` }] }} />
       <section className="apply">
         <div className="container apply__in">
           <div className="apply__copy">

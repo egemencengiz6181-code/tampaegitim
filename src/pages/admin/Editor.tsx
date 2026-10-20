@@ -1,5 +1,7 @@
 // Blog yazısı editörü: Markdown yazım alanı, canlı önizleme, SEO analizi ve yayın işlemleri.
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
+import { authors } from '../../data/authors'
+import { site } from '../../data/site'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { api, ApiError, type AdminPost, type Upload } from './api'
 import { analyze, scoreTone, SEO_LIMITS, type CheckStatus } from './seo'
@@ -409,7 +411,7 @@ export function Editor({ slug, storage, onSaved }: { slug: string | null; storag
 
               <Panel title="Google önizlemesi">
                 <div className="adm-serp">
-                  <div className="adm-serp__site"><span className="adm-serp__fav" />Tampa Yurtdışı Eğitim<small>https://tampaegitim.com.tr › blog › {draft.slug || '…'}</small></div>
+                  <div className="adm-serp__site"><span className="adm-serp__fav" />Tampa Yurtdışı Eğitim<small>{site.url} › blog › {draft.slug || '…'}</small></div>
                   <p className="adm-serp__title">{analysis.seoTitle.length > 62 ? `${analysis.seoTitle.slice(0, 60)}…` : analysis.seoTitle || 'SEO başlığı'}</p>
                   <p className="adm-serp__desc">
                     <span>{formatDate(draft.date)} — </span>
@@ -457,6 +459,13 @@ export function Editor({ slug, storage, onSaved }: { slug: string | null; storag
                   <input type="date" value={draft.date} onChange={(e) => set('date', e.target.value)} max="2100-12-31" />
                 </label>
                 {draft.updated && draft.updated !== draft.date && <p className="adm-muted adm-small">Son güncelleme: {formatDate(draft.updated)} (Google’a “güncellendi” olarak bildirilir)</p>}
+                <label className="adm-field">
+                  <span>Yazar</span>
+                  <select value={draft.author ?? ''} onChange={(e) => set('author', e.target.value)}>
+                    <option value="">Tampa Yurtdışı Eğitim (kurum)</option>
+                    {authors.map((a) => <option key={a.slug} value={a.slug}>{a.name}{a.ready ? '' : ' (profil eksik: kurum gösterilir)'}</option>)}
+                  </select>
+                </label>
                 <label className="adm-field">
                   <span>Kategori</span>
                   <select value={draft.category} onChange={(e) => set('category', e.target.value as PostCategory)}>

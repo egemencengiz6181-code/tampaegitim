@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { ORG_ID } from '../seo/schema'
 import { Link, useParams } from 'react-router-dom'
 import { Seo, Btn, SectionHead, FaqList, CheckList, RouteCode } from '../components/ui'
 import { Icon } from '../components/Icon'
@@ -92,7 +93,7 @@ export function OnlineProgramPage() {
           name: p.name,
           description: p.description,
           provider: { '@type': 'Organization', name: p.partner.name, sameAs: p.partner.url },
-          offers: { '@type': 'Offer', category: 'Online', seller: { '@id': 'https://tampaegitim.com.tr/#organization' } },
+          offers: { '@type': 'Offer', category: 'Online', seller: { '@id': ORG_ID } },
           hasCourseInstance: { '@type': 'CourseInstance', courseMode: 'online' },
         }}
       />
@@ -193,7 +194,7 @@ export function AccommodationPage() {
     <>
       <Seo
         title={`Londra Öğrenci Yurtları ve Konaklama | Haftalık £${londonFrom}’dan`}
-        description={`Londra, Brighton, Leeds ve Dublin’de faturaların dahil olduğu öğrenci yurtları: ${residences.length} yurt, oda tipleri ve haftalık fiyatlar. Konaklama partnerlerimiz GoBritanya ve Amber ile yerinizi ayırtıyoruz.`}
+        description={`Londra, Brighton, Leeds ve Dublin’de faturaların dahil olduğu öğrenci yurtları: ${residences.length} yurt, oda tipleri, haftalık fiyatlar ve rezervasyon desteği.`}
         path="/ogrenci-konaklama"
         image={residences[0]?.images[0]}
       />
@@ -404,7 +405,7 @@ export function SchoolPricesHub() {
     <>
       <Seo
         title={`İngiltere Dil Okulları ${priceListYear} Fiyat Listesi: Şehirlere Göre`}
-        description={`Londra, Brighton, Oxford, Cambridge, Manchester ve Bournemouth’daki dil okullarının ${priceListYear} eğitim ve konaklama fiyatları. Şehir seçin, okulları ve haftalık fiyatları karşılaştırın.`}
+        description={`İngiltere dil okulları fiyat listesi ${priceListYear}: Londra, Brighton, Oxford, Cambridge, Manchester ve Bournemouth’ta eğitim ve konaklama ücretleri, şehir şehir.`}
         path="/ingiltere-dil-okullari-fiyat-listesi"
       />
       <PageHero

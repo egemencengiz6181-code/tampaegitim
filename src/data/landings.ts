@@ -196,7 +196,7 @@ export const landings: Landing[] = [
     ],
     steps: ['Formu doldur, 24 saat içinde arayalım', 'Seviyene ve bütçene uygun 3 okul teklifini karşılaştır', 'Kaydını yapalım, vize dosyanı birlikte hazırlayalım'],
     faqs: [
-      { q: 'İngiltere dil okulu için vize gerekiyor mu?', a: 'Türk vatandaşları için 6 aya kadar dil kursları Standard Visitor vizesiyle, 11 aya kadar İngilizce kursları Short-term Study vizesiyle yapılır. Vize dosyanızı birlikte hazırlıyoruz.' },
+      { q: 'İngiltere dil okulu için vize gerekiyor mu?', a: 'Türk vatandaşları için 6 aya kadar dil kursları Standard Visitor vizesiyle, 6 aydan uzun, 11 aya kadar İngilizce kursları Short-term Study vizesiyle yapılır. Vize dosyanızı birlikte hazırlıyoruz.' },
       { q: 'En kısa kaç haftalık program var?', a: 'Programlar 1 haftadan başlar; Her Şey Dahil Londra paketimiz 2 haftadan itibaren planlanabilir.' },
       { q: 'Hiç İngilizcem yok, katılabilir miyim?', a: 'Evet. Okullar ilk gün seviye tespit sınavı yapar ve sizi başlangıç seviyesindeki sınıfa yerleştirir.' },
     ],

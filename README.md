@@ -67,4 +67,4 @@ Kurulum (Apps Script + Vercel'de `LEAD_WEBHOOK_URL`, `LEAD_WEBHOOK_SECRET`): **[
 
 - **Netlify:** build komutu `npm run build`, yayın klasörü `dist`. `_redirects` otomatik üretilir (eski WordPress adresleri 301, bilinmeyen adresler 404).
 - **Vercel:** kökteki `vercel.json` (cleanUrls, 301 yönlendirmeler) hazır.
-- Yayından sonra Google Search Console'a `https://tampaegitim.com.tr/sitemap.xml` gönderilmeli.
+- Yayından sonra Google Search Console'a `https://www.tampaegitim.com.tr/sitemap.xml` gönderilmeli.

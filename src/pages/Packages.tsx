@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { ORG_ID, abs } from '../seo/schema'
 import { Link, useParams } from 'react-router-dom'
 import { Seo, Btn, SectionHead, CheckList, RouteCode, FaqList } from '../components/ui'
 import { Icon } from '../components/Icon'
@@ -96,7 +97,7 @@ export function PackageDetail() {
     <>
       <Seo
         title={`${p.title} | ${p.currencySymbol}${formatPrice(p.prices[0].price)}’den`}
-        description={`${p.lead} ${p.prices.map((x) => `${x.weeks} hafta ${formatPrice(x.price)} ${p.currency}`).join(', ')}.`}
+        description={p.metaDescription ?? `${p.lead} ${p.prices.map((x) => `${x.weeks} hafta ${formatPrice(x.price)} ${p.currency}`).join(', ')}.`}
         path={`/her-sey-dahil-paketler/${p.slug}`}
         image={p.image}
         jsonLd={{
@@ -104,7 +105,7 @@ export function PackageDetail() {
           '@type': 'Product',
           name: p.title,
           description: p.lead,
-          image: `https://tampaegitim.com.tr${p.image}`,
+          image: abs(p.image),
           brand: { '@type': 'Brand', name: 'Tampa Yurtdışı Eğitim' },
           category: 'Yurt dışı dil eğitimi paketi',
           offers: {
@@ -114,7 +115,7 @@ export function PackageDetail() {
             highPrice: p.prices[p.prices.length - 1].price,
             offerCount: p.prices.length,
             availability: 'https://schema.org/InStock',
-            seller: { '@id': 'https://tampaegitim.com.tr/#organization' },
+            seller: { '@id': ORG_ID },
           },
         }}
       />

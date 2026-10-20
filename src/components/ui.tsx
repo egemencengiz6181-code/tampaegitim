@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import type { ReactNode } from 'react'
 import { Icon } from './Icon'
 import { site } from '../data/site'
@@ -64,11 +64,31 @@ export function brandTitle(t: string) {
   return t
 }
 
+/**
+ * Meta açıklama 160 karakteri aşıyorsa "…" ile kesilmez: sığan tam cümleler kullanılır,
+ * tek cümle bile sığmıyorsa son tam kelimede ve noktalama ile biter. Öncelikli sayfalarda
+ * açıklamalar elle 140–155 karakter yazılır; bu yalnızca güvenlik ağıdır.
+ */
+export function metaDescription(text: string, max = 160) {
+  const t = text.replace(/\s+/g, ' ').trim()
+  if (t.length <= max) return t
+  let out = ''
+  for (const sentence of t.match(/[^.!?]+[.!?]+/g) ?? []) {
+    if ((out + sentence).trim().length > max) break
+    out += sentence
+  }
+  if (out.trim().length >= 70) return out.trim()
+  const cut = t.slice(0, max).replace(/\s+\S*$/, '').replace(/[\s,;:–-]+$/, '')
+  return /[.!?]$/.test(cut) ? cut : `${cut}.`
+}
+
 export function Seo({ title, description, path = '', image = '/img/brand/logo-full.jpg', imageAlt, type = 'website', published, modified, section, tags, jsonLd, noindex }: SeoProps) {
   const full = brandTitle(title)
   const url = `${site.url}${path === '/' ? '/' : path}`
   const img = image.startsWith('http') ? image : `${site.url}${image}`
-  const desc = description.length > 165 ? `${description.slice(0, 160).replace(/\s+\S*$/, '')}…` : description
+  const desc = metaDescription(description)
+  // SEO_LOG=1 npm run build: elle yazılması gereken (otomatik kısaltılan) açıklamaları listeler
+  if (import.meta.env.SSR && desc !== description.replace(/\s+/g, ' ').trim() && (globalThis as { process?: { env: Record<string, string | undefined> } }).process?.env.SEO_LOG) console.warn(`[meta] ${path}`)
   return (
     <>
       <title>{full}</title>
@@ -103,11 +123,14 @@ export function Seo({ title, description, path = '', image = '/img/brand/logo-fu
 /* ---------- Breadcrumbs ---------- */
 export type Crumb = { label: string; to?: string }
 export function Breadcrumbs({ items, tone = 'dark' }: { items: Crumb[]; tone?: 'dark' | 'light' }) {
+  const { pathname } = useLocation()
   const all = [{ label: 'Ana sayfa', to: '/' }, ...items]
+  // Yapısal veride bağlantısız ara kırıntılar (ör. "Kurumsal") atlanır; son öğe sayfanın kendi adresidir.
+  const ldItems = all.flatMap((c, i) => (i === all.length - 1 ? [{ ...c, to: pathname }] : c.to ? [c] : []))
   const ld = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: all.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.label, item: c.to ? `${site.url}${c.to}` : undefined })),
+    itemListElement: ldItems.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.label, item: `${site.url}${c.to === '/' ? '/' : c.to}` })),
   }
   return (
     <nav aria-label="Konum" className={`crumbs crumbs--${tone}`}>

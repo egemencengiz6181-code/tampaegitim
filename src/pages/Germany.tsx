@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
+import { abs } from '../seo/schema'
 import { Seo, Btn, SectionHead, FaqList, CheckList, RouteCode } from '../components/ui'
 import { Icon } from '../components/Icon'
 import { RouteSteps } from '../components/signature'
@@ -19,7 +20,7 @@ export function GermanUnisHub() {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: 'Almanya’daki özel üniversiteler',
-    itemListElement: germanUnis.map((u, i) => ({ '@type': 'ListItem', position: i + 1, url: `https://tampaegitim.com.tr${BASE}/${u.slug}`, name: u.name })),
+    itemListElement: germanUnis.map((u, i) => ({ '@type': 'ListItem', position: i + 1, url: abs(`${BASE}/${u.slug}`), name: u.name })),
   }
   return (
     <>
@@ -152,7 +153,7 @@ export function GermanUniPage() {
     description: u.lead,
     ...(u.founded ? { foundingDate: u.founded } : {}),
     address: { '@type': 'PostalAddress', addressLocality: u.campuses[0], addressCountry: 'DE' },
-    url: `https://tampaegitim.com.tr${path}`,
+    url: abs(path),
   }
   return (
     <>

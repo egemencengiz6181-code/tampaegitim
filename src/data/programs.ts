@@ -1,3 +1,4 @@
+import { ukSummer } from './uk'
 import { countries, type Country, type ProgramKey } from './countries'
 
 export type Faq = { q: string; a: string }
@@ -106,7 +107,7 @@ export const programs: Program[] = [
     trait: 'Dinamik',
     image: '/img/misc/summer.jpg',
     lead: 'Yurtdışında yaz kampı deneyimi, yalnızca eğlenceli bir tatil değil, aynı zamanda farklı bir kültürü tanıma, yeni arkadaşlıklar kurma ve kendinizi geliştirmenin en etkili yollarından biridir.',
-    promise: 'Tampa Eğitim olarak, yurtdışı yaz kampı deneyiminizi unutulmaz kılmak için buradayız.',
+    promise: 'Her öğrenci için yaşına, İngilizce seviyesine ve karakterine uygun kampüsü birlikte seçiyor; kayıttan dönüşe kadar veliyle düzenli iletişimde kalıyoruz.',
     intro: [
       'Yaz okulları, 7–17 yaş arası öğrencilerin güvenli ve denetimli bir ortamda dil öğrenirken dünyanın dört bir yanından gelen yaşıtlarıyla tanıştığı programlardır. Sabah dersleri, öğleden sonra atölyeler ve spor, hafta sonları şehir gezileriyle her gün dolu dolu geçer.',
       'Velilerimizin en çok önem verdiği konu güvenlik. Bu yüzden yalnızca 7/24 gözetim sunan, kampüs içi konaklamalı ve deneyimli grup liderleriyle çalışan okulları öneriyor; öğrencimiz Türkiye’ye dönene kadar aileyle düzenli iletişimde kalıyoruz.',
@@ -119,8 +120,8 @@ export const programs: Program[] = [
       'Gelecekte yurtdışında lise veya üniversite okumayı düşünenler',
     ],
     facts: [
-      { label: 'Süre', value: '1–8 hafta' },
-      { label: 'Yaş', value: '7–17 yaş' },
+      { label: 'Süre', value: ukSummer.duration },
+      { label: 'Yaş', value: ukSummer.ages },
       { label: 'Dönem', value: 'Haziran – Ağustos' },
       { label: 'Gözetim', value: '7/24 grup liderleri' },
     ],

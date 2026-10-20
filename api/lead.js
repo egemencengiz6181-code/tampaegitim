@@ -2,6 +2,10 @@
 // Apps Script başvuruyu Google E-Tablo'ya yazar ve Gmail ile bildirim gönderir (docs/FORMLAR.md).
 // Ortam değişkenleri: LEAD_WEBHOOK_URL (Apps Script web uygulaması adresi), LEAD_WEBHOOK_SECRET (ortak gizli anahtar).
 import { send, readJson, handle, HttpError, clientIp } from './_lib/http.js'
+// Sitenin asıl adresi (content/site.json); statik import, Vercel paketine otomatik dahil olur
+import siteConfig from '../content/site.json' with { type: 'json' }
+
+const SITE_URL = siteConfig.url
 
 // Kontrol karakterleri bilerek temizlenir (e-posta/tabloya bozuk veri gitmesin)
 // oxlint-disable-next-line no-control-regex
@@ -79,7 +83,7 @@ export default handle(async (req, res) => {
     message: cleanText(body.message, 3000),
     form: sourceLabel(source),
     source,
-    page: `https://tampaegitim.com.tr${clean(body.page, 300).startsWith('/') ? clean(body.page, 300) : '/'}`,
+    page: `${SITE_URL}${clean(body.page, 300).startsWith('/') ? clean(body.page, 300) : '/'}`,
     landing: clean(a.landing, 300),
     referrer: clean(a.referrer, 300),
     utm_source: clean(a.utm_source, 150),

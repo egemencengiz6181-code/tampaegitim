@@ -5,14 +5,14 @@ import { Footer, MobileBar, WhatsAppFloat } from './Footer'
 import { Breadcrumbs, Btn, type Crumb } from './ui'
 import { Icon } from './Icon'
 import { site } from '../data/site'
-import { organizationLd, websiteLd } from '../seo/schema'
+import { organizationLd, websiteLd, officesLd } from '../seo/schema'
 import { titleCase, titleNode } from '../lib/text'
 
 export function SiteLayout() {
   return (
     <>
       <a href="#main" className="skip">İçeriğe geç</a>
-      <script type="application/ld+json">{JSON.stringify([organizationLd, websiteLd])}</script>
+      <script type="application/ld+json">{JSON.stringify([organizationLd, websiteLd, ...officesLd])}</script>
       <Header />
       <main id="main">
         <Outlet />

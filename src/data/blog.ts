@@ -25,6 +25,8 @@ export type PostFile = {
   countries?: string[]
   programs?: ProgramKey[]
   faqs?: Faq[]
+  /** Yazar slug'ı (src/data/authors.ts) */
+  author?: string
   draft?: boolean
   readMin?: number
   words?: number
@@ -47,6 +49,7 @@ export type Post = {
   keywords?: string[]
   faqs: Faq[]
   readMin: number
+  author?: string
 }
 
 const files = import.meta.glob<PostFile>('../../content/blog/*.json', { eager: true, import: 'default' })
@@ -67,6 +70,7 @@ export const posts: Post[] = Object.values(files)
     programs: f.programs?.length ? f.programs : undefined,
     keywords: f.keywords?.length ? f.keywords : undefined,
     faqs: f.faqs ?? [],
+    author: f.author || undefined,
     readMin: f.readMin ?? 5,
   }))
   .sort((a, b) => b.date.localeCompare(a.date) || a.title.localeCompare(b.title, 'tr'))

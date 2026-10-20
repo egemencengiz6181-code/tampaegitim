@@ -3,7 +3,7 @@
 Tampa Yurtdışı Eğitim sitesinin blog yazılarını tarayıcıdan yönetmek için hazırlanmış paneldir.
 Panelden **yalnızca blog yazıları** yönetilir: yeni yazı eklenir, mevcut yazılar düzenlenir, taslak olarak saklanır, yayınlanır, yayından kaldırılır veya silinir.
 
-Adres: **https://tampaegitim.com.tr/admin**
+Adres: **https://www.tampaegitim.com.tr/admin**
 
 ---
 
@@ -69,7 +69,7 @@ Kaydettikten sonra **Deployments** sekmesinden son dağıtımın yanındaki **�
 
 ### 2.3 Kontrol
 
-1. https://tampaegitim.com.tr/admin adresini açın.
+1. https://www.tampaegitim.com.tr/admin adresini açın.
 2. Şifre ekranı geliyorsa kurulum tamamdır. “Kurulum gerekli” ekranı geliyorsa eksik değişkenler işaretlenmiş olarak listelenir.
 3. Giriş yapın; mevcut tüm blog yazılarının listesini görmelisiniz.
 
@@ -107,7 +107,7 @@ Kaydettikten sonra **Deployments** sekmesinden son dağıtımın yanındaki **�
    - **Sık sorulan sorular:** Eklenen her soru-cevap yazının sonunda gösterilir ve Google’a FAQ yapılandırılmış verisi olarak bildirilir.
 6. Kaydetme:
    - **Taslağı kaydet:** Yazı depoya kaydedilir ama **sitede görünmez**. Daha sonra devam edebilirsiniz.
-   - **Yayınla:** Yazı 1–2 dakika içinde `tampaegitim.com.tr/blog/<adres>` adresinde yayına çıkar; blog listesine, sitemap’e ve RSS’e eklenir.
+   - **Yayınla:** Yazı 1–2 dakika içinde `www.tampaegitim.com.tr/blog/<adres>` adresinde yayına çıkar; blog listesine, sitemap’e ve RSS’e eklenir.
    - Kısayol: **Ctrl + S** (Mac’te **⌘ + S**) yazının mevcut durumunu (taslak/yayında) koruyarak kaydeder.
 
 ### 3.4 Var olan yazıyı düzenleme

@@ -10,6 +10,8 @@ export type Package = {
   image: string
   title: string
   lead: string
+  /** Arama sonucu açıklaması (140–155 karakter, elle yazılır) */
+  metaDescription?: string
   prices: { weeks: number; price: number }[]
   includes: string[]
   fun: string[]
@@ -29,6 +31,7 @@ export const packages: Package[] = [
     image: '/img/misc/london-package.jpg',
     title: 'Londra Her Şey Dahil Dil Eğitimi Paketi',
     lead: 'İngilizceyi Londra’nın tarihi atmosferinde öğrenin; uçak biletinden eğlence paketine kadar her şey tek fiyatta.',
+    metaDescription: 'Her Şey Dahil Londra dil paketi: 2–10 hafta İngilizce eğitimi, özel banyolu yurt odası, uçak bileti, vize ücreti ve sigorta tek fiyatta. 18 yaş üstü.',
     prices: [
       { weeks: 2, price: 2950 },
       { weeks: 3, price: 3350 },

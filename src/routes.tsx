@@ -4,6 +4,7 @@ import { SiteLayout, LandingLayout } from './components/layouts'
 import Home from './pages/Home'
 import { programs } from './data/programs'
 import { services } from './data/services'
+import { redirects } from './data/redirects'
 
 /**
  * Sayfalar React Router'ın `lazy` mekanizmasıyla ayrı chunk'lar halinde yüklenir.
@@ -38,16 +39,8 @@ const programRoutes: RouteObject[] = programs.flatMap((p) => [
 
 const serviceRoutes: RouteObject[] = services.map((s) => ({ path: s.path.slice(1), ...page(servicesMod, 'ServicePage', { slug: s.slug }) }))
 
-// Eski WordPress adresleri yeni sayfalara yönlenir
-const legacyRedirects: RouteObject[] = Object.entries({
-  'universite-basvuru-rehberi': '/bilgi-bankasi/universite-basvuru-rehberi',
-  'ornek-cv': '/kaynaklar/ornek-cv',
-  'ornek-niyet-mektubu-2': '/kaynaklar/ornek-niyet-mektubu',
-  'ornek-muvaffakatname': '/kaynaklar/ornek-muvaffakatname',
-  'ornek-banka-mektubu': '/kaynaklar/ornek-banka-mektubu',
-  'ornek-sponsor-mektubu': '/kaynaklar/ornek-sponsor-mektubu',
-  'ornek-taahhutname': '/kaynaklar/ornek-taahhutname',
-}).map(([from, to]) => ({ path: from, element: <Navigate to={to} replace /> }))
+// 301 ile taşınan adresler (src/data/redirects.ts): istemci tarafında da yeni adrese yönlenir
+const legacyRedirects: RouteObject[] = Object.entries(redirects).map(([from, to]) => ({ path: from.slice(1), element: <Navigate to={to} replace /> }))
 
 export const routes: RouteObject[] = [
   {
@@ -73,6 +66,7 @@ export const routes: RouteObject[] = [
       { path: 'tampa-akademi', ...page(servicesMod, 'Academy') },
       { path: 'hakkimizda', ...page(corpMod, 'About') },
       { path: 'ekibimiz', ...page(corpMod, 'Team') },
+      { path: 'ekibimiz/:slug', ...page(corpMod, 'AuthorPage') },
       { path: 'musteri-yorumlari', ...page(corpMod, 'Reviews') },
       { path: 'kariyer', ...page(corpMod, 'Careers') },
       { path: 'ofislerimiz', ...page(corpMod, 'Offices') },

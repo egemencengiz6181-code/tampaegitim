@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
+import { ORG_ID, abs } from '../seo/schema'
 import { Seo, Btn, SectionHead, FaqList, CheckList, RouteCode } from '../components/ui'
 import { Icon } from '../components/Icon'
 import { BoardingPass, RouteSteps, ReadMore } from '../components/signature'
@@ -7,7 +8,9 @@ import { LeadForm } from '../components/LeadForm'
 import { programs, programByKey, countriesFor, type Program } from '../data/programs'
 import { countries, countryBySlug, type Country, type ProgramKey } from '../data/countries'
 import { languageFromPrices, languageFromByCountry, languageFromLabel } from '../data/packages'
-import { cities } from '../data/cities'
+import { cities, type City } from '../data/cities'
+import { ukProgramBlocks, ukUpdated, type InfoCard, type ProgramBlocks } from '../data/uk'
+import { dedupeFaqs } from '../lib/faq'
 import { guidesForProgram, guidesForCountry } from '../data/guides'
 import { deep, countryDeep, type DeepSection } from '../data/deep'
 import { postsForCountry, postsForProgram, formatDate, type Post } from '../data/blog'
@@ -249,7 +252,8 @@ export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
   const title = p.countryTitle(c)
   const note = c.notes?.[programKey]
   const d = deep[`${p.key}:${c.slug}`]
-  const faqs = [...(d?.faqs ?? []), ...countryFaqs(p, c)]
+  const faqs = dedupeFaqs([...(d?.faqs ?? []), ...countryFaqs(p, c)])
+  const blocks = programBlocks(programKey, c)
   const relPosts = postsForCountry(c.slug).filter((x) => x.programs?.includes(p.key)).concat(postsForProgram(p.key).filter((x) => !x.countries?.includes(c.slug))).slice(0, 3)
   const siblings = countriesFor(p.key).filter((x) => x.slug !== c.slug)
   const otherPrograms = c.programs.filter((k) => k !== programKey).map((k) => programByKey[k])
@@ -272,7 +276,7 @@ export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
               <div><dt>Dil</dt><dd>{c.language}</dd></div>
               <div><dt>Para birimi</dt><dd>{c.currency}</dd></div>
               <div><dt>Uçuş</dt><dd>{c.flightHours}</dd></div>
-              <div><dt>Popüler şehir</dt><dd>{c.cities.slice(0, 3).join(', ')}</dd></div>
+              <div><dt>Popüler şehir</dt><dd>{blocks.popularCities.join(', ')}</dd></div>
               {programKey === 'dil' && languageFromByCountry[c.slug]?.price && (
                 <div><dt>Başlangıç</dt><dd>{languageFromLabel(languageFromByCountry[c.slug])}</dd></div>
               )}
@@ -289,7 +293,7 @@ export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
           <a href="#neden">Neden {c.name}?</a>
           <a href="#program">Program</a>
           <a href="#sehirler">Şehirler</a>
-          <a href="#vize">Vize ve yaşam</a>
+          <a href="#vize">{blocks.infoTitle}</a>
           <a href="#sss">SSS</a>
         </div>
       </nav>
@@ -311,7 +315,7 @@ export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
           <section id="neden" className="dsec">
             <h2>Neden {c.name}?</h2>
             <dl className="featlist featlist--2">
-              {c.highlights.map((h) => (<div key={h.title}><dt>{h.title}</dt><dd>{h.text}</dd></div>))}
+              {blocks.highlights.map((h) => (<div key={h.title}><dt>{h.title}</dt><dd>{h.text}</dd></div>))}
             </dl>
           </section>
 
@@ -327,17 +331,15 @@ export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
 
           <section id="sehirler" className="dsec">
             <h2>Popüler Şehirler</h2>
-            <CityList country={c} />
+            <CityList country={c} list={blocks.cities} />
           </section>
 
           <section id="vize" className="dsec">
-            <h2>Vize, Yaşam ve Çalışma</h2>
+            <h2>{blocks.infoTitle}</h2>
             <div className="infogrid">
-              <div><h3><Icon name="file" size={18} /> Vize</h3><p>{c.visa}</p></div>
-              <div><h3><Icon name="globe" size={18} /> Yaşam maliyeti</h3><p>{c.living}</p></div>
-              <div><h3><Icon name="user" size={18} /> Çalışma hakkı</h3><p>{c.work}</p></div>
+              {blocks.info.map((x) => <div key={x.title}><h3><Icon name={x.icon} size={18} /> {x.title}</h3><p>{x.text}</p></div>)}
             </div>
-            <p className="muted small">Vize ve çalışma koşulları ülkelerin göç mevzuatına göre değişebilir. Başvuru öncesinde güncel koşulları birlikte kontrol ediyoruz.</p>
+            <p className="muted small">Vize ve çalışma koşulları ülkelerin göç mevzuatına göre değişebilir. Başvuru öncesinde güncel koşulları birlikte kontrol ediyoruz.{c.slug === 'ingiltere' && <> Son güncelleme: <time dateTime={ukUpdated}>{formatDate(ukUpdated)}</time>.</>}</p>
           </section>
 
           <section className="dsec">
@@ -405,13 +407,50 @@ export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
   )
 }
 
+/** Ülke şablonundan gelen SSS: yalnızca o programa uygun sorular (yaz okulunda çalışma sorusu yok). */
 function countryFaqs(p: Program, c: Country) {
+  const b = programBlocks(p.key, c)
+  const visa = b.info.find((x) => x.title === 'Vize')?.text ?? c.visa
+  const cityNames = b.cities.length ? b.cities.map((x) => x.name) : c.cities
   return [
-    { q: `${c.loc} ${p.short.toLowerCase()} için vize gerekiyor mu?`, a: c.visa },
-    { q: `${c.loc} öğrenciyken çalışabilir miyim?`, a: c.work },
-    { q: `${c.name} için hangi şehirleri önerirsiniz?`, a: `${c.cities.join(', ')} öğrencilerimizin tercih ettiği şehirler arasında. ${c.living}` },
-    ...p.faqs.slice(0, 3),
+    { q: `${c.loc} ${p.short.toLowerCase()} için vize gerekiyor mu?`, a: visa },
+    ...(p.key === 'yaz' ? [] : [{ q: `${c.loc} öğrenciyken çalışabilir miyim?`, a: b.info.find((x) => x.title === 'Çalışma hakkı')?.text ?? c.work }]),
+    { q: `${c.name} için hangi şehirleri önerirsiniz?`, a: `${cityNames.join(', ')} öğrencilerimizin tercih ettiği şehirler arasında.${p.key === 'yaz' ? '' : ` ${c.living}`}` },
+    ...p.faqs,
   ]
+}
+
+const summerInfo = (c: Country): InfoCard[] => [
+  { icon: 'file', title: 'Vize', text: c.visa },
+  { icon: 'shield', title: 'Güvenlik ve gözetim', text: 'Önerdiğimiz programlarda 7/24 gözetim, belirli öğrenci başına grup lideri, kampüs giriş kontrolü ve acil durum hattı bulunur.' },
+  { icon: 'plane', title: 'Refakatsiz çocuk uçuşu', text: 'Havayollarının refakatsiz çocuk (UM) hizmeti kullanılabilir veya uygun dönemlerde refakatli grup uçuşlarına katılınabilir. Okul öğrenciyi havalimanında karşılar.' },
+  { icon: 'user', title: 'Muvafakatname', text: '18 yaş altı öğrenciler için noter onaylı muvafakatname hem vize başvurusunda hem yurt dışına çıkışta istenir.' },
+]
+
+const cityTag: Partial<Record<ProgramKey, RegExp>> = { dil: /dil/i, yaz: /yaz/i, lisans: /üniversite/i, 'yuksek-lisans': /yüksek lisans/i, 'work-study': /work/i, lise: /lise/i }
+
+/** "Neden …?", "Popüler Şehirler", "Vize, Yaşam ve Çalışma" ve "kısaca" blokları program tipine göre. */
+function programBlocks(key: ProgramKey, c: Country): ProgramBlocks {
+  const uk = c.slug === 'ingiltere' ? ukProgramBlocks[key] : undefined
+  if (uk) return uk
+  const all = cities[c.slug] ?? []
+  const re = cityTag[key]
+  const matching: City[] = re ? all.filter((ci) => ci.tags.some((t) => re.test(t))) : []
+  const list = matching.length ? matching : all
+  return {
+    highlights: c.highlights,
+    cities: list,
+    popularCities: list.length ? list.slice(0, 3).map((x) => x.name) : c.cities.slice(0, 3),
+    infoTitle: key === 'yaz' ? 'Vize, Güvenlik ve Seyahat' : 'Vize, Yaşam ve Çalışma',
+    info:
+      key === 'yaz'
+        ? summerInfo(c)
+        : [
+            { icon: 'file', title: 'Vize', text: c.visa },
+            { icon: 'globe', title: 'Yaşam maliyeti', text: c.living },
+            { icon: 'user', title: 'Çalışma hakkı', text: c.work },
+          ],
+  }
 }
 
 /* ---------- /ulkeler ---------- */
@@ -585,9 +624,8 @@ function countryOnlyFaqs(c: Country) {
   ]
 }
 
-function CityList({ country, grid }: { country: Country; grid?: boolean }) {
-  const list = cities[country.slug]
-  if (!list) {
+function CityList({ country, grid, list = cities[country.slug] }: { country: Country; grid?: boolean; list?: City[] }) {
+  if (!list?.length) {
     return (
       <>
         <ul className="chips chips--lg">{country.cities.map((city) => <li key={city}><span>{city}</span></li>)}</ul>
@@ -675,8 +713,8 @@ function serviceLd(name: string, description: string, path: string) {
     name,
     description,
     serviceType: 'Yurt dışı eğitim danışmanlığı',
-    url: `https://tampaegitim.com.tr${path}`,
+    url: abs(path),
     areaServed: { '@type': 'Country', name: 'Türkiye' },
-    provider: { '@id': 'https://tampaegitim.com.tr/#organization' },
+    provider: { '@id': ORG_ID },
   }
 }

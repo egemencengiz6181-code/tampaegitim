@@ -1,13 +1,14 @@
 // Build sonrası: her sayfayı statik HTML olarak dist/ altına yazar ve sitemap.xml üretir.
 import fs from 'node:fs'
+import { contentHash } from './content-hash.mjs'
 import path from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const dist = path.join(root, 'dist')
-const SITE = 'https://tampaegitim.com.tr'
+const SITE = JSON.parse(fs.readFileSync(path.join(root, 'content/site.json'), 'utf8')).url
 const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8')
-const { render, sitemapPaths, blogFeed } = await import(pathToFileURL(path.join(root, 'dist-ssr/entry-server.js')).href)
+const { render, sitemapPaths, blogFeed, redirects } = await import(pathToFileURL(path.join(root, 'dist-ssr/entry-server.js')).href)
 
 // React 19 hoist edilen <title>/<meta>/<link> etiketlerini içerik başında üretir; bunları <head>'e taşırız.
 const HOIST = /<(title)[^>]*>[\s\S]*?<\/title>|<meta\b[^>]*\/?>|<link\b[^>]*rel="(?:canonical|alternate|preload)"[^>]*\/?>/g
@@ -25,7 +26,33 @@ function assemble(html) {
   return out
 }
 
+// vercel.json yönlendirmeleri src/data/redirects.ts ile aynı olmalı (Vercel 301'i vercel.json'dan yapar)
+const vercel = JSON.parse(fs.readFileSync(path.join(root, 'vercel.json'), 'utf8'))
+const vercelMap = new Map((vercel.redirects ?? []).map((r) => [r.source, r.destination]))
+const missing = Object.entries(redirects).filter(([a, b]) => vercelMap.get(a) !== b)
+if (missing.length) {
+  console.error('vercel.json > redirects eksik/farklı:\n' + missing.map(([a, b]) => `  ${a} -> ${b}`).join('\n'))
+  process.exit(1)
+}
+
+// lastmod: sayfanın ana içeriği (<main>) değiştiğinde güncellenir. content/lastmod.json içerik
+// özetini ve tarihi saklar; yerel build bu dosyayı günceller (değişikliklerle birlikte commit edin).
+const MANIFEST = path.join(root, 'content/lastmod.json')
+const manifest = fs.existsSync(MANIFEST) ? JSON.parse(fs.readFileSync(MANIFEST, 'utf8')) : {}
+const today = new Date().toISOString().slice(0, 10)
+const feedAll = blogFeed()
+const newestPost = feedAll.reduce((m, p) => (p.updated > m ? p.updated : m), '')
+function lastmodFor(pg, h) {
+  const prev = manifest[pg.path]
+  if (prev?.h === h) return prev.d
+  if (pg.lastmod) return pg.lastmod
+  // Vercel'de (manifest güncellenmemişse): değişiklik admin panelinden gelen bir yazıdan kaynaklanıyorsa o yazının tarihi
+  if (process.env.VERCEL && prev && newestPost > prev.d) return newestPost
+  return today
+}
+
 const pages = sitemapPaths()
+const nextManifest = {}
 let ok = 0
 for (const pg of pages) {
   const res = await render(pg.path)
@@ -33,16 +60,28 @@ for (const pg of pages) {
   // /blog -> dist/blog.html (Netlify, Vercel cleanUrls, GitHub Pages ve vite preview uzantısız servis eder)
   const file = pg.path === '/' ? path.join(dist, 'index.html') : path.join(dist, `${pg.path}.html`)
   fs.mkdirSync(path.dirname(file), { recursive: true })
-  fs.writeFileSync(file, assemble(res.html))
+  const out = assemble(res.html)
+  fs.writeFileSync(file, out)
+  if (pg.index) {
+    const h = contentHash(out)
+    pg.lastmod = lastmodFor(pg, h)
+    nextManifest[pg.path] = { h, d: pg.lastmod }
+  }
   ok++
 }
+fs.writeFileSync(MANIFEST, JSON.stringify(nextManifest, null, 1) + '\n')
 
 // 404 sayfası
 const nf = await render('/bu-sayfa-yok')
 fs.writeFileSync(path.join(dist, '404.html'), assemble(nf.html))
 
+// robots.txt (Sitemap satırı asıl adresten)
+fs.writeFileSync(
+  path.join(dist, 'robots.txt'),
+  `User-agent: *\nAllow: /\nDisallow: /lp/\nDisallow: /tesekkurler\nDisallow: /admin\nDisallow: /api/\n\nSitemap: ${SITE}/sitemap.xml\n`,
+)
+
 // sitemap.xml
-const today = new Date().toISOString().slice(0, 10)
 const urls = pages
   .filter((p) => p.index)
   .map((p) => `  <url>\n    <loc>${SITE}${p.path === '/' ? '/' : p.path}</loc>\n    <lastmod>${p.lastmod ?? today}</lastmod>\n    <changefreq>${p.changefreq}</changefreq>\n    <priority>${p.priority.toFixed(1)}</priority>\n  </url>`)
@@ -82,15 +121,9 @@ ${items}
 `,
 )
 
-// Barındırma yönlendirmeleri: eski WordPress adresleri (301) ve 404
+// Barındırma yönlendirmeleri (Netlify vb. için _redirects): 301 listesi ve 404
 const legacy = {
-  '/universite-basvuru-rehberi': '/bilgi-bankasi/universite-basvuru-rehberi',
-  '/ornek-cv': '/kaynaklar/ornek-cv',
-  '/ornek-niyet-mektubu-2': '/kaynaklar/ornek-niyet-mektubu',
-  '/ornek-muvaffakatname': '/kaynaklar/ornek-muvaffakatname',
-  '/ornek-banka-mektubu': '/kaynaklar/ornek-banka-mektubu',
-  '/ornek-sponsor-mektubu': '/kaynaklar/ornek-sponsor-mektubu',
-  '/ornek-taahhutname': '/kaynaklar/ornek-taahhutname',
+  ...redirects,
   '/lisans-programlari/': '/lisans-programlari',
   '/her-sey-dahil-paketler/': '/her-sey-dahil-paketler',
 }

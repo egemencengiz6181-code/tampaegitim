@@ -1,3 +1,5 @@
+import { ukVisa, ukWork, ukLiving, ukSummer } from './uk'
+
 export type ProgramKey = 'dil' | 'yaz' | 'lise' | 'lisans' | 'yuksek-lisans' | 'work-study'
 
 export type Country = {
@@ -46,16 +48,13 @@ export const countries: Country[] = [
       { title: 'Mezuniyet sonrası çalışma', text: 'Lisans ve yüksek lisans mezunları için Graduate Route ile ülkede çalışma deneyimi kazanma imkânı.' },
       { title: 'Kültürel çeşitlilik', text: 'Londra başta olmak üzere dünyanın dört bir yanından öğrencinin bir araya geldiği çok kültürlü kampüsler.' },
     ],
-    visa:
-      '6 aya kadar dil kursları için Standard Visitor, 11 aya kadar İngilizce kursları için Short-term Study, üniversite ve uzun dönem programlar için Student vizesi gerekir. Finansal yeterlilik, kabul belgesi (CAS) ve İngilizce yeterliliği vize dosyasının temelidir.',
-    living:
-      'Londra Avrupa’nın en pahalı şehirleri arasındadır; Manchester, Liverpool, Brighton veya Bournemouth gibi şehirlerde konaklama ve günlük giderler belirgin şekilde daha uygundur.',
-    work:
-      'Student vizesindeki üniversite öğrencileri dönem içinde haftada 20 saate kadar çalışabilir. Dil kursu için verilen visitor vizeleri çalışma hakkı tanımaz.',
+    visa: ukVisa.summary,
+    living: ukLiving,
+    work: ukWork.summary,
     programs: ['dil', 'yaz', 'lise', 'lisans', 'yuksek-lisans'],
     notes: {
       dil: 'Londra’nın tarihi atmosferinden Brighton’ın sahil şeridine kadar 2 haftadan 1 yıla uzanan programlar sunuyoruz. Haftada 15–30 ders saati arasında yoğunluk seçebilir, IELTS veya Cambridge hazırlık modülleri ekleyebilirsiniz.',
-      yaz: 'İngiltere yaz okulları; sabah dersleri, öğleden sonra atölyeler ve hafta sonu Oxford, Cambridge, Bath gibi şehir gezileriyle 8–17 yaş arası öğrenciler için en çok tercih edilen programlardır. Kampüs içi konaklama ve 7/24 gözetim standarttır.',
+      yaz: `İngiltere yaz okulları; sabah dersleri, öğleden sonra atölyeler ve hafta sonu Oxford, Cambridge, Bath gibi şehir gezileriyle ${ukSummer.ages} arası öğrenciler için en çok tercih edilen programlardır. Kampüs içi konaklama ve 7/24 gözetim standarttır.`,
       lise: 'İngiltere’de lise eğitimi yatılı okullar (boarding school) ve kolejler üzerinden yürür. GCSE ve A-Level programları üniversite başvurusunda doğrudan avantaj sağlar.',
       lisans: 'İngiltere’de lisans başvuruları UCAS sistemi üzerinden yapılır. Türkiye’de lise mezunları için çoğu üniversitede bir yıllık Foundation programı ön koşuldur; IB veya A-Level ile doğrudan başvuru da mümkündür.',
       'yuksek-lisans': 'İngiltere’de yüksek lisans çoğunlukla 12 ay sürer. Queen Mary University of London, Manchester Metropolitan ve Liverpool gibi çözüm ortaklarımızla öğrencilerimizin profiline en uygun programı birlikte belirliyoruz.',

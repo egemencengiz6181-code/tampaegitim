@@ -1,9 +1,12 @@
 // Kurumsal bilgiler tampaegitim.com.tr'den alınmıştır.
+// Sitenin asıl adresi (canonical, sitemap, OG, JSON-LD) tek yerden gelir: content/site.json
+import siteConfig from '../../content/site.json'
+
 export const site = {
   name: 'Tampa Yurtdışı Eğitim',
   legalName: 'Tampa Yurtdışı Eğitim ve Danışmanlık',
   shortName: 'Tampa Eğitim',
-  url: 'https://tampaegitim.com.tr',
+  url: siteConfig.url,
   email: 'info@tampaegitim.com.tr',
   phone: '+90 530 881 07 09',
   phoneHref: 'tel:+905308810709',
@@ -37,6 +40,12 @@ export type Office = {
   image: string
   mapQuery: string
   note: string
+  /** Yapısal veri (LocalBusiness) için posta adresi ayrıntıları */
+  locality?: string
+  district?: string
+  postalCode?: string
+  /** Harita koordinatı. TODO: Tampa'dan teyit (Google Haritalar'daki işletme pininden) */
+  geo?: { lat: number; lng: number }
 }
 
 export const offices: Office[] = [
@@ -49,6 +58,11 @@ export const offices: Office[] = [
     phoneHref: 'tel:+905308810709',
     image: '/img/misc/izmir.jpg',
     mapQuery: 'Park Yaşam Ofisleri Karşıyaka İzmir',
+    locality: 'Karşıyaka',
+    district: 'İzmir',
+    postalCode: '35550',
+    // OpenStreetMap'te 6523. Sokak (Yalı Mah.) konumu; bina pini Tampa'dan teyit edilmeli
+    geo: { lat: 38.4777, lng: 27.0785 },
     note: 'Genel merkezimiz. Yüz yüze danışmanlık, belge teslimi ve vize hazırlık görüşmeleri.',
   },
   {
@@ -60,6 +74,9 @@ export const offices: Office[] = [
     phoneHref: 'tel:+905051443509',
     image: '/img/misc/aydin.jpg',
     mapQuery: 'My Town Plaza Efeler Aydın',
+    locality: 'Efeler',
+    district: 'Aydın',
+    // TODO: Tampa'dan teyit: posta kodu ve harita koordinatı
     note: 'Aydın ve çevre illerdeki öğrenci ve velilerimiz için randevulu görüşme.',
   },
   {
