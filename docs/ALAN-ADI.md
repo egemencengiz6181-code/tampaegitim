@@ -5,25 +5,17 @@ satırı, Open Graph/Twitter etiketleri ve JSON-LD adresleri tek bir sabitten ge
 [`content/site.json`](../content/site.json). Adres bir gün değişirse yalnızca bu dosya güncellenir.
 İç linkler göreli olduğu için ziyaretçinin girdiği host'ta kalır.
 
-## Durum (20 Ekim 2026)
+## Durum: tamamlandı (20 Ekim 2026)
 
-- `https://www.tampaegitim.com.tr/*` → **200**, sertifika geçerli. Site burada çalışıyor.
-- `https://tampaegitim.com.tr/*` (www'suz) → **TLS hatası**: Vercel'deki sertifika yalnızca `www` için çıkarılmış.
-  Bu adrese gelen ziyaretçi ve eski bağlantılar siteye ulaşamıyor.
-- `http://tampaegitim.com.tr` → Vercel 308 ile `https://tampaegitim.com.tr`'ye gönderiyor, orada da sertifika hatası var.
-- DNS doğru: kök alan adı `216.198.79.1` (Vercel), www `vercel-dns` CNAME.
+- `https://www.tampaegitim.com.tr/*` → **200**. Asıl adres.
+- `https://tampaegitim.com.tr/*` → **308** ile `https://www.tampaegitim.com.tr/*`. Yol ve sorgu dizesi korunuyor
+  (`/blog?x=1` → `https://www.tampaegitim.com.tr/blog?x=1`). Vercel'de “Valid Configuration”, sertifika geçerli.
+- `http://tampaegitim.com.tr/` → 308 `https://tampaegitim.com.tr/` → 308 `https://www.tampaegitim.com.tr/` (iki adım; Vercel'in standart davranışı).
+- Yönlendirme Vercel paneli (Settings → Domains) üzerinden yapıldı. vercel.json'da www/kök alan adı
+  yönlendirmesi **yok ve eklenmemeli**; panel ayarıyla çakışır.
 
-## Yapılacak (Vercel paneli, ~5 dakika)
-
-Koddaki değişiklik buna bağlı değildir; site panel ayarı yapılmadan da www'de doğru çalışır. Bu adım
-www'suz adrese gelenleri kurtarmak içindir.
-
-1. Vercel → proje → **Settings → Domains**.
-2. `www.tampaegitim.com.tr` satırı **Production**, **No redirect** olarak kalsın (asıl alan adı).
-3. `tampaegitim.com.tr` listede yoksa **Add** ile ekleyin. Vercel “www'ye yönlendirilsin mi?” diye sorarsa **evet**.
-   Varsa satırda **Edit → Redirect to `www.tampaegitim.com.tr`**, durum kodu **308** (veya 301; ikisi de kalıcıdır).
-   Vercel yolu ve sorgu dizesini (`/blog?x=1`) korur.
-4. Vercel `tampaegitim.com.tr` için sertifikayı otomatik çıkarır (birkaç dakika sürebilir).
+Önceki durum (19 Ekim 2026): kök alan adı Vercel'e eklenmemişti, sertifika yalnızca `www` içindi ve
+`https://tampaegitim.com.tr` TLS hatası veriyordu.
 
 ## Test
 
@@ -37,5 +29,5 @@ curl -sI http://tampaegitim.com.tr/ | grep -i location                 # https:/
 curl -s https://www.tampaegitim.com.tr/robots.txt | grep Sitemap        # Sitemap: https://www.tampaegitim.com.tr/sitemap.xml
 ```
 
-Ardından Google Search Console'da `https://www.tampaegitim.com.tr` (veya alan adı mülkü) için
+Yayından sonra Google Search Console'da `https://www.tampaegitim.com.tr` (veya alan adı mülkü) için
 sitemap'i yeniden gönderin: `https://www.tampaegitim.com.tr/sitemap.xml`.
