@@ -1,11 +1,11 @@
 {
  "/": {
-  "h": "5f5e0c00c966470f",
-  "d": "2026-10-14"
+  "h": "2ccf64cd474de03b",
+  "d": "2026-10-22"
  },
  "/yurtdisi-egitim": {
-  "h": "508627708ff8ea3e",
-  "d": "2026-10-19"
+  "h": "16896be794554a34",
+  "d": "2026-10-22"
  },
  "/yurtdisi-dil-okullari": {
   "h": "5848ea1c7639a21a",
@@ -20,12 +20,12 @@
   "d": "2026-10-14"
  },
  "/lisans-programlari": {
-  "h": "e98fb0a3def48791",
-  "d": "2026-10-14"
+  "h": "5f812302d2d1456c",
+  "d": "2026-10-22"
  },
  "/yurtdisi-yuksek-lisans": {
-  "h": "347d89cb80d6e601",
-  "d": "2026-10-14"
+  "h": "05037842ed1a9dc6",
+  "d": "2026-10-22"
  },
  "/work-and-study": {
   "h": "9152e4b49a57af34",
@@ -180,128 +180,136 @@
   "d": "2026-10-19"
  },
  "/lisans-programlari/ingiltere": {
-  "h": "c161ba4214e90cad",
-  "d": "2026-10-20"
+  "h": "092711b81e2b74e2",
+  "d": "2026-10-22"
  },
  "/lisans-programlari/amerika": {
-  "h": "9368283386b8810a",
-  "d": "2026-10-19"
+  "h": "39393b65f7bad17a",
+  "d": "2026-10-22"
  },
  "/lisans-programlari/kanada": {
-  "h": "26ea2d92c8a3ea0a",
-  "d": "2026-10-19"
+  "h": "a59c37f2732aba1b",
+  "d": "2026-10-22"
  },
  "/lisans-programlari/avustralya": {
-  "h": "76af5fa524949708",
-  "d": "2026-10-19"
+  "h": "bc700e376489fa97",
+  "d": "2026-10-22"
  },
  "/lisans-programlari/malta": {
-  "h": "6cb2415a4d408f8e",
-  "d": "2026-10-19"
+  "h": "79df6a4a860fffb2",
+  "d": "2026-10-22"
  },
  "/lisans-programlari/almanya": {
-  "h": "42e2ef3a3df6e031",
-  "d": "2026-10-19"
+  "h": "66bfb1fd2ff088f7",
+  "d": "2026-10-22"
  },
  "/lisans-programlari/ispanya": {
-  "h": "caef832996d600b5",
-  "d": "2026-10-19"
+  "h": "eae5d8884e9842cc",
+  "d": "2026-10-22"
  },
  "/lisans-programlari/fransa": {
-  "h": "3b7d1a90748bf075",
-  "d": "2026-10-19"
+  "h": "339a189733ee1ecb",
+  "d": "2026-10-22"
  },
  "/lisans-programlari/italya": {
-  "h": "6321639243dae696",
-  "d": "2026-10-19"
+  "h": "e0943459ad272676",
+  "d": "2026-10-22"
  },
  "/lisans-programlari/dubai": {
-  "h": "83bab056bb68574c",
-  "d": "2026-10-19"
+  "h": "6f36e397caad9ae4",
+  "d": "2026-10-22"
  },
  "/lisans-programlari/arjantin": {
-  "h": "3a8b2c877746e867",
-  "d": "2026-10-19"
+  "h": "a242ba115fe7a10c",
+  "d": "2026-10-22"
  },
  "/lisans-programlari/japonya": {
-  "h": "96f4a7f165bc8369",
-  "d": "2026-10-19"
+  "h": "d49cb7bede9e961b",
+  "d": "2026-10-22"
  },
  "/lisans-programlari/kore": {
-  "h": "7e8379779786e25e",
-  "d": "2026-10-19"
+  "h": "931f8bf6ebd824b7",
+  "d": "2026-10-22"
  },
  "/lisans-programlari/isvicre": {
-  "h": "26e106ea0b841580",
-  "d": "2026-10-19"
+  "h": "54932c0c162215dd",
+  "d": "2026-10-22"
  },
  "/lisans-programlari/macaristan": {
-  "h": "b982df59b92eb9df",
-  "d": "2026-10-19"
+  "h": "1a0ccac55883459a",
+  "d": "2026-10-22"
  },
  "/lisans-programlari/polonya": {
-  "h": "c80a29bc0191b60b",
-  "d": "2026-10-19"
+  "h": "193b910b7cb81ab5",
+  "d": "2026-10-22"
+ },
+ "/lisans-programlari/cekya": {
+  "h": "e7779721f26c6396",
+  "d": "2026-10-22"
  },
  "/yurtdisi-yuksek-lisans/ingiltere": {
-  "h": "6d3ed57506f21b63",
-  "d": "2026-10-19"
+  "h": "15aef7f799ac4315",
+  "d": "2026-10-22"
  },
  "/yurtdisi-yuksek-lisans/amerika": {
-  "h": "395e087e8504337d",
-  "d": "2026-10-19"
+  "h": "b201d2d4d6c73c50",
+  "d": "2026-10-22"
  },
  "/yurtdisi-yuksek-lisans/kanada": {
-  "h": "8719d0fbbcb72090",
-  "d": "2026-10-19"
+  "h": "7cb1b02950c57484",
+  "d": "2026-10-22"
  },
  "/yurtdisi-yuksek-lisans/avustralya": {
-  "h": "09b922ba1176d8c4",
-  "d": "2026-10-19"
+  "h": "815d0e4369af7c3c",
+  "d": "2026-10-22"
  },
  "/yurtdisi-yuksek-lisans/irlanda": {
-  "h": "142e05b191acd46b",
-  "d": "2026-10-19"
+  "h": "2cc81904c442a518",
+  "d": "2026-10-22"
  },
  "/yurtdisi-yuksek-lisans/malta": {
-  "h": "906f5b2744b87fe6",
-  "d": "2026-10-19"
+  "h": "a4c4f7ae78062f9a",
+  "d": "2026-10-22"
  },
  "/yurtdisi-yuksek-lisans/almanya": {
-  "h": "4c53b8ed67071e80",
-  "d": "2026-10-19"
+  "h": "4b2f54c53cbe1429",
+  "d": "2026-10-22"
  },
  "/yurtdisi-yuksek-lisans/avusturya": {
-  "h": "cc083d3c98731de4",
-  "d": "2026-10-19"
+  "h": "95f5d10fe241986c",
+  "d": "2026-10-22"
  },
  "/yurtdisi-yuksek-lisans/ispanya": {
-  "h": "deb0ed4153c51e61",
-  "d": "2026-10-19"
+  "h": "617bc2b5aabe4912",
+  "d": "2026-10-22"
  },
  "/yurtdisi-yuksek-lisans/fransa": {
-  "h": "79f8d5ef36376ca3",
-  "d": "2026-10-19"
+  "h": "8971a5af3504731b",
+  "d": "2026-10-22"
  },
  "/yurtdisi-yuksek-lisans/italya": {
-  "h": "55840701d324940d",
-  "d": "2026-10-19"
+  "h": "cc7b415f17ae7c4b",
+  "d": "2026-10-22"
  },
  "/yurtdisi-yuksek-lisans/dubai": {
-  "h": "39060392894d7046",
-  "d": "2026-10-19"
+  "h": "6447b9f55075bdf3",
+  "d": "2026-10-22"
  },
  "/yurtdisi-yuksek-lisans/macaristan": {
-  "h": "2dd6698a00ee9c10",
-  "d": "2026-10-19"
+  "h": "8b9a9ab2add734f4",
+  "d": "2026-10-22"
  },
  "/yurtdisi-yuksek-lisans/polonya": {
-  "h": "f1baf9e139158345",
-  "d": "2026-10-19"
+  "h": "09da58ae39c6c4dd",
+  "d": "2026-10-22"
+ },
+ "/yurtdisi-yuksek-lisans/cekya": {
+  "h": "6176997d3be21a10",
+  "d": "2026-10-22"
  },
  "/yurtdisi-yuksek-lisans/belcika": {
-  "h": "7acb0403be53a4eb",
-  "d": "2026-10-19"
+  "h": "db694981984000d1",
+  "d": "2026-10-22"
  },
  "/work-and-study/kanada": {
   "h": "6d64dfe428114501",
@@ -324,100 +332,104 @@
   "d": "2026-10-19"
  },
  "/ulkeler": {
-  "h": "920a5cce845cd4b0",
-  "d": "2026-10-14"
+  "h": "ed2900c81503451f",
+  "d": "2026-10-22"
  },
  "/ulkeler/ingiltere": {
-  "h": "0ee01ca2e5aab5f8",
-  "d": "2026-10-19"
+  "h": "590049cdf010bdd6",
+  "d": "2026-10-22"
  },
  "/ulkeler/amerika": {
-  "h": "a26289c4c782fc7b",
-  "d": "2026-10-14"
+  "h": "bdfeb816601ed189",
+  "d": "2026-10-22"
  },
  "/ulkeler/kanada": {
-  "h": "4d340548b8c1900f",
-  "d": "2026-10-14"
+  "h": "82c2285e13b8d149",
+  "d": "2026-10-22"
  },
  "/ulkeler/avustralya": {
-  "h": "7ddc8642a6d7834e",
-  "d": "2026-10-14"
+  "h": "22957ec747924e25",
+  "d": "2026-10-22"
  },
  "/ulkeler/irlanda": {
-  "h": "3b886534a5d5b73b",
-  "d": "2026-10-14"
+  "h": "81c34b85d8b26d90",
+  "d": "2026-10-22"
  },
  "/ulkeler/malta": {
-  "h": "08a1e368a96c6105",
-  "d": "2026-10-14"
+  "h": "c786f75f4f25b2a7",
+  "d": "2026-10-22"
  },
  "/ulkeler/almanya": {
-  "h": "541cb696c91712f5",
-  "d": "2026-10-14"
+  "h": "c6a516c555d42435",
+  "d": "2026-10-22"
  },
  "/ulkeler/avusturya": {
-  "h": "aa683d479e8f895b",
-  "d": "2026-10-14"
+  "h": "42c89a84ccd3219b",
+  "d": "2026-10-22"
  },
  "/ulkeler/ispanya": {
-  "h": "71d2b7cc7726d692",
-  "d": "2026-10-14"
+  "h": "ac6f726b422a3675",
+  "d": "2026-10-22"
  },
  "/ulkeler/fransa": {
-  "h": "056bf17afa1c5fd0",
-  "d": "2026-10-14"
+  "h": "093623d88ec7ff3e",
+  "d": "2026-10-22"
  },
  "/ulkeler/italya": {
-  "h": "f386d0f910dc5651",
-  "d": "2026-10-14"
+  "h": "24be1e0a82d435f7",
+  "d": "2026-10-22"
  },
  "/ulkeler/rusya": {
-  "h": "de33215babd6b7c9",
-  "d": "2026-10-14"
+  "h": "2843b0b96f316549",
+  "d": "2026-10-22"
  },
  "/ulkeler/yeni-zelanda": {
-  "h": "8640cc1cb66aa945",
-  "d": "2026-10-14"
+  "h": "aca70e708e085c19",
+  "d": "2026-10-22"
  },
  "/ulkeler/dubai": {
-  "h": "611fb1951a50324d",
-  "d": "2026-10-14"
+  "h": "cb6fdeee099ace72",
+  "d": "2026-10-22"
  },
  "/ulkeler/guney-amerika": {
-  "h": "e5743d935c11f0a9",
-  "d": "2026-10-14"
+  "h": "9f53aec89ac28a0b",
+  "d": "2026-10-22"
  },
  "/ulkeler/arjantin": {
-  "h": "ba947d68066db0e2",
-  "d": "2026-10-14"
+  "h": "2c6854beda5016d5",
+  "d": "2026-10-22"
  },
  "/ulkeler/japonya": {
-  "h": "1bc36eb2b15e13d1",
-  "d": "2026-10-14"
+  "h": "6d2803b5516cefa3",
+  "d": "2026-10-22"
  },
  "/ulkeler/kore": {
-  "h": "402eba537d257bb0",
-  "d": "2026-10-14"
+  "h": "c14753d54299f594",
+  "d": "2026-10-22"
  },
  "/ulkeler/isvicre": {
-  "h": "9ed1bcbd5423fdd9",
-  "d": "2026-10-14"
+  "h": "9a36dba3730e4b9e",
+  "d": "2026-10-22"
  },
  "/ulkeler/macaristan": {
-  "h": "21e7d84bf5f07e54",
-  "d": "2026-10-14"
+  "h": "3c42f7912c03a956",
+  "d": "2026-10-22"
  },
  "/ulkeler/polonya": {
-  "h": "bc21e63e8b2f98e7",
-  "d": "2026-10-14"
+  "h": "62bea16db2c954ad",
+  "d": "2026-10-22"
+ },
+ "/ulkeler/cekya": {
+  "h": "2032a3f1cb3ec309",
+  "d": "2026-10-22"
  },
  "/ulkeler/belcika": {
-  "h": "c4236db46c8dae63",
-  "d": "2026-10-14"
+  "h": "e020c2964d275c13",
+  "d": "2026-10-22"
  },
  "/her-sey-dahil-paketler": {
-  "h": "a56c5044696010dd",
-  "d": "2026-10-14"
+  "h": "cb66755d407c7475",
+  "d": "2026-10-22"
  },
  "/her-sey-dahil-paketler/londra": {
   "h": "79107f8840a1d286",
@@ -432,8 +444,8 @@
   "d": "2026-10-14"
  },
  "/online-egitim": {
-  "h": "f96b7e0133dd13b9",
-  "d": "2026-10-14"
+  "h": "dbcb163180811853",
+  "d": "2026-10-22"
  },
  "/online-egitim/kanada-online-lise-diplomasi": {
   "h": "942d08155aad463d",
@@ -444,8 +456,8 @@
   "d": "2026-10-14"
  },
  "/ogrenci-konaklama": {
-  "h": "3a453a68a540c01a",
-  "d": "2026-10-14"
+  "h": "88b1162fe36bd73c",
+  "d": "2026-10-22"
  },
  "/ogrenci-konaklama/your-tribe-southwark": {
   "h": "fa03e0500a961d74",
@@ -512,12 +524,12 @@
   "d": "2026-10-14"
  },
  "/ingiltere-dil-okullari-fiyat-listesi": {
-  "h": "4761cd6abeb0b959",
-  "d": "2026-10-14"
+  "h": "30b6992642fe5c31",
+  "d": "2026-10-22"
  },
  "/almanyadaki-ozel-universiteler": {
-  "h": "60c74c9e1583ff5d",
-  "d": "2026-10-14"
+  "h": "b0ff269eb83c089d",
+  "d": "2026-10-22"
  },
  "/almanyadaki-ozel-universiteler/ue-university-of-europe-for-applied-sciences": {
   "h": "d6ba25fba71e6d7b",
@@ -551,6 +563,10 @@
   "h": "e5a77aadcb64a40a",
   "d": "2026-10-14"
  },
+ "/cekya-universiteleri": {
+  "h": "df5ea2c14baf8785",
+  "d": "2026-10-22"
+ },
  "/hizmetler": {
   "h": "7d0da7b23294613d",
   "d": "2026-10-14"
@@ -580,8 +596,8 @@
   "d": "2026-10-14"
  },
  "/tampa-akademi": {
-  "h": "edca9142b756e39d",
-  "d": "2026-10-14"
+  "h": "4eaaece651ae937b",
+  "d": "2026-10-22"
  },
  "/blog": {
   "h": "2b7822a110245cc3",
@@ -1012,16 +1028,16 @@
   "d": "2026-10-14"
  },
  "/iletisim": {
-  "h": "7f67713300439777",
-  "d": "2026-10-14"
+  "h": "afd84109f388d6b9",
+  "d": "2026-10-22"
  },
  "/basvuru": {
-  "h": "a5dec174f5219826",
-  "d": "2026-10-14"
+  "h": "8bb3c5a13bde58f4",
+  "d": "2026-10-22"
  },
  "/site-haritasi": {
-  "h": "427260d6c8d646e3",
-  "d": "2026-10-14"
+  "h": "7fba03f6acf2604a",
+  "d": "2026-10-22"
  },
  "/kvkk": {
   "h": "0b337f4a448fcefa",

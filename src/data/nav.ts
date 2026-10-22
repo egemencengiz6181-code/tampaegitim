@@ -29,6 +29,7 @@ export const countryMenu = regions.map((r) => ({
 export const programExtras: NavLink[] = [
   { label: 'Online eğitim', to: '/online-egitim', note: 'Kanada online lise, İngiltere online lisans ve MBA' },
   { label: 'Almanya’daki özel üniversiteler', to: '/almanyadaki-ozel-universiteler', note: 'YKS’siz, İngilizce eğitim' },
+  { label: 'Çekya üniversiteleri', to: '/cekya-universiteleri', note: 'Çekçe ücretsiz, İngilizce uygun ücretli' },
   { label: 'İngiltere dil okulları fiyat listesi', to: '/ingiltere-dil-okullari-fiyat-listesi', note: 'Şehirlere göre' },
   { label: 'Öğrenci konaklaması', to: '/ogrenci-konaklama', note: 'Londra yurtları' },
 ]

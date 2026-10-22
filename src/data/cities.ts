@@ -72,6 +72,12 @@ export const cities: Record<string, City[]> = {
     { name: 'Wrocław', text: 'Genç nüfusu ve teknoloji şirketleriyle yükselen bir üniversite şehri.', tags: ['Üniversite', 'Tıp'] },
     { name: 'Poznań ve Gliwice', text: 'Teknik ve sanat üniversiteleriyle uygun maliyetli eğitim şehirleri.', tags: ['Üniversite'] },
   ],
+  cekya: [
+    { name: 'Prag', text: 'Başkent ve en büyük öğrenci şehri; Charles Üniversitesi ve Çek Teknik Üniversitesi gibi köklü kurumların adresi. Yaşam maliyeti ülkenin en yüksek olanıdır.', tags: ['Üniversite', 'Yüksek lisans', 'Tıp'] },
+    { name: 'Brno', text: 'Çekya’nın ikinci büyük şehri; Masaryk ve Brno Teknik üniversiteleriyle genç, canlı ve Prag’a göre daha ekonomik.', tags: ['Üniversite', 'Tıp'] },
+    { name: 'Olomouc', text: 'Palacký Üniversitesi’nin şehri; sakin, tarihi ve uygun maliyetli bir öğrenci kenti.', tags: ['Üniversite', 'Tıp'] },
+    { name: 'Ostrava, Plzeň ve Hradec Králové', text: 'Teknik ve çok alanlı üniversiteleriyle daha düşük yaşam giderleri sunan şehirler.', tags: ['Üniversite'] },
+  ],
   macaristan: [
     { name: 'Budapeşte', text: 'Tuna kıyısında, tarihi ve canlı bir başkent; Avrupa’nın en uygun maliyetli başkentlerinden.', tags: ['Üniversite', 'Yüksek lisans'] },
     { name: 'Debrecen, Pécs ve Szeged', text: 'Uluslararası tıp fakülteleriyle bilinen, sakin ve ekonomik üniversite şehirleri.', tags: ['Tıp', 'Üniversite'] },

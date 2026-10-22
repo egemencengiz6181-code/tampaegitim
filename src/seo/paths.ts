@@ -39,6 +39,7 @@ function allPaths(): SitePath[] {
     ...ukPriceCities.filter((c) => c.schools.length).map((c) => p(`/ingiltere-dil-okullari-fiyat-listesi/${c.slug}`, 0.7)),
     p('/almanyadaki-ozel-universiteler', 0.8),
     ...germanUnis.map((u) => p(`/almanyadaki-ozel-universiteler/${u.slug}`, 0.7)),
+    p('/cekya-universiteleri', 0.8),
     p('/hizmetler', 0.7),
     ...services.map((s) => p(s.path, 0.7)),
     p('/tampa-akademi', 0.6),
