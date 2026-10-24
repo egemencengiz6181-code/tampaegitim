@@ -5,7 +5,8 @@ import Home from './pages/Home'
 import { programs } from './data/programs'
 import { services } from './data/services'
 import { redirects } from './data/redirects'
-import { languageCityRouting, universityRouting, glossaryRouting, localSlugs } from './data/routing'
+import { languageCityRouting, universityRouting, glossaryRouting, localSlugs, priceRouting } from './data/routing'
+import { priceLoaders } from './data/prices/load'
 import { universityLoaders } from './data/universities/load'
 import { glossaryLoaders } from './data/glossary/load'
 import { languageCityLoaders } from './data/languageCities/load'
@@ -39,6 +40,7 @@ const czechMod = () => import('./pages/Czech')
 const langCityMod = () => import('./pages/LanguageCity')
 const localMod = () => import('./pages/Local')
 const uniMod = () => import('./pages/University')
+const pricesMod = () => import('./pages/Prices')
 
 const programRoutes: RouteObject[] = programs.flatMap((p) => [
   { path: p.slug, ...page(programsMod, 'ProgramHub', { programKey: p.key }) },
@@ -81,6 +83,17 @@ const glossaryRoutes: RouteObject[] = Object.entries(glossaryRouting).map(([slug
   },
 }))
 
+// Fiyat sayfaları: sayfanın içerik dosyası + ülkenin üniversite dosyaları (otomatik ücret tablosu)
+const priceRoutes: RouteObject[] = Object.entries(priceRouting).map(([slug, { country, file }]) => ({
+  path: `fiyatlar/${slug}`,
+  lazy: async () => {
+    const uniFiles = universityRouting[country] ?? []
+    const [m, pages, ...unis] = await Promise.all([pricesMod(), priceLoaders[file](), ...uniFiles.map((f) => universityLoaders[f]())])
+    const C = m.PricePageRoute
+    return { element: <C slug={slug} pages={pages} unis={unis.flat()} /> }
+  },
+}))
+
 // 301 ile taşınan adresler (src/data/redirects.ts): istemci tarafında da yeni adrese yönlenir
 const legacyRedirects: RouteObject[] = Object.entries(redirects).map(([from, to]) => ({ path: from.slice(1), element: <Navigate to={to} replace /> }))
 
@@ -94,6 +107,8 @@ export const routes: RouteObject[] = [
       { path: 'universiteler', ...page(uniMod, 'UniversitiesHub') },
       { path: 'universiteler/:country', ...page(uniMod, 'UniversitiesCountry') },
       ...uniRoutes,
+      { path: 'fiyatlar', ...page(pricesMod, 'PricesHub') },
+      ...priceRoutes,
       ...programRoutes,
       { path: 'ulkeler', ...page(programsMod, 'CountriesIndex') },
       { path: 'ulkeler/:slug', ...page(programsMod, 'CountryPage') },

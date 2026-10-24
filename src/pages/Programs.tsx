@@ -18,6 +18,7 @@ import { postsForCountry, postsForProgram, formatDate, type Post } from '../data
 import { Rich } from '../components/Rich'
 import { languageCitiesFor, languageCityPath } from '../data/languageCities/list'
 import { universitiesFor, universityPath } from '../data/universities/list'
+import { priceList, pricePath } from '../data/prices/list'
 import NotFound from './NotFound'
 import { cardImg } from '../lib/img'
 import { titleCase } from '../lib/text'
@@ -373,6 +374,9 @@ export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
             <p className="lead-strong">{c.intro}</p>
             {note ? <p>{note}</p> : <p>{p.intro[0]}</p>}
             <p>{p.promise}</p>
+            {(p.key === 'lisans' || p.key === 'yuksek-lisans') && priceList.filter((x) => x.country === c.slug).map((x) => (
+              <p key={x.slug} className="note"><Icon name="bolt" size={16} /> Eğitim ücretleri, yaşam giderleri ve örnek bütçeler: <Link to={pricePath(x)}>{titleCase(x.label)}</Link></p>
+            ))}
             {crossLinks[`${p.key}:${c.slug}`]?.map((x) => (
               <p key={x.to} className="note"><Icon name="bolt" size={16} /> {x.text} <Link to={x.to}>{x.label}</Link></p>
             ))}

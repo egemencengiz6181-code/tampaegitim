@@ -26,6 +26,7 @@ import NotFound from './NotFound'
 import { cardImg } from '../lib/img'
 import { languageCityList, languageCityPath } from '../data/languageCities/list'
 import { universityList, universityPath } from '../data/universities/list'
+import { priceList, pricePath } from '../data/prices/list'
 
 /* ---------- Knowledge base ---------- */
 export function KnowledgeHub() {
@@ -434,6 +435,10 @@ export function Sitemap() {
               <ul>{countriesFor(p.key).map((c) => <li key={c.slug}><Link to={`/${p.slug}/${c.slug}`}>{p.countryTitle(c)}</Link></li>)}</ul>
             </div>
           ))}
+          <div>
+            <h2 className="h3"><Link to="/fiyatlar">Üniversite Fiyatları</Link></h2>
+            <ul>{priceList.map((x) => <li key={x.slug}><Link to={pricePath(x)}>{x.label}</Link></li>)}</ul>
+          </div>
           <div>
             <h2 className="h3"><Link to="/universiteler">Üniversiteler</Link></h2>
             <ul>{universityList.map((u) => <li key={`${u.country}/${u.slug}`}><Link to={universityPath(u)}>{u.name}</Link></li>)}</ul>

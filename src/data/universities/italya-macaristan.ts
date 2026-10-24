@@ -843,7 +843,7 @@ export const italyaMacaristanUnis: University[] = [
       { item: 'Sağlık sigortası', value: 'Vize ve oturum için zorunlu', note: 'Bkz. [sağlık sigortası](/bilgi-bankasi/saglik-sigortasi)' },
     ],
     scholarships: [
-      'Stipendium Hungaricum: Macar hükümetinin ortak ülkelere yönelik bursu; Türkiye geçmiş dönemlerde ortak ülkeler arasında yer almış ve Türk adaylara kontenjan ayrılmıştır. Tıp programlarında kontenjan çok sınırlıdır; güncel çağrı stipendiumhungaricum.hu’da kontrol edilmeli.',
+      'Stipendium Hungaricum: Macar hükümetinin ortak ülkelere yönelik bursu; Türkiye, MEB ile Macaristan arasında 2026–2028 dönemini kapsayan anlaşmayla ortak ülkeler arasındadır; yıllık çağrı ve kontenjanlar stipendiumhungaricum.hu’da ilan edilir. Tıp programlarında kontenjan çok sınırlıdır; güncel çağrı stipendiumhungaricum.hu’da kontrol edilmeli.',
       'Üniversitenin başarılı öğrencilere yönelik dönemsel indirimleri; koşullar her yıl değişir.',
     ],
     campus: [
@@ -922,7 +922,7 @@ export const italyaMacaristanUnis: University[] = [
       { item: 'Oda kirası', value: 'Yaklaşık 300 – 550 € / ay', note: 'Paylaşımlı daire; yurtlar daha uygun' },
     ],
     scholarships: [
-      'Stipendium Hungaricum: ücretsiz öğrenim, aylık burs, yurt veya konaklama katkısı ve sağlık sigortası; Türkiye geçmiş dönemlerde ortak ülkeler arasında yer almıştır. Son başvuru genellikle Ocak ortasıdır.',
+      'Stipendium Hungaricum: ücretsiz öğrenim, aylık burs, yurt veya konaklama katkısı ve sağlık sigortası; Türkiye, MEB ile Macaristan arasında 2026–2028 dönemini kapsayan anlaşmayla ortak ülkeler arasındadır; yıllık çağrı ve kontenjanlar stipendiumhungaricum.hu’da ilan edilir. Son başvuru genellikle Ocak ortasıdır.',
       'Ücretli (self-financed) öğrenciler için ELTE’nin ek burs imkânı sınırlıdır; bütçe öğrenim ücretinin tamamı üzerinden planlanmalıdır.',
       'Genel seçenekler için [yurt dışı burs rehberi](/bilgi-bankasi/yurtdisi-burs-rehberi).',
     ],
@@ -1001,7 +1001,7 @@ export const italyaMacaristanUnis: University[] = [
       { item: 'Oda / stüdyo kirası', value: 'Yaklaşık 250 – 450 € / ay', note: 'Üniversite yurtları daha uygun' },
     ],
     scholarships: [
-      'Stipendium Hungaricum: ücretsiz öğrenim, aylık burs, konaklama katkısı ve sağlık sigortası; Türkiye geçmiş dönemlerde ortak ülkeler arasında yer almıştır.',
+      'Stipendium Hungaricum: ücretsiz öğrenim, aylık burs, konaklama katkısı ve sağlık sigortası; Türkiye, MEB ile Macaristan arasında 2026–2028 dönemini kapsayan anlaşmayla ortak ülkeler arasındadır; yıllık çağrı ve kontenjanlar stipendiumhungaricum.hu’da ilan edilir.',
       'Debrecen Üniversitesi’nin uluslararası öğrenci bursu: 2026’da duyurulan çağrıya göre talep gören alanlarda öğrenim ücretinde yüksek oranlı (%90’a varan) indirimler; koşullar her yıl değişir.',
       'Başarılı tıp öğrencilerine yönelik dönemsel ücret indirimleri; güncel koşullar üniversitenin uluslararası ofisinden kontrol edilmeli.',
     ],

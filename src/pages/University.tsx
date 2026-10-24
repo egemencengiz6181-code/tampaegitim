@@ -8,6 +8,8 @@ import { Rich } from '../components/Rich'
 import { countryBySlug, countries } from '../data/countries'
 import { universityList, universityPath, universitiesFor, type UniversityMeta } from '../data/universities/list'
 import type { University } from '../data/universities/types'
+import { priceList, pricePath } from '../data/prices/list'
+import { titleCase } from '../lib/text'
 import NotFound from './NotFound'
 
 const formProgram = 'Üniversite'
@@ -168,6 +170,7 @@ export function UniversityPage({ country, unis }: { country: string; unis: Unive
             <ul className="chips">
               {c.programs.includes('lisans') && <li><Link to={`/lisans-programlari/${c.slug}`}>{c.loc} lisans</Link></li>}
               {c.programs.includes('yuksek-lisans') && <li><Link to={`/yurtdisi-yuksek-lisans/${c.slug}`}>{c.loc} yüksek lisans</Link></li>}
+              {priceList.filter((x) => x.country === c.slug).map((x) => <li key={x.slug}><Link to={pricePath(x)}>{titleCase(x.label)}</Link></li>)}
               <li><Link to={`/ulkeler/${c.slug}`}>{c.name} ülke rehberi</Link></li>
             </ul>
           </div>
@@ -257,7 +260,7 @@ export function UniversitiesCountry() {
       <section className="section">
         <div className="container">
           <UniCards items={items} />
-          <p className="note"><Icon name="bolt" size={16} /> Ülke genelinde başvuru, vize ve yaşam bilgisi için: {c.programs.includes('lisans') && <><Link to={`/lisans-programlari/${c.slug}`}>{c.loc} lisans</Link>{' · '}</>}{c.programs.includes('yuksek-lisans') && <><Link to={`/yurtdisi-yuksek-lisans/${c.slug}`}>{c.loc} yüksek lisans</Link>{' · '}</>}<Link to={`/ulkeler/${c.slug}`}>{c.name} ülke rehberi</Link></p>
+          <p className="note"><Icon name="bolt" size={16} /> Ülke genelinde başvuru, vize ve yaşam bilgisi için: {c.programs.includes('lisans') && <><Link to={`/lisans-programlari/${c.slug}`}>{c.loc} lisans</Link>{' · '}</>}{c.programs.includes('yuksek-lisans') && <><Link to={`/yurtdisi-yuksek-lisans/${c.slug}`}>{c.loc} yüksek lisans</Link>{' · '}</>}<Link to={`/ulkeler/${c.slug}`}>{c.name} ülke rehberi</Link>{priceList.filter((x) => x.country === c.slug).map((x) => <span key={x.slug}>{' · '}<Link to={pricePath(x)}>{titleCase(x.label)}</Link></span>)}</p>
         </div>
       </section>
       <section className="section section--mist" id="form">

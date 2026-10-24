@@ -14,6 +14,7 @@ import { authors } from '../data/authors'
 import { redirects } from '../data/redirects'
 import { localPages } from '../data/local'
 import { universityList, universityPath } from '../data/universities/list'
+import { priceList, pricePath } from '../data/prices/list'
 import { languageCityList, languageCityPath } from '../data/languageCities/list'
 
 export type SitePath = { path: string; priority: number; changefreq: 'daily' | 'weekly' | 'monthly' | 'yearly'; lastmod?: string; index?: boolean }
@@ -31,6 +32,8 @@ function allPaths(): SitePath[] {
     ...programs.map((pr) => p(`/${pr.slug}`, 0.9, 'weekly')),
     ...programs.flatMap((pr) => countriesFor(pr.key).map((c) => p(`/${pr.slug}/${c.slug}`, c.slug === 'ingiltere' ? 0.9 : 0.8, 'monthly'))),
     ...languageCityList.map((ci) => p(languageCityPath(ci), ci.country === 'ingiltere' ? 0.8 : 0.7)),
+    p('/fiyatlar', 0.8, 'monthly'),
+    ...priceList.map((x) => p(pricePath(x), 0.8)),
     p('/universiteler', 0.8, 'weekly'),
     ...[...new Set(universityList.map((u) => u.country))].map((c) => p(`/universiteler/${c}`, 0.7)),
     ...universityList.map((u) => p(universityPath(u), 0.7)),

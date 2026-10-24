@@ -3,6 +3,7 @@
 import type { LanguageCityFile } from './languageCities/list'
 import type { UniversityFile } from './universities/list'
 import type { GlossaryFile } from './glossary'
+import type { PriceFile } from './prices/list'
 
 /** Ülke → şehir sayfası içerik dosyaları */
 export const languageCityRouting: Record<string, LanguageCityFile[]> = {
@@ -152,3 +153,21 @@ export const localSlugs = [
   'aydin-yurt-disi-egitim'
 ]
 
+/** Fiyat sayfası slug → ülke ve içerik dosyası (üniversite ücret tablosu için ülkenin üniversite dosyaları da yüklenir) */
+export const priceRouting: Record<string, { country: string; file: PriceFile }> = {
+  'macaristan-universite-fiyatlari': { country: 'macaristan', file: 'orta-avrupa' },
+  'polonya-universite-fiyatlari': { country: 'polonya', file: 'orta-avrupa' },
+  'cekya-universite-fiyatlari': { country: 'cekya', file: 'orta-avrupa' },
+  'ingiltere-universite-fiyatlari': { country: 'ingiltere', file: 'anglo-avrupa' },
+  'irlanda-universite-fiyatlari': { country: 'irlanda', file: 'anglo-avrupa' },
+  'almanya-universite-fiyatlari': { country: 'almanya', file: 'dach-italya' },
+  'avusturya-universite-fiyatlari': { country: 'avusturya', file: 'dach-italya' },
+  'italya-universite-fiyatlari': { country: 'italya', file: 'dach-italya' },
+  'amerika-universite-fiyatlari': { country: 'amerika', file: 'yeni-dunya' },
+  'kanada-universite-fiyatlari': { country: 'kanada', file: 'yeni-dunya' },
+  'avustralya-universite-fiyatlari': { country: 'avustralya', file: 'yeni-dunya' },
+  'kore-universite-fiyatlari': { country: 'kore', file: 'asya-latin' },
+  'japonya-universite-fiyatlari': { country: 'japonya', file: 'asya-latin' },
+  'ispanya-universite-fiyatlari': { country: 'ispanya', file: 'asya-latin' },
+  'fransa-universite-fiyatlari': { country: 'fransa', file: 'asya-latin' },
+}

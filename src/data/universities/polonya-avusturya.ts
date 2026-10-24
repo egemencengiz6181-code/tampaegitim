@@ -145,7 +145,7 @@ export const polonyaAvusturyaUnis: University[] = [
       ] },
     ],
     costs: [
-      { item: 'İngilizce lisans / yüksek lisans (yıllık)', value: 'Programa göre değişir; birkaç bin euro düzeyinde', note: 'Güncel tutarlar yabancı öğrenci ücretlerine ilişkin yıllık Rektör kararının ekinde yayımlanır.' },
+      { item: 'İngilizce lisans / yüksek lisans (dönemlik)', value: 'Programa göre yaklaşık 1.800–8.000 € / dönem', note: '2026 Rektör kararına göre; ör. Bilgisayar Bilimi dönemlik 5.520 € (yıllık ~11.040 €). Tutarlar her yıl yeniden ilan edilir.' },
       { item: 'Başvuru / kayıt ücreti', value: 'Başvuru sisteminde belirtilir', note: 'Her yıl ayrıca duyurulur.' },
       { item: 'Varşova’da aylık yaşam gideri', value: 'Yaklaşık 3.000–4.500 PLN', note: 'Konaklama dahil; Polonya’nın en pahalı şehridir.' },
       { item: 'Konaklama', value: 'Yurt: yaklaşık 700–1.400 PLN / ay; özel oda: 2.000–3.000 PLN / ay', note: 'Merkeze yakın daireler daha pahalıdır.' },
@@ -951,7 +951,7 @@ export const polonyaAvusturyaUnis: University[] = [
     ],
     costs: [
       { item: 'Harç (AB dışı öğrenciler)', value: '726,72 € / dönem', note: '2025/2026 için geçerli tutar; Avusturya devlet üniversitelerinde ortak uygulanır.' },
-      { item: 'Öğrenci birliği (ÖH) aidatı', value: 'Yaklaşık 25 € / dönem', note: 'Her dönem harçla birlikte ödenir.' },
+      { item: 'Öğrenci birliği (ÖH) aidatı', value: '26,20 € / dönem (2026/27)', note: 'Her dönem harçla birlikte ödenir.' },
       { item: 'Başvuru ücreti', value: 'Uluslararası başvurularda ayrı bir ücret alınabilir', note: 'Güncel tutar u:space üzerinden kontrol edilmeli.' },
       { item: 'Viyana’da aylık yaşam gideri', value: 'Yaklaşık 1.100–1.400 €', note: 'Konaklama dahil.' },
       { item: 'Konaklama', value: 'Yurt: yaklaşık 350–600 € / ay; paylaşımlı dairede oda (WG): 450–700 € / ay', note: 'Ekim öncesi talep çok yüksektir.' },
@@ -1038,7 +1038,7 @@ export const polonyaAvusturyaUnis: University[] = [
     ],
     costs: [
       { item: 'Harç (AB dışı öğrenciler)', value: '726,72 € / dönem', note: '2025/2026 için TU Wien’in resmî sayfasında belirtilen tutar; ilk dönemden itibaren ödenir.' },
-      { item: 'Öğrenci birliği (ÖH) aidatı', value: 'Yaklaşık 25 € / dönem', note: 'Harçla birlikte ödenir.' },
+      { item: 'Öğrenci birliği (ÖH) aidatı', value: '26,20 € / dönem (2026/27)', note: 'Harçla birlikte ödenir.' },
       { item: 'Viyana’da aylık yaşam gideri', value: 'Yaklaşık 1.100–1.400 €', note: 'Konaklama dahil.' },
       { item: 'Konaklama', value: 'Yurt: yaklaşık 350–600 € / ay; WG odası: 450–700 € / ay', note: 'Wieden ve Margareten gibi kampüse yakın semtler popülerdir.' },
       { item: 'Ek giderler', value: 'Dizüstü bilgisayar, yazılım, ders malzemeleri', note: 'Mimarlık öğrencileri için maket ve baskı masrafları ayrıca planlanmalı.' },
@@ -1124,7 +1124,7 @@ export const polonyaAvusturyaUnis: University[] = [
     ],
     costs: [
       { item: 'Harç (AB dışı öğrenciler)', value: '726,72 € / dönem', note: '2025/2026 itibarıyla Avusturya devlet üniversitelerindeki tutar.' },
-      { item: 'Öğrenci birliği (ÖH) aidatı', value: 'Yaklaşık 25 € / dönem', note: 'Harçla birlikte ödenir.' },
+      { item: 'Öğrenci birliği (ÖH) aidatı', value: '26,20 € / dönem (2026/27)', note: 'Harçla birlikte ödenir.' },
       { item: 'BBE kayıt ücreti', value: '50 €', note: '2026 seçme süreci için; her yıl güncellenebilir.' },
       { item: 'Viyana’da aylık yaşam gideri', value: 'Yaklaşık 1.100–1.400 €', note: 'Konaklama dahil.' },
       { item: 'Konaklama', value: 'Yurt: yaklaşık 350–600 € / ay; WG odası: 450–700 € / ay', note: '2. ve 20. bölgelerdeki yurtlar kampüse yakındır.' },

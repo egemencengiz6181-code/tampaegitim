@@ -3,7 +3,8 @@ import { languageCityList } from './languageCities/list'
 import { universityList } from './universities/list'
 import { glossaryGuides } from './glossary'
 import { localPages } from './local'
-import { languageCityRouting, universityRouting, glossaryRouting, localSlugs } from './routing'
+import { priceList } from './prices/list'
+import { languageCityRouting, universityRouting, glossaryRouting, localSlugs, priceRouting } from './routing'
 
 /** routing.ts (ana paketteki rota eşlemeleri) liste dosyalarıyla uyumlu mu? Boş dizi = sorun yok. */
 export function routingMismatch(): string[] {
@@ -18,5 +19,7 @@ export function routingMismatch(): string[] {
   for (const s of Object.keys(glossaryRouting)) if (!glossaryGuides.some((g) => g.slug === s)) out.push(`routing.ts > glossaryRouting: ${s} fazla`)
   const ls = localPages.map((l) => l.slug).sort().join(), rs = [...localSlugs].sort().join()
   if (ls !== rs) out.push('routing.ts > localSlugs local.ts ile uyuşmuyor')
+  for (const p of priceList) if (priceRouting[p.slug]?.file !== p.file || priceRouting[p.slug]?.country !== p.country) out.push(`routing.ts > priceRouting: ${p.slug} eksik/farklı`)
+  for (const s of Object.keys(priceRouting)) if (!priceList.some((p) => p.slug === s)) out.push(`routing.ts > priceRouting: ${s} fazla`)
   return out
 }

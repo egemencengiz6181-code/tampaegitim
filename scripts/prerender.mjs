@@ -8,7 +8,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const dist = path.join(root, 'dist')
 const SITE = JSON.parse(fs.readFileSync(path.join(root, 'content/site.json'), 'utf8')).url
 const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8')
-const { render, sitemapPaths, blogFeed, redirects, languageCityListMismatch, universityListMismatch, glossaryListMismatch, routingMismatch } = await import(pathToFileURL(path.join(root, 'dist-ssr/entry-server.js')).href)
+const { render, sitemapPaths, blogFeed, redirects, languageCityListMismatch, universityListMismatch, glossaryListMismatch, routingMismatch, priceListMismatch } = await import(pathToFileURL(path.join(root, 'dist-ssr/entry-server.js')).href)
 
 // React 19 hoist edilen <title>/<meta>/<link> etiketlerini içerik başında üretir; bunları <head>'e taşırız.
 const HOIST = /<(title)[^>]*>[\s\S]*?<\/title>|<meta\b[^>]*\/?>|<link\b[^>]*rel="(?:canonical|alternate|preload)"[^>]*\/?>/g
@@ -36,7 +36,7 @@ if (missing.length) {
 }
 
 // Şehir sayfalarının hafif listesi (list.ts) ile tam içerik dosyaları aynı şehirleri içermeli
-const cityMismatch = [...languageCityListMismatch(), ...universityListMismatch(), ...glossaryListMismatch(), ...routingMismatch()]
+const cityMismatch = [...languageCityListMismatch(), ...universityListMismatch(), ...glossaryListMismatch(), ...routingMismatch(), ...priceListMismatch()]
 if (cityMismatch.length) {
   console.error('Hafif liste ile içerik dosyaları uyuşmuyor:\n' + cityMismatch.map((x) => `  ${x}`).join('\n'))
   process.exit(1)

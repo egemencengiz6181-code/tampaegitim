@@ -119,7 +119,7 @@ export function CzechUnisHub() {
 
       <section className="section">
         <div className="container">
-          <SectionHead title="Ücretler ve Yaşam Maliyeti" intro="Rakamlar yaklaşıktır; üniversite, bölüm ve şehre göre değişir ve her yıl güncellenir." />
+          <SectionHead title="Ücretler ve Yaşam Maliyeti" intro="Rakamlar yaklaşıktır; üniversite, bölüm ve şehre göre değişir ve her yıl güncellenir." action={{ label: 'Ayrıntılı fiyatlar ve örnek bütçeler', to: '/fiyatlar/cekya-universite-fiyatlari' }} />
           <div className="tablewrap">
             <table className="ctable">
               <thead><tr><th scope="col">Kalem</th><th scope="col">Yaklaşık tutar</th><th scope="col">Not</th></tr></thead>
