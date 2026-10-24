@@ -170,4 +170,8 @@ export const priceRouting: Record<string, { country: string; file: PriceFile }> 
   'japonya-universite-fiyatlari': { country: 'japonya', file: 'asya-latin' },
   'ispanya-universite-fiyatlari': { country: 'ispanya', file: 'asya-latin' },
   'fransa-universite-fiyatlari': { country: 'fransa', file: 'asya-latin' },
+  'macaristan-tip-fakultesi-ucretleri': { country: 'macaristan', file: 'tip' },
+  'polonya-tip-fakultesi-ucretleri': { country: 'polonya', file: 'tip' },
+  'cekya-tip-fakultesi-ucretleri': { country: 'cekya', file: 'tip' },
+  'italya-tip-fakultesi-ucretleri': { country: 'italya', file: 'tip' },
 }

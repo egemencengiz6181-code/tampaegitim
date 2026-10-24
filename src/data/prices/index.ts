@@ -5,9 +5,10 @@ import { angloAvrupaPrices } from './anglo-avrupa'
 import { dachItalyaPrices } from './dach-italya'
 import { yeniDunyaPrices } from './yeni-dunya'
 import { asyaLatinPrices } from './asya-latin'
+import { tipPrices } from './tip'
 import { priceList } from './list'
 
-export const pricePages: PricePage[] = [...ortaAvrupaPrices, ...angloAvrupaPrices, ...dachItalyaPrices, ...yeniDunyaPrices, ...asyaLatinPrices]
+export const pricePages: PricePage[] = [...ortaAvrupaPrices, ...angloAvrupaPrices, ...dachItalyaPrices, ...yeniDunyaPrices, ...asyaLatinPrices, ...tipPrices]
 
 /** list.ts ile tam içerik aynı sayfaları mı içeriyor? Boş dizi = sorun yok. */
 export function priceListMismatch(): string[] {

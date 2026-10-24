@@ -7,6 +7,8 @@ import type { Faq } from '../programs'
 export type PriceTable = { head: string[]; rows: string[][]; note?: string }
 
 export type PricePage = {
+  /** 'genel': ülke geneli üniversite fiyatları; 'tip': tıp, diş hekimliği ve eczacılık ücretleri */
+  kind?: 'genel' | 'tip'
   /** countries.ts slug'ı */
   country: string
   /** URL parçası, ör. 'macaristan-universite-fiyatlari' */

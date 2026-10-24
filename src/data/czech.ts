@@ -241,7 +241,7 @@ export const czechUnis: CzechUni[] = [
 export const czechCosts = [
   { label: 'Çekçe programlar (devlet)', value: 'Ücretsiz', note: 'Standart öğrenim süresi aşılırsa ek ücret alınabilir.' },
   { label: 'İngilizce lisans ve yüksek lisans', value: 'Yıllık ~2.000–10.000 €', note: 'Bölüme ve üniversiteye göre değişir.' },
-  { label: 'İngilizce tıp ve diş hekimliği', value: 'Yıllık ~12.500–24.500 €', note: 'Fakülteye göre değişir.' },
+  { label: 'İngilizce tıp ve diş hekimliği', value: 'Yıllık ~12.000–24.500 €', note: 'Fakülteye göre değişir.' },
   { label: 'Çekçe hazırlık (1 yıl)', value: 'Programa göre', note: 'Bölüme yönelik paketlerde ücret artar.' },
   { label: 'Öğrenci yurdu', value: 'Aylık ~150–300 €', note: 'Paylaşımlı oda; şehre göre değişir.' },
   { label: 'Paylaşımlı daire', value: 'Aylık ~250–450 €', note: 'Prag diğer şehirlere göre pahalıdır.' },
@@ -293,7 +293,7 @@ export const czechSteps = [
 export const czechFaqs: Faq[] = [
   { q: 'Çekya’da üniversite eğitimi gerçekten ücretsiz mi?', a: 'Evet, Çek devlet üniversitelerinde Çekçe verilen programlar uyruk ayrımı olmadan ücretsizdir. Bunun için Çekçe programa başvuracak seviyede (genellikle B2) Çekçe bilmeniz gerekir; öğrencilerin çoğu önce bir yıllık Çekçe hazırlık programına katılır. İngilizce programlar ise ücretlidir.' },
   { q: 'Çekya’da üniversite okumak için YKS gerekli mi?', a: 'Hayır. Türkiye’deki üniversite sınavına girme veya bir bölüme yerleşme şartı yoktur. Lise diplomanız, not ortalamanız ve bazı bölümlerde üniversitenin kendi giriş sınavı veya mülakatı üzerinden değerlendirilirsiniz.' },
-  { q: 'İngilizce programların yıllık ücreti ne kadar?', a: 'Lisans ve yüksek lisans programlarında yıllık ücretler genellikle 2.000–10.000 € arasındadır. İngilizce tıp ve diş hekimliği programları daha yüksektir (yaklaşık yıllık 12.500–24.500 €; Prag’daki fakültelerde üst sınıra yakın). Ücretler üniversite ve bölüme göre değişir.' },
+  { q: 'İngilizce programların yıllık ücreti ne kadar?', a: 'Lisans ve yüksek lisans programlarında yıllık ücretler genellikle 2.000–10.000 € arasındadır. İngilizce tıp ve diş hekimliği programları daha yüksektir (yaklaşık yıllık 12.000–24.500 €; Prag’daki fakültelerde üst sınıra yakın). Ücretler üniversite ve bölüme göre değişir.' },
   { q: 'Çekya’da sınavsız tıp okunabilir mi?', a: 'YKS gerekmez, ancak tıp fakülteleri kendi giriş sınavlarını yapar. Sınav genellikle biyoloji, kimya ve fizik ağırlıklıdır. Sınava hazır olmayan öğrenciler için tıbba yönelik İngilizce veya Çekçe hazırlık programları vardır. Türkiye’de hekimlik yapabilmek için mezuniyet sonrası YÖK denkliği ve ilgili seviye tespit sınavı süreçleri tamamlanmalıdır.' },
   { q: 'Nostrifikasyon nedir, ne kadar sürer?', a: 'Nostrifikasyon, lise veya üniversite diplomanızın Çekya’da resmî olarak tanınmasıdır. Lise diploması için il yönetimine (Krajský úřad) başvurulur; süreç genellikle 1–3 ay sürer. Bu nedenle başvuru takviminizin en başında planlanmalıdır.' },
   { q: 'Hangi şehirleri önerirsiniz?', a: 'Öğrencilerin en çok tercih ettiği şehir Prag’dır; üniversite sayısı ve iş imkânları en yüksek, yaşam maliyeti de en pahalı şehirdir. Brno canlı öğrenci yaşamı ve daha uygun giderleriyle ikinci sıradadır. Olomouc, Ostrava, Plzeň ve Hradec Králové daha sakin ve ekonomik seçeneklerdir.' },

@@ -216,7 +216,7 @@ export const ortaAvrupaPrices: PricePage[] = [
       { q: 'Stipendium Hungaricum Türk öğrencilere açık mı?', a: 'MEB ile Macaristan, Aralık 2025’te 2026–2028 dönemini kapsayan Stipendium Hungaricum mutabakatı imzaladı. 2027-28 çağrısının kontenjanı ve tarihleri henüz duyurulmadı. Önceki yıllarda son başvuru Ocak ortasındaydı; çağrı açıldığında hem resmî burs portalını hem MEB duyurularını kontrol etmek gerekir.' },
       { q: 'Macaristan öğrenci vizesi ne kadar?', a: 'Macaristan İstanbul Başkonsolosluğu’na göre oturum izni amaçlı vize ücreti 110 €’dur; Stipendium Hungaricum bursiyerleri bu ücretten muaftır. Macaristan’da yapılan uzatmalarda ayrıca forint cinsinden idari ücret ödenir.' },
       { q: 'Macaristan’dan alınan tıp diploması Türkiye’de geçerli mi?', a: 'Diplomanın Türkiye’de kullanılabilmesi için YÖK denklik süreci gerekir; tıpta buna ek olarak seviye tespit sınavı istenebilir. YÖK, tıp gibi alanlarda yurt dışına giden öğrenciler için YKS başarı şartı da arayabilir. Kayıttan önce güncel yönetmeliği [YÖK denkliği](/bilgi-bankasi/yok-denkligi) ve [Avrupa’da tıp eğitimi](/bilgi-bankasi/avrupada-tip-egitimi) rehberlerimizle kontrol edin.' },
-      { q: 'Macaristan mı Polonya mı daha ucuz?', a: 'İngilizce tıpta iki ülke birbirine yakındır: Polonya’da yıllık 63.000–68.000 PLN (yaklaşık 14.400–15.600 €), Macaristan’da 15.800 € – 20.900 USD. Tıp dışı bölümlerde Macaristan’ın taşra üniversiteleri çoğu zaman daha uygundur. Ayrıntılı karşılaştırma için [Polonya üniversite fiyatları](/fiyatlar/polonya-universite-fiyatlari) sayfasına bakın.' },
+      { q: 'Macaristan mı Polonya mı daha ucuz?', a: 'İngilizce tıpta iki ülke birbirine yakındır: Polonya’da yıllık yaklaşık 63.000–82.000 PLN (≈ 14.400–18.800 €), Macaristan’da 15.800 € – 20.900 USD. Tıp dışı bölümlerde Macaristan’ın taşra üniversiteleri çoğu zaman daha uygundur. Ayrıntılı karşılaştırma için [Polonya üniversite fiyatları](/fiyatlar/polonya-universite-fiyatlari) sayfasına bakın.' },
     ],
     updated: '2026-10-24',
   },
@@ -231,9 +231,9 @@ export const ortaAvrupaPrices: PricePage[] = [
       'Polonya üniversite fiyatları 2026-2027: devlet ve özel üniversite ücretleri, İngilizce tıp, Varşova ve Krakov yaşam maliyeti, vize, oturum ve burslar.',
     h1: 'Polonya Üniversite Fiyatları 2026-2027: Eğitim ve Yaşam Maliyeti',
     lead:
-      'Polonya’da devlet üniversitelerinin İngilizce programları çoğunlukla yıllık 2.000–6.000 €, teknik ve mimarlık bölümlerinde daha yüksektir. İngilizce tıp yıllık 63.000–68.000 PLN civarındadır. Bu rehberde 2026-27 Rektör kararlarındaki rakamları ve Varşova, Krakov, Wrocław ile Poznań’ın yaşam maliyetini bir arada bulacaksınız.',
+      'Polonya’da devlet üniversitelerinin İngilizce programları çoğunlukla yıllık 2.000–6.000 €, teknik ve mimarlık bölümlerinde daha yüksektir. İngilizce tıp yıllık 63.000–82.000 PLN civarındadır. Bu rehberde 2026-27 Rektör kararlarındaki rakamları ve Varşova, Krakov, Wrocław ile Poznań’ın yaşam maliyetini bir arada bulacaksınız.',
     summary:
-      'Polonya’da devlet üniversitelerinin İngilizce lisans ve yüksek lisans programları çoğunlukla yıllık 2.000–6.000 €’dur; Varşova Teknik gibi teknik üniversitelerde bölüme göre dönemlik 2.340–8.000 €’ya çıkar. İngilizce tıp yıllık 63.000–68.000 PLN, özel üniversiteler 12.000–30.000 PLN’dir. Aylık yaşam gideri 2.300–4.500 PLN’dir.',
+      'Polonya’da devlet üniversitelerinin İngilizce lisans ve yüksek lisans programları çoğunlukla yıllık 2.000–6.000 €’dur; Varşova Teknik gibi teknik üniversitelerde bölüme göre dönemlik 2.340–8.000 €’ya çıkar. İngilizce tıp yıllık 63.000–82.000 PLN, özel üniversiteler 12.000–30.000 PLN’dir. Aylık yaşam gideri 2.300–4.500 PLN’dir.',
     compare: {
       currency: 'Zloti (PLN); ücretler PLN veya EUR',
       publicTuition: 'Devlette İngilizce ~2.000–6.000 € / yıl; teknik bölümler dönemlik 2.340–8.000 €',
@@ -244,7 +244,7 @@ export const ortaAvrupaPrices: PricePage[] = [
     facts: [
       { label: 'Para birimi', value: 'Polonya zlotisi (PLN); Ekim 2026 başında 1 € ≈ 4,37 PLN (ECB)' },
       { label: 'Devlet – İngilizce', value: 'Çoğunlukla 2.000–6.000 € / yıl' },
-      { label: 'İngilizce tıp', value: '63.000–68.000 PLN / yıl (≈ 14.400–15.600 €)' },
+      { label: 'İngilizce tıp', value: 'Yaklaşık 63.000–82.000 PLN / yıl (≈ 14.400–18.800 €)' },
       { label: 'Özel üniversite', value: 'Yaklaşık 12.000–30.000 PLN / yıl' },
       { label: 'Aylık yaşam gideri', value: 'Varşova 3.000–4.500 PLN; diğer büyük şehirler 2.300–4.000 PLN' },
       { label: 'Ulusal (D) vize ücreti', value: '200 € (1 Ocak 2026’dan itibaren)' },
@@ -414,8 +414,8 @@ export const ortaAvrupaPrices: PricePage[] = [
       'Gliwice, Lublin veya Łódź gibi şehirlerdeki devlet üniversiteleri, Varşova’ya göre hem ücret hem kira açısından daha uygundur.',
     ],
     faqs: [
-      { q: 'Polonya’da üniversite okumak ne kadar?', a: 'Devlet üniversitelerinin İngilizce programları çoğunlukla yıllık 2.000–6.000 €’dur. Varşova Teknik gibi teknik üniversitelerde bölüme göre dönemlik 2.340–8.000 €’ya çıkar. Özel üniversiteler yıllık 12.000–30.000 PLN, İngilizce tıp 63.000–68.000 PLN civarındadır.' },
-      { q: 'Polonya’da tıp fakültesi ücretleri ne kadar?', a: 'Wrocław Tıp Üniversitesi’nde 2026-27 girişi için İngilizce tıp yıllık 67.900 PLN, diş hekimliği 78.700 PLN’dir. Silezya Tıp Üniversitesi’nde tıp dönemlik 32.750 PLN, Jagiellonian’da ilk yıl 15.500 €’dur. Yaşam giderleriyle birlikte yıllık toplam 22.000–26.000 € civarındadır. Ayrıntı: [Wrocław Tıp Üniversitesi](/universiteler/polonya/wroclaw-tip-universitesi).' },
+      { q: 'Polonya’da üniversite okumak ne kadar?', a: 'Devlet üniversitelerinin İngilizce programları çoğunlukla yıllık 2.000–6.000 €’dur. Varşova Teknik gibi teknik üniversitelerde bölüme göre dönemlik 2.340–8.000 €’ya çıkar. Özel üniversiteler yıllık 12.000–30.000 PLN, İngilizce tıp 63.000–82.000 PLN civarındadır.' },
+      { q: 'Polonya’da tıp fakültesi ücretleri ne kadar?', a: 'Wrocław Tıp Üniversitesi’nde 2026-27 girişi için İngilizce tıp yıllık 67.900 PLN, diş hekimliği 78.700 PLN’dir. Silezya Tıp Üniversitesi’nde tıp dönemlik 32.750 PLN, Jagiellonian’da ilk yıl 16.000 €’dur. Yaşam giderleriyle birlikte yıllık toplam 22.000–26.000 € civarındadır. Ayrıntı: [Wrocław Tıp Üniversitesi](/universiteler/polonya/wroclaw-tip-universitesi).' },
       { q: 'Polonya’da devlet üniversiteleri ücretsiz mi?', a: 'Lehçe programlar Polonya ve AB vatandaşları için ücretsizdir. Türk öğrenciler ise ancak en az C1 düzeyinde resmî Lehçe sertifikası gibi yasal koşulları sağlarsa ücretsiz okuyabilir. İngilizce programlar herkes için ücretlidir.' },
       { q: 'Polonya’da öğrencinin aylık masrafı ne kadar?', a: 'Konaklama dahil aylık gider Varşova’da 3.000–4.500 PLN, Krakov’da 2.500–4.000 PLN, Wrocław ve Poznań’da 2.300–3.800 PLN’dir. Yurtta kalmak bu tutarı belirgin şekilde düşürür. Ekim 2026 kuruyla 4.500 PLN yaklaşık 1.030 €’ya denk gelir.' },
       { q: 'Polonya öğrenci vizesi ücreti ne kadar?', a: 'Polonya konsoloslukları 1 Ocak 2026’dan itibaren ulusal (D tipi) vize başvurusu için 200 € alıyor. Polonya’da geçici oturum izni için ayrıca 340 PLN harç ve 100 PLN kart ücreti ödenir. Mali yeterlilik için yaygın olarak aylık 776 PLN, konaklama bedeli ve 2.500 PLN dönüş masrafı gösterilmesi istenir.' },

@@ -11,6 +11,7 @@ import type { PricePage, PriceTable } from '../data/prices/types'
 import type { University } from '../data/universities/types'
 import { universityPath } from '../data/universities/list'
 import { formatDate } from '../data/blog'
+import { titleCase } from '../lib/text'
 import NotFound from './NotFound'
 
 function Table({ t, caption }: { t: PriceTable; caption?: string }) {
@@ -39,9 +40,11 @@ function Table({ t, caption }: { t: PriceTable; caption?: string }) {
 const TUITION = /lisans|master|öğrenim|harç|katkı payı|ingilizce|korece|tıp|diş|program|foundation|semesterbeitrag|band/i
 const NOT_TUITION = /başvuru|kayıt|depozito|burs|scholarship|sigorta|yurt|kira|konaklama|yaşam|geçim|indirim|artış|ödeme|vize|uni-assist|ek gider|zorunlu|toplam|caq|aidat/i
 
-function uniFeeRows(unis: University[]) {
+const MEDICAL = /tıp|diş|eczac|medic|dent|pharm|\bMD\b/i
+
+function uniFeeRows(unis: University[], medical = false) {
   return unis.map((u) => {
-    const fees = u.costs.filter((c) => TUITION.test(c.item) && !NOT_TUITION.test(c.item)).slice(0, 2)
+    const fees = u.costs.filter((c) => (medical ? MEDICAL.test(c.item) : TUITION.test(c.item)) && !NOT_TUITION.test(c.item)).slice(0, medical ? 3 : 2)
     const living = u.costs.find((c) => /yaşam/i.test(c.item)) ?? u.costs.find((c) => /kira/i.test(c.item))
     return [
       `[${u.name}](${universityPath(u)})`,
@@ -58,9 +61,13 @@ export function PricePageView({ page, unis }: { page: PricePage; unis: Universit
   const c = countryBySlug[page.country]
   if (!c) return <NotFound />
   const path = pricePath(page)
-  const others = priceList.filter((x) => x.slug !== page.slug)
-  const uniTable: PriceTable | undefined = unis.length
-    ? { head: ['Üniversite', 'Şehir', 'Tür', 'Eğitim ücreti', 'Aylık yaşam'], rows: uniFeeRows(unis), note: 'Tablo, üniversite sayfalarımızdaki güncel bilgilerden oluşturulur. Ayrıntı için üniversite adına tıklayın.' }
+  const medical = page.kind === 'tip'
+  const others = priceList.filter((x) => x.slug !== page.slug && (x.kind === 'tip') === medical)
+  const sameCountry = priceList.filter((x) => x.slug !== page.slug && x.country === page.country)
+  // Tıp sayfasında yalnızca tıp/diş/eczacılık ücreti yazılı üniversiteler
+  const tableUnis = medical ? unis.filter((u) => u.costs.some((c) => MEDICAL.test(c.item))) : unis
+  const uniTable: PriceTable | undefined = tableUnis.length
+    ? { head: ['Üniversite', 'Şehir', 'Tür', medical ? 'Tıp / diş / eczacılık ücreti' : 'Eğitim ücreti', 'Aylık yaşam'], rows: uniFeeRows(tableUnis, medical), note: 'Tablo, üniversite sayfalarımızdaki güncel bilgilerden oluşturulur. Ayrıntı için üniversite adına tıklayın.' }
     : undefined
   const ld = {
     '@context': 'https://schema.org',
@@ -117,22 +124,22 @@ export function PricePageView({ page, unis }: { page: PricePage; unis: Universit
           </section>
 
           <section id="ucretler" className="dsec">
-            <h2>{c.loc} Üniversite Eğitim Ücretleri</h2>
-            <Table t={page.tuition} caption="Eğitim seviyesine ve üniversite türüne göre ücretler" />
-            <h3>Bölümlere Göre Ücretler</h3>
+            <h2>{medical ? `${c.loc} Tıp Fakültesi Ücretleri` : `${c.loc} Üniversite Eğitim Ücretleri`}</h2>
+            <Table t={page.tuition} caption={medical ? 'Üniversitelere göre tıp, diş hekimliği ve eczacılık ücretleri' : 'Eğitim seviyesine ve üniversite türüne göre ücretler'} />
+            <h3>{medical ? 'Programlara Göre Ücretler' : 'Bölümlere Göre Ücretler'}</h3>
             <Table t={page.byField} caption="Bölümlere göre ücretler" />
           </section>
 
           {uniTable && (
             <section id="universiteler" className="dsec">
-              <h2>Üniversitelere Göre Ücret Tablosu</h2>
+              <h2>{medical ? 'Üniversite Sayfalarımızdaki Tıp Ücretleri' : 'Üniversitelere Göre Ücret Tablosu'}</h2>
               <Table t={uniTable} caption={`${c.name} üniversitelerinin ücretleri`} />
               <p><Link to={`/universiteler/${c.slug}`} className="textlink">Tüm {c.name} üniversiteleri <Icon name="arrow" size={15} /></Link></p>
             </section>
           )}
 
           <section className="dsec">
-            <h2>Hazırlık ve Foundation Ücretleri</h2>
+            <h2>{medical ? 'Hazırlık, Premed ve Dil Hazırlığı' : 'Hazırlık ve Foundation Ücretleri'}</h2>
             {page.prep.text.map((p, i) => <p key={i}><Rich text={p} /></p>)}
             {page.prep.table && <Table t={page.prep.table} caption="Hazırlık programı ücretleri" />}
           </section>
@@ -192,8 +199,14 @@ export function PricePageView({ page, unis }: { page: PricePage; unis: Universit
 
       <section className="section section--mist">
         <div className="container">
+          {sameCountry.length > 0 && (
+            <div className="related">
+              <h2 className="h3">{c.name} için Diğer Fiyat Rehberleri</h2>
+              <ul className="chips">{sameCountry.map((x) => <li key={x.slug}><Link to={pricePath(x)}>{titleCase(x.label)}</Link></li>)}</ul>
+            </div>
+          )}
           <div className="related">
-            <h2 className="h3">Diğer Ülkelerde Üniversite Fiyatları</h2>
+            <h2 className="h3">{medical ? 'Diğer Ülkelerde Tıp Fakültesi Ücretleri' : 'Diğer Ülkelerde Üniversite Fiyatları'}</h2>
             <ul className="chips">{others.map((x) => <li key={x.slug}><Link to={pricePath(x)}>{x.label}</Link></li>)}</ul>
           </div>
           <div className="related">
@@ -218,11 +231,33 @@ export function PricePageRoute({ slug, pages, unis }: { slug: string; pages: Pri
   return <PricePageView page={page} unis={unis.filter((u) => u.country === page.country)} />
 }
 
+function CompareTable({ items, cols }: { items: typeof priceList; cols: [string, string] }) {
+  return (
+    <div className="tablewrap">
+      <table className="ctable ctable--auto">
+        <thead><tr><th scope="col">Ülke</th><th scope="col">Para birimi</th><th scope="col">{cols[0]}</th><th scope="col">{cols[1]}</th><th scope="col">Aylık yaşam</th><th scope="col">Hazırlık</th></tr></thead>
+        <tbody>
+          {items.map((p) => (
+            <tr key={p.slug}>
+              <th scope="row"><Link to={pricePath(p)}>{countryBySlug[p.country]?.name ?? p.label}</Link></th>
+              <td data-label="Para birimi">{p.compare.currency}</td>
+              <td data-label={cols[0]}>{p.compare.publicTuition}</td>
+              <td data-label={cols[1]}>{p.compare.privateTuition}</td>
+              <td data-label="Aylık yaşam">{p.compare.monthlyLiving}</td>
+              <td data-label="Hazırlık">{p.compare.prep ?? '—'}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )
+}
+
 /* ---------- /fiyatlar ---------- */
 export function PricesHub() {
   return (
     <>
-      <Seo title="Yurt Dışında Üniversite Fiyatları 2026-2027: Ülke Karşılaştırması" description={`${priceList.length} ülkede üniversite ücretleri, aylık yaşam giderleri, hazırlık, vize ve ek masraflar: yurt dışında eğitim maliyetini ülke ülke karşılaştırın.`} path="/fiyatlar" />
+      <Seo title="Yurt Dışında Üniversite Fiyatları 2026-2027: Ülke Karşılaştırması" description={`${priceList.filter((p) => p.kind !== 'tip').length} ülkede üniversite ve tıp fakültesi ücretleri, aylık yaşam giderleri, hazırlık, vize ve ek masraflar: yurt dışında eğitim maliyetini ülke ülke karşılaştırın.`} path="/fiyatlar" />
       <PageHero
         tone="mist"
         crumbs={[{ label: 'Fiyatlar' }]}
@@ -234,23 +269,13 @@ export function PricesHub() {
       <section className="section">
         <div className="container">
           <SectionHead title="Ülkelere Göre Maliyet Karşılaştırması" intro="Uluslararası (AB dışı) öğrenciler için yaklaşık yıllık eğitim ücretleri ve aylık yaşam giderleri." />
-          <div className="tablewrap">
-            <table className="ctable ctable--auto">
-              <thead><tr><th scope="col">Ülke</th><th scope="col">Para birimi</th><th scope="col">Devlet üniversitesi</th><th scope="col">Özel üniversite</th><th scope="col">Aylık yaşam</th><th scope="col">Hazırlık</th></tr></thead>
-              <tbody>
-                {priceList.map((p) => (
-                  <tr key={p.slug}>
-                    <th scope="row"><Link to={pricePath(p)}>{countryBySlug[p.country]?.name ?? p.label}</Link></th>
-                    <td data-label="Para birimi">{p.compare.currency}</td>
-                    <td data-label="Devlet üniversitesi">{p.compare.publicTuition}</td>
-                    <td data-label="Özel üniversite">{p.compare.privateTuition}</td>
-                    <td data-label="Aylık yaşam">{p.compare.monthlyLiving}</td>
-                    <td data-label="Hazırlık">{p.compare.prep ?? '—'}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <CompareTable items={priceList.filter((p) => p.kind !== 'tip')} cols={['Devlet üniversitesi', 'Özel üniversite']} />
+          {priceList.some((p) => p.kind === 'tip') && (
+            <>
+              <h2 className="h3">Tıp ve Diş Hekimliği Ücretleri</h2>
+              <CompareTable items={priceList.filter((p) => p.kind === 'tip')} cols={['Devlet (İngilizce tıp)', 'Özel']} />
+            </>
+          )}
           <p className="muted small">Tutarlar yaklaşıktır ve bölüme, şehre ve başvuru yılına göre değişir. Ayrıntılı tablolar ve örnek bütçeler ülke sayfalarındadır.</p>
         </div>
       </section>

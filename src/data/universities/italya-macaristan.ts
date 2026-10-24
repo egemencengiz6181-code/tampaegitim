@@ -151,7 +151,7 @@ export const italyaMacaristanUnis: University[] = [
       { label: 'Akademik yıl', value: 'Eylül sonu başlangıç; dersler iki dönem (semestre) halinde' },
       { label: 'İngilizce lisans başvuruları', value: 'Genellikle kış sonu–bahar aylarında; programa göre birden fazla çağrı dönemi uygulanabilir' },
       { label: 'Yüksek lisans başvuruları', value: 'Genellikle Ocak–Mayıs arasında, programa göre farklı son tarihler' },
-      { label: 'IMAT', value: 'Sonbaharda tek oturum; 2026 için 30 Eylül olarak duyuruldu' },
+      { label: 'IMAT', value: 'Sonbaharda tek oturum; 2026 sınavı 29 Eylül’de yapıldı' },
       { label: 'Universitaly ön başvurusu', value: 'Kabul sonrası, vize başvurusundan önce' },
     ],
     faqs: [
@@ -229,7 +229,7 @@ export const italyaMacaristanUnis: University[] = [
     calendar: [
       { label: 'Akademik yıl', value: 'Eylül sonu / Ekim başlangıç' },
       { label: 'İngilizce lisans ve yüksek lisans ön değerlendirmesi', value: 'Genellikle kış sonu–bahar aylarında, programa göre birkaç başvuru penceresi' },
-      { label: 'IMAT', value: 'Sonbaharda; 2026 sınavı için 30 Eylül duyuruldu' },
+      { label: 'IMAT', value: 'Sonbaharda; 2026 sınavı 29 Eylül’de yapıldı' },
       { label: 'Universitaly ön başvurusu', value: 'Kabul sonrası, vize başvurusundan önce' },
       { label: 'DiSCo burs başvurusu', value: 'Genellikle yaz aylarında; ISEE parificato önceden hazırlanmalı' },
     ],
@@ -308,7 +308,7 @@ export const italyaMacaristanUnis: University[] = [
     calendar: [
       { label: 'Akademik yıl', value: 'Eylül sonu / Ekim başlangıç' },
       { label: 'İngilizce program ön değerlendirmesi', value: 'Genellikle kış–bahar aylarında birkaç başvuru penceresi; burs için erken pencere önemlidir' },
-      { label: 'IMAT', value: 'Sonbaharda; 2026 sınavı için 30 Eylül duyuruldu' },
+      { label: 'IMAT', value: 'Sonbaharda; 2026 sınavı 29 Eylül’de yapıldı' },
       { label: 'Universitaly ön başvurusu', value: 'Kabul sonrası, vize başvurusundan önce' },
     ],
     faqs: [
@@ -464,7 +464,7 @@ export const italyaMacaristanUnis: University[] = [
     calendar: [
       { label: 'Akademik yıl', value: 'Eylül sonu / Ekim başlangıç' },
       { label: 'Uluslararası ön değerlendirme', value: 'Genellikle kış–bahar aylarında; programa göre farklı son tarihler' },
-      { label: 'IMAT', value: 'Sonbaharda; 2026 sınavı için 30 Eylül duyuruldu' },
+      { label: 'IMAT', value: 'Sonbaharda; 2026 sınavı 29 Eylül’de yapıldı' },
       { label: 'Universitaly ön başvurusu', value: 'Kabul sonrası, vize başvurusundan önce' },
     ],
     faqs: [

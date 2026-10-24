@@ -14,7 +14,7 @@ export const polonyaAvusturyaUnis: University[] = [
     seoTitle: 'Jagiellonian Üniversitesi: Bölümler, Ücretler, Kabul',
     description: 'Jagiellonian Üniversitesi rehberi: Krakov’da İngilizce lisans, yüksek lisans ve tıp (MD) programları, kabul şartları, yıllık ücretler ve başvuru takvimi.',
     lead: 'Polonya’nın en eski üniversitesi Jagiellonian, Krakov’un tarihi merkezinde tıp, uluslararası ilişkiler ve doğa bilimlerinde İngilizce programlar sunar. Tampa’nın çözüm ortakları arasındadır.',
-    summary: 'Jagiellonian Üniversitesi, 1364’te kurulan ve Krakov’da bulunan Polonya’nın en köklü devlet üniversitesidir. Uluslararası öğrencilere İngilizce lisans, yüksek lisans ve altı yıllık İngilizce tıp (MD) programı sunar. Ücretler programa göre yıllık yaklaşık 16.000 PLN’den başlar; İngilizce tıp programının ilk yıl ücreti 15.500 €’dur.',
+    summary: 'Jagiellonian Üniversitesi, 1364’te kurulan ve Krakov’da bulunan Polonya’nın en köklü devlet üniversitesidir. Uluslararası öğrencilere İngilizce lisans, yüksek lisans ve altı yıllık İngilizce tıp (MD) programı sunar. Ücretler programa göre yıllık yaklaşık 16.000 PLN’den başlar; İngilizce tıp programının ilk yıl ücreti 16.000 € (2026/27)’dur.',
     facts: [
       { label: 'Kuruluş', value: '1364, Polonya’nın en eski üniversitesi' },
       { label: 'Öğrenci sayısı', value: '~35.000 (yaklaşık)' },
@@ -60,7 +60,7 @@ export const polonyaAvusturyaUnis: University[] = [
     ],
     costs: [
       { item: 'İngilizce programlar (yıllık)', value: 'Yaklaşık 16.000 PLN’den başlar', note: 'Programa göre değişir; tutar Rektör kararıyla her yıl belirlenir.' },
-      { item: 'İngilizce tıp (MD), ilk yıl', value: '15.500 €', note: 'Üniversitenin uluslararası öğrenci sayfasında belirtilen ilk yıl ücreti.' },
+      { item: 'İngilizce tıp (MD), yıllık', value: '16.000 € (2026/27 girişi)', note: 'İngilizce diş hekimliği 17.000 €. 2025/26 girişinde tıp 15.500 € idi.' },
       { item: 'Ödeme düzeni', value: 'Dönemlik taksitler', note: 'İlk taksit kayıttan kısa süre sonra ödenir.' },
       { item: 'Krakov’da aylık yaşam gideri', value: 'Yaklaşık 2.500–4.000 PLN', note: 'Konaklama dahil; yaşam tarzına göre değişir.' },
       { item: 'Konaklama', value: 'Yurt: yaklaşık 600–1.200 PLN / ay; özel oda: 1.500–2.500 PLN / ay', note: 'Yurt kontenjanı sınırlıdır, erken başvuru gerekir.' },
@@ -84,7 +84,7 @@ export const polonyaAvusturyaUnis: University[] = [
     faqs: [
       { q: 'Jagiellonian Üniversitesi YÖK tarafından tanınıyor mu?', a: 'UJ, Polonya’nın akredite bir devlet üniversitesidir ve Avrupa’da diploması geniş çapta tanınır. YÖK denkliği ise mezuniyet sonrası, okuduğunuz programa ve güncel YÖK mevzuatına göre ayrıca değerlendirilir. Başvurmadan önce [YÖK denkliği](/bilgi-bankasi/yok-denkligi) koşullarını kontrol etmenizi öneririz.' },
       { q: 'Jagiellonian Üniversitesi kabul şartları neler?', a: 'Lisans için apostilli lise diploması, transkript ve genellikle B2 düzeyinde İngilizce gerekir; bazı bölümler mülakat veya sınav yapar. Tıp programında biyoloji ve kimya ağırlıklı ayrı bir giriş değerlendirmesi uygulanır. Yüksek lisans için ilgili alanda lisans diploması ve motivasyon mektubu istenir.' },
-      { q: 'Jagiellonian Üniversitesi ücretleri ne kadar?', a: 'İngilizce programlarda yıllık ücretler yaklaşık 16.000 PLN’den başlar ve programa göre artar. İngilizce tıp (MD) programının ilk yıl ücreti 15.500 €’dur. Tutarlar her yıl Rektör kararıyla güncellendiği için başvuru dönemindeki program kartını kontrol etmek gerekir.' },
+      { q: 'Jagiellonian Üniversitesi ücretleri ne kadar?', a: 'İngilizce programlarda yıllık ücretler yaklaşık 16.000 PLN’den başlar ve programa göre artar. İngilizce tıp (MD) programının ilk yıl ücreti 16.000 € (2026/27)’dur. Tutarlar her yıl Rektör kararıyla güncellendiği için başvuru dönemindeki program kartını kontrol etmek gerekir.' },
       { q: 'Jagiellonian’da tıp okumak için YKS gerekiyor mu?', a: 'Hayır, kabul YKS’ye değil üniversitenin kendi değerlendirmesine dayanır. Lise diplomanız, fen derslerindeki notlarınız ve giriş değerlendirmesindeki performansınız belirleyicidir. Türkiye’de tıp diploması tanınması için ayrıca [Avrupa’da tıp eğitimi](/bilgi-bankasi/avrupada-tip-egitimi) rehberimize göz atabilirsiniz.' },
       { q: 'Jagiellonian Üniversitesi burs veriyor mu?', a: 'İlk yıl için kurumsal indirim genellikle yoktur; ancak NAWA bursu kazananlar İngilizce program ücretinden muaf tutulabilir. İkinci yıldan itibaren başarı veya maddi durum gerekçesiyle indirim başvurusu yapılabilir.' },
       { q: 'Krakov’da öğrenci olarak yaşamak pahalı mı?', a: 'Krakov, Varşova’ya kıyasla biraz daha ekonomiktir. Konaklama dahil aylık bütçe çoğu öğrenci için yaklaşık 2.500–4.000 PLN aralığındadır. Yurtta kalanlar bu aralığın alt sınırına yaklaşabilir.' },
@@ -412,7 +412,7 @@ export const polonyaAvusturyaUnis: University[] = [
     costs: [
       { item: 'İngilizce tıp (yıllık), 2025/2026 girişi', value: '67.858 PLN', note: 'Üniversitenin resmî ücret tablosu; iki veya dört taksitle ödeme seçeneği bulunur.' },
       { item: 'İngilizce tıp (yıllık), 2026/2027 girişi', value: '67.900 PLN', note: 'Resmî tabloya göre; ücret giriş yılına göre sabitlenir.' },
-      { item: 'Diş hekimliği / eczacılık', value: 'Programa göre ayrı ücret', note: 'Güncel tutarlar aynı resmî ücret tablosunda yer alır.' },
+      { item: 'İngilizce diş hekimliği (yıllık)', value: '78.700 PLN (2026/27)', note: 'İngilizce eczacılık programı 2026/27 ücret tablosunda yer almıyor.' },
       { item: 'Wrocław’da aylık yaşam gideri', value: 'Yaklaşık 2.500–3.800 PLN', note: 'Konaklama dahil.' },
       { item: 'Ek giderler', value: 'Önlük, ekipman, aşılar ve sağlık sigortası', note: 'Klinik yıllarda ek masraflar artar.' },
     ],

@@ -451,7 +451,7 @@ export const dachItalyaPrices: PricePage[] = [
         ['Özel üniversite – Cattolica', '8.800 € (lisans), 9.350 € (YL)', 'AB dışı gelir grubu', '2026/27 ilk yıl tutarı; UCSC uluslararası bursuyla lisans 5.900 €'],
         ['Özel üniversite – Bocconi', '16.700 € (lisans, 2025/26 standart)', 'Gelire dayalı indirim', '%20–%80 indirimli dilimler: 13.360 € – 3.340 €'],
         ['Özel tasarım / moda akademileri', 'Genellikle 15.000 € ve üzeri', 'Program', 'Milano ve Floransa’da yoğun; malzeme masrafı ayrıca'],
-        ['Özel tıp fakülteleri', 'Genellikle 20.000 € civarı ve üzeri', 'Program', 'Kontenjan küçük, kendi sınavları vardır'],
+        ['Özel tıp fakülteleri', 'Yaklaşık 18.000–23.000 €', 'Program', 'Kontenjan küçük, kendi sınavları vardır'],
         ['Doktora (dottorato)', 'Çoğunlukla ücret yok', 'Burslu kadro', 'Burslu doktora öğrencisine yıllık brüt bir maaş benzeri burs ödenir'],
       ],
       note: 'Devlet üniversitesi aralıkları 2025/26–2026/27 yönetmeliklerine dayanır; her üniversite ücret tablosunu yıllık yayımlar. Özel tasarım ve tıp okulları için verilen bantlar yaklaşık olup kurumun güncel tarifesinden kontrol edilmelidir.',
@@ -459,7 +459,7 @@ export const dachItalyaPrices: PricePage[] = [
     byField: {
       head: ['Bölüm', 'Devlet (yıllık)', 'Özel (yıllık)', 'Not'],
       rows: [
-        ['Tıp', '0–4.000 € (ISEE’ye göre)', 'Genellikle 20.000 € civarı ve üzeri', 'İngilizce programlarda AB dışı kontenjan çok sınırlı'],
+        ['Tıp', '0–4.000 € (ISEE’ye göre)', 'Yaklaşık 18.000–23.000 €', 'İngilizce programlarda AB dışı kontenjan çok sınırlı'],
         ['Diş hekimliği', '0–4.000 €', 'Özelde yüksek', 'İngilizce program sayısı az; çoğu İtalyanca'],
         ['Eczacılık', '0–4.000 €', 'Sınırlı', 'İngilizce seçenek az; giriş sınavı TOLC-F olabilir'],
         ['Mühendislik', '0–3.900 € (Polimi, PoliTo)', 'Az', 'Torino’da İngilizce lisans mühendislik seçenekleri öne çıkar'],
@@ -609,7 +609,7 @@ export const dachItalyaPrices: PricePage[] = [
       { q: 'İtalya’da devlet üniversitesi ücretleri ne kadar?', a: 'Devlet üniversiteleri yıllık katkı payını ISEE’ye göre belirler ve tutar genellikle 0–4.000 € arasındadır. ISEE parificato sunmayan AB dışı öğrenci en üst dilime girer; bu Politecnico di Milano’da yaklaşık 3.900 €, Bologna’da yaklaşık 3.000 €’dur. Bazı üniversiteler AB dışına sabit ücret uygular.' },
       { q: 'ISEE parificato olmadan İtalya’da okunur mu?', a: 'Okunur, ancak çoğu üniversitede en üst dilimden ücret ödersiniz ve DSU bursuna başvuramazsınız. Belge CAF’ler tarafından aile gelir ve varlık belgelerinize göre hazırlanır. Bazı üniversitelerde belge yalnızca burs için dikkate alındığından ücret indirimi getirmeyebilir.' },
       { q: 'Bocconi ne kadar?', a: 'Bocconi’nin 2025/26 standart lisans ücreti yıllık 16.700 €’dur; gelire dayalı indirimlerle 13.360 €, 10.020 €, 6.680 € veya 3.340 €’ya inebilir. Yüksek lisans ücretleri programa göre değişir. Ayrıntılar için [Bocconi sayfamıza](/universiteler/italya/bocconi-universitesi) bakın.' },
-      { q: 'İtalya’da tıp okumak ne kadar tutar?', a: 'Devlet üniversitelerinin İngilizce tıp programlarında katkı payı diğer bölümlerle aynı ISEE tarifesine bağlıdır, yani yıllık 0–4.000 € aralığındadır. Asıl zorluk giriş sınavı ve AB dışı kontenjanın çok sınırlı olmasıdır. Özel tıp fakülteleri ise genellikle yıllık 20.000 € civarı ve üzeri ücret alır; genel bilgi için [Avrupa’da tıp eğitimi](/bilgi-bankasi/avrupada-tip-egitimi).' },
+      { q: 'İtalya’da tıp okumak ne kadar tutar?', a: 'Devlet üniversitelerinin İngilizce tıp programlarında katkı payı diğer bölümlerle aynı ISEE tarifesine bağlıdır, yani yıllık 0–4.000 € aralığındadır. Asıl zorluk giriş sınavı ve AB dışı kontenjanın çok sınırlı olmasıdır. Özel tıp fakülteleri ise yıllık yaklaşık 18.000–23.000 € alır; ayrıntılı tablo için [İtalya tıp fakültesi ücretleri](/fiyatlar/italya-tip-fakultesi-ucretleri).' },
       { q: 'İtalya öğrenci vizesi için ne kadar para göstermek gerekir?', a: '2026/27 akademik yılı için asgari tutar ayda 783,06 €, yıllık yaklaşık 10.180 €’dur. Bu tutar 2025/26’daki 534,41 €’nun belirgin şekilde üzerindedir. Konsolosluklar bunu asgari şart olarak görür; ek belge isteyebilir.' },
       { q: 'İtalya’da aylık yaşam masrafı ne kadar?', a: 'Kira dahil Torino’da ayda yaklaşık 700–1.150 €, Bologna ve Padova’da 750–1.350 €, Roma’da 800–1.400 €, Milano’da 870–1.650 € gerçekçi aralıklardır. En büyük fark kiradan kaynaklanır. Sağlık için SSN kaydı yılda 700 €’dur.' },
       { q: 'DSU bursu ne kadar destek sağlar?', a: 'DSU bursu katkı payından muafiyetin yanında nakit destek, yurt ve yemek hakkı içerebilir. Tutar bölgeye, gelir dilimine ve öğrencinin şehir dışından gelip gelmediğine göre değişir; Lombardiya’da en düşük gelir diliminde yıllık 7.000 €’yu aşan çağrılar yayımlandı. Bursu korumak için her yıl kredi şartını sağlamak gerekir.' },

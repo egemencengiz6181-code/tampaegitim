@@ -8,4 +8,5 @@ export const priceLoaders: Record<PriceFile, () => Promise<PricePage[]>> = {
   'dach-italya': () => import('./dach-italya').then((m) => m.dachItalyaPrices),
   'yeni-dunya': () => import('./yeni-dunya').then((m) => m.yeniDunyaPrices),
   'asya-latin': () => import('./asya-latin').then((m) => m.asyaLatinPrices),
+  tip: () => import('./tip').then((m) => m.tipPrices),
 }

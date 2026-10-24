@@ -212,7 +212,7 @@
   "d": "2026-10-24"
  },
  "/lisans-programlari/italya": {
-  "h": "5c7846e284a588a4",
+  "h": "00471214060c925f",
   "d": "2026-10-24"
  },
  "/lisans-programlari/dubai": {
@@ -236,15 +236,15 @@
   "d": "2026-10-22"
  },
  "/lisans-programlari/macaristan": {
-  "h": "29e63722f3a15c59",
+  "h": "01f2bfb17634ffdd",
   "d": "2026-10-24"
  },
  "/lisans-programlari/polonya": {
-  "h": "4d2ee83c22da3cc3",
+  "h": "d88032741b128e29",
   "d": "2026-10-24"
  },
  "/lisans-programlari/cekya": {
-  "h": "4787a7b73c10d90b",
+  "h": "74f7013a1807c19f",
   "d": "2026-10-24"
  },
  "/yurtdisi-yuksek-lisans/ingiltere": {
@@ -288,7 +288,7 @@
   "d": "2026-10-24"
  },
  "/yurtdisi-yuksek-lisans/italya": {
-  "h": "175cf5260b7ff9fe",
+  "h": "bc831353ce3d0d22",
   "d": "2026-10-24"
  },
  "/yurtdisi-yuksek-lisans/dubai": {
@@ -296,15 +296,15 @@
   "d": "2026-10-24"
  },
  "/yurtdisi-yuksek-lisans/macaristan": {
-  "h": "bba6cfbabaa3cda2",
+  "h": "a7d02595dd2cc63d",
   "d": "2026-10-24"
  },
  "/yurtdisi-yuksek-lisans/polonya": {
-  "h": "c6162cc6e66781d0",
+  "h": "6a295a941a0dbbd8",
   "d": "2026-10-24"
  },
  "/yurtdisi-yuksek-lisans/cekya": {
-  "h": "ffe3f3e29944ebc7",
+  "h": "d94334b07ad0480c",
   "d": "2026-10-24"
  },
  "/yurtdisi-yuksek-lisans/belcika": {
@@ -624,19 +624,19 @@
   "d": "2026-10-24"
  },
  "/fiyatlar": {
-  "h": "265513bb77934767",
+  "h": "ebed607a65f9c5ed",
   "d": "2026-10-24"
  },
  "/fiyatlar/macaristan-universite-fiyatlari": {
-  "h": "64b805146e40714d",
+  "h": "b40b1b684e8663ec",
   "d": "2026-10-24"
  },
  "/fiyatlar/polonya-universite-fiyatlari": {
-  "h": "328afbdfd48a4682",
+  "h": "317c7541eacb8d66",
   "d": "2026-10-24"
  },
  "/fiyatlar/cekya-universite-fiyatlari": {
-  "h": "f80996afe6079ee9",
+  "h": "b237e0c375307c21",
   "d": "2026-10-24"
  },
  "/fiyatlar/ingiltere-universite-fiyatlari": {
@@ -656,7 +656,7 @@
   "d": "2026-10-24"
  },
  "/fiyatlar/italya-universite-fiyatlari": {
-  "h": "f3d03b8def927b2e",
+  "h": "50d30c8e66e9fbbe",
   "d": "2026-10-24"
  },
  "/fiyatlar/amerika-universite-fiyatlari": {
@@ -687,6 +687,22 @@
   "h": "535bdc853ec5f1a8",
   "d": "2026-10-24"
  },
+ "/fiyatlar/macaristan-tip-fakultesi-ucretleri": {
+  "h": "69bf7a12f4b4780f",
+  "d": "2026-10-24"
+ },
+ "/fiyatlar/polonya-tip-fakultesi-ucretleri": {
+  "h": "60db0710cc469fdd",
+  "d": "2026-10-24"
+ },
+ "/fiyatlar/cekya-tip-fakultesi-ucretleri": {
+  "h": "2fae548b3e2de472",
+  "d": "2026-10-24"
+ },
+ "/fiyatlar/italya-tip-fakultesi-ucretleri": {
+  "h": "40a815be5ea487b1",
+  "d": "2026-10-24"
+ },
  "/universiteler": {
   "h": "2351944ded95f169",
   "d": "2026-10-24"
@@ -700,15 +716,15 @@
   "d": "2026-10-24"
  },
  "/universiteler/italya": {
-  "h": "a90399924009e1fd",
+  "h": "ed68e964333fd0d8",
   "d": "2026-10-24"
  },
  "/universiteler/macaristan": {
-  "h": "cdc7d4917639cd30",
+  "h": "4efad510f171185b",
   "d": "2026-10-24"
  },
  "/universiteler/polonya": {
-  "h": "7da6ae8c121c925c",
+  "h": "17829b415dd2901b",
   "d": "2026-10-24"
  },
  "/universiteler/avusturya": {
@@ -912,107 +928,107 @@
   "d": "2026-10-24"
  },
  "/universiteler/italya/milano-politeknik-universitesi": {
-  "h": "3874784a6aae3a5d",
+  "h": "9c405a50e5fceb6a",
   "d": "2026-10-24"
  },
  "/universiteler/italya/bologna-universitesi": {
-  "h": "c27f5fe5eee13851",
+  "h": "331dc0d6d1ced88d",
   "d": "2026-10-24"
  },
  "/universiteler/italya/roma-sapienza-universitesi": {
-  "h": "1c5b7689f814df60",
+  "h": "6edcd794950510c7",
   "d": "2026-10-24"
  },
  "/universiteler/italya/padova-universitesi": {
-  "h": "1ae0d9f750b3cfc9",
+  "h": "6ff2dd8db03d5e62",
   "d": "2026-10-24"
  },
  "/universiteler/italya/torino-politeknik-universitesi": {
-  "h": "d480b51499ec05cb",
+  "h": "0a9c274402febe7f",
   "d": "2026-10-24"
  },
  "/universiteler/italya/milano-universitesi": {
-  "h": "e472df5a88a5fa3d",
+  "h": "8a791103e8bc1040",
   "d": "2026-10-24"
  },
  "/universiteler/italya/pisa-universitesi": {
-  "h": "35607bb934b1eb69",
+  "h": "505f79598e8a4798",
   "d": "2026-10-24"
  },
  "/universiteler/italya/trento-universitesi": {
-  "h": "72a42432db7266be",
+  "h": "fe29e6996b3a5a19",
   "d": "2026-10-24"
  },
  "/universiteler/italya/bocconi-universitesi": {
-  "h": "1d43d249f69ccb22",
+  "h": "55d7ca92247432e0",
   "d": "2026-10-24"
  },
  "/universiteler/italya/ca-foscari-universitesi": {
-  "h": "3ce7ca47abfc61ec",
+  "h": "c4d655af0f2c0e00",
   "d": "2026-10-24"
  },
  "/universiteler/macaristan/semmelweis-universitesi": {
-  "h": "e08d11cf16d16747",
+  "h": "63e8df3c35f610ad",
   "d": "2026-10-24"
  },
  "/universiteler/macaristan/elte-universitesi": {
-  "h": "2b02e47f0c476718",
+  "h": "99fe7770487c1269",
   "d": "2026-10-24"
  },
  "/universiteler/macaristan/debrecen-universitesi": {
-  "h": "96a5e5d07375a914",
+  "h": "6ea432dd08d54417",
   "d": "2026-10-24"
  },
  "/universiteler/macaristan/pecs-universitesi": {
-  "h": "a31f64c7f19b4606",
+  "h": "075ac14e9745bae7",
   "d": "2026-10-24"
  },
  "/universiteler/macaristan/szeged-universitesi": {
-  "h": "1ff81910283c591e",
+  "h": "e4232a8506b75a6c",
   "d": "2026-10-24"
  },
  "/universiteler/macaristan/budapeste-teknik-universitesi": {
-  "h": "8739d0dedf2c9f22",
+  "h": "99740b0e7eac5bf4",
   "d": "2026-10-24"
  },
  "/universiteler/polonya/jagiellonian-universitesi": {
-  "h": "f5a995bf5816874e",
+  "h": "ee2e04c18cfe94ba",
   "d": "2026-10-24"
  },
  "/universiteler/polonya/varsova-teknik-universitesi": {
-  "h": "179ac6f8834a6510",
+  "h": "750f862df6f77ec9",
   "d": "2026-10-24"
  },
  "/universiteler/polonya/silezya-teknik-universitesi": {
-  "h": "cea4a6f1f946e2da",
+  "h": "bd08425e324ec53f",
   "d": "2026-10-24"
  },
  "/universiteler/polonya/wroclaw-universitesi": {
-  "h": "f7f41184eb1e9d60",
+  "h": "52c0fbcedbca2f47",
   "d": "2026-10-24"
  },
  "/universiteler/polonya/wroclaw-tip-universitesi": {
-  "h": "d12a7e1e4c31eb54",
+  "h": "1227fc210c894e0b",
   "d": "2026-10-24"
  },
  "/universiteler/polonya/polonya-japon-bilgi-teknolojileri-akademisi": {
-  "h": "0472e0ba4e819c8d",
+  "h": "6c20853027f4afbe",
   "d": "2026-10-24"
  },
  "/universiteler/polonya/poznan-guzel-sanatlar-universitesi": {
-  "h": "8e8fe4d62a9c20ab",
+  "h": "b7ac645cce93e6eb",
   "d": "2026-10-24"
  },
  "/universiteler/polonya/kozminski-universitesi": {
-  "h": "8cfe4e5f0f51df7d",
+  "h": "0058583c69de0082",
   "d": "2026-10-24"
  },
  "/universiteler/polonya/collegium-civitas": {
-  "h": "0e198202eb4826c4",
+  "h": "41e4b193998f71b4",
   "d": "2026-10-24"
  },
  "/universiteler/polonya/poznan-teknik-universitesi": {
-  "h": "ab2837048ef93de4",
+  "h": "48d1d1307d109a4d",
   "d": "2026-10-24"
  },
  "/universiteler/avusturya/viyana-universitesi": {
@@ -1384,7 +1400,7 @@
   "d": "2026-10-14"
  },
  "/cekya-universiteleri": {
-  "h": "0f2074f946a25c14",
+  "h": "e99e1651365e0bab",
   "d": "2026-10-24"
  },
  "/hizmetler": {
@@ -1668,7 +1684,7 @@
   "d": "2026-10-24"
  },
  "/bilgi-bankasi/avrupada-tip-egitimi": {
-  "h": "18260584d6cf514d",
+  "h": "750bdd8cea3ff3b0",
   "d": "2026-10-24"
  },
  "/bilgi-bankasi/neden-yurtdisinda-yuksek-lisans": {
@@ -2040,7 +2056,7 @@
   "d": "2026-10-24"
  },
  "/site-haritasi": {
-  "h": "a880be4bfcd19590",
+  "h": "9fc1a7a1c932e714",
   "d": "2026-10-24"
  },
  "/kvkk": {

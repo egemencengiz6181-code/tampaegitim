@@ -273,6 +273,7 @@ export const guides: Guide[] = [
     countries: ['macaristan', 'polonya', 'italya'],
     summary: 'İngilizce tıp programları, giriş sınavları ve denklik süreci hakkında bilinmesi gerekenler.',
     sections: [
+      { h: 'Ülkelere göre tıp fakültesi ücretleri', p: ['Üniversite üniversite güncel ücretler, giriş sınavları, hazırlık programları ve 6 yıllık örnek bütçeler: [Macaristan](/fiyatlar/macaristan-tip-fakultesi-ucretleri), [Polonya](/fiyatlar/polonya-tip-fakultesi-ucretleri), [Çekya](/fiyatlar/cekya-tip-fakultesi-ucretleri) ve [İtalya](/fiyatlar/italya-tip-fakultesi-ucretleri) tıp fakültesi ücretleri.'] },
       { h: 'Hangi ülkeler?', p: ['Macaristan, Polonya ve İtalya, İngilizce tıp programlarıyla uluslararası öğrencilerin sık tercih ettiği ülkelerdir. Programlar genellikle 6 yıl sürer.'] },
       { h: 'Giriş sınavları', p: ['İtalya’da İngilizce tıp programlarına IMAT sınavıyla girilir. Macaristan ve Polonya’daki üniversiteler genellikle biyoloji ve kimya ağırlıklı kendi giriş sınavlarını veya mülakatlarını uygular.'] },
       { h: 'Türkiye’de çalışmak', p: ['Yurtdışında tıp eğitimi alanların Türkiye’de çalışabilmesi için YÖK denkliği ve ilgili sınav süreçlerini tamamlaması gerekir. Başvuru öncesinde üniversitenin tanınırlığını mutlaka kontrol ediyoruz.'] },
