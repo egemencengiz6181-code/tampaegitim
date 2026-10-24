@@ -25,3 +25,7 @@ export async function render(url: string) {
 
 export { sitemapPaths, blogFeed } from './seo/paths'
 export { redirects } from './data/redirects'
+export { languageCityListMismatch } from './data/languageCities'
+export { universityListMismatch } from './data/universities'
+export { glossaryListMismatch } from './data/glossary/full'
+export { routingMismatch } from './data/routingCheck'

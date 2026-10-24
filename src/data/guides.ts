@@ -1,4 +1,5 @@
 import type { ProgramKey } from './countries'
+import { glossaryGuides } from './glossary'
 
 export type GuideGroup =
   | 'Dil okulu'
@@ -21,7 +22,15 @@ export type Guide = {
   countries?: string[]
   summary: string
   facts?: { label: string; value: string }[]
-  sections: { h: string; p?: string[]; list?: string[] }[]
+  /** Metinlerde [link](/yol) ve **kalın** kullanılabilir */
+  sections: { h: string; p?: string[]; list?: string[]; table?: { head: string[]; rows: string[][] } }[]
+  /** Arama sonucu başlığı (yoksa title); 50–60 karakter */
+  seoTitle?: string
+  /** Arama sonucu açıklaması (yoksa summary); 140–155 karakter */
+  description?: string
+  faqs?: { q: string; a: string }[]
+  /** Son içerik kontrolü (YYYY-AA-GG) */
+  updated?: string
 }
 
 export const guideGroups: GuideGroup[] = ['Dil okulu', 'Yaz okulu', 'Lise', 'Üniversite', 'Yüksek lisans', 'Work and Study', 'Sınavlar', 'Başvuru', 'Vize & Belgeler', 'Yaşam']
@@ -667,6 +676,8 @@ export const guides: Guide[] = [
     ],
   },
 ]
+
+guides.push(...glossaryGuides)
 
 export const guideBySlug = Object.fromEntries(guides.map((g) => [g.slug, g])) as Record<string, Guide>
 export const guidesForProgram = (k: ProgramKey) => guides.filter((g) => g.program === k)

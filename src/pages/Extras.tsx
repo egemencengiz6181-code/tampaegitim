@@ -23,6 +23,12 @@ import {
 } from '../data/accommodation'
 import { ukPriceCities, priceCityBySlug, priceWeeks, priceListYear, fromPrice } from '../data/schoolPrices'
 import { formatPrice } from '../data/packages'
+import { languageCityList, languageCityPath } from '../data/languageCities/list'
+
+const cityGuide = (slug: string) => {
+  const ci = languageCityList.find((x) => x.country === 'ingiltere' && x.slug === `${slug}-dil-okullari`)
+  return ci ? languageCityPath(ci) : undefined
+}
 
 /* =========================================================
    Online eğitim
@@ -519,6 +525,7 @@ export function SchoolPricesCity() {
               <p className="muted">{c.name}’daki çalıştığımız dil okullarının {priceListYear} eğitim ve konaklama fiyatlarını formu doldurmanızın ardından size hemen iletelim.</p>
             </div>
           )}
+          {cityGuide(c.slug) && <p className="note"><Icon name="bolt" size={16} /> Semtler, konaklama ve yaşam maliyeti için: <Link to={cityGuide(c.slug)!}>{c.name} dil okulları rehberi</Link></p>}
           <p className="note"><Icon name="bolt" size={16} /> Öğrenci yurdu mu arıyorsunuz? <Link to="/ogrenci-konaklama">Londra, Brighton ve Leeds’teki öğrenci yurtlarının haftalık fiyatlarına</Link> göz atın.</p>
         </div>
       </section>

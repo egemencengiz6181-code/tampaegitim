@@ -13,7 +13,7 @@ import { Markdown } from '../components/Markdown'
 // Yazı metinleri yalnızca bu (lazy) sayfa paketinde yüklenir.
 const bodies = import.meta.glob<string>('../../content/blog/*.md', { eager: true, query: '?raw', import: 'default' })
 const bodyOf = (slug: string) => bodies[`../../content/blog/${slug}.md`] ?? ''
-import { plain } from '../components/Rich'
+import { plain, Rich } from '../components/Rich'
 import { ORG_ID, abs, personLd, authorPath } from '../seo/schema'
 import { publishedAuthor } from '../data/authors'
 import { programs, countriesFor, programByKey } from '../data/programs'
@@ -24,6 +24,8 @@ import { generalFaqs } from '../data/landings'
 import { landings } from '../data/landings'
 import NotFound from './NotFound'
 import { cardImg } from '../lib/img'
+import { languageCityList, languageCityPath } from '../data/languageCities/list'
+import { universityList, universityPath } from '../data/universities/list'
 
 /* ---------- Knowledge base ---------- */
 export function KnowledgeHub() {
@@ -93,16 +95,16 @@ export function KnowledgeHub() {
 
 const slugify = (t: string) => t.toLocaleLowerCase('tr').replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ş/g, 's').replace(/ü/g, 'u').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
 
-export function GuidePage() {
+export function GuidePage({ full }: { full?: Guide }) {
   const { slug = '' } = useParams()
-  const g = guideBySlug[slug]
+  const g = full ?? guideBySlug[slug]
   if (!g) return <NotFound />
   const related = guides.filter((x) => x.group === g.group && x.slug !== g.slug)
   const program = g.program ? programByKey[g.program] : undefined
   const relCountries = (g.countries ?? []).map((c) => countryBySlug[c]).filter(Boolean)
   return (
     <>
-      <Seo title={g.title} description={g.summary.length < 110 ? `${g.summary} ${g.group} hakkında Tampa Yurtdışı Eğitim bilgi bankası rehberi.` : g.summary} path={`/bilgi-bankasi/${g.slug}`} jsonLd={{ '@context': 'https://schema.org', '@type': 'Article', headline: g.title, description: g.summary, publisher: { '@type': 'Organization', name: 'Tampa Yurtdışı Eğitim' } }} />
+      <Seo title={g.seoTitle ?? g.title} description={g.description ?? (g.summary.length < 110 ? `${g.summary} ${g.group} hakkında Tampa Yurtdışı Eğitim bilgi bankası rehberi.` : g.summary)} path={`/bilgi-bankasi/${g.slug}`} modified={g.updated} jsonLd={{ '@context': 'https://schema.org', '@type': 'Article', headline: g.title, description: g.description ?? g.summary, ...(g.updated ? { dateModified: g.updated } : {}), publisher: { '@type': 'Organization', name: 'Tampa Yurtdışı Eğitim' } }} />
       <PageHero tone="mist" crumbs={[{ label: 'Bilgi bankası', to: '/bilgi-bankasi' }, { label: g.group, to: `/bilgi-bankasi#${slugify(g.group)}` }, { label: g.title }]} kicker={g.group} title={g.title} lead={g.summary} />
       <div className="container detail">
         <article className="detail__main">
@@ -118,10 +120,25 @@ export function GuidePage() {
           {g.sections.map((s, i) => (
             <section key={s.h} className="dsec" id={`b${i}`}>
               <h2>{s.h}</h2>
-              {s.p?.map((t) => <p key={t.slice(0, 24)}>{t}</p>)}
-              {s.list && <CheckList items={s.list} />}
+              {s.p?.map((t) => <p key={t.slice(0, 24)}><Rich text={t} /></p>)}
+              {s.list && <ul className="checks">{s.list.map((t) => <li key={t.slice(0, 32)}><Icon name="check" size={18} /> <span><Rich text={t} /></span></li>)}</ul>}
+              {s.table && (
+                <div className="tablewrap">
+                  <table className="ctable ctable--auto">
+                    <thead><tr>{s.table.head.map((h) => <th key={h} scope="col">{h}</th>)}</tr></thead>
+                    <tbody>{s.table.rows.map((r) => <tr key={r.join('|')}>{r.map((cell, j) => j === 0 ? <th key={j} scope="row"><Rich text={cell} /></th> : <td key={j} data-label={s.table!.head[j]}><Rich text={cell} /></td>)}</tr>)}</tbody>
+                  </table>
+                </div>
+              )}
             </section>
           ))}
+          {g.faqs && g.faqs.length > 0 && (
+            <section className="dsec">
+              <h2>Sık Sorulan Sorular</h2>
+              <FaqList items={g.faqs} />
+            </section>
+          )}
+          {g.updated && <p className="muted small">Son güncelleme: <time dateTime={g.updated}>{formatDate(g.updated)}</time>. Kurallar değişebilir; başvuru öncesinde güncel durumu birlikte kontrol ediyoruz.</p>}
           {(program || relCountries.length > 0) && (
             <section className="dsec">
               <h2 className="h3">İlgili Sayfalar</h2>
@@ -417,6 +434,14 @@ export function Sitemap() {
               <ul>{countriesFor(p.key).map((c) => <li key={c.slug}><Link to={`/${p.slug}/${c.slug}`}>{p.countryTitle(c)}</Link></li>)}</ul>
             </div>
           ))}
+          <div>
+            <h2 className="h3"><Link to="/universiteler">Üniversiteler</Link></h2>
+            <ul>{universityList.map((u) => <li key={`${u.country}/${u.slug}`}><Link to={universityPath(u)}>{u.name}</Link></li>)}</ul>
+          </div>
+          <div>
+            <h2 className="h3">Şehirlere Göre Dil Okulları</h2>
+            <ul>{languageCityList.map((ci) => <li key={`${ci.country}/${ci.slug}`}><Link to={languageCityPath(ci)}>{ci.name} dil okulları</Link></li>)}</ul>
+          </div>
           <div>
             <h2 className="h3"><Link to="/ulkeler">Ülkeler</Link></h2>
             <ul>{countries.map((c) => <li key={c.slug}><Link to={`/ulkeler/${c.slug}`}>{c.name}</Link></li>)}</ul>

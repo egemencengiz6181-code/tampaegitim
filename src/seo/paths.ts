@@ -12,6 +12,9 @@ import { ukPriceCities } from '../data/schoolPrices'
 import { germanUnis } from '../data/germanUnis'
 import { authors } from '../data/authors'
 import { redirects } from '../data/redirects'
+import { localPages } from '../data/local'
+import { universityList, universityPath } from '../data/universities/list'
+import { languageCityList, languageCityPath } from '../data/languageCities/list'
 
 export type SitePath = { path: string; priority: number; changefreq: 'daily' | 'weekly' | 'monthly' | 'yearly'; lastmod?: string; index?: boolean }
 
@@ -27,6 +30,10 @@ function allPaths(): SitePath[] {
     p('/yurtdisi-egitim', 0.9, 'weekly'),
     ...programs.map((pr) => p(`/${pr.slug}`, 0.9, 'weekly')),
     ...programs.flatMap((pr) => countriesFor(pr.key).map((c) => p(`/${pr.slug}/${c.slug}`, c.slug === 'ingiltere' ? 0.9 : 0.8, 'monthly'))),
+    ...languageCityList.map((ci) => p(languageCityPath(ci), ci.country === 'ingiltere' ? 0.8 : 0.7)),
+    p('/universiteler', 0.8, 'weekly'),
+    ...[...new Set(universityList.map((u) => u.country))].map((c) => p(`/universiteler/${c}`, 0.7)),
+    ...universityList.map((u) => p(universityPath(u), 0.7)),
     p('/ulkeler', 0.8),
     ...countries.map((c) => p(`/ulkeler/${c.slug}`, c.slug === 'ingiltere' ? 0.9 : 0.7)),
     p('/her-sey-dahil-paketler', 0.8, 'weekly'),
@@ -52,6 +59,7 @@ function allPaths(): SitePath[] {
     p('/kaynaklar', 0.5),
     ...documents.map((d) => p(`/kaynaklar/${d.slug}`, 0.5)),
     ...['/hakkimizda', '/ekibimiz', '/ofislerimiz', '/musteri-yorumlari', '/kariyer', '/iletisim', '/basvuru'].map((x) => p(x, 0.6)),
+    ...localPages.map((l) => p(`/${l.slug}`, 0.7)),
     ...authors.filter((a) => a.ready).map((a) => p(`/ekibimiz/${a.slug}`, 0.5)),
     ...['/site-haritasi', '/kvkk', '/cerez-politikasi'].map((x) => p(x, 0.2, 'yearly')),
     // İndekslenmeyen ama prerender edilen sayfalar

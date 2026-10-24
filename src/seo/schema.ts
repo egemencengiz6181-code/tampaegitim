@@ -7,7 +7,7 @@ export const officeId = (slug: string) => `${site.url}/ofislerimiz#${slug}`
 /** Fiziksel ofisler (İzmir, Aydın): her biri ayrı LocalBusiness. Temsilcilik İzmir ofisiyle aynı adreste. */
 const branchOffices = offices.filter((o) => o.slug === 'izmir' || o.slug === 'aydin')
 
-function localBusinessLd(o: Office) {
+export function localBusinessLd(o: Office) {
   return {
     '@type': ['LocalBusiness', 'EducationalOrganization'],
     '@id': officeId(o.slug),

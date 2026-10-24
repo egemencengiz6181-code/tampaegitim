@@ -16,6 +16,8 @@ import { guidesForProgram, guidesForCountry } from '../data/guides'
 import { deep, countryDeep, type DeepSection } from '../data/deep'
 import { postsForCountry, postsForProgram, formatDate, type Post } from '../data/blog'
 import { Rich } from '../components/Rich'
+import { languageCitiesFor, languageCityPath } from '../data/languageCities/list'
+import { universitiesFor, universityPath } from '../data/universities/list'
 import NotFound from './NotFound'
 import { cardImg } from '../lib/img'
 import { titleCase } from '../lib/text'
@@ -252,6 +254,22 @@ export function ProgramHub({ programKey }: { programKey: ProgramKey }) {
         </section>
       )}
 
+      {showPackages && (
+        <section className="section section--mist" aria-labelledby="sehir-h">
+          <div className="container">
+            <SectionHead id="sehir-h" title="Şehir Şehir Dil Okulları" intro="Okulların yoğunlaştığı semtler, konaklama seçenekleri, yaşam maliyeti ve hafta sonu gezileriyle hazırladığımız şehir rehberleri." />
+            {list.filter((c) => languageCitiesFor(c.slug).length).map((c) => (
+              <div key={c.slug} className="related">
+                <h3 className="h3"><Link to={`/${p.slug}/${c.slug}`}>{c.name} dil okulları</Link></h3>
+                <ul className="chips">
+                  {languageCitiesFor(c.slug).map((ci) => <li key={ci.slug}><Link to={languageCityPath(ci)}>{ci.name} dil okulları</Link></li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       <section className="section">
         <div className="container twocol">
           <div>
@@ -381,8 +399,30 @@ export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
 
           <section id="sehirler" className="dsec">
             <h2>Popüler Şehirler</h2>
-            <CityList country={c} list={blocks.cities} />
+            {programKey === 'dil' && languageCitiesFor(c.slug).length > 0 ? (
+              <ul className="citylist citylist--grid">
+                {languageCitiesFor(c.slug).map((ci) => (
+                  <li key={ci.slug}>
+                    <h3><Link to={languageCityPath(ci)}>{ci.name} dil okulları</Link></h3>
+                    <p>{ci.lead}</p>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <CityList country={c} list={blocks.cities} />
+            )}
           </section>
+
+          {(programKey === 'lisans' || programKey === 'yuksek-lisans') && universitiesFor(c.slug).length > 0 && (
+            <section id="universiteler" className="dsec">
+              <h2>{c.name} Üniversiteleri</h2>
+              <p>Kabul şartları, yaklaşık ücretler, bölümler ve başvuru takvimiyle tek tek incelediğimiz üniversiteler:</p>
+              <ul className="chips">
+                {universitiesFor(c.slug).map((u) => <li key={u.slug}><Link to={universityPath(u)}>{u.name}</Link></li>)}
+              </ul>
+              <p><Link to={`/universiteler/${c.slug}`} className="textlink">Tüm {c.name} üniversiteleri <Icon name="arrow" size={15} /></Link></p>
+            </section>
+          )}
 
           <section id="vize" className="dsec">
             <h2>{blocks.infoTitle}</h2>

@@ -5,6 +5,10 @@ import Home from './pages/Home'
 import { programs } from './data/programs'
 import { services } from './data/services'
 import { redirects } from './data/redirects'
+import { languageCityRouting, universityRouting, glossaryRouting, localSlugs } from './data/routing'
+import { universityLoaders } from './data/universities/load'
+import { glossaryLoaders } from './data/glossary/load'
+import { languageCityLoaders } from './data/languageCities/load'
 
 /**
  * Sayfalar React Router'ın `lazy` mekanizmasıyla ayrı chunk'lar halinde yüklenir.
@@ -32,6 +36,9 @@ const extrasMod = () => import('./pages/Extras')
 const adminMod = () => import('./pages/admin/Admin')
 const germanyMod = () => import('./pages/Germany')
 const czechMod = () => import('./pages/Czech')
+const langCityMod = () => import('./pages/LanguageCity')
+const localMod = () => import('./pages/Local')
+const uniMod = () => import('./pages/University')
 
 const programRoutes: RouteObject[] = programs.flatMap((p) => [
   { path: p.slug, ...page(programsMod, 'ProgramHub', { programKey: p.key }) },
@@ -39,6 +46,40 @@ const programRoutes: RouteObject[] = programs.flatMap((p) => [
 ])
 
 const serviceRoutes: RouteObject[] = services.map((s) => ({ path: s.path.slice(1), ...page(servicesMod, 'ServicePage', { slug: s.slug }) }))
+
+// Şehir bazlı dil okulu sayfaları: her ülke yalnızca kendi içerik dosyasını yükler
+const langCityRoutes: RouteObject[] = Object.entries(languageCityRouting).map(([country, files]) => {
+  return {
+    path: `yurtdisi-dil-okullari/${country}/:city`,
+    lazy: async () => {
+      const [m, ...data] = await Promise.all([langCityMod(), ...files.map((f) => languageCityLoaders[f]())])
+      const C = m.LanguageCityPage
+      return { element: <C country={country} cities={data.flat()} /> }
+    },
+  }
+})
+
+// Üniversite detay sayfaları: her ülke yalnızca kendi içerik dosyasını yükler
+const uniRoutes: RouteObject[] = Object.entries(universityRouting).map(([country, files]) => {
+  return {
+    path: `universiteler/${country}/:slug`,
+    lazy: async () => {
+      const [m, ...data] = await Promise.all([uniMod(), ...files.map((f) => universityLoaders[f]())])
+      const C = m.UniversityPage
+      return { element: <C country={country} unis={data.flat()} /> }
+    },
+  }
+})
+
+// Kavram rehberleri: liste menüde, tam içerik yalnızca rehber sayfasında yüklenir
+const glossaryRoutes: RouteObject[] = Object.entries(glossaryRouting).map(([slug, file]) => ({
+  path: `bilgi-bankasi/${slug}`,
+  lazy: async () => {
+    const [m, list] = await Promise.all([resMod(), glossaryLoaders[file]()])
+    const C = (m as typeof import('./pages/Resources')).GuidePage
+    return { element: <C full={list.find((x) => x.slug === slug)} /> }
+  },
+}))
 
 // 301 ile taşınan adresler (src/data/redirects.ts): istemci tarafında da yeni adrese yönlenir
 const legacyRedirects: RouteObject[] = Object.entries(redirects).map(([from, to]) => ({ path: from.slice(1), element: <Navigate to={to} replace /> }))
@@ -49,6 +90,10 @@ export const routes: RouteObject[] = [
     children: [
       { index: true, element: <Home /> },
       { path: 'yurtdisi-egitim', ...page(programsMod, 'ProgramsOverview') },
+      ...langCityRoutes,
+      { path: 'universiteler', ...page(uniMod, 'UniversitiesHub') },
+      { path: 'universiteler/:country', ...page(uniMod, 'UniversitiesCountry') },
+      ...uniRoutes,
       ...programRoutes,
       { path: 'ulkeler', ...page(programsMod, 'CountriesIndex') },
       { path: 'ulkeler/:slug', ...page(programsMod, 'CountryPage') },
@@ -72,6 +117,7 @@ export const routes: RouteObject[] = [
       { path: 'musteri-yorumlari', ...page(corpMod, 'Reviews') },
       { path: 'kariyer', ...page(corpMod, 'Careers') },
       { path: 'ofislerimiz', ...page(corpMod, 'Offices') },
+      ...localSlugs.map((slug) => ({ path: slug, ...page(localMod, 'LocalPage', { slug }) })),
       { path: 'iletisim', ...page(corpMod, 'Contact') },
       { path: 'basvuru', ...page(corpMod, 'Apply') },
       { path: 'tesekkurler', ...page(corpMod, 'Thanks') },
@@ -79,6 +125,7 @@ export const routes: RouteObject[] = [
       { path: 'cerez-politikasi', ...page(corpMod, 'Legal', { kind: 'cerez' }) },
       ...legacyRedirects,
       { path: 'bilgi-bankasi', ...page(resMod, 'KnowledgeHub') },
+      ...glossaryRoutes,
       { path: 'bilgi-bankasi/:slug', ...page(resMod, 'GuidePage') },
       { path: 'kaynaklar', ...page(resMod, 'DocumentsHub') },
       { path: 'kaynaklar/:slug', ...page(resMod, 'DocumentPage') },
