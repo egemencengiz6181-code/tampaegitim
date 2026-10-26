@@ -23,8 +23,8 @@ export const ukSummer = {
   updated: ukUpdated,
 }
 
-/** İngiltere Üniversite Temsilciliği sayfası. Paket 3'te /ingiltere-universite-temsilciligi açılınca buradan değiştirilecek. */
-export const ukRepresentationPath = '/ofislerimiz#ingiltere-universite-temsilciligi'
+/** İngiltere Üniversite Temsilciliği sayfası (src/pages/UkRepresentation.tsx). */
+export const ukRepresentationPath = '/ingiltere-universite-temsilciligi'
 
 /** UCAS 2027 girişi takvimi (kaynak: ucas.com, kontrol: 20 Ekim 2026) */
 export const ukUcas2027 = {
@@ -196,4 +196,31 @@ export const ukProgramBlocks: Partial<Record<ProgramKey, ProgramBlocks>> = {
       { icon: 'user', title: 'Çalışma hakkı', text: `${ukWork.student} ${ukWork.graduateRoute}` },
     ],
   },
+}
+
+/** /ingiltere-universite-temsilciligi sayfasının içeriği. Ofis adres/telefonu site.ts → offices dizisinden gelir. */
+export const ukRepresentation = {
+  services: [
+    { title: 'Program ve üniversite seçimi', text: 'Not ortalamanıza, İngilizce seviyenize, bütçenize ve hedef bölümünüze göre Foundation, International Year One veya doğrudan lisans yolunu ve üniversiteleri birlikte belirleriz.' },
+    { title: 'UCAS ve doğrudan başvuru', text: 'UCAS hesabı, kişisel beyan (personal statement), referans ve transkriptler; Foundation ve yüksek lisans için üniversiteye doğrudan başvuru dosyası.' },
+    { title: 'Kabul ve koşulların takibi', text: 'Koşullu ve koşulsuz kabul tekliflerini karşılaştırır, IELTS veya not koşullarını tamamlama planı yapar, teklif kabulü ve depozito adımlarını takip ederiz.' },
+    { title: 'CAS ve Student vizesi', text: 'CAS belgesi, finansal yeterlilik, sağlık katkı payı (IHS) ve vize başvurusu; biyometri randevusu İzmir’deki vize başvuru merkezinden alınabilir.' },
+    { title: 'Konaklama ve varış', text: 'Üniversite yurdu veya özel öğrenci yurdu seçimi ve ilk haftaya hazırlık. Londra yurtları için [öğrenci konaklaması](/ogrenci-konaklama) sayfamıza bakabilirsiniz.' },
+    { title: 'Yüksek lisans başvuruları', text: '12 ay süren ders ağırlıklı master programları için motivasyon mektubu, referanslar ve CV. Ayrıntılar: [İngiltere’de yüksek lisans](/yurtdisi-yuksek-lisans/ingiltere).' },
+  ],
+  steps: [
+    { title: 'Ön görüşme', text: 'Ofiste, telefonla veya online; hedef bölümü, notları, İngilizce seviyesini ve bütçeyi konuşuruz.' },
+    { title: 'Yol ve üniversite listesi', text: 'Foundation, International Year One veya doğrudan lisans arasında seçim yapar, üniversite listesini çıkarırız.' },
+    { title: 'Başvuru dosyası', text: 'Kişisel beyan, referans, transkript ve dil belgesiyle UCAS veya doğrudan başvuruyu tamamlarız.' },
+    { title: 'Kabul teklifleri', text: 'Teklifleri karşılaştırır, koşulların tamamlanma takvimini birlikte yönetiriz.' },
+    { title: 'CAS ve vize', text: 'CAS belgesi geldikten sonra Student vizesi dosyasını hazırlar, randevu sürecini takip ederiz.' },
+    { title: 'Varış', text: 'Konaklama, uçuş ve ilk hafta için kontrol listesiyle yola çıkarsınız.' },
+  ],
+  faqs: [
+    { q: 'İngiltere Üniversite Temsilciliği nerede?', a: 'İzmir Karşıyaka’da, Park Yaşam Ofisleri’ndeki merkez ofisimizin hemen yanında. Görüşmeleri ofiste, telefonla veya online yapabiliriz.' },
+    { q: 'İngiltere’de üniversite için YKS gerekli mi?', a: 'Hayır. İngiltere üniversiteleri YKS puanı istemez. Türk lise diplomasıyla başvuranların çoğu bir yıllık Foundation programıyla lisansa geçer; IB veya A-Level sahipleri UCAS üzerinden doğrudan başvurabilir.' },
+    { q: 'Başvurular ne zaman yapılmalı?', a: `2027 girişi için UCAS başvuruları ${ukUcas2027.opens} itibarıyla açıktır. Oxford, Cambridge, tıp, diş hekimliği ve veterinerlik için son tarih ${ukUcas2027.earlyDeadline}, diğer bölümler için eşit değerlendirme son tarihi ${ukUcas2027.equalConsideration} olarak açıklandı. Foundation ve yüksek lisans başvuruları çoğunlukla üniversiteye doğrudan ve daha esnek tarihlerle yapılır.` },
+    { q: 'Student vizesi için ne kadar yaşam gideri gösterilmeli?', a: `${ukMaintenance.from} ve sonrasındaki başvurularda Londra’da aylık ${ukMaintenance.london.toLocaleString('tr-TR')} £, Londra dışında aylık ${ukMaintenance.outside.toLocaleString('tr-TR')} £ (en fazla ${ukMaintenance.months} ay) gösterilmesi gerekir. Buna ek olarak ilk yılın harcı da hesaba katılır.` },
+    { q: 'Okurken ve mezun olduktan sonra çalışabilir miyim?', a: `${ukWork.student} ${ukWork.graduateRoute}` },
+  ],
 }

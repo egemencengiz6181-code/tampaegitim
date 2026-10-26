@@ -37,6 +37,7 @@ const extrasMod = () => import('./pages/Extras')
 const adminMod = () => import('./pages/admin/Admin')
 const germanyMod = () => import('./pages/Germany')
 const czechMod = () => import('./pages/Czech')
+const ukRepMod = () => import('./pages/UkRepresentation')
 const langCityMod = () => import('./pages/LanguageCity')
 const localMod = () => import('./pages/Local')
 const uniMod = () => import('./pages/University')
@@ -132,6 +133,7 @@ export const routes: RouteObject[] = [
       { path: 'musteri-yorumlari', ...page(corpMod, 'Reviews') },
       { path: 'kariyer', ...page(corpMod, 'Careers') },
       { path: 'ofislerimiz', ...page(corpMod, 'Offices') },
+      { path: 'ingiltere-universite-temsilciligi', ...page(ukRepMod, 'UkRepresentationPage') },
       ...localSlugs.map((slug) => ({ path: slug, ...page(localMod, 'LocalPage', { slug }) })),
       { path: 'iletisim', ...page(corpMod, 'Contact') },
       { path: 'basvuru', ...page(corpMod, 'Apply') },

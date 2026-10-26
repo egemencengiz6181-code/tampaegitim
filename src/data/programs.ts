@@ -40,7 +40,7 @@ export const programs: Program[] = [
     promise: 'Tampa Eğitim olarak, bu deneyimi sizin için unutulmaz ve verimli bir hale getirmek için buradayız.',
     intro: [
       'Bir dili en hızlı ve en kalıcı şekilde öğrenmenin yolu, o dilin konuşulduğu ülkede yaşamaktır. Sınıfta öğrendiğinizi markette, metroda, ev arkadaşınızla sohbetinizde hemen kullanırsınız; birkaç hafta içinde düşünme biçiminizin değiştiğini fark edersiniz.',
-      '18 ülkede, İngilizceden Japoncaya kadar farklı dillerde akredite okullarla çalışıyoruz. Seviyenize, bütçenize ve hedefinize göre okul, şehir, konaklama ve program yoğunluğunu birlikte belirliyor; kayıttan vizeye, havalimanı karşılamasından dönüşünüze kadar süreci sizin adınıza yönetiyoruz.',
+      '19 ülkede, İngilizceden Japoncaya kadar farklı dillerde akredite okullarla çalışıyoruz. Seviyenize, bütçenize ve hedefinize göre okul, şehir, konaklama ve program yoğunluğunu birlikte belirliyor; kayıttan vizeye, havalimanı karşılamasından dönüşünüze kadar süreci sizin adınıza yönetiyoruz.',
     ],
     audience: [
       'Kariyerinde İngilizcesini bir üst seviyeye taşımak isteyen profesyoneller',

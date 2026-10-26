@@ -4,6 +4,7 @@ import { Icon } from './Icon'
 import { site } from '../data/site'
 import type { Faq } from '../data/programs'
 import { titleNode } from '../lib/text'
+import { metaOverrides } from '../data/meta'
 
 /* ---------- Button ---------- */
 type BtnProps = {
@@ -86,9 +87,9 @@ export function Seo({ title, description, path = '', image = '/img/brand/logo-fu
   const full = brandTitle(title)
   const url = `${site.url}${path === '/' ? '/' : path}`
   const img = image.startsWith('http') ? image : `${site.url}${image}`
-  const desc = metaDescription(description)
+  const desc = metaDescription(metaOverrides[path] ?? description)
   // SEO_LOG=1 npm run build: elle yazılması gereken (otomatik kısaltılan) açıklamaları listeler
-  if (import.meta.env.SSR && desc !== description.replace(/\s+/g, ' ').trim() && (globalThis as { process?: { env: Record<string, string | undefined> } }).process?.env.SEO_LOG) console.warn(`[meta] ${path}`)
+  if (import.meta.env.SSR && !metaOverrides[path] && desc !== description.replace(/\s+/g, ' ').trim() && (globalThis as { process?: { env: Record<string, string | undefined> } }).process?.env.SEO_LOG) console.warn(`[meta] ${path}`)
   return (
     <>
       <title>{full}</title>

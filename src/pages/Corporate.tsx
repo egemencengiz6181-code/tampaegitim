@@ -1,3 +1,4 @@
+import { ukRepresentationPath } from '../data/uk'
 import { Link, useLocation, useParams } from 'react-router-dom'
 import { Seo, Btn, SectionHead, Stars, FaqList, CheckList } from '../components/ui'
 import { Icon } from '../components/Icon'
@@ -284,6 +285,7 @@ export function Offices() {
                 <h2 className="h3">{o.title}</h2>
                 <p>{o.note}</p>
                 {localPages.some((l) => l.office === o.slug) && <p><Link to={`/${localPages.find((l) => l.office === o.slug)!.slug}`} className="textlink">{o.city} yurt dışı eğitim danışmanlığı</Link></p>}
+                {o.slug === 'ingiltere-universite-temsilciligi' && <p><Link to={ukRepresentationPath} className="textlink">Temsilcilik hizmetleri ve randevu</Link></p>}
                 <p className="officecard__addr"><Icon name="pin" size={18} /> {o.address}</p>
                 {o.phone && <p><a href={o.phoneHref}><Icon name="phone" size={18} /> {o.phone}</a></p>}
                 <a className="textlink" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(o.mapQuery)}`} target="_blank" rel="noopener noreferrer">Yol tarifi alın <Icon name="external" size={15} /></a>

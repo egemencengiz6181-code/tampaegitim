@@ -214,7 +214,7 @@ export const countries: Country[] = [
     ],
     visa: 'Malta bir Schengen ülkesidir. 90 güne kadar programlar Schengen kısa süreli vizesiyle, daha uzun programlar ulusal (D tipi) vize ile yapılır.',
     living: 'St. Julian’s ve Sliema öğrencilerin en yoğun yaşadığı bölgelerdir; yurt, öğrenci evi ve aile yanı konaklama seçenekleri bulunur.',
-    work: 'Uzun dönem programlarda belirli bir süre eğitim aldıktan sonra koşullu olarak yarı zamanlı çalışma izni başvurusu yapılabilir.',
+    work: 'Süresi 90 günü aşan uzun dönem programlarda, Malta’daki ilk üç aylık eğitimin ardından Jobsplus çalışma izniyle haftada 20 saate kadar yarı zamanlı çalışılabilir.',
     programs: ['dil', 'yaz', 'lisans', 'yuksek-lisans', 'work-study'],
     notes: {
       dil: 'Malta dil okullarında haftada 20–30 ders saatlik genel İngilizce, IELTS hazırlık ve 30 yaş üstü programları bulunur. 2–10 haftalık Her Şey Dahil Malta paketimizle konaklama, sigorta ve aktiviteler tek fiyata dahildir.',
@@ -329,7 +329,7 @@ export const countries: Country[] = [
     highlights: [
       { title: 'Grande école’ler', text: 'İşletme ve mühendislikte uluslararası prestije sahip seçkin okullar.' },
       { title: 'Yaratıcı sektörler', text: 'Moda, tasarım, mutfak sanatları ve otelcilikte uzmanlaşmış okullar.' },
-      { title: 'Konut yardımı', text: 'Uygun öğrencilere CAF aracılığıyla konaklama desteği.' },
+      { title: 'Konut yardımı', text: 'CAF konut yardımı (APL), 1 Temmuz 2026’dan itibaren AB dışından gelen öğrencilerde yalnızca sosyal kriterli burs alanlara ve çalışan öğrenciler gibi istisnalara açık.' },
       { title: 'Fransızca', text: 'Diplomasi ve uluslararası kuruluşlarda değerli bir dil.' },
     ],
     visa: 'Uzun dönem eğitimler için Campus France süreci tamamlanır ve ulusal öğrenci vizesi (VLS-TS) alınır.',
@@ -615,7 +615,7 @@ export const countries: Country[] = [
     highlights: [
       { title: 'İngilizce programlar', text: 'Lisans ve yüksek lisansta yaygın İngilizce bölümler.' },
       { title: 'Tıp eğitimi', text: 'Debrecen, Pécs ve Szeged’de uluslararası tıp fakülteleri.' },
-      { title: 'Stipendium Hungaricum', text: 'Devlet bursuyla harç, konaklama ve aylık destek imkânı.' },
+      { title: 'Stipendium Hungaricum', text: 'Türkiye’nin de ortak ülke olduğu devlet bursu: harç, konaklama ve aylık destek. Türk adaylar MEB’in basvuru.meb.gov.tr sistemi üzerinden de başvurur.' },
       { title: 'Ekonomik yaşam', text: 'Batı Avrupa’ya göre çok daha uygun yaşam giderleri.' },
     ],
     visa: 'Uzun dönem eğitim için oturum izni amaçlı öğrenci vizesi başvurusu yapılır.',
