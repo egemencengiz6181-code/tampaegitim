@@ -144,6 +144,14 @@ export function Header() {
                       <li key={c.to}><Link to={c.to}><span className="code">{c.code}</span>{c.label}</Link></li>
                     ))}
                   </ul>
+                  {prog.links.length > 0 && (
+                    <div className="mega__kb">
+                      <p className="mega__h">Fiyatlar ve öne çıkanlar</p>
+                      <ul>
+                        {prog.links.map((x) => <li key={x.to}><Link to={x.to}>{x.label}</Link></li>)}
+                      </ul>
+                    </div>
+                  )}
                   {prog.guides.length > 0 && (
                     <div className="mega__kb">
                       <p className="mega__h">Bilgi bankası</p>
@@ -282,7 +290,14 @@ function MobileDrawer({ open, onClose }: { open: boolean; onClose: () => void })
           <details>
             <summary>Programlar <Icon name="chevronDown" size={18} /></summary>
             <ul>
-              {programMenu.map((p) => <li key={p.key}><NavLink to={p.to}>{p.label}</NavLink></li>)}
+              {programMenu.map((p) => (
+                <li key={p.key}>
+                  <NavLink to={p.to}>{p.label}</NavLink>
+                  {p.links.length > 0 && (
+                    <ul className="drawer__sub">{p.links.map((x) => <li key={x.to}><NavLink to={x.to}>{x.label}</NavLink></li>)}</ul>
+                  )}
+                </li>
+              ))}
               {programExtras.map((x) => <li key={x.to}><NavLink to={x.to}>{x.label}</NavLink></li>)}
             </ul>
           </details>

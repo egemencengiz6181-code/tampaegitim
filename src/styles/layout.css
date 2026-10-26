@@ -499,6 +499,16 @@
   text-decoration: none;
   color: var(--ink-2);
 }
+.drawer__nav .drawer__sub {
+  padding: 0 0 0.35rem 0.9rem;
+  margin-left: 0.15rem;
+  border-left: 2px solid var(--line-2);
+}
+.drawer__sub li a {
+  padding: 0.4rem 0;
+  font-size: var(--fs-sm);
+  color: var(--ink-3);
+}
 .drawer__chips {
   display: flex;
   flex-wrap: wrap;

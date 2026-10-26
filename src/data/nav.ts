@@ -7,6 +7,18 @@ import { packages } from './packages'
 
 export type NavLink = { label: string; to: string; note?: string }
 
+/** Programın altında gösterilen ilgili sayfalar (fiyat listeleri, ülke özel sayfaları). */
+const programLinks: Partial<Record<string, NavLink[]>> = {
+  dil: [
+    { label: 'İngiltere dil okulları fiyat listesi', to: '/ingiltere-dil-okullari-fiyat-listesi', note: 'Şehirlere göre' },
+  ],
+  lisans: [
+    { label: 'Üniversite fiyatları', to: '/fiyatlar', note: '15 ülkede eğitim ve yaşam maliyeti' },
+    { label: 'Almanya’daki özel üniversiteler', to: '/almanyadaki-ozel-universiteler', note: 'YKS’siz, İngilizce eğitim' },
+    { label: 'Çekya üniversiteleri', to: '/cekya-universiteleri', note: 'Çekçe ücretsiz, İngilizce uygun ücretli' },
+  ],
+}
+
 export const programMenu = programs.map((p) => ({
   key: p.key,
   label: p.name,
@@ -16,6 +28,7 @@ export const programMenu = programs.map((p) => ({
   image: p.image,
   countries: countriesFor(p.key).map((c) => ({ label: p.countryTitle(c), to: `/${p.slug}/${c.slug}`, code: c.code })),
   guides: guidesForProgram(p.key).slice(0, 5).map((g) => ({ label: g.title, to: `/bilgi-bankasi/${g.slug}` })),
+  links: programLinks[p.key] ?? [],
 }))
 
 export const regions = ['Avrupa', 'Kuzey Amerika', 'Okyanusya', 'Asya & Orta Doğu', 'Latin Amerika'] as const
@@ -29,10 +42,6 @@ export const countryMenu = regions.map((r) => ({
 export const programExtras: NavLink[] = [
   { label: 'Online eğitim', to: '/online-egitim', note: 'Kanada online lise, İngiltere online lisans ve MBA' },
   { label: 'Yurt dışındaki üniversiteler', to: '/universiteler', note: 'Kabul şartları, ücretler, bölümler' },
-  { label: 'Üniversite fiyatları', to: '/fiyatlar', note: '15 ülkede eğitim ve yaşam maliyeti' },
-  { label: 'Almanya’daki özel üniversiteler', to: '/almanyadaki-ozel-universiteler', note: 'YKS’siz, İngilizce eğitim' },
-  { label: 'Çekya üniversiteleri', to: '/cekya-universiteleri', note: 'Çekçe ücretsiz, İngilizce uygun ücretli' },
-  { label: 'İngiltere dil okulları fiyat listesi', to: '/ingiltere-dil-okullari-fiyat-listesi', note: 'Şehirlere göre' },
   { label: 'Öğrenci konaklaması', to: '/ogrenci-konaklama', note: 'Londra yurtları' },
 ]
 
