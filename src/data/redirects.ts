@@ -11,4 +11,16 @@ export const redirects: Record<string, string> = {
   '/ornek-banka-mektubu': '/kaynaklar/ornek-banka-mektubu',
   '/ornek-sponsor-mektubu': '/kaynaklar/ornek-sponsor-mektubu',
   '/ornek-taahhutname': '/kaynaklar/ornek-taahhutname',
+  // Paket 4 (2026-10-26): ince blog yazıları aynı konudaki güçlü sayfalarla birleştirildi
+  '/blog/amerika-yaz-okulu': '/yurtdisi-yaz-okullari/amerika',
+  '/blog/dubai-dil-okulu': '/yurtdisi-dil-okullari/dubai',
+  '/blog/malta-dil-okulu-rehberi': '/yurtdisi-dil-okullari/malta',
+  '/blog/brighton-dil-okulu': '/yurtdisi-dil-okullari/ingiltere/brighton-dil-okullari',
+  '/blog/polonyada-universite-okumak': '/lisans-programlari/polonya',
+  '/blog/almanyada-ucretsiz-universite': '/lisans-programlari/almanya',
+  '/blog/ingilterede-lise-egitimi': '/yurtdisi-lise-egitimi/ingiltere',
+  '/blog/irlanda-work-and-study-rehberi': '/work-and-study/irlanda',
+  '/blog/kanada-dil-okulu-ve-co-op': '/work-and-study/kanada',
+  '/blog/ingiltere-yaz-kamplari-ve-gencler-icin-firsatlar': '/blog/ingiltere-yaz-okulu-rehberi',
+  '/blog/cocuklar-icin-ingiltere-yaz-kampi': '/blog/ingiltere-yaz-okulu-rehberi',
 }

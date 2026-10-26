@@ -11,6 +11,18 @@ Yaz okulu, ilk yurt dışı deneyimi için en güvenli başlangıçlardan biridi
 - **15–17 yaş:** Daha fazla bağımsızlık; şehir merkezlerinde kampüsler, akademik İngilizce, liderlik ve sınav hazırlık seçenekleri.
 - **18 yaş ve üzeri:** Yaz okulu yerine yetişkin [dil okulu programları](/yurtdisi-dil-okullari/ingiltere) veya [Her Şey Dahil Londra paketi](/her-sey-dahil-paketler/londra) tercih edilir.
 
+## Küçük yaştaki çocuklar için (7–12 yaş)
+
+Bu yaş grubunda en önemli kriter, çocuğun aileden ayrı kalmaya hazır olup olmadığıdır. Daha önce izci kampına veya yatılı bir okul gezisine katılmış çocuklar genellikle daha kolay uyum sağlar. Küçük yaş programlarını farklı kılanlar:
+
+- Daha yüksek gözetmen oranı
+- Kapalı ve geniş kampüsler
+- Daha kısa, oyun temelli dersler
+- Akşamları erken saatte biten programlar
+- Yaş grubuna özel yatakhaneler ve “house parent” sistemi
+
+Veli olarak programı çocuğunuzla birlikte inceleyin, telefon kullanım kurallarını önceden konuşun, valizini birlikte toplayın ve ilk birkaç gün özlem duymanın doğal olduğunu anlatın. Küçük yaştaki öğrenciler havayollarının refakatsiz çocuk hizmetiyle veya uygun dönemlerde [refakatli grup uçuşlarımızla](/bilgi-bankasi/grup-yaz-okulu) seyahat edebilir.
+
 ## Bir günde neler var?
 
 Tipik bir İngiltere yaz okulu gününde sabah 3 saat İngilizce dersi yapılır. Öğrenciler ilk gün yapılan seviye tespit sınavına göre gruplara ayrılır. Öğleden sonra spor, drama, sanat veya kodlama gibi atölyeler; akşamları ise disko, yetenek gecesi, quiz ve film geceleri düzenlenir.

@@ -20,7 +20,6 @@ export const metaOverrides: Record<string, string> = {
   '/blog/almanyada-yazilim-yuksek-lisansi-mediadesign': 'Almanya’da yazılım yüksek lisansı: Mediadesign University of Applied Sciences programı, uygulamalı bilimler üniversiteleri, mezuniyet sonrası ve başvuru.',
   '/blog/ielts-kac-puan-gerekir': 'IELTS kaç puan gerekir? Lisans için genellikle 6.0–6.5, yüksek lisans için 6.5–7.0 istenir; alt bölüm şartlarını ve foundation skorlarını öğrenin.',
   '/blog/ingilizce-ogrenme-suresi-kac-ay': 'İngilizce öğrenme süresi kaç ay? Yoğun programda bir seviye 8–12 hafta sürer, A1’den B2’ye 6–9 ayda ulaşılabilir; süreyi kısaltan faktörleri okuyun.',
-  '/blog/malta-dil-okulu-rehberi': 'Malta dil okulu rehberi: yaklaşık 2,5 saatlik uçuş, güneşli iklim ve uygun fiyatlar; programlar, bölge seçimi, vize ve Her Şey Dahil Malta paketi.',
   '/blog/work-and-study-yas-siniri-var-mi': 'Work and study yaş sınırı var mı? Çoğu ülkede resmi üst sınır yok, alt sınır genellikle 18; vizede yaştan çok başvurunun tutarlılığı belirleyicidir.',
   '/blog/yurtdisi-egitim-danismanligi-nasil-secilir': 'Yurt dışı eğitim danışmanlığı firması seçerken tecrübe, şeffaf ücretler, gerçek referanslar ve fiziki ofise bakın; ilk görüşmede sorulacak sorular.',
   '/ekibimiz/alp': 'Alp, Tampa Yurtdışı Eğitim’de eğitim danışmanı; İngiltere yaz okulları ve İngiltere’de üniversite konularında uzman. Ücretsiz ön görüşme planlayın.',

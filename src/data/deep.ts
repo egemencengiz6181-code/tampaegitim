@@ -96,7 +96,7 @@ export const deep: Record<string, Deep> = {
             ['18 yaş ve üzeri', 'Yetişkin dil okulları / Her Şey Dahil Londra paketi', 'Esnek süre, şehir hayatı'],
           ],
         },
-        p: ['Küçük yaş grubu için [çocuklar için İngiltere yaz kampı](/blog/cocuklar-icin-ingiltere-yaz-kampi), 13–17 yaş için [gençlere yönelik İngiltere yaz programları](/blog/ingiltere-yaz-kamplari-ve-gencler-icin-firsatlar) yazılarımıza bakın. 18 yaş üstü katılımcılar için [İngiltere dil okulları](/yurtdisi-dil-okullari/ingiltere) ve [Her Şey Dahil Londra paketimiz](/her-sey-dahil-paketler/londra) daha uygundur.'],
+        p: ['Yaş gruplarına göre program farkları ve küçük yaştaki çocuklar için veli hazırlığı [İngiltere yaz okulu rehberimizde](/blog/ingiltere-yaz-okulu-rehberi). 18 yaş üstü katılımcılar için [İngiltere dil okulları](/yurtdisi-dil-okullari/ingiltere) ve [Her Şey Dahil Londra paketimiz](/her-sey-dahil-paketler/londra) daha uygundur.'],
       },
       {
         h: 'Şehre göre seçim',
@@ -302,8 +302,9 @@ export const deep: Record<string, Deep> = {
     description: 'İngiltere’de lise eğitimi: yatılı okullar, GCSE ve A-Level programları, giriş sınavları, vasi zorunluluğu, öğrenci vizesi ve üniversiteye geçiş.',
     h1: 'İngiltere’de Lise Eğitimi',
     sections: [
-      { h: 'GCSE ve A-Level', p: ['14–16 yaşta GCSE, 16–18 yaşta A-Level programı takip edilir. A-Level sonuçlarıyla İngiltere’deki üniversitelere doğrudan başvurulabilir. Ayrıntılar: [İngiltere’de lise eğitimi](/blog/ingilterede-lise-egitimi).'] },
+      { h: 'GCSE ve A-Level', p: ['14–16 yaşta GCSE, 16–18 yaşta A-Level programı takip edilir. A-Level sonuçlarıyla İngiltere’deki üniversitelere doğrudan başvurulabilir. Program farkları için [IB, A-Level ve AP](/bilgi-bankasi/ib-a-level-ap) rehberimize bakın.'] },
       { h: 'Yatılı okul deneyimi', p: ['İngiliz yatılı okulları disiplinli akademik programları ve geniş spor, sanat ve kulüp imkânlarıyla bilinir. [Boarding school nedir?](/bilgi-bankasi/boarding-school-nedir)'] },
+      { h: 'Başvuru ve giriş', p: ['Popüler okullar için başvurunun 9–12 ay önceden yapılması önerilir. Çoğu okul son iki yılın karnelerini, okulun giriş sınavını veya İngilizce seviye testini, çoğunlukla online yapılan bir mülakatı ve öğretmen referanslarını ister.', '18 yaş altı uluslararası öğrencilerin İngiltere’de, tatillerde ve acil durumlarda sorumluluğu üstlenen bir vasisi (guardian) olması genellikle zorunludur.'] },
       { h: 'Yaz okuluyla başlamak', p: ['Yatılı okul öncesinde kampüs hayatını tanımak için [İngiltere yaz okulları](/yurtdisi-yaz-okullari/ingiltere) iyi bir başlangıçtır.'] },
     ],
   },

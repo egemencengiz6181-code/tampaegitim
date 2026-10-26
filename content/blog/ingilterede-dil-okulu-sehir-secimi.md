@@ -8,7 +8,7 @@ Kültür, kariyer ve sosyal hayat açısından en zengin seçenek. Müzeler, tiy
 
 ## Brighton
 
-Londra’ya trenle yaklaşık bir saat mesafede, genç ve yaratıcı bir sahil şehri. Canlı sosyal hayatı ve uygun boyutuyla dil öğrencilerinin gözdesi. Ayrıntılar: [Brighton’da dil okulu](/blog/brighton-dil-okulu).
+Londra’ya trenle yaklaşık bir saat mesafede, genç ve yaratıcı bir sahil şehri. Canlı sosyal hayatı ve uygun boyutuyla dil öğrencilerinin gözdesi. Ayrıntılar: [Brighton dil okulları](/yurtdisi-dil-okullari/ingiltere/brighton-dil-okullari).
 
 ## Oxford ve Cambridge
 

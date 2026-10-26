@@ -38,6 +38,61 @@
       "source": "/ornek-taahhutname",
       "destination": "/kaynaklar/ornek-taahhutname",
       "permanent": true
+    },
+    {
+      "source": "/blog/amerika-yaz-okulu",
+      "destination": "/yurtdisi-yaz-okullari/amerika",
+      "permanent": true
+    },
+    {
+      "source": "/blog/dubai-dil-okulu",
+      "destination": "/yurtdisi-dil-okullari/dubai",
+      "permanent": true
+    },
+    {
+      "source": "/blog/malta-dil-okulu-rehberi",
+      "destination": "/yurtdisi-dil-okullari/malta",
+      "permanent": true
+    },
+    {
+      "source": "/blog/brighton-dil-okulu",
+      "destination": "/yurtdisi-dil-okullari/ingiltere/brighton-dil-okullari",
+      "permanent": true
+    },
+    {
+      "source": "/blog/polonyada-universite-okumak",
+      "destination": "/lisans-programlari/polonya",
+      "permanent": true
+    },
+    {
+      "source": "/blog/almanyada-ucretsiz-universite",
+      "destination": "/lisans-programlari/almanya",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ingilterede-lise-egitimi",
+      "destination": "/yurtdisi-lise-egitimi/ingiltere",
+      "permanent": true
+    },
+    {
+      "source": "/blog/irlanda-work-and-study-rehberi",
+      "destination": "/work-and-study/irlanda",
+      "permanent": true
+    },
+    {
+      "source": "/blog/kanada-dil-okulu-ve-co-op",
+      "destination": "/work-and-study/kanada",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ingiltere-yaz-kamplari-ve-gencler-icin-firsatlar",
+      "destination": "/blog/ingiltere-yaz-okulu-rehberi",
+      "permanent": true
+    },
+    {
+      "source": "/blog/cocuklar-icin-ingiltere-yaz-kampi",
+      "destination": "/blog/ingiltere-yaz-okulu-rehberi",
+      "permanent": true
     }
   ],
   "rewrites": [

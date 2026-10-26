@@ -238,7 +238,7 @@ export const countries: Country[] = [
     intro:
       'Almanya; devlet üniversitelerinin büyük bölümünde harç alınmaması, mühendislik ve teknoloji alanındaki gücü ve mezunlara tanıdığı iş arama izniyle Türk öğrencilerin en çok tercih ettiği ülkelerden biri. Almanca öğrenmek isteyenler için dil okulları, mesleki eğitim (Ausbildung) arayanlar için ise yönlendirme programlarımız mevcuttur.',
     highlights: [
-      { title: 'Harçsız eğitim', text: 'Devlet üniversitelerinin çoğunda yalnızca dönemlik katkı payı ödenir.' },
+      { title: 'Harçsız eğitim', text: 'Devlet üniversitelerinin çoğunda yalnızca dönemlik katkı payı ödenir; Baden-Württemberg ise AB dışı öğrencilerden dönemlik 1.500 € harç alır.' },
       { title: 'İngilizce programlar', text: 'Özellikle yüksek lisansta yüzlerce İngilizce program seçeneği.' },
       { title: 'Güçlü iş piyasası', text: 'Mühendislik, yazılım ve sağlık alanlarında nitelikli iş gücü talebi.' },
       { title: 'Ausbildung yolu', text: 'Meslek eğitimiyle ücretli çalışarak Almanya’da kariyer kurma imkânı.' },

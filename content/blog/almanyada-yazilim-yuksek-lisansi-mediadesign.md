@@ -16,4 +16,4 @@ Almanya, mezunlara iş aramak için oturum izni uzatması imkânı tanır. Yazı
 
 ## Başvuru süreci
 
-Lisans diploması ve transkript, İngilizce yeterlilik, motivasyon mektubu ve CV başvurunun temelini oluşturur. Programlar: [Almanya’da yüksek lisans](/yurtdisi-yuksek-lisans/almanya). İlgili: [Almanya’da ücretsiz üniversite](/blog/almanyada-ucretsiz-universite).
+Lisans diploması ve transkript, İngilizce yeterlilik, motivasyon mektubu ve CV başvurunun temelini oluşturur. Programlar: [Almanya’da yüksek lisans](/yurtdisi-yuksek-lisans/almanya). İlgili: [Almanya’da üniversite](/lisans-programlari/almanya).
