@@ -1,17 +1,19 @@
 {
   "slug": "ingiltere-mezuniyet-sonrasi-calisma",
-  "title": "İngiltere’de Mezuniyet Sonrası Çalışma: Graduate Route Hakkında",
-  "metaTitle": "",
-  "description": "İngiltere’de mezuniyet sonrası çalışma: Graduate Route ile lisans ve yüksek lisans mezunlarına tanınan çalışma izni, süre, şartlar ve başvuru adımları.",
+  "title": "İngiltere Graduate Route 2027: 18 Ay Çalışma, Ücret ve Skilled Worker",
+  "metaTitle": "İngiltere Graduate Route 2027 | Süre, Ücret, Şartlar",
+  "description": "İngiltere Graduate Route: 1 Ocak 2027’den itibaren 18 ay (doktora 3 yıl), £937 başvuru ücreti, IHS, başvuru zamanı ve Skilled Worker vizesine geçiş.",
   "category": "Yüksek Lisans",
   "date": "2026-05-22",
-  "updated": "2026-05-22",
+  "updated": "2026-10-28",
   "image": "/img/misc/career.jpg",
-  "imageAlt": "İngiltere’de Mezuniyet Sonrası Çalışma: Graduate Route Hakkında",
+  "imageAlt": "İngiltere’de mezuniyet sonrası çalışan genç profesyoneller",
   "focusKeyword": "ingiltere graduate route",
   "keywords": [
     "ingiltere graduate route",
-    "ingiltere mezuniyet sonrası çalışma izni"
+    "ingiltere mezuniyet sonrası çalışma izni",
+    "graduate visa 18 ay",
+    "ingiltere skilled worker maaş eşiği"
   ],
   "countries": [
     "ingiltere"
@@ -20,8 +22,25 @@
     "yuksek-lisans",
     "lisans"
   ],
-  "faqs": [],
+  "faqs": [
+    {
+      "q": "Graduate Route kaç yıl?",
+      "a": "31 Aralık 2026’ya kadar yapılan başvurularda lisans ve yüksek lisans mezunlarına 2 yıl, 1 Ocak 2027 ve sonrasındaki başvurularda 18 ay verilir. Doktora mezunlarında süre 3 yıldır."
+    },
+    {
+      "q": "Graduate Route ücreti ne kadar?",
+      "a": "Başvuru ücreti £937’dir. Buna ek olarak yıllık £1.035 sağlık katkı payı (IHS) ödenir; 18 aylık vize için IHS toplamı £1.552,50’dir."
+    },
+    {
+      "q": "Graduate Route’a ne zaman başvurulur?",
+      "a": "Üniversite programı tamamladığınızı bildirdikten sonra, Student vizeniz bitmeden İngiltere içinden başvurulur. Diploma törenini beklemeniz gerekmez."
+    },
+    {
+      "q": "Graduate Route’tan Skilled Worker vizesine geçmek için maaş ne olmalı?",
+      "a": "Genel eşik yıllık £41.700’dür. Graduate vizesinden geçen yeni başlayanlar için eşik £33.400’dür ve bu indirimli eşik Graduate süresi dahil toplam 4 yıl kullanılabilir."
+    }
+  ],
   "draft": false,
-  "readMin": 1,
-  "words": 107
+  "readMin": 5,
+  "words": 821
 }

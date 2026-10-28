@@ -1,17 +1,18 @@
 {
   "slug": "ingilterede-universite-okumak",
-  "title": "İngiltere’de Üniversite Okumak: UCAS, Foundation ve Kabul Şartları",
-  "metaTitle": "İngiltere’de Üniversite Okumak | UCAS, Foundation, Şartlar",
-  "description": "İngiltere’de üniversite okumak: 3 yıllık lisans, UCAS başvurusu, Türk lise mezunları için Foundation yılı, IELTS şartları, ücretler ve başvuru takvimi.",
+  "title": "İngiltere’de Üniversite Okumak: Adım Adım Karar Rehberi 2027",
+  "metaTitle": "İngiltere’de Üniversite Okumak 2027 | Adım Adım Rehber",
+  "description": "İngiltere’de üniversite okumak için adım adım rehber: Türk lise diplomasıyla hangi yol, foundation mı doğrudan kabul mü, UCAS takvimi, bütçe ve vize.",
   "category": "Üniversite",
   "date": "2026-08-30",
-  "updated": "2026-08-30",
+  "updated": "2026-10-28",
   "image": "/img/misc/bachelor.jpg",
-  "imageAlt": "İngiltere’de Üniversite Okumak: UCAS, Foundation ve Kabul Şartları",
+  "imageAlt": "İngiltere’de üniversite okumak isteyen öğrenci için karar rehberi",
   "focusKeyword": "ingilterede üniversite okumak",
   "keywords": [
     "ingilterede üniversite okumak",
     "ingiltere üniversite başvuru",
+    "türk lise diploması ingiltere",
     "ucas başvurusu",
     "ingiltere foundation"
   ],
@@ -21,8 +22,25 @@
   "programs": [
     "lisans"
   ],
-  "faqs": [],
+  "faqs": [
+    {
+      "q": "Türk lise diplomasıyla İngiltere’de doğrudan üniversiteye girilebilir mi?",
+      "a": "Bazı üniversiteler onayladıkları okulların mezunlarını yüksek ortalamayla doğrudan kabul eder; örneğin Liverpool onaylı okullardan yaklaşık %75 ortalama ister. Bu şartları karşılamayan öğrenciler çoğunlukla bir yıllık foundation programıyla lisansa geçer."
+    },
+    {
+      "q": "İngiltere’de üniversite için YKS gerekir mi?",
+      "a": "Hayır. İngiliz üniversiteleri YKS puanı istemez; lise notlarınızı, İngilizce seviyenizi, kişisel beyanınızı ve referansınızı değerlendirir."
+    },
+    {
+      "q": "2027 girişi için UCAS son tarihi ne zaman?",
+      "a": "Oxford, Cambridge, tıp, diş hekimliği ve veterinerlik için son tarih 15 Ekim 2026’ydı. Diğer bölümler için eşit değerlendirme son tarihi 13 Ocak 2027, 18.00 (İngiltere saati)."
+    },
+    {
+      "q": "İngiltere’de lisans kaç yıl sürer?",
+      "a": "İngiltere ve Galler’de lisans genellikle 3 yıl, İskoçya’da 4 yıl sürer. Foundation ile başlayanlar için toplam süre 4 yıldır."
+    }
+  ],
   "draft": false,
-  "readMin": 1,
-  "words": 171
+  "readMin": 5,
+  "words": 854
 }

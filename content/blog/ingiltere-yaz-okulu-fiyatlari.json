@@ -1,16 +1,17 @@
 {
   "slug": "ingiltere-yaz-okulu-fiyatlari",
-  "title": "İngiltere Yaz Okulu Fiyatları Neye Göre Belirlenir?",
-  "metaTitle": "İngiltere Yaz Okulu Fiyatları 2027: Neye Göre Belirlenir?",
-  "description": "İngiltere yaz okulu fiyatlarını belirleyenler: kampüs tipi, şehir, ders yoğunluğu, geziler ve özel ilgi programları. Fiyata dahil olanlar ve ek giderler.",
+  "title": "İngiltere Yaz Okulu Fiyatları 2027: Fiyatı Belirleyen Kalemler ve Bütçe",
+  "metaTitle": "İngiltere Yaz Okulu Fiyatları 2027: Kalemler ve Bütçe",
+  "description": "İngiltere yaz okulu fiyatları 2027: kampüs, şehir, konaklama, süre ve dahil olanlar fiyatı nasıl etkiler? Uçak, vize, sigorta ve harçlıkla toplam bütçe.",
   "category": "Yaz Okulu",
   "date": "2026-09-24",
-  "updated": "2026-09-24",
+  "updated": "2026-10-28",
   "image": "/img/misc/summer.jpg",
-  "imageAlt": "İngiltere Yaz Okulu Fiyatları Neye Göre Belirlenir?",
+  "imageAlt": "İngiltere yaz okulu fiyatları ve bütçe planlaması",
   "focusKeyword": "ingiltere yaz okulu fiyatları",
   "keywords": [
     "ingiltere yaz okulu fiyatları",
+    "ingiltere yaz okulu fiyatları 2027",
     "yaz okulu ücretleri",
     "ingiltere yaz kampı fiyat"
   ],
@@ -20,8 +21,25 @@
   "programs": [
     "yaz"
   ],
-  "faqs": [],
+  "faqs": [
+    {
+      "q": "İngiltere yaz okulu fiyatına neler dahildir?",
+      "a": "Standart programlarda genellikle İngilizce dersleri, tam pansiyon kampüs konaklaması, aktivite ve akşam programları, programdaki geziler, 7/24 gözetim ve seviye sertifikası dahildir."
+    },
+    {
+      "q": "Yaz okulu fiyatına dahil olmayan giderler nelerdir?",
+      "a": "Uçak bileti, vize ücreti, sigorta ve harçlık genellikle ayrıca hesaplanır. Havalimanı transferi, oda tipi farkı ve özel ilgi programları da okula göre ek ücretli olabilir."
+    },
+    {
+      "q": "İngiltere yaz okulu fiyatları neden okuldan okula değişir?",
+      "a": "Fiyatı kampüs tipi, şehir, konaklama, süre, ders yoğunluğu, gezi sayısı ve özel ilgi programları belirler. Bu yüzden doğru fiyat, çocuğunuza göre hazırlanan yazılı teklifle verilir."
+    },
+    {
+      "q": "Yaz okulu ödemesi hangi para biriminde yapılır?",
+      "a": "İngiltere'deki okullar fiyatlarını sterlin olarak belirler. Çoğu okulda kayıtta ön ödeme alınır, kalan tutar program başlamadan önce tamamlanır."
+    }
+  ],
   "draft": false,
-  "readMin": 1,
-  "words": 285
+  "readMin": 5,
+  "words": 859
 }

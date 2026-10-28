@@ -48,7 +48,7 @@ export function About() {
             {offices.map((o) => (
               <figure key={o.slug}>
                 <img src={o.image} alt={`${o.city} ofisi`} loading="lazy" width="480" height="340" />
-                <figcaption><strong>{o.city}</strong><span>{o.note}</span></figcaption>
+                <figcaption><strong>{o.city}</strong><span>{o.note}</span>{o.localPage && <Link to={o.localPage.to} className="textlink">{o.localPage.label}</Link>}</figcaption>
               </figure>
             ))}
           </div>

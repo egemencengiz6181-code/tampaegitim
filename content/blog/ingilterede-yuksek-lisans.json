@@ -1,18 +1,20 @@
 {
   "slug": "ingilterede-yuksek-lisans",
-  "title": "İngiltere’de 1 Yıllık Yüksek Lisans: Avantajlar, Şartlar ve Başvuru",
-  "metaTitle": "İngiltere’de Yüksek Lisans | 1 Yıllık Master Rehberi",
-  "description": "İngiltere’de yüksek lisans: 12 ay süren master programları, kabul şartları, IELTS, motivasyon mektubu, gerekli belgeler ve doğru program seçimi.",
+  "title": "İngiltere’de Yüksek Lisans: 1 Yıllık Master, Şartlar ve Burslar",
+  "metaTitle": "İngiltere’de Yüksek Lisans 2027 | Şartlar, GPA ve Burslar",
+  "description": "İngiltere’de yüksek lisans: 12 aylık MSc ve MA, Türk diplomasıyla 2:1 ve 2:2 karşılığı GPA, IELTS, başvuru dönemleri, Chevening ve Graduate Route.",
   "category": "Yüksek Lisans",
   "date": "2026-08-18",
-  "updated": "2026-08-18",
+  "updated": "2026-10-28",
   "image": "/img/misc/masters.jpg",
-  "imageAlt": "İngiltere’de 1 Yıllık Yüksek Lisans: Avantajlar, Şartlar ve Başvuru",
+  "imageAlt": "İngiltere’de bir yıllık yüksek lisans programına başlayan öğrenciler",
   "focusKeyword": "ingilterede yüksek lisans",
   "keywords": [
     "ingilterede yüksek lisans",
     "ingiltere master",
-    "ingiltere 1 yıllık yüksek lisans"
+    "ingiltere 1 yıllık yüksek lisans",
+    "ingiltere yüksek lisans şartları",
+    "chevening bursu"
   ],
   "countries": [
     "ingiltere"
@@ -20,8 +22,25 @@
   "programs": [
     "yuksek-lisans"
   ],
-  "faqs": [],
+  "faqs": [
+    {
+      "q": "İngiltere’de yüksek lisans için kaç ortalama gerekir?",
+      "a": "Programların çoğu 2:1 veya 2:2 ister. Warwick’in Türkiye sayfasına göre 4’lük sistemde 2:1 yaklaşık 2.80–3.29, 2:2 yaklaşık 2.50–2.79’a karşılık gelir; Manchester genel asgari şart olarak 2.8 gösterir."
+    },
+    {
+      "q": "İngiltere’de yüksek lisans kaç yıl sürer?",
+      "a": "Ders ağırlıklı (taught) MSc ve MA programlarının çoğu 12 ay sürer. Araştırma ağırlıklı MRes ve MPhil 1–2 yıl, doktora genellikle 3–4 yıldır."
+    },
+    {
+      "q": "Türk vatandaşları Chevening bursuna başvurabilir mi?",
+      "a": "Evet. Türkiye Chevening’e uygun ülkeler arasında. 2027/2028 dönemi başvuruları 6 Ekim 2026’da kapandı; dönemler genellikle ağustosta açılır."
+    },
+    {
+      "q": "Yüksek lisans öğrencisi eşini İngiltere’ye götürebilir mi?",
+      "a": "Ders ağırlıklı yüksek lisans öğrencileri 2024’ten bu yana bağımlı getiremez. Bu hak doktora ve araştırma ağırlıklı yüksek lisans öğrencileri ile devlet burslu öğrencilerle sınırlıdır."
+    }
+  ],
   "draft": false,
-  "readMin": 1,
-  "words": 145
+  "readMin": 5,
+  "words": 848
 }

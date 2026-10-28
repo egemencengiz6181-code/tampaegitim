@@ -1,18 +1,21 @@
 {
   "slug": "ingilterede-ogrenci-yasam-maliyeti",
-  "title": "İngiltere’de Öğrenci Olarak Yaşamak: Konaklama ve Günlük Giderler",
-  "metaTitle": "İngiltere’de Öğrenci Yaşam Maliyeti ve Konaklama",
-  "description": "İngiltere’de öğrenci yaşam maliyeti: Londra ve diğer şehirler arasındaki fark, konaklama türleri, ulaşım, yemek ve bütçe planlarken dikkat edilecekler.",
+  "title": "İngiltere’de Öğrenci Yaşam Maliyeti: Kira, Ulaşım ve Aylık Bütçe",
+  "metaTitle": "İngiltere’de Öğrenci Yaşam Maliyeti: Kira, Ulaşım, Market",
+  "description": "İngiltere’de yaşam maliyeti öğrenci bütçesinde: yurt, aile yanı ve paylaşımlı ev kirası, Oyster ve Railcard, market, telefon ve Londra ile diğer şehirler.",
   "category": "Yaşam",
   "date": "2026-06-28",
-  "updated": "2026-06-28",
+  "updated": "2026-10-28",
   "image": "/img/misc/uk-office.jpg",
-  "imageAlt": "İngiltere’de Öğrenci Olarak Yaşamak: Konaklama ve Günlük Giderler",
-  "focusKeyword": "ingiltere yaşam maliyeti öğrenci",
+  "imageAlt": "İngiltere’de öğrenci yaşam maliyeti ve konaklama seçenekleri",
+  "focusKeyword": "ingiltere'de yaşam maliyeti öğrenci",
   "keywords": [
-    "ingiltere yaşam maliyeti öğrenci",
+    "ingiltere'de yaşam maliyeti öğrenci",
+    "ingiltere öğrenci yaşam maliyeti",
+    "londra öğrenci yaşam maliyeti",
     "londra öğrenci yurdu",
-    "ingiltere konaklama"
+    "ingiltere aile yanı konaklama fiyatları",
+    "student oyster"
   ],
   "countries": [
     "ingiltere"
@@ -22,8 +25,25 @@
     "lisans",
     "yuksek-lisans"
   ],
-  "faqs": [],
+  "faqs": [
+    {
+      "q": "Londra’da bir öğrencinin aylık gideri ne kadar?",
+      "a": "Yurtta kalan bir üniversite öğrencisi için yaklaşık 1.300–2.400 £; Manchester’da 970–1.730 £, Leeds’te 860–1.650 £ civarındadır. Tutarlar yaklaşıktır ve konaklama türüne göre değişir."
+    },
+    {
+      "q": "İngiltere Student vizesi için ne kadar para göstermek gerekiyor?",
+      "a": "30 Kasım 2026 ve sonrasındaki başvurularda Londra için aylık 1.570 £, Londra dışı için aylık 1.203 £, en fazla 9 ay için gösterilir. Tutarın 28 gün hesapta tutulması ve ödenmemiş harcın eklenmesi gerekir."
+    },
+    {
+      "q": "Dil okulu öğrencileri Student Oyster kartı alabilir mi?",
+      "a": "18+ Student Oyster için haftada en az 15 saatlik ve en az 14 hafta süren tam zamanlı bir kursa, TfL programına kayıtlı bir kurumda kayıtlı olmak gerekir. Birkaç haftalık kurslar genellikle bu koşulu karşılamaz."
+    },
+    {
+      "q": "Londra’da en ucuz öğrenci yurdu ne kadar?",
+      "a": "Sitemizde listelediğimiz Londra öğrenci yurtları haftalık 238 £’dan başlıyor; merkezi semtlerde haftalık 575–598 £’a kadar çıkıyor."
+    }
+  ],
   "draft": false,
-  "readMin": 1,
-  "words": 139
+  "readMin": 5,
+  "words": 909
 }

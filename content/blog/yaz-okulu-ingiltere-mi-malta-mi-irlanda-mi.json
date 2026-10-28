@@ -1,18 +1,20 @@
 {
   "slug": "yaz-okulu-ingiltere-mi-malta-mi-irlanda-mi",
-  "title": "Yaz Okulu İçin İngiltere mi, Malta mı, İrlanda mı?",
-  "metaTitle": "Yaz Okulu: İngiltere mi Malta mı İrlanda mı? | Karşılaştırma",
-  "description": "Yaz okulu için İngiltere mi, Malta mı, İrlanda mı? Üç ülkeyi iklim, maliyet, vize, kampüs yapısı ve aktivite programları açısından karşılaştırdık.",
+  "title": "Yaz Okulu İçin İngiltere mi, Malta mı, İrlanda mı? Karşılaştırma 2027",
+  "metaTitle": "Yaz Okulu: İngiltere mi Malta mı İrlanda mı? 2027",
+  "description": "Yaz okulu hangi ülkede olmalı? İngiltere, Malta ve İrlanda'yı iklim, uçuş süresi, vize, aksan, göreli maliyet, yaş grubu ve aktivite yapısıyla karşılaştırdık.",
   "category": "Yaz Okulu",
   "date": "2026-07-18",
-  "updated": "2026-07-18",
+  "updated": "2026-10-28",
   "image": "/img/dest/malta.jpg",
-  "imageAlt": "Yaz Okulu İçin İngiltere mi, Malta mı, İrlanda mı?",
+  "imageAlt": "Malta'da yaz okulu öğrencileri deniz kenarında",
   "focusKeyword": "yaz okulu hangi ülke",
   "keywords": [
     "yaz okulu hangi ülke",
     "ingiltere mi malta mı yaz okulu",
-    "irlanda yaz okulu"
+    "irlanda yaz okulu",
+    "malta yaz okulu",
+    "yurt dışı yaz okulu karşılaştırma"
   ],
   "countries": [
     "ingiltere",
@@ -22,8 +24,25 @@
   "programs": [
     "yaz"
   ],
-  "faqs": [],
+  "faqs": [
+    {
+      "q": "Yaz okulu için İngiltere mi Malta mı daha uygun?",
+      "a": "İlk kez yurt dışına çıkacak küçük yaştaki çocuklar ve akademik ya da kültürel bir program isteyenler için İngiltere'yi, deniz ve açık hava etkinlikleriyle sosyal bir yaz isteyen 12–17 yaş gençler için Malta'yı öneriyoruz."
+    },
+    {
+      "q": "Malta ve İrlanda yaz okulları için vize gerekir mi?",
+      "a": "Evet. Malta Schengen ülkesidir ve 90 güne kadar programlar Schengen kısa süreli vizesiyle yapılır. İrlanda Schengen bölgesinde olmadığı için ayrı bir İrlanda vizesi gerekir."
+    },
+    {
+      "q": "İngiltere vizesiyle İrlanda'ya gidilebilir mi?",
+      "a": "Bir yaz okulu için bunu varsaymayın. İrlanda kendi vize sistemini uygular; Türk vatandaşı öğrenciler İrlanda'daki program için ayrıca İrlanda vizesine başvurmalıdır."
+    },
+    {
+      "q": "Hangi ülkede yaz okulu daha ucuz?",
+      "a": "Genel eğilim olarak Malta daha uygun, İngiltere ve İrlanda daha yüksek fiyatlıdır. Ancak kampüs, süre, oda tipi ve programa dahil gezilere göre aynı ülkede bile fiyatlar belirgin şekilde değişir."
+    }
+  ],
   "draft": false,
-  "readMin": 1,
-  "words": 141
+  "readMin": 6,
+  "words": 1007
 }

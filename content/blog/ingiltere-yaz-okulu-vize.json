@@ -1,18 +1,20 @@
 {
   "slug": "ingiltere-yaz-okulu-vize",
-  "title": "İngiltere Yaz Okulu İçin Vize: 18 Yaş Altı Başvuru Rehberi",
-  "metaTitle": "İngiltere Yaz Okulu Vizesi | 18 Yaş Altı Vize Başvurusu",
-  "description": "İngiltere yaz okulu vizesi: 18 yaş altı öğrenciler için Standard Visitor başvurusu, muvafakatname, veli finansal belgeleri, okul kabul belgesi ve randevu.",
+  "title": "İngiltere Yaz Okulu Vizesi: 18 Yaş Altı Başvuru Rehberi 2027",
+  "metaTitle": "İngiltere Yaz Okulu Vizesi: 18 Yaş Altı Başvuru 2027",
+  "description": "İngiltere yaz okulu vizesi: 18 yaş altı Standard Visitor başvurusu, £135 ücret, muvafakatname, belge listesi, VFS Global randevusu ve sık ret nedenleri.",
   "category": "Vize & Başvuru",
   "date": "2026-08-12",
-  "updated": "2026-08-12",
+  "updated": "2026-10-28",
   "image": "/img/misc/office-1.jpg",
-  "imageAlt": "İngiltere Yaz Okulu İçin Vize: 18 Yaş Altı Başvuru Rehberi",
+  "imageAlt": "İngiltere yaz okulu vize başvurusu için belge hazırlığı",
   "focusKeyword": "ingiltere yaz okulu vize",
   "keywords": [
     "ingiltere yaz okulu vize",
     "ingiltere vize 18 yaş altı",
-    "ingiltere visitor vize öğrenci"
+    "ingiltere standard visitor vize çocuk",
+    "ingiltere vize ücreti",
+    "ingiltere eta türk vatandaşı"
   ],
   "countries": [
     "ingiltere"
@@ -20,8 +22,29 @@
   "programs": [
     "yaz"
   ],
-  "faqs": [],
+  "faqs": [
+    {
+      "q": "İngiltere yaz okulu için hangi vize gerekir?",
+      "a": "Türk vatandaşı öğrenciler İngiltere yaz okulları için Standard Visitor vizesine başvurur. Bu vize 6 aya kadar kalışı kapsar ve çalışma hakkı tanımaz."
+    },
+    {
+      "q": "Türk vatandaşları İngiltere'ye ETA ile gidebilir mi?",
+      "a": "Hayır. Türkiye, İngiltere'nin vize gerektiren ülkeler listesinde yer alıyor; bu nedenle yaz okuluna giden her öğrencinin vize alması gerekir."
+    },
+    {
+      "q": "İngiltere ziyaretçi vizesi ne kadar?",
+      "a": "GOV.UK'ye göre 6 aya kadar Standard Visitor vizesinin ücreti £135'tir. Ücret dönem dönem güncellenir; vize merkezinin isteğe bağlı ek hizmetleri ayrıca ücretlendirilir."
+    },
+    {
+      "q": "18 yaş altı vize başvurusunda ebeveyn izni gerekir mi?",
+      "a": "Evet. Çocuk ebeveynleri olmadan seyahat ediyorsa ebeveyn veya yasal vasinin yazılı izni ve iletişim bilgileri istenir. Türkiye'den çıkış için de noter onaylı muvafakatname hazırlanır."
+    },
+    {
+      "q": "Vize başvurusu ne kadar sürede sonuçlanır?",
+      "a": "Karar genellikle 3 hafta içinde çıkar. Başvuru en erken seyahatten 3 ay önce yapılabildiği için temmuz uçuşlarında nisan sonu – mayıs ortasını öneriyoruz."
+    }
+  ],
   "draft": false,
-  "readMin": 1,
-  "words": 178
+  "readMin": 5,
+  "words": 856
 }

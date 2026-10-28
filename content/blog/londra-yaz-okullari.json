@@ -1,18 +1,20 @@
 {
   "slug": "londra-yaz-okullari",
-  "title": "Londra Yaz Okulları: Dünyanın En Kozmopolit Şehrinde Bir Yaz",
-  "metaTitle": "Londra Yaz Okulları: Gençler İçin Yaz Programları",
-  "description": "Londra yaz okulları 2027: 13–17 yaş için şehir kampüslerinde İngilizce dersleri, müze ve tarihi mekân gezileri, güvenlik önlemleri ve kampüs seçimi.",
+  "title": "Londra Yaz Okulu Rehberi 2027: Kampüs Tipleri, Geziler ve Güvenlik",
+  "metaTitle": "Londra Yaz Okulu 2027: Kampüs, Gezi ve Güvenlik",
+  "description": "Londra yaz okulu seçerken merkez ve şehir dışı kampüs farkı, yatılı ya da aile yanı konaklama, ücretsiz müze gezileri, güvenlik ve yaşa göre uygunluk.",
   "category": "Yaz Okulu",
   "date": "2026-09-15",
-  "updated": "2026-09-15",
+  "updated": "2026-10-28",
   "image": "/img/misc/london-student.jpg",
-  "imageAlt": "Londra Yaz Okulları: Dünyanın En Kozmopolit Şehrinde Bir Yaz",
+  "imageAlt": "Londra'da yaz okulu öğrencisi şehir merkezinde",
   "focusKeyword": "londra yaz okulu",
   "keywords": [
     "londra yaz okulu",
+    "londra yaz okulları",
     "londra yaz kampı",
-    "ingiltere yaz okulu londra"
+    "ingiltere yaz okulu londra",
+    "londra yaz okulu güvenli mi"
   ],
   "countries": [
     "ingiltere"
@@ -20,8 +22,25 @@
   "programs": [
     "yaz"
   ],
-  "faqs": [],
+  "faqs": [
+    {
+      "q": "Londra yaz okulu kaç yaş için uygundur?",
+      "a": "Londra'nın merkezindeki kampüsleri genellikle 13–17 yaş, şehir hayatına uyum sağlayabilecek öğrencilere öneriyoruz. 7–12 yaş ve ilk kez yurt dışına çıkacak çocuklar için Londra'ya günübirlik geziler düzenleyen şehir dışındaki kampüsler daha uygundur."
+    },
+    {
+      "q": "Londra yaz okullarında öğrenciler nerede kalır?",
+      "a": "Programların çoğu yatılıdır; öğrenciler üniversite yurtlarında tek veya çift kişilik odalarda kalır ve grup liderleri aynı binada konaklar. Bazı programlar 16–17 yaş için aile yanı konaklama da sunar."
+    },
+    {
+      "q": "Londra yaz okulu güvenli mi?",
+      "a": "Londra büyük bir şehir olduğu için kalabalık noktalarda dikkat gerekir. Önerdiğimiz programlarda kontrollü kampüs girişleri, gezilerde grup liderleri, akşam yoklamaları ve 7/24 acil durum hattı bulunur."
+    },
+    {
+      "q": "Londra'daki müze gezileri ek ücretli mi?",
+      "a": "British Museum, Natural History Museum ve Tate Modern gibi büyük müzelerin kalıcı koleksiyonları ücretsizdir. Özel sergiler, müzikal ve bazı tam gün geziler ise programa göre ücrete dahil olabilir ya da ayrıca ödenebilir."
+    }
+  ],
   "draft": false,
-  "readMin": 1,
-  "words": 201
+  "readMin": 6,
+  "words": 1107
 }

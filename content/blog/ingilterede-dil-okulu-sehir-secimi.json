@@ -1,19 +1,21 @@
 {
   "slug": "ingilterede-dil-okulu-sehir-secimi",
-  "title": "İngiltere’de Dil Okulu İçin Hangi Şehir? Londra, Brighton, Oxford ve Diğerleri",
-  "metaTitle": "İngiltere’de Dil Okulu İçin En İyi Şehirler",
-  "description": "İngiltere’de dil okulu için hangi şehir? Londra, Brighton, Oxford, Manchester ve Bournemouth’u bütçe, sosyal hayat ve pratik fırsatı açısından inceledik.",
+  "title": "İngiltere’de Dil Okulu İçin Hangi Şehir? 14 Şehrin Karşılaştırması",
+  "metaTitle": "İngiltere Dil Okulu Hangi Şehir? 14 Şehir Karşılaştırması",
+  "description": "İngiltere dil okulu için hangi şehir? Londra, Brighton, Oxford, Manchester ve 10 şehri daha bütçe, aksan, iklim, ulaşım ve kariyer açısından karşılaştırdık.",
   "category": "Dil Okulu",
   "date": "2026-09-28",
-  "updated": "2026-09-28",
+  "updated": "2026-10-28",
   "image": "/img/misc/london-student.jpg",
-  "imageAlt": "İngiltere’de Dil Okulu İçin Hangi Şehir? Londra, Brighton, Oxford ve Diğerleri",
-  "focusKeyword": "ingiltere dil okulu",
+  "imageAlt": "Londra’da dil okulu öğrencisi; İngiltere’de dil okulu için şehir seçimi",
+  "focusKeyword": "ingiltere dil okulu hangi şehir",
   "keywords": [
+    "ingiltere dil okulu hangi şehir",
+    "ingiltere dil okulu şehir seçimi",
     "ingiltere dil okulu",
-    "ingiltere dil okulu şehir",
     "londra dil okulu",
-    "brighton dil okulu"
+    "brighton dil okulu",
+    "ingiltere en ucuz dil okulu şehri"
   ],
   "countries": [
     "ingiltere"
@@ -21,8 +23,29 @@
   "programs": [
     "dil"
   ],
-  "faqs": [],
+  "faqs": [
+    {
+      "q": "İngiltere’de dil okulu için en uygun maliyetli şehir hangisi?",
+      "a": "Büyük şehirler arasında Liverpool, Leeds ve Birmingham öne çıkar; aile yanı konaklama haftalık yaklaşık 170–230 £’dur. Londra’da aynı kalem 260–350 £ aralığındadır."
+    },
+    {
+      "q": "Türk öğrencinin az olduğu İngiltere dil okulu şehirleri hangileri?",
+      "a": "Bristol, Birmingham, Leeds ve York gibi şehirlerde sınıflarda Türk öğrenci oranı genellikle Londra’ya göre düşüktür. Oran okula ve mevsime göre değiştiği için okul seçerken o dönemin milliyet dağılımını ayrıca soruyoruz."
+    },
+    {
+      "q": "İlk kez yurt dışına çıkan biri için hangi şehir uygun?",
+      "a": "Brighton, Bournemouth, Eastbourne ve Bath; yürünebilir merkezleri, aile yanı konaklama kültürü ve sakin temposuyla uyum sürecini kolaylaştırır."
+    },
+    {
+      "q": "IELTS hazırlığı için İngiltere’de hangi şehir seçilmeli?",
+      "a": "Akademik atmosfer isteyenler için Oxford ve Cambridge, daha düşük bütçe için Manchester ve Leeds iyi seçeneklerdir. Okul seçimi, şehirden daha belirleyicidir."
+    },
+    {
+      "q": "Dil okulunda okurken İngiltere’de çalışabilir miyim?",
+      "a": "Hayır. Dil kursları için verilen Standard Visitor ve Short-term Study vizeleri çalışma hakkı tanımaz."
+    }
+  ],
   "draft": false,
-  "readMin": 1,
-  "words": 180
+  "readMin": 5,
+  "words": 858
 }

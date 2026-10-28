@@ -126,7 +126,7 @@ export function ProgramHub({ programKey }: { programKey: ProgramKey }) {
   const showPackages = p.key === 'dil'
   return (
     <>
-      <Seo title={p.name} description={`${p.lead} ${list.length} ülkede ${p.short.toLowerCase()} seçenekleri, başvuru süreci, gerekli belgeler ve sık sorulan sorular.`} path={`/${p.slug}`} />
+      <Seo title={p.hubSeoTitle(list.length)} description={`${p.lead} ${list.length} ülkede ${p.short.toLowerCase()} seçenekleri, başvuru süreci, gerekli belgeler ve sık sorulan sorular.`} path={`/${p.slug}`} />
       <PageHero
         image={p.image}
         crumbs={[{ label: 'Programlar', to: '/yurtdisi-egitim' }, { label: p.name }]}
@@ -289,6 +289,16 @@ export function ProgramHub({ programKey }: { programKey: ProgramKey }) {
   )
 }
 
+/** Ülke sayfası başlığı: sunulan programlardan sığan kadarını sayar (ör. "Malta’da Eğitim: Dil Okulu, Yaz Okulu"). */
+function countrySeoTitle(loc: string, progs: Program[]) {
+  const names = progs.map((x) => titleCase(x.short.toLocaleLowerCase('tr')))
+  for (const n of [3, 2, 1]) {
+    const t = `${loc} Yurt Dışı Eğitim: ${names.slice(0, n).join(', ')}`
+    if (t.length <= 58) return t
+  }
+  return `${loc} Eğitim: ${names.slice(0, 2).join(', ')}`
+}
+
 function FactCard({ facts, title }: { facts: { label: string; value: string }[]; title: string }) {
   return (
     <div className="factcard">
@@ -319,7 +329,7 @@ export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
 
   return (
     <>
-      <Seo title={d?.seoTitle ?? title} description={d?.description ?? `${p.countryLead(c)} ${c.name} için vize, şehirler, yaşam maliyeti ve başvuru süreci.`} path={path} image={c.image} jsonLd={serviceLd(d?.h1 ?? title, d?.description ?? p.countryLead(c), path)} />
+      <Seo title={d?.seoTitle ?? p.countrySeoTitle(c)} description={d?.description ?? `${p.countryLead(c)} ${c.name} için vize, şehirler, yaşam maliyeti ve başvuru süreci.`} path={path} image={c.image} jsonLd={serviceLd(d?.h1 ?? title, d?.description ?? p.countryLead(c), path)} />
       <PageHero
         image={c.image}
         crumbs={[{ label: p.name, to: `/${p.slug}` }, { label: c.name }]}
@@ -596,7 +606,7 @@ export function CountryPage() {
   const cPosts = postsForCountry(c.slug).slice(0, 6)
   return (
     <>
-      <Seo title={cd?.seoTitle ?? `${c.loc} Eğitim`} description={cd?.description ?? c.metaDescription ?? c.intro} path={`/ulkeler/${c.slug}`} image={c.image} />
+      <Seo title={cd?.seoTitle ?? countrySeoTitle(c.loc, progs)} description={cd?.description ?? c.metaDescription ?? c.intro} path={`/ulkeler/${c.slug}`} image={c.image} />
       <PageHero
         image={c.image}
         crumbs={[{ label: 'Ülkeler', to: '/ulkeler' }, { label: c.name }]}

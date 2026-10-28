@@ -40,6 +40,8 @@ export type Office = {
   image: string
   mapQuery: string
   note: string
+  /** Şehre özel yerel sayfa (footer ve kurumsal sayfadan bağlanır) */
+  localPage?: { to: string; label: string }
   /** Yapısal veri (LocalBusiness) için posta adresi ayrıntıları */
   locality?: string
   district?: string
@@ -63,6 +65,7 @@ export const offices: Office[] = [
     postalCode: '35550',
     // OpenStreetMap'te 6523. Sokak (Yalı Mah.) konumu; bina pini Tampa'dan teyit edilmeli
     geo: { lat: 38.4777, lng: 27.0785 },
+    localPage: { to: '/izmir-yurt-disi-egitim', label: 'İzmir yurt dışı eğitim danışmanlığı' },
     note: 'Genel merkezimiz. Yüz yüze danışmanlık, belge teslimi ve vize hazırlık görüşmeleri.',
   },
   {
@@ -77,6 +80,7 @@ export const offices: Office[] = [
     locality: 'Efeler',
     district: 'Aydın',
     // TODO: Tampa'dan teyit: posta kodu ve harita koordinatı
+    localPage: { to: '/aydin-yurt-disi-egitim', label: 'Aydın yurt dışı eğitim danışmanlığı' },
     note: 'Aydın ve çevre illerdeki öğrenci ve velilerimiz için randevulu görüşme.',
   },
   {

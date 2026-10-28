@@ -1,18 +1,20 @@
 {
   "slug": "ingiltere-ogrenci-vizesi-rehberi",
-  "title": "İngiltere Öğrenci Vizesi Rehberi: Visitor, Short-term Study ve Student Visa",
-  "metaTitle": "İngiltere Öğrenci Vizesi 2027 | Hangi Vize, Hangi Belgeler?",
-  "description": "İngiltere öğrenci vizesi rehberi: Standard Visitor, Short-term Study ve Student vizesi arasındaki farklar, gerekli belgeler, finansal şartlar ve süreler.",
+  "title": "İngiltere Öğrenci Vizesi 2027: CAS, Finansal Şart, IHS ve Çalışma",
+  "metaTitle": "İngiltere Öğrenci Vizesi 2027 | CAS, Para Şartı, IHS",
+  "description": "İngiltere öğrenci vizesi 2027: CAS, 30 Kasım 2026’dan itibaren aylık £1.570 / £1.203 yaşam gideri, 28 gün kuralı, £558 vize ücreti, IHS ve çalışma hakkı.",
   "category": "Vize & Başvuru",
   "date": "2026-09-10",
-  "updated": "2026-09-10",
+  "updated": "2026-10-28",
   "image": "/img/misc/office-2.jpg",
-  "imageAlt": "İngiltere Öğrenci Vizesi Rehberi: Visitor, Short-term Study ve Student Visa",
+  "imageAlt": "İngiltere Student vizesi başvurusu için hazırlanan belgeler",
   "focusKeyword": "ingiltere öğrenci vizesi",
   "keywords": [
     "ingiltere öğrenci vizesi",
     "ingiltere student visa",
-    "ingiltere dil okulu vizesi"
+    "ingiltere öğrenci vizesi finansal şart",
+    "ingiltere vize ücreti",
+    "cas nedir"
   ],
   "countries": [
     "ingiltere"
@@ -22,8 +24,29 @@
     "lisans",
     "yuksek-lisans"
   ],
-  "faqs": [],
+  "faqs": [
+    {
+      "q": "İngiltere öğrenci vizesi için ne kadar para göstermek gerekir?",
+      "a": "İlk yılın ödenmemiş harcına ek olarak, 30 Kasım 2026 ve sonrasındaki başvurularda Londra’da aylık £1.570, Londra dışında aylık £1.203 (en fazla 9 ay) gösterilmelidir. Para en az 28 gün kesintisiz hesapta durmalıdır."
+    },
+    {
+      "q": "İngiltere Student vizesi ücreti ne kadar?",
+      "a": "Türkiye’den başvuruda vize ücreti £558’dir. Buna ek olarak öğrenciler yıllık £776 sağlık katkı payı (IHS) öder."
+    },
+    {
+      "q": "Türkiye’den İngiltere öğrenci vizesi için TB testi gerekir mi?",
+      "a": "Hayır. Türkiye, İngiltere’nin tüberküloz testi istediği ülkeler listesinde yer almıyor."
+    },
+    {
+      "q": "Student vizesiyle haftada kaç saat çalışılabilir?",
+      "a": "Lisans ve yüksek lisans öğrencileri dönem içinde haftada 20 saate, foundation gibi lisans altı programlardaki öğrenciler 10 saate kadar çalışabilir; tatillerde tam zamanlı çalışma mümkündür."
+    },
+    {
+      "q": "Student vizesine en erken ne zaman başvurulur?",
+      "a": "Türkiye’den en erken başvuru programın başlangıcından 6 ay önce yapılabilir; karar süresi genellikle yaklaşık 3 haftadır."
+    }
+  ],
   "draft": false,
-  "readMin": 1,
-  "words": 196
+  "readMin": 5,
+  "words": 801
 }

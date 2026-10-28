@@ -1,18 +1,19 @@
 {
   "slug": "ingiltere-yaz-okulu-kayit-takvimi",
-  "title": "İngiltere Yaz Okulları Ne Zaman Başlar? 2027 Kayıt Takvimi",
-  "metaTitle": "İngiltere Yaz Okulları Ne Zaman Başlar? 2027 Takvimi",
-  "description": "İngiltere yaz okulu kayıt takvimi 2027: popüler kampüslerin dolduğu aylar, vize randevu yoğunluğu ve ideal kayıt zamanı. Ocaktan hazirana adım adım plan.",
+  "title": "İngiltere Yaz Okulu Ne Zaman? 2027 Kayıt Takvimi ve Aylık Plan",
+  "metaTitle": "İngiltere Yaz Okulu Ne Zaman? 2027 Kayıt Takvimi",
+  "description": "İngiltere yaz okulu ne zaman başlar, ne zaman kayıt olunur? 2027 aylık kayıt planı, MEB tatil tarihi, hafta giriş günleri ve vize randevu zamanlaması.",
   "category": "Yaz Okulu",
   "date": "2026-07-30",
-  "updated": "2026-07-30",
+  "updated": "2026-10-28",
   "image": "/img/dest/ingiltere.jpg",
-  "imageAlt": "İngiltere Yaz Okulları Ne Zaman Başlar? 2027 Kayıt Takvimi",
+  "imageAlt": "İngiltere yaz okulu 2027 kayıt takvimi",
   "focusKeyword": "ingiltere yaz okulu ne zaman",
   "keywords": [
     "ingiltere yaz okulu ne zaman",
-    "yaz okulu kayıt tarihleri",
-    "ingiltere yaz okulu 2027"
+    "ingiltere yaz okulu kayıt tarihleri",
+    "ingiltere yaz okulu 2027",
+    "yaz okulu kayıt takvimi"
   ],
   "countries": [
     "ingiltere"
@@ -20,8 +21,25 @@
   "programs": [
     "yaz"
   ],
-  "faqs": [],
+  "faqs": [
+    {
+      "q": "İngiltere yaz okulları ne zaman başlar?",
+      "a": "Programlar genellikle haziranın son haftasında başlar ve ağustosun son haftasına kadar sürer. Çoğu kampüste her pazar, bazılarında pazartesi yeni öğrenci girişi yapılır."
+    },
+    {
+      "q": "2027'de Türkiye'de okullar kapandıktan sonra en erken ne zaman gidilebilir?",
+      "a": "MEB takvimine göre 2026-2027 ders yılı 25 Haziran 2027 Cuma günü sona eriyor. Bu durumda en erken gerçekçi giriş günü 27 Haziran 2027 Pazar olur."
+    },
+    {
+      "q": "İngiltere yaz okuluna en geç ne zaman kayıt olunmalı?",
+      "a": "Vize başvurusunu mayıs ayında rahatça yapabilmek için kaydı en geç nisan sonuna kadar tamamlamanızı öneriyoruz. Popüler kampüsler ve haftalar ocak – mart arasında dolmaya başlar."
+    },
+    {
+      "q": "Yaz okulu vizesine ne kadar önce başvurulur?",
+      "a": "Standard Visitor vizesine seyahatten en erken 3 ay önce başvurulabilir; karar genellikle 3 hafta içinde çıkar. Temmuz başı uçuşlar için nisan sonu – mayıs ortası idealdir."
+    }
+  ],
   "draft": false,
-  "readMin": 1,
-  "words": 143
+  "readMin": 5,
+  "words": 815
 }

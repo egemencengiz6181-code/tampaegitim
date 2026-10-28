@@ -1,18 +1,20 @@
 {
   "slug": "oxford-cambridge-yaz-okulu",
-  "title": "Oxford ve Cambridge Yaz Okulları: Akademik Bir Yaz Deneyimi",
-  "metaTitle": "Oxford ve Cambridge Yaz Okulu | Akademik Yaz Programları",
-  "description": "Oxford ve Cambridge yaz okulları: tarihi kolej binalarında konaklama, dil eğitimiyle birleşen akademik dersler, münazara ve liderlik atölyeleri.",
+  "title": "Oxford ve Cambridge Yaz Okulu: Velilerin Bilmesi Gerekenler (2027)",
+  "metaTitle": "Oxford ve Cambridge Yaz Okulu 2027: Veli Rehberi",
+  "description": "Oxford yaz okulu ve Cambridge yaz okulu programlarını kim düzenler? Bağımsız sağlayıcı ayrımı, akademik konular, yaş, İngilizce seviyesi ve iki şehrin farkı.",
   "category": "Yaz Okulu",
   "date": "2026-09-04",
-  "updated": "2026-09-04",
+  "updated": "2026-10-28",
   "image": "/img/misc/blog-yaz.jpg",
-  "imageAlt": "Oxford ve Cambridge Yaz Okulları: Akademik Bir Yaz Deneyimi",
+  "imageAlt": "Oxford ve Cambridge'de tarihi kolej binasında yaz okulu öğrencileri",
   "focusKeyword": "oxford yaz okulu",
   "keywords": [
     "oxford yaz okulu",
     "cambridge yaz okulu",
-    "ingiltere akademik yaz okulu"
+    "oxford cambridge yaz okulu",
+    "ingiltere akademik yaz okulu",
+    "oxford üniversitesi yaz okulu"
   ],
   "countries": [
     "ingiltere"
@@ -20,8 +22,25 @@
   "programs": [
     "yaz"
   ],
-  "faqs": [],
+  "faqs": [
+    {
+      "q": "Oxford yaz okulları Oxford Üniversitesi'nin programı mı?",
+      "a": "Ortaokul ve lise öğrencilerine yönelik Oxford ve Cambridge yaz programlarının büyük çoğunluğu, kolej binalarını kiralayan bağımsız eğitim şirketleri tarafından düzenlenir. Üniversitelerin kendi yaz programları ise genellikle 18 yaş üstü katılımcılara yöneliktir."
+    },
+    {
+      "q": "Oxford veya Cambridge yaz okuluna katılmak üniversite başvurusunda avantaj sağlar mı?",
+      "a": "Hayır. Üniversiteler yaz programlarının lisans kabul süreciyle ilişkisi olmadığını belirtir. Ancak öğrenci programda öğrendiklerini başvuru metninde somut bir deneyim olarak anlatabilir."
+    },
+    {
+      "q": "Akademik yaz programları için hangi İngilizce seviyesi gerekir?",
+      "a": "Dil ve aktivite programları başlangıç seviyesinden itibaren öğrenci kabul eder. Akademik konu programlarının çoğu en az orta seviye (B1–B2 civarı) İngilizce ister; bazıları test veya görüşme yapar."
+    },
+    {
+      "q": "Oxford mu Cambridge mi daha iyi?",
+      "a": "İki şehir de Londra'ya trenle yaklaşık bir saat uzaklıkta, tarihi üniversite şehirleridir. Oxford biraz daha büyük ve hareketli, Cambridge daha küçük ve sakindir; seçimde şehirden çok programın konusu, yaş aralığı ve konaklaması belirleyicidir."
+    }
+  ],
   "draft": false,
-  "readMin": 1,
-  "words": 155
+  "readMin": 5,
+  "words": 996
 }

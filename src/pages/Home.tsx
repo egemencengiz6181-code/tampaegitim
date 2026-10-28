@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <>
       <Seo
-        title="Yurt Dışı Eğitim Danışmanlığı İzmir | İngiltere Yaz Okulu, Üniversite | Tampa"
+        title="Yurt Dışı Eğitim Danışmanlığı İzmir | İngiltere Yaz Okulu | Tampa"
         description="İzmir ve Aydın’da yurt dışı eğitim danışmanlığı: İngiltere yaz okulları, üniversite başvurusu, dil okulları ve yüksek lisans. 15 yıllık tecrübe."
         path="/"
       />

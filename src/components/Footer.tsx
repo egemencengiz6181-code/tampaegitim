@@ -76,6 +76,7 @@ export function Footer() {
                 <li key={o.slug}>
                   <strong>{o.city}</strong>
                   <span>{o.address}</span>
+                  {o.localPage && <Link to={o.localPage.to}>{o.localPage.label}</Link>}
                   {o.phone && <a href={o.phoneHref}>{o.phone}</a>}
                 </li>
               ))}

@@ -1,21 +1,45 @@
 {
   "slug": "ingilizce-ogrenme-suresi-kac-ay",
-  "title": "İngilizce Öğrenme Süresi Kaç Ay?",
-  "metaTitle": "",
-  "description": "İngilizce öğrenmeye başlayan herkesin aklındaki ilk soru aynıdır: İngilizce öğrenme süresi ne kadar? Bu soruya tek bir cevap vermek mümkün değildir. Ancak doğru yöntemler ve düzenli bir çalışma planı ile bu süre net şekilde öngörülebilir ve ciddi şekilde kısaltılabilir.",
+  "title": "İngilizce Öğrenme Süresi Kaç Ay? Seviye Seviye Hesap",
+  "metaTitle": "İngilizce Öğrenme Süresi Kaç Ay? CEFR ve Haftalık Hesap",
+  "description": "İngilizce öğrenme süresi kaç ay? CEFR seviyelerine göre rehberli öğrenme saatleri, haftada 20–30 dersle kaç hafta sürdüğü ve IELTS hedefine göre süre.",
   "category": "Dil Okulu",
   "date": "2026-04-24",
-  "updated": "2026-04-24",
+  "updated": "2026-10-28",
   "image": "/img/misc/blog-ingilizce.jpg",
-  "imageAlt": "İngilizce Öğrenme Süresi Kaç Ay?",
-  "focusKeyword": "",
-  "keywords": [],
+  "imageAlt": "İngilizce öğrenme süresi ve CEFR seviyeleri",
+  "focusKeyword": "ingilizce öğrenme süresi",
+  "keywords": [
+    "ingilizce öğrenme süresi",
+    "ingilizce kaç ayda öğrenilir",
+    "ingilizce öğrenme süresi kaç ay",
+    "cefr seviyeleri süre",
+    "b2 seviyesine kaç ayda çıkılır",
+    "dil okulu kaç hafta"
+  ],
   "countries": [],
   "programs": [
     "dil"
   ],
-  "faqs": [],
+  "faqs": [
+    {
+      "q": "Bir İngilizce seviyesini geçmek kaç saat sürer?",
+      "a": "Cambridge English’e göre bir CEFR seviyesinden diğerine geçmek yaklaşık 200 rehberli öğrenme saati sürer. Haftada 20 derslik bir programda bu yaklaşık 10 hafta demektir."
+    },
+    {
+      "q": "Sıfırdan B2 seviyesine kaç ayda çıkılır?",
+      "a": "Sıfırdan B2 için yaklaşık 500–600 rehberli saat gerekir; haftada 25 derslik yoğun bir programda bu 20–24 hafta, yani yaklaşık 5–6 aydır."
+    },
+    {
+      "q": "IELTS 6.5 için ne kadar süre gerekir?",
+      "a": "B1 seviyesinden başlayan bir öğrenci için yoğun bir programda genellikle 16–24 hafta gerekir. Süre başlangıç seviyesine ve haftalık ders yoğunluğuna göre değişir."
+    },
+    {
+      "q": "Yurt dışında dil okulu süreyi kısaltır mı?",
+      "a": "Evet. Haftalık ders saati yüksek olduğu ve ders dışındaki zaman da pratiğe dönüştüğü için aynı seviye Türkiye’deki haftada birkaç saatlik kurslara göre çok daha kısa sürede geçilir."
+    }
+  ],
   "draft": false,
-  "readMin": 1,
-  "words": 154
+  "readMin": 5,
+  "words": 835
 }

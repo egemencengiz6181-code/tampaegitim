@@ -1,17 +1,19 @@
 {
   "slug": "ingiltere-yaz-okulu-valiz-listesi",
-  "title": "İngiltere Yaz Okulu Valiz Listesi: Yanınıza Almanız Gerekenler",
-  "metaTitle": "",
-  "description": "İngiltere yaz okulu valiz listesi: belgeler, serin akşamlar ve yağmur için kıyafetler, adaptör, ilaçlar ve harçlık. Veliler için pratik kontrol listesi.",
+  "title": "İngiltere Yaz Okulu Valiz Listesi: Belgeler, Kıyafet, Priz ve Harçlık",
+  "metaTitle": "İngiltere Yaz Okulu Valiz Listesi: Eksiksiz Kontrol",
+  "description": "Yaz okulu valiz listesi: İngiltere için belgeler, 2 haftalık kıyafet tablosu, G tipi priz, ilaçlar, harçlık ve kart, yasak yiyecekler ve el bagajı önerileri.",
   "category": "Yaz Okulu",
   "date": "2026-07-05",
-  "updated": "2026-07-05",
+  "updated": "2026-10-28",
   "image": "/img/misc/summer.jpg",
-  "imageAlt": "İngiltere Yaz Okulu Valiz Listesi: Yanınıza Almanız Gerekenler",
+  "imageAlt": "İngiltere yaz okulu için hazırlanan valiz",
   "focusKeyword": "yaz okulu valiz listesi",
   "keywords": [
     "yaz okulu valiz listesi",
-    "ingiltere yaz okulu hazırlık"
+    "ingiltere yaz okulu valiz listesi",
+    "ingiltere yaz okulu hazırlık",
+    "ingiltere priz tipi"
   ],
   "countries": [
     "ingiltere"
@@ -19,8 +21,25 @@
   "programs": [
     "yaz"
   ],
-  "faqs": [],
+  "faqs": [
+    {
+      "q": "İngiltere'de hangi priz kullanılıyor?",
+      "a": "İngiltere'de üç köşeli G tipi priz kullanılır. Voltaj Türkiye'deki gibi 230 V olduğu için yalnızca priz adaptörü yeterlidir."
+    },
+    {
+      "q": "Yaz okulunda İngiltere'de hava nasıl olur?",
+      "a": "Gündüzler çoğunlukla ılık, akşamlar serindir ve yağmur sık görülür. Kat kat giyinmeye uygun kıyafetler ve su geçirmez bir mont mutlaka valizde olmalı."
+    },
+    {
+      "q": "İngiltere'ye peynir veya sucuk götürülebilir mi?",
+      "a": "Hayır. AB dışındaki ülkelerden kişisel bagajla et ve süt ürünleri getirmek yasaktır ve gümrükte el konulur."
+    },
+    {
+      "q": "Çocuğumun ilaçlarını nasıl götürmeliyim?",
+      "a": "İlaçlar orijinal kutusunda, el bagajında ve doktorun ilacı, dozu ve miktarı gösteren İngilizce yazısıyla taşınmalıdır. İlaç bilgileri okulun sağlık formuna da yazılmalıdır."
+    }
+  ],
   "draft": false,
-  "readMin": 1,
-  "words": 138
+  "readMin": 5,
+  "words": 850
 }

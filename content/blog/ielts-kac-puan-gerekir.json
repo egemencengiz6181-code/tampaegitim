@@ -1,18 +1,20 @@
 {
   "slug": "ielts-kac-puan-gerekir",
-  "title": "IELTS Kaç Puan Gerekir? Üniversite ve Yüksek Lisans İçin Rehber",
-  "metaTitle": "",
-  "description": "Lisans için genellikle 6.0–6.5, yüksek lisans için 6.5–7.0 IELTS istenir; ancak bölüm ve ülkeye göre alt bölüm şartları değişir. Hedef skorunuzu nasıl belirleyeceğinizi anlatıyoruz.",
+  "title": "IELTS Kaç Puan Gerekir? Foundation, Lisans, Yüksek Lisans ve Vize",
+  "metaTitle": "IELTS Kaç Puan Gerekir? | Lisans, Master ve UKVI",
+  "description": "IELTS kaç puan gerekir? Foundation için 5.0–5.5, lisans için 6.0–6.5, yüksek lisans için 6.5–7.0; alt bant şartları, IELTS for UKVI farkı ve PTE, TOEFL.",
   "category": "Vize & Başvuru",
   "date": "2026-05-12",
-  "updated": "2026-05-12",
+  "updated": "2026-10-28",
   "image": "/img/misc/blog-ingilizce.jpg",
-  "imageAlt": "IELTS Kaç Puan Gerekir? Üniversite ve Yüksek Lisans İçin Rehber",
+  "imageAlt": "IELTS sınavına hazırlanan öğrenci",
   "focusKeyword": "ielts kaç puan",
   "keywords": [
     "ielts kaç puan",
     "ielts üniversite şartı",
-    "ielts yüksek lisans"
+    "ielts yüksek lisans",
+    "ielts for ukvi",
+    "ielts foundation"
   ],
   "countries": [
     "ingiltere",
@@ -24,8 +26,25 @@
     "lisans",
     "yuksek-lisans"
   ],
-  "faqs": [],
+  "faqs": [
+    {
+      "q": "İngiltere’de lisans için IELTS kaç olmalı?",
+      "a": "Çoğu lisans programı genel 6.0–6.5 ve her bölümde 5.5–6.0 ister. Hukuk, tıp ve eğitim gibi bölümlerde 7.0 ve üzeri istenebilir."
+    },
+    {
+      "q": "IELTS for UKVI ile IELTS Academic arasındaki fark nedir?",
+      "a": "İçerik ve puanlama aynıdır; IELTS for UKVI, Home Office onaylı merkezlerde yapılan ve vize için kabul edilen bir SELT sınavıdır. Foundation gibi lisans altı programlarda vize için genellikle UKVI sürümü gerekir."
+    },
+    {
+      "q": "TOEFL İngiltere vizesi için geçerli mi?",
+      "a": "TOEFL, Home Office’in onaylı SELT listesinde yer almaz. Yalnızca İngilizceyi kendi değerlendiren üniversitelerin lisans ve üzeri programlarında kabul görebilir."
+    },
+    {
+      "q": "IELTS sonucu kaç yıl geçerli?",
+      "a": "İngiliz üniversitelerinin çoğu IELTS sonucunu sınav tarihinden itibaren 2 yıl geçerli sayar."
+    }
+  ],
   "draft": false,
-  "readMin": 1,
-  "words": 122
+  "readMin": 5,
+  "words": 814
 }

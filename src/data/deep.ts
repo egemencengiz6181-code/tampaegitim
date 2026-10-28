@@ -69,7 +69,7 @@ export const deep: Record<string, Deep> = {
         h: 'İngiltere yaz okulu nedir, kimler için uygundur?',
         p: [
           `**İngiltere yaz okulları**, yaz tatilinde ${ukSummer.duration} süren, İngilizce dil eğitimini spor, sanat ve kültürel gezilerle birleştiren yatılı programlardır. Öğrenciler üniversite veya yatılı okul kampüslerinde konaklar, dünyanın dört bir yanından gelen yaşıtlarıyla aynı sınıfları ve aktiviteleri paylaşır.`,
-          'Yurt dışında ilk deneyimini yaşayacak ortaokul ve lise öğrencileri, İngilizce konuşma özgüvenini artırmak isteyenler ve ileride yurt dışında lise veya üniversite okumayı düşünenler için İngiltere yaz kampları güvenli ve verimli bir başlangıçtır. Seçim kriterleri için [İngiltere yaz okulu nasıl seçilir?](/blog/ingiltere-yaz-okulu-rehberi) rehberimize bakabilirsiniz.',
+          'Yurt dışında ilk deneyimini yaşayacak ortaokul ve lise öğrencileri, İngilizce konuşma özgüvenini artırmak isteyenler ve ileride yurt dışında lise veya üniversite okumayı düşünenler için İngiltere yaz kampları güvenli ve verimli bir başlangıçtır. Yaş, şehir ve kampüs farkları için [İngiltere yaz okulu rehberi](/blog/ingiltere-yaz-okulu-rehberi), okula sormanız gerekenler için [İngiltere yaz okulu nasıl seçilir?](/blog/ingiltere-yaz-okulu-secerken-sorulacak-sorular) yazımıza bakabilirsiniz.',
         ],
       },
       {
@@ -233,7 +233,7 @@ export const deep: Record<string, Deep> = {
             ['International Year One', 'Notları güçlü, foundation’a ihtiyaç duymayan öğrenciler', '1 yıl + 2 yıl', 'Lisansın 1. yılı ek akademik destekle okunur; başarılı öğrenci 2. sınıfa geçer.'],
           ],
         },
-        p: ['Bazı üniversiteler yüksek not ortalaması ve AP gibi ek sınavlarla Türk lise diplomasını doğrudan kabul edebilir. Hangi yolun size uygun olduğunu notlarınıza ve hedef bölümünüze göre birlikte belirliyoruz. Foundation hakkında ayrıntılar: [Foundation nedir?](/bilgi-bankasi/foundation-nedir)'],
+        p: ['Bazı üniversiteler yüksek not ortalaması ve AP gibi ek sınavlarla Türk lise diplomasını doğrudan kabul edebilir. Hangi yolun size uygun olduğunu notlarınıza ve hedef bölümünüze göre birlikte belirliyoruz. Foundation hakkında ayrıntılar: [Foundation nedir?](/bilgi-bankasi/foundation-nedir) ve şartlar, ücretler ve geçiş koşullarıyla [İngiltere foundation programı](/blog/ingilterede-foundation-programi) rehberimiz.'],
       },
       {
         h: 'İngiltere üniversite şartları',

@@ -24,8 +24,14 @@ export type Program = {
   faqs: Faq[]
   seo: { title: string; body: string[] }
   countryTitle: (c: Country) => string
+  /** Arama sonucu başlığı: program hub'ı (ülke sayısıyla) ve program × ülke sayfası */
+  hubSeoTitle: (n: number) => string
+  countrySeoTitle: (c: Country) => string
   countryLead: (c: Country) => string
 }
+
+/** Marka eki sığsın diye ~58 karakteri aşmayan ilk başlık adayını seçer. */
+const fit = (...candidates: string[]) => candidates.find((t) => t.length <= 58) ?? candidates[candidates.length - 1]
 
 export const programs: Program[] = [
   {
@@ -96,6 +102,8 @@ export const programs: Program[] = [
       ],
     },
     countryTitle: (c) => `${c.name} Dil Okulları`,
+    hubSeoTitle: (n) => `Yurtdışı Dil Okulları 2027: ${n} Ülkede Dil Eğitimi Rehberi`,
+    countrySeoTitle: (c) => fit(`${c.name} Dil Okulları 2027: Vize, Konaklama ve Yaşam Maliyeti`, `${c.name} Dil Okulları 2027: Vize, Konaklama, Maliyet`, `${c.name} Dil Okulları 2027: Vize ve Konaklama`, `${c.name} Dil Okulları 2027`),
     countryLead: (c) =>
       `${c.loc} ${c.language.split(',')[0]} öğrenmek; ${c.hub} başta olmak üzere ${c.cities.slice(1, 4).join(', ')} gibi şehirlerde, akredite okullarda ve size uygun yoğunlukta mümkün.`,
   },
@@ -158,6 +166,8 @@ export const programs: Program[] = [
       ],
     },
     countryTitle: (c) => `${c.name} Yaz Okulları`,
+    hubSeoTitle: (n) => `Yurtdışı Yaz Okulları 2027: ${n} Ülkede 7–17 Yaş Programları`,
+    countrySeoTitle: (c) => fit(`${c.name} Yaz Okulları 2027: Yaş Grupları, Programlar ve Vize`, `${c.name} Yaz Okulları 2027: Yaş Grupları ve Vize`, `${c.name} Yaz Okulları 2027`),
     countryLead: (c) =>
       `${c.loc} yaz okulu; ${c.cities.slice(0, 3).join(', ')} gibi şehirlerde dil dersleri, aktiviteler ve gezilerle dolu, 7/24 gözetimli bir yaz demek.`,
   },
@@ -212,6 +222,8 @@ export const programs: Program[] = [
       ],
     },
     countryTitle: (c) => `${c.name} Lise Eğitimi`,
+    hubSeoTitle: (n) => `Yurtdışında Lise Eğitimi: ${n} Ülkede Şartlar ve Süreç`,
+    countrySeoTitle: (c) => fit(`${c.loc} Lise Eğitimi 2027: Şartlar, Vize ve Konaklama`, `${c.loc} Lise Eğitimi: Şartlar ve Vize`, `${c.name} Lise Eğitimi`),
     countryLead: (c) => `${c.loc} lise eğitimi; ${c.language.split(',')[0]} dilinde akademik bir altyapı ve üniversiteye doğrudan açılan bir kapı demek.`,
   },
   {
@@ -267,6 +279,8 @@ export const programs: Program[] = [
       ],
     },
     countryTitle: (c) => `${c.loc} Üniversite`,
+    hubSeoTitle: (n) => `Yurtdışında Üniversite Okumak 2027: ${n} Ülke, Şartlar`,
+    countrySeoTitle: (c) => fit(`${c.loc} Üniversite Okumak 2027: Şartlar ve Başvuru`, `${c.loc} Üniversite 2027: Şartlar ve Başvuru`, `${c.loc} Üniversite`),
     countryLead: (c) => `${c.loc} üniversite okumak; ${c.highlights[0].text.charAt(0).toLowerCase()}${c.highlights[0].text.slice(1)}`,
   },
   {
@@ -322,6 +336,8 @@ export const programs: Program[] = [
       ],
     },
     countryTitle: (c) => `${c.loc} Yüksek Lisans`,
+    hubSeoTitle: (n) => `Yurtdışında Yüksek Lisans 2027: ${n} Ülkede Şartlar ve Başvuru`,
+    countrySeoTitle: (c) => fit(`${c.loc} Yüksek Lisans 2027: Kabul Şartları ve Başvuru`, `${c.loc} Yüksek Lisans 2027: Şartlar ve Başvuru`, `${c.loc} Yüksek Lisans`),
     countryLead: (c) => `${c.loc} yüksek lisans; ${c.tagline.charAt(0).toLowerCase()}${c.tagline.slice(1)}`,
   },
   {
@@ -375,6 +391,8 @@ export const programs: Program[] = [
       ],
     },
     countryTitle: (c) => `Work and Study ${c.name}`,
+    hubSeoTitle: (n) => `Work and Study 2027: ${n} Ülkede Çalışarak Dil Eğitimi`,
+    countrySeoTitle: (c) => fit(`Work and Study ${c.name} 2027: Şartlar ve Çalışma Hakkı`, `Work and Study ${c.name} 2027: Şartlar`, `Work and Study ${c.name}`),
     countryLead: (c) => `${c.loc} work and study; eğitim alırken yasal olarak çalışma ve ${c.hub} gibi bir şehirde yaşama deneyimi demek.`,
   },
 ]
