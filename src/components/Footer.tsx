@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Icon } from './Icon'
+import { ConsentLink } from './CookieBanner'
 import { site, offices } from '../data/site'
 import { programs } from '../data/programs'
 import { services } from '../data/services'
@@ -89,6 +90,7 @@ export function Footer() {
           <ul>
             <li><Link to="/kvkk">KVKK aydınlatma metni</Link></li>
             <li><Link to="/cerez-politikasi">Çerez politikası</Link></li>
+            <li><ConsentLink /></li>
             <li><Link to="/site-haritasi">Site haritası</Link></li>
           </ul>
         </div>

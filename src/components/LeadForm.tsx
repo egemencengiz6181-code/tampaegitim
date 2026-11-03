@@ -1,6 +1,7 @@
 import { useEffect, useId, useRef, useState, type FormEvent } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { submitLead, programOptions } from '../lib/lead'
+import { track } from '../lib/analytics'
 import { countries } from '../data/countries'
 import { Icon } from './Icon'
 import { site } from '../data/site'
@@ -52,6 +53,7 @@ export function LeadForm({ variant = 'full', source, defaultProgram = '', defaul
         { name: v('name'), phone: v('phone'), email: v('email'), program: v('program'), country: v('country'), message: v('message'), source },
         { hp: v('website'), elapsed: Date.now() - shownAt.current },
       )
+      track('generate_lead', { program: v('program') || undefined, country: v('country') || undefined, form_source: source })
       nav('/tesekkurler', { state: { name: v('name').split(' ')[0], program: v('program') } })
     } catch {
       setStatus('error')

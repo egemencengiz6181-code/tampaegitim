@@ -4,6 +4,7 @@ import { Header } from './Header'
 import { Footer, MobileBar, WhatsAppFloat } from './Footer'
 import { Breadcrumbs, Btn, type Crumb } from './ui'
 import { Icon } from './Icon'
+import { CookieBanner, ConsentLink } from './CookieBanner'
 import { site } from '../data/site'
 import { organizationLd, websiteLd, officesLd } from '../seo/schema'
 import { titleCase, titleNode } from '../lib/text'
@@ -20,6 +21,7 @@ export function SiteLayout() {
       <Footer />
       <MobileBar />
       <WhatsAppFloat />
+      <CookieBanner />
       <ScrollRestoration />
     </>
   )
@@ -44,9 +46,10 @@ export function LandingLayout() {
       <footer className="lp-footer">
         <div className="container">
           <p>© {new Date().getFullYear()} {site.legalName} · {site.experienceYears} yıllık tecrübe · İzmir, Aydın</p>
-          <p><Link to="/kvkk">KVKK</Link> · <Link to="/cerez-politikasi">Çerez politikası</Link> · <Link to="/">tampaegitim.com.tr</Link></p>
+          <p><Link to="/kvkk">KVKK</Link> · <Link to="/cerez-politikasi">Çerez politikası</Link> · <ConsentLink /> · <Link to="/">tampaegitim.com.tr</Link></p>
         </div>
       </footer>
+      <CookieBanner />
       <ScrollRestoration />
     </>
   )

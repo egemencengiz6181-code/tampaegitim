@@ -409,11 +409,19 @@ export function Legal({ kind }: { kind: 'kvkk' | 'cerez' }) {
             </>
           ) : (
             <>
-              <p>Web sitemizde, deneyiminizi iyileştirmek ve site trafiğini analiz etmek amacıyla çerezler kullanılabilir.</p>
+              <p>Web sitemizde zorunlu çerezlerin yanı sıra, yalnızca açık rızanızla analitik ve pazarlama çerezleri kullanılır. İlk ziyaretinizde açılan banttan tercihinizi “Kabul et” veya “Reddet” ile belirleyebilirsiniz; reddetmeniz sitenin kullanımını etkilemez.</p>
               <h2>Kullanılan Çerez Türleri</h2>
-              <ul><li>Zorunlu çerezler: sitenin çalışması için gereklidir.</li><li>Analitik çerezler: ziyaret istatistiklerini anonim olarak ölçer.</li><li>Pazarlama çerezleri: reklam kampanyalarının performansını ölçer.</li></ul>
-              <h2>Çerezleri Yönetme</h2>
-              <p>Tarayıcınızın ayarlarından çerezleri silebilir veya engelleyebilirsiniz.</p>
+              <ul>
+                <li><strong>Zorunlu:</strong> Sitenin çalışması ve çerez tercihinizin hatırlanması için gereklidir (tarayıcınızın yerel depolamasında “tampa-consent” kaydı). Onay gerektirmez.</li>
+                <li><strong>Analitik (Google Analytics 4):</strong> Hangi sayfaların ziyaret edildiğini, formların ve iletişim bağlantılarının ne kadar kullanıldığını ölçer. Yalnızca onay verirseniz “_ga” ile başlayan çerezler yazılır.</li>
+                <li><strong>Pazarlama (Google reklam ürünleri):</strong> Reklam kampanyalarımızın başvuruya dönüşüp dönüşmediğini ölçer. Yalnızca onay verirseniz etkinleşir.</li>
+              </ul>
+              <h2>Onay vermezseniz</h2>
+              <p>Google’ın onay modu (Consent Mode) gereği, onay vermediğiniz durumda cihazınıza analitik veya pazarlama çerezi yazılmaz; Google’a yalnızca çerez içermeyen, kimliksiz sinyaller iletilebilir.</p>
+              <h2>Veri aktarımı</h2>
+              <p>Analitik ve pazarlama verileri Google LLC tarafından işlenir ve yurt dışındaki sunuculara aktarılabilir. Bu aktarım, çerez bandında vereceğiniz açık rızaya dayanır.</p>
+              <h2>Tercihinizi değiştirme</h2>
+              <p>Sayfanın alt kısmındaki “Çerez tercihleri” bağlantısından kararınızı istediğiniz zaman değiştirebilirsiniz. Tarayıcınızın ayarlarından çerezleri silebilir veya engelleyebilirsiniz. Haklarınız için <Link to="/kvkk">KVKK aydınlatma metnimize</Link> bakın.</p>
               <p className="muted small">Bu metin bilgilendirme amaçlı bir taslaktır; yayına alınmadan önce hukuk danışmanınız tarafından gözden geçirilmelidir.</p>
             </>
           )}

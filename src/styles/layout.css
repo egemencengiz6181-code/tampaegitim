@@ -1032,3 +1032,59 @@
   color: #fff !important;
   margin-bottom: 0.5rem;
 }
+
+/* ---------- Çerez onayı ---------- */
+.cookiebar {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: var(--z-drawer);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  max-width: 34rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: var(--shadow-2);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.cookiebar p {
+  margin: 0;
+  flex: 1 1 18rem;
+}
+.cookiebar__actions {
+  display: flex;
+  gap: 0.5rem;
+}
+.cookiebar__actions .btn {
+  min-width: 7rem;
+  justify-content: center;
+}
+@media (max-width: 900px) {
+  .cookiebar {
+    left: 0.5rem;
+    right: 0.5rem;
+    bottom: calc(68px + env(safe-area-inset-bottom));
+    max-width: none;
+  }
+  .cookiebar__actions {
+    width: 100%;
+  }
+  .cookiebar__actions .btn {
+    flex: 1;
+  }
+}
+.linkbtn {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
