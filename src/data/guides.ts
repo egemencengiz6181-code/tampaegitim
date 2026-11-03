@@ -133,6 +133,7 @@ export const guides: Guide[] = [
       { h: 'Gözetim', p: ['Önerdiğimiz yaz okulları 7/24 gözetim sunar. Belirli sayıda öğrenciye bir grup lideri düşer; grup liderleri öğrencilerle birlikte konaklar ve tüm aktivitelere eşlik eder.'] },
       { h: 'Kampüs güvenliği', list: ['Kampüs girişlerinde kontrol ve ziyaretçi kaydı', 'Gece yoklaması ve oda kontrolleri', 'Yaş grubuna göre belirlenen serbest zaman kuralları', 'Acil durumlar için 7/24 ulaşılabilen telefon hattı', 'Kampüste veya yakınında sağlık hizmeti'] },
       { h: 'Aileyle iletişim', p: ['Program boyunca aileler okul ve danışmanımız aracılığıyla bilgilendirilir. Öğrencinin telefon kullanım kuralları ve iletişim saatleri programdan önce veliyle paylaşılır.'] },
+      { h: 'İngiltere için ayrıntılı rehber', p: ['Okula ve danışmana sormanız gereken güvenlik soruları için [İngiltere yaz okulu nasıl seçilir?](/blog/ingiltere-yaz-okulu-secerken-sorulacak-sorular), yatılı kampüs ile aile yanı konaklamanın farkları için [yaz okulu konaklama rehberi](/blog/ingiltere-yaz-okulu-konaklama) yazılarımıza bakın. 7–12 yaş için ek önlemler: [çocuklar için İngiltere yaz okulu](/blog/cocuklar-icin-ingiltere-yaz-okulu).'] },
     ],
   },
   {
@@ -145,6 +146,7 @@ export const guides: Guide[] = [
       { h: 'Tipik bir hafta', list: ['Hafta içi sabahları seviyeye göre İngilizce dersleri', 'Öğleden sonra spor, sanat, drama veya proje atölyeleri', 'Akşamları disko, yetenek gecesi, film ve quiz geceleri', 'Hafta içi yarım gün şehir gezileri', 'Hafta sonu tam gün geziler'] },
       { h: 'Örnek geziler', p: ['İngiltere programlarında Londra, Oxford, Cambridge, Bath ve Brighton; Malta’da Valletta, Mdina ve Gozo adası; İrlanda’da Dublin şehir merkezi ve kıyı kasabaları sık yapılan gezilerdendir.'] },
       { h: 'Özel ilgi programları', p: ['Futbol, tenis, binicilik, kodlama, liderlik veya sanat gibi alanlarda yoğunlaşmak isteyen öğrenciler için dil derslerini bu aktivitelerle birleştiren programlar bulunur.'] },
+      { h: 'Şehirlere göre yaz okulu', p: ['Gezi ve etkinlik programı şehirden şehre değişir: [Londra yaz okulları](/blog/londra-yaz-okullari), [Oxford ve Cambridge yaz okulu](/blog/oxford-cambridge-yaz-okulu) ve sahil şehirleri için [Brighton yaz okulu](/blog/brighton-yaz-okulu) yazılarımızda örnek haftaları bulabilirsiniz.'] },
     ],
   },
   {
@@ -157,6 +159,7 @@ export const guides: Guide[] = [
       { h: 'Belgeler', list: ['Geçerli pasaport (dönüş tarihinden sonra en az 6 ay)', 'Vize (gerekiyorsa)', 'Noter onaylı muvafakatname', 'Okul kabul ve kayıt belgeleri', 'Sağlık sigortası poliçesi', 'Uçuş ve transfer bilgileri'] },
       { h: 'Valiz', list: ['Yağmurluk ve kat kat giyinmeye uygun kıyafetler', 'Spor ayakkabı ve spor kıyafetleri', 'Adaptör ve şarj aletleri', 'Düzenli kullanılan ilaçlar ve reçeteleri', 'Küçük bir sırt çantası'] },
       { h: 'Harçlık', p: ['Hafta sonu gezilerinin çoğu programa dahildir; harçlık genellikle kişisel alışveriş ve atıştırmalıklar için gereklidir. Önerilen haftalık tutarı programa göre veliyle paylaşıyoruz.'] },
+      { h: 'İngiltere’ye gidecekler için', p: ['Eşya listesinin tamamı için [İngiltere yaz okulu valiz listesi](/blog/ingiltere-yaz-okulu-valiz-listesi), 18 yaş altı vize belgeleri için [İngiltere yaz okulu vizesi](/blog/ingiltere-yaz-okulu-vize) ve tarih planı için [2027 kayıt takvimi](/blog/ingiltere-yaz-okulu-kayit-takvimi) yazılarımıza bakın.'] },
     ],
   },
   {
@@ -169,6 +172,7 @@ export const guides: Guide[] = [
       { h: 'Nasıl işler?', p: ['Uygun dönemlerde aynı programa katılan öğrenciler Türkiye’den bir refakatçi eşliğinde birlikte uçar. Refakatçi havalimanı işlemlerinde ve okul tarafından karşılanana kadar öğrencilerle birliktedir.'] },
       { h: 'Avantajları', list: ['İlk kez yurtdışına çıkan öğrenciler için güven', 'Ailelere düzenli bilgilendirme', 'Uçuş ve transferlerin tek elden organizasyonu'] },
       { h: 'Dikkat', p: ['Grup içinde Türkçe konuşma eğilimini azaltmak için öğrenciler okulda farklı milliyetlerden öğrencilerle aynı sınıf ve odalara yerleştirilir.'] },
+      { h: 'İngiltere’de grup programları', p: ['İzmir’den refakatli grup programları ve kampüs seçenekleri için [İngiltere yaz okulları](/yurtdisi-yaz-okullari/ingiltere) sayfamızı, küçük yaştaki öğrenciler için [çocuklar için İngiltere yaz okulu](/blog/cocuklar-icin-ingiltere-yaz-okulu) yazımızı inceleyin.'] },
     ],
   },
 

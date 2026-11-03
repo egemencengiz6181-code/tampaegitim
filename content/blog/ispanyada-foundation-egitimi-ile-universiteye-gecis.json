@@ -1,23 +1,51 @@
 {
   "slug": "ispanyada-foundation-egitimi-ile-universiteye-gecis",
-  "title": "İspanya’da Foundation Eğitimi ile Üniversiteye Geçiş Nasıl Sağlanır?",
-  "metaTitle": "İspanya’da Foundation ile Üniversiteye Geçiş",
-  "description": "İspanya’da foundation eğitimi ile üniversiteye geçiş: programın süresi, içeriği, dil şartları ve uluslararası öğrenciler için başvuru adımları.",
+  "title": "İspanya’da Foundation: Homologación, PCE ve Üniversiteye Geçiş",
+  "metaTitle": "İspanya’da Foundation: Homologación, PCE ve B2",
+  "description": "İspanya’da foundation nasıl işler? Türk lise mezunu için homologación, UNEDasiss ve PCE not hesabı, İspanyolca B2 şartı, öğrenci vizesi kuralları ve maliyet.",
   "category": "Üniversite",
   "date": "2026-08-10",
-  "updated": "2026-08-10",
+  "updated": "2026-11-03",
   "image": "/img/misc/blog-ispanya.jpg",
-  "imageAlt": "İspanya’da Foundation Eğitimi ile Üniversiteye Geçiş Nasıl Sağlanır?",
-  "focusKeyword": "",
-  "keywords": [],
+  "imageAlt": "İspanya’da üniversiteye hazırlık yılına başlayan öğrenci",
+  "focusKeyword": "ispanya’da foundation",
+  "keywords": [
+    "ispanya’da foundation",
+    "ispanya üniversiteye geçiş",
+    "unedasiss",
+    "homologación",
+    "ispanya pce sınavı",
+    "ispanya öğrenci vizesi"
+  ],
   "countries": [
     "ispanya"
   ],
   "programs": [
     "lisans"
   ],
-  "faqs": [],
+  "faqs": [
+    {
+      "q": "İspanya’da üniversite için foundation zorunlu mu?",
+      "a": "Hayır. Türk lise diploması homologación ile İspanyol Bachillerato’suna denk sayılır. Foundation çoğu zaman İspanyolca B2 seviyesine ulaşmak ve PCE sınavlarına hazırlanmak için yapılan bir hazırlık yılıdır."
+    },
+    {
+      "q": "UNEDasiss notu nasıl hesaplanır?",
+      "a": "Kabul notu 14 puan üzerinden hesaplanır. Homologación sahibi öğrencinin PCE’siz notu 5 ile 6 arasında kalır; en iyi dört PCE sınavı her biri 0,1 katsayıyla eklenerek not yükseltilir."
+    },
+    {
+      "q": "İspanya’da devlet üniversitesi için hangi İspanyolca seviyesi gerekir?",
+      "a": "İspanyolca eğitim veren devlet programlarının çoğu en az B2 düzeyi ister; DELE veya SIELE belgesi kabul edilir. Başlangıç seviyesinden B2’ye ulaşmak yoğun kursla genellikle 6–9 ay sürer."
+    },
+    {
+      "q": "Hazırlık yılı için İspanya öğrenci vizesi alınır mı?",
+      "a": "Alınabilir, ancak hazırlık programının belirli bir yükseköğretim programına bağlı olması ve o kurum ya da anlaşmalı kurumu tarafından verilmesi gerekir. İspanyolca kursu için izin, resmî dil okulları veya Instituto Cervantes akreditasyonlu merkezlerdeki kurslar için verilir."
+    },
+    {
+      "q": "İspanya öğrenci vizesi için ne kadar para göstermek gerekir?",
+      "a": "Her ay için IPREM’in yüzde 100’ü istenir; 2026’da bu tutar ayda 600 €, 12 aylık kalış için 7.200 €’dur. Konaklama önceden ödenmişse tutar düşebilir."
+    }
+  ],
   "draft": false,
-  "readMin": 1,
-  "words": 168
+  "readMin": 5,
+  "words": 977
 }

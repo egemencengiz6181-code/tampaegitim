@@ -1,0 +1,46 @@
+{
+  "slug": "ingiltere-yaz-okulu-konaklama",
+  "title": "Yaz Okulu Konaklama: Aile Yanı mı, Yatılı Kampüs mü?",
+  "metaTitle": "Yaz Okulu Konaklama: Aile Yanı mı Yurt mu?",
+  "description": "Yaz okulu konaklama seçimi: İngiltere'de yatılı kampüs ile aile yanı karşılaştırması, yaşa göre öneri, oda düzeni, yemek, ulaşım ve DBS güvenlik kontrolü.",
+  "category": "Yaz Okulu",
+  "date": "2026-11-03",
+  "updated": "2026-11-03",
+  "image": "/img/cities/oxford.jpg",
+  "imageAlt": "Oxford'da avlulu tarihi kolej binası; yatılı yaz okulu kampüslerine bir örnek",
+  "focusKeyword": "yaz okulu konaklama",
+  "keywords": [
+    "yaz okulu konaklama",
+    "yaz okulu aile yanı mı yurt mu",
+    "ingiltere yaz okulu aile yanı",
+    "yatılı yaz okulu",
+    "homestay yaz okulu"
+  ],
+  "countries": [
+    "ingiltere"
+  ],
+  "programs": [
+    "yaz"
+  ],
+  "faqs": [
+    {
+      "q": "Yaz okulunda aile yanı mı, yurt mu daha iyi?",
+      "a": "7–12 yaş için yatılı kampüs daha uygundur; gözetim ve günlük düzen en net bu modeldedir. 16–17 yaşta aile yanı İngilizceyi daha çok ilerletir, kampüs ise daha sosyal bir ortam sunar."
+    },
+    {
+      "q": "İngiltere'de ev sahibi aileler kontrol ediliyor mu?",
+      "a": "18 yaş altı öğrenci ağırlayan ailelerde evdeki yetişkinler için DBS kontrolü yapılır, ev yerinde ziyaret edilir. Akredite okulların aile yanı konaklamasını seçmek ilk güvence adımıdır."
+    },
+    {
+      "q": "Aile yanında okula nasıl gidilir?",
+      "a": "Şehre göre yürüyerek, otobüsle veya okul servisiyle; süre genellikle 15–40 dakikadır. 18 yaş altı öğrenciler için eve dönüş saati ve akşam dönüş düzeni okul tarafından yazılı olarak belirlenir."
+    },
+    {
+      "q": "Yatılı kampüste odalar kaç kişilik?",
+      "a": "Yatılı okul kampüslerinde genellikle 2–6 kişilik yatakhaneler, üniversite kampüslerinde tek veya çift kişilik odalar bulunur. Banyolar çoğunlukla ortaktır."
+    }
+  ],
+  "draft": false,
+  "readMin": 6,
+  "words": 1022
+}

@@ -1,0 +1,46 @@
+{
+  "slug": "ingilterenin-en-iyi-universiteleri",
+  "title": "İngiltere’nin En İyi Üniversiteleri: 2027 Sıralama ve Seçim Rehberi",
+  "metaTitle": "İngiltere’nin En İyi Üniversiteleri 2027: Sıralama Rehberi",
+  "description": "İngiltere’nin en iyi üniversiteleri: QS, THE, Guardian ve Complete University Guide neyi ölçer, Russell Group grupları ve Türk öğrenci için kabul seviyeleri.",
+  "category": "Üniversite",
+  "date": "2026-11-03",
+  "updated": "2026-11-03",
+  "image": "/img/misc/bachelor.jpg",
+  "imageAlt": "İngiltere’de bir üniversite kampüsünde mezuniyet töreni",
+  "focusKeyword": "ingiltere'nin en iyi üniversiteleri",
+  "keywords": [
+    "ingiltere'nin en iyi üniversiteleri",
+    "ingiltere üniversite sıralaması 2027",
+    "russell group üniversiteleri",
+    "ingiltere üniversiteleri kabul şartları",
+    "londra en iyi üniversiteler"
+  ],
+  "countries": [
+    "ingiltere"
+  ],
+  "programs": [
+    "lisans"
+  ],
+  "faqs": [
+    {
+      "q": "İngiltere’nin en iyi üniversiteleri hangi sıralamaya göre belirlenir?",
+      "a": "Tek bir resmî sıralama yoktur. QS ve THE dünya sıralamaları araştırma ve itibarı, Complete University Guide ve Guardian ise öğrenci deneyimi, öğretim ve mezun sonuçlarını daha çok ölçer; Guardian araştırmayı hiç hesaba katmaz."
+    },
+    {
+      "q": "Russell Group’ta kaç üniversite var?",
+      "a": "Russell Group’ta 24 üniversite vardır. Sitemizde profili bulunan 29 İngiliz üniversitesinden 17’si bu grubun üyesidir; Imperial, UCL, LSE, King’s, Manchester, Edinburgh ve Warwick bunlar arasındadır."
+    },
+    {
+      "q": "Türk lise diplomasıyla İngiltere’nin en iyi üniversitelerine girilir mi?",
+      "a": "Imperial, LSE ve UCL gibi en seçici üniversitelerde Türk lise diplomasıyla doğrudan kabul pratikte yoktur; IB, A-Level ya da tanınan bir hazırlık programı gerekir. Brunel, Coventry veya Middlesex gibi üniversitelerde bazı bölümler yüksek ortalamalı diplomayı doğrudan değerlendirebilir."
+    },
+    {
+      "q": "Üniversite seçerken genel sıralamaya mı bölüm sıralamasına mı bakmalıyım?",
+      "a": "Bölüm sıralaması daha belirleyicidir. Genel listede daha aşağıda olan bir üniversite sizin bölümünüzde üst sıralarda olabilir; akreditasyon, maliyet ve şehir de kararı en az sıralama kadar etkiler."
+    }
+  ],
+  "draft": false,
+  "readMin": 6,
+  "words": 1040
+}

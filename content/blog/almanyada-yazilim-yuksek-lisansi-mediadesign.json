@@ -1,23 +1,50 @@
 {
   "slug": "almanyada-yazilim-yuksek-lisansi-mediadesign",
-  "title": "Almanya’da Yazılım Yüksek Lisansı: Mediadesign University of Applied Sciences ile Geleceği Kodlayın",
-  "metaTitle": "Almanya’da Yazılım Yüksek Lisansı: Mediadesign University",
-  "description": "Yazılım dünyasında kariyer yapmak isteyenlerin hayallerini süsleyen ilk durak genellikle Almanya oluyor. Gerek teknoloji devlerine ev sahipliği yapması gerekse mezuniyet sonrası sunduğu geniş iş imkânları, bu ülkeyi cazibe merkezi haline getiriyor.",
+  "title": "Almanya’da Yazılım Yüksek Lisansı: Devlet mi Özel mi?",
+  "metaTitle": "Almanya’da Yazılım Yüksek Lisansı: Devlet mi Özel mi?",
+  "description": "Almanya’da yazılım yüksek lisansı: devlet ve özel üniversite karşılaştırması, kabul şartları, uni-assist, Mediadesign örneği, bloke hesap ve iş arama izni.",
   "category": "Yüksek Lisans",
   "date": "2026-04-11",
-  "updated": "2026-04-11",
+  "updated": "2026-11-03",
   "image": "/img/misc/blog-almanya.jpg",
-  "imageAlt": "Almanya’da Yazılım Yüksek Lisansı: Mediadesign University of Applied Sciences ile Geleceği Kodlayın",
-  "focusKeyword": "",
-  "keywords": [],
+  "imageAlt": "Almanya’da bilgisayar bilimi yüksek lisansı yapan öğrenci",
+  "focusKeyword": "almanya’da yazılım yüksek lisansı",
+  "keywords": [
+    "almanya’da yazılım yüksek lisansı",
+    "almanya bilgisayar bilimi yüksek lisans",
+    "almanya informatik master",
+    "mediadesign hochschule",
+    "almanya özel üniversite yüksek lisans"
+  ],
   "countries": [
     "almanya"
   ],
   "programs": [
     "yuksek-lisans"
   ],
-  "faqs": [],
+  "faqs": [
+    {
+      "q": "Almanya’da yazılım yüksek lisansı ücretsiz mi?",
+      "a": "Devlet üniversitelerinin çoğunda öğrenim ücreti yoktur, yalnızca Semesterbeitrag ödenir. Ancak Baden-Württemberg AB dışı öğrencilerden dönemlik 1.500 €, TUM ise yüksek lisansta genellikle dönemlik 4.000–6.000 € alır. Özel üniversitelerde yıllık ücret yaklaşık 11.000–16.000 €’dur."
+    },
+    {
+      "q": "Devlet üniversitesine kabul için ne gerekir?",
+      "a": "Lisans transkriptinizin matematik, teorik bilgisayar bilimi ve programlama derslerinden yeterli ECTS içermesi ve not ortalamanızın programın barajını geçmesi gerekir. Başvuru çoğu zaman uni-assist veya VPD ile yapılır."
+    },
+    {
+      "q": "Mediadesign Hochschule’de hangi yüksek lisans var?",
+      "a": "Okulun sitesine göre İngilizce M.Sc. Information Technology programı Cybersecurity ile Artificial Intelligence and Data Analytics alanlarında sunuluyor. Bilişim veya benzeri lisans diploması ve IELTS 7.0 ya da TOEFL iBT 95 düzeyinde İngilizce isteniyor."
+    },
+    {
+      "q": "Almanya’da mezun olduktan sonra kalabilir miyim?",
+      "a": "Evet. Almanya’da yükseköğretimini bitiren mezun, iş aramak için 18 aya kadar oturma izni alabilir ve bu sürede çalışabilir. İş bulunca nitelikli çalışan iznine veya AB Mavi Kart’a geçilir."
+    },
+    {
+      "q": "Almanya bloke hesap 2026’da ne kadar?",
+      "a": "Öğrenim vizesi için 2026’da istenen tutar yıllık 11.904 €, aylık 992 €’dur. Bu tutar devlet ve özel üniversite öğrencileri için aynıdır."
+    }
+  ],
   "draft": false,
-  "readMin": 1,
-  "words": 130
+  "readMin": 5,
+  "words": 906
 }

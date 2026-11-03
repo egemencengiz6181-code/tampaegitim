@@ -1,23 +1,42 @@
 {
   "slug": "yurtdisi-egitim-danismanligi-nasil-secilir",
-  "title": "Yurt Dışı Eğitim Danışmanlığı Firması Nasıl Seçilir?",
-  "metaTitle": "",
-  "description": "Yurt dışı eğitim kararınızın en önemli parçalarından biri doğru danışmanla çalışmak. Tecrübe, şeffaflık, referanslar ve süreç yönetimi açısından dikkat etmeniz gerekenler.",
+  "title": "Yurt Dışı Eğitim Danışmanlığı Nasıl Seçilir? Kontrol Listesi",
+  "metaTitle": "Yurt Dışı Eğitim Danışmanlığı Nasıl Seçilir? 2027",
+  "description": "Yurt dışı eğitim danışmanlığı nasıl seçilir? Doğrulanabilir göstergeler, British Council sertifikası, komisyon modeli, sorulacak sorular ve kırmızı bayraklar.",
   "category": "Genel",
   "date": "2026-04-30",
-  "updated": "2026-04-30",
+  "updated": "2026-11-03",
   "image": "/img/misc/office-2.jpg",
-  "imageAlt": "Yurt Dışı Eğitim Danışmanlığı Firması Nasıl Seçilir?",
-  "focusKeyword": "yurt dışı eğitim danışmanlığı",
+  "imageAlt": "Yurt dışı eğitim danışmanlığı ofisinde ön görüşme",
+  "focusKeyword": "yurt dışı eğitim danışmanlığı nasıl seçilir",
   "keywords": [
+    "yurt dışı eğitim danışmanlığı nasıl seçilir",
     "yurt dışı eğitim danışmanlığı",
-    "yurtdışı eğitim firması",
-    "izmir yurt dışı eğitim"
+    "yurtdışı eğitim firması seçimi",
+    "british council sertifikalı danışman",
+    "agent quality framework"
   ],
   "countries": [],
   "programs": [],
-  "faqs": [],
+  "faqs": [
+    {
+      "q": "İyi bir yurt dışı eğitim danışmanlığını nasıl anlarım?",
+      "a": "Doğrulayabildiğiniz göstergelere bakın: fiziki ofis, yazılı ücret ve hizmet kapsamı, danışmanın British Council sertifikası ve üniversitelerin kendi sitelerinde yayımladığı temsilci listeleri."
+    },
+    {
+      "q": "British Council sertifikası firmanın onaylı olduğu anlamına mı gelir?",
+      "a": "Hayır. Sertifika, eğitimi ve sınavları geçen danışmana kişisel olarak verilir ve British Council’in herkese açık veri tabanında listelenir; British Council firmaları akredite etmez veya onaylamaz."
+    },
+    {
+      "q": "Danışmanlık firmaları nasıl para kazanır?",
+      "a": "Çoğunlukla öğrenciden alınan hizmet ücreti ve okul ya da üniversitelerin kayıt sonrası ödediği komisyonla. Bu model yaygındır; önemli olan ücretlerin ve önerilen okulların neden seçildiğinin açıkça anlatılmasıdır."
+    },
+    {
+      "q": "Vize garantisi veren danışmana güvenilir mi?",
+      "a": "Hayır. Vizeye konsolosluk veya ilgili ülkenin göç makamı, kabule üniversite karar verir; hiçbir danışmanlık firması vize ya da kabul garanti edemez."
+    }
+  ],
   "draft": false,
-  "readMin": 1,
-  "words": 155
+  "readMin": 5,
+  "words": 900
 }

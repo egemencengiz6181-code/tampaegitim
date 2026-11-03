@@ -1,0 +1,50 @@
+{
+  "slug": "cocuklar-icin-ingiltere-yaz-okulu",
+  "title": "Çocuklar İçin İngiltere Yaz Okulu: 7–12 Yaş Veli Rehberi",
+  "metaTitle": "Çocuklar İçin İngiltere Yaz Okulu: 7–12 Yaş Rehberi",
+  "description": "Çocuklar için İngiltere yaz okulu: 7–12 yaş junior programların farkı, hazır olma listesi, ev özlemi, refakatsiz çocuk uçuşu ve 28 gün kuralı.",
+  "category": "Yaz Okulu",
+  "date": "2026-11-03",
+  "updated": "2026-11-03",
+  "image": "/img/misc/blog-yaz.jpg",
+  "imageAlt": "İngiltere'de yaz okulu öğrencileri bir katedralin önünde grup halinde",
+  "focusKeyword": "çocuklar için ingiltere yaz okulu",
+  "keywords": [
+    "çocuklar için ingiltere yaz okulu",
+    "7-12 yaş yaz okulu",
+    "ingiltere junior yaz okulu",
+    "refakatsiz çocuk uçuşu",
+    "çocuğum yaz okuluna hazır mı"
+  ],
+  "countries": [
+    "ingiltere"
+  ],
+  "programs": [
+    "yaz"
+  ],
+  "faqs": [
+    {
+      "q": "İngiltere yaz okuluna kaç yaşında gidilebilir?",
+      "a": "İngiltere yaz okulları genellikle 7–17 yaş arası öğrencileri kabul eder. 7–12 yaş için ayrı junior programlar, ayrı sınıflar ve daha sıkı gözetim uygulanır."
+    },
+    {
+      "q": "Çocuğumun yaz okuluna hazır olduğunu nasıl anlarım?",
+      "a": "Daha önce ailesinden ayrı birkaç gece geçirmiş olması, temel öz bakımını kendisi yapabilmesi, ihtiyacını bir yetişkine söyleyebilmesi ve gitmeyi kendisinin de istemesi iyi işaretlerdir. Yaş tek başına belirleyici değildir."
+    },
+    {
+      "q": "Çocuğum İngiltere'ye yalnız uçabilir mi?",
+      "a": "Havayollarının ücretli refakatsiz çocuk (UM) hizmetiyle uçabilir; yaş sınırları ve ücretler havayoluna göre değişir. Uygun dönemlerde İzmir'den refakatli grup uçuşlarına da katılabilir."
+    },
+    {
+      "q": "Yaz okulunda çocuğumla ne sıklıkla konuşabilirim?",
+      "a": "Junior gruplarda telefon çoğu zaman belirli saatlerde verilir. Okulun kuralına uygun, önceden belirlenmiş kısa ve düzenli görüşmeler ev özlemini azaltır."
+    },
+    {
+      "q": "28 gün kuralı yaz okulunu etkiler mi?",
+      "a": "16 yaşından küçük bir çocuk akrabası olmayan bir ailenin yanında 28 gün veya daha uzun kalırsa yerel yönetime bildirim gerekir. Kampüste kalınan 2–3 haftalık programlarda bu kural genellikle devreye girmez."
+    }
+  ],
+  "draft": false,
+  "readMin": 6,
+  "words": 1157
+}

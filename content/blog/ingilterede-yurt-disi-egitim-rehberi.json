@@ -1,18 +1,20 @@
 {
   "slug": "ingilterede-yurt-disi-egitim-rehberi",
-  "title": "İngiltere’de Yurt Dışı Eğitim: Programlar, Maliyetler ve Başvuru Rehberi",
-  "metaTitle": "İngiltere’de Yurt Dışı Eğitim Rehberi 2027",
-  "description": "İngiltere’de yurt dışı eğitim rehberi: dil okulu, yaz okulu, lise, üniversite ve yüksek lisans seçenekleri; kime uygun, ne kadar sürer, vize nasıl alınır.",
+  "title": "İngiltere’de Yurt Dışı Eğitim: Yaşa ve Hedefe Göre Hangi Program?",
+  "metaTitle": "İngiltere’de Yurt Dışı Eğitim: Hangi Program? 2027",
+  "description": "İngiltere’de yurt dışı eğitim için hangi program size uygun? Yaz okulu, dil okulu, lise, foundation, lisans, yüksek lisans ve online seçenekler tek tabloda.",
   "category": "Genel",
   "date": "2026-10-05",
-  "updated": "2026-10-05",
+  "updated": "2026-11-03",
   "image": "/img/dest/ingiltere.jpg",
-  "imageAlt": "İngiltere’de Yurt Dışı Eğitim: Programlar, Maliyetler ve Başvuru Rehberi",
-  "focusKeyword": "ingiltere yurt dışı eğitim",
+  "imageAlt": "İngiltere’de yurt dışı eğitim programları için karar rehberi",
+  "focusKeyword": "ingiltere'de yurt dışı eğitim",
   "keywords": [
+    "ingiltere'de yurt dışı eğitim",
     "ingiltere yurt dışı eğitim",
-    "ingilterede eğitim",
-    "ingiltere yurtdışı eğitim danışmanlığı"
+    "ingilterede eğitim seçenekleri",
+    "ingiltere'de hangi program",
+    "ingiltere eğitim yaş"
   ],
   "countries": [
     "ingiltere"
@@ -24,8 +26,25 @@
     "lisans",
     "yuksek-lisans"
   ],
-  "faqs": [],
+  "faqs": [
+    {
+      "q": "İngiltere’de yurt dışı eğitim için en uygun program hangisi?",
+      "a": "Yaşa ve hedefe bağlıdır: 7–17 yaş için yaz okulu, 13–18 yaş için yatılı lise, 16 yaş üstü için dil okulu, Türk lise mezunları için foundation ve lisans, üniversite mezunları için çoğunlukla 12 ay süren yüksek lisans."
+    },
+    {
+      "q": "Türk lise diplomasıyla İngiltere’de doğrudan lisansa başlanabilir mi?",
+      "a": "Çoğu üniversitede hayır; genellikle bir yıllık foundation programı istenir. IB Diploma veya A-Level ile okuyan öğrenciler UCAS üzerinden doğrudan başvurabilir."
+    },
+    {
+      "q": "İngiltere’de hangi program için hangi vize gerekir?",
+      "a": "6 aya kadar dil kursu ve yaz okulu için Standard Visitor, 6–11 aylık İngilizce kursları için Short-term Study, lise, foundation, lisans ve yüksek lisans için Student vizesi gerekir."
+    },
+    {
+      "q": "İngiltere’de okurken çalışılabilir mi?",
+      "a": "Dil okulu vizeleri çalışma hakkı tanımaz. Student vizesindeki lisans ve yüksek lisans öğrencileri dönem içinde haftada 20 saate, foundation gibi lisans altı programlardaki öğrenciler haftada 10 saate kadar çalışabilir."
+    }
+  ],
   "draft": false,
-  "readMin": 1,
-  "words": 268
+  "readMin": 5,
+  "words": 896
 }

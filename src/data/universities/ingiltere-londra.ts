@@ -507,7 +507,7 @@ export const ingiltereLondraUnis: University[] = [
       { item: 'Konaklama', value: 'Kampüs yurtları yaklaşık 170–280 £ / hafta', note: 'Seçenekler için [öğrenci konaklama](/ogrenci-konaklama).' },
     ],
     scholarships: [
-      'Royal Holloway International Undergraduate Scholarship: A-Level’da ABB veya denk not alan Eylül 2026 girişli uluslararası lisans öğrencilerine ilk yıl için 3.000 £ ücret indirimi; otomatik olarak verilir.',
+      'Royal Holloway International Undergraduate Scholarship: A-Level’da BBB (IB 30) veya denk not alan Eylül 2027 girişli uluslararası lisans öğrencilerine programın her yılı için 3.000 £ ücret indirimi; otomatik olarak verilir.',
       'Yüksek lisans için bölüm bazlı ve başarı odaklı burslar.',
       'Burs koşulları her giriş yılı için yeniden yayımlanır; güncel listeyi başvuru döneminde kontrol edin.',
     ],
@@ -525,7 +525,7 @@ export const ingiltereLondraUnis: University[] = [
     faqs: [
       { q: 'Royal Holloway Londra’da mı?', a: 'Royal Holloway, Londra’nın batısındaki Surrey’de, Egham’da yer alır; Londra şehir sınırlarının hemen dışındadır. Egham istasyonundan Londra Waterloo’ya trenle yaklaşık 35–40 dakikada gidilir. Üniversite, University of London üyesidir ve diplomalarında bu bağ yer alır.' },
       { q: 'Royal Holloway YÖK tarafından tanınıyor mu?', a: 'Royal Holloway, İngiltere’de tanınan bir devlet üniversitesidir ve University of London üyesidir. Türkiye’de denklik, mezuniyet sonrası YÖK’e bireysel başvuru ile değerlendirilir. Programınızın süresinin ve türünün güncel YÖK kriterlerine uygunluğunu önceden kontrol edin.' },
-      { q: 'Royal Holloway’de hangi burslar var?', a: 'Eylül 2026 girişli uluslararası lisans öğrencileri için ABB veya denk not koşuluyla ilk yıl 3.000 £ indirim sağlayan otomatik bir burs vardır. Yüksek lisans adayları için de bölüm bazlı burslar sunulur. Koşullar her yıl güncellenir.' },
+      { q: 'Royal Holloway’de hangi burslar var?', a: 'Eylül 2027 girişli uluslararası lisans öğrencileri için BBB (IB 30) veya denk not koşuluyla her yıl 3.000 £ indirim sağlayan otomatik bir burs vardır. Yüksek lisans adayları için de bölüm bazlı burslar sunulur. Koşullar her yıl güncellenir.' },
       { q: 'Royal Holloway siber güvenlik yüksek lisansı nasıl?', a: 'Information Security Group, siber güvenlik eğitiminde İngiltere’nin köklü akademik gruplarından biridir ve [yüksek lisans](/yurtdisi-yuksek-lisans/ingiltere) programı sektörde tanınır. Başvuru için genellikle bilgisayar, matematik veya mühendislik geçmişi istenir. Programın içeriği teknik ve yönetsel konuları birlikte ele alır.' },
       { q: 'Royal Holloway ücretleri ne kadar?', a: 'Uluslararası lisans ücretleri bölüme göre yaklaşık 23.000–30.000 £ arasındadır. 2026/27 International Foundation Year ücreti 20.750 £’dur. Yaşam giderleri Londra merkezine göre biraz daha düşüktür ama Egham çevresi de pahalı sayılır.' },
     ],

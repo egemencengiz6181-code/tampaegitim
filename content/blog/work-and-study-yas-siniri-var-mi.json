@@ -1,21 +1,50 @@
 {
   "slug": "work-and-study-yas-siniri-var-mi",
-  "title": "Work and Study Yaş Sınırı Var mı? Yurt Dışı Eğitimde Yaş Faktörü ve Vize Etkisi",
-  "metaTitle": "Work and Study Yaş Sınırı Var mı? Yaş ve Vize Etkisi",
-  "description": "Work and Study programı, yurt dışında eğitim alırken aynı zamanda yasal olarak çalışabilme fırsatı sunan en popüler sistemlerden biridir. Bu modeli özellikle dil eğitimi almak ve kariyerine global bir yön vermek isteyenler tercih eder. Ancak en sık sorulan sorulardan biri yaş sınırıdır.",
+  "title": "Work and Study Yaş Sınırı Var mı? Ülke Ülke Yaş ve Koşullar",
+  "metaTitle": "Work and Study Yaş Sınırı: 5 Ülkede Koşullar 2027",
+  "description": "Work and study yaş sınırı var mı? İrlanda, Malta, Kanada, Avustralya ve Dubai’de yaş ve çalışma koşulları, vizede yaşın etkisi ve Working Holiday farkı.",
   "category": "Work and Study",
   "date": "2025-04-17",
-  "updated": "2025-04-17",
+  "updated": "2026-11-03",
   "image": "/img/misc/blog-workstudy.jpg",
-  "imageAlt": "Work and Study Yaş Sınırı Var mı? Yurt Dışı Eğitimde Yaş Faktörü ve Vize Etkisi",
-  "focusKeyword": "",
-  "keywords": [],
-  "countries": [],
+  "imageAlt": "Work and study programında çalışırken dil eğitimi alan öğrenci",
+  "focusKeyword": "work and study yaş sınırı",
+  "keywords": [
+    "work and study yaş sınırı",
+    "work and study yaş",
+    "work and study 30 yaş üstü",
+    "working holiday yaş sınırı",
+    "stamp 2 yaş"
+  ],
+  "countries": [
+    "irlanda",
+    "malta",
+    "kanada",
+    "avustralya",
+    "dubai"
+  ],
   "programs": [
     "work-study"
   ],
-  "faqs": [],
+  "faqs": [
+    {
+      "q": "Work and study için üst yaş sınırı var mı?",
+      "a": "İrlanda, Malta, Kanada, Avustralya ve Dubai’de öğrenci olarak çalışma hakkı için resmî bir üst yaş sınırı yoktur. Okullar work and study programlarına genellikle 18 yaşını doldurmuş öğrencileri kabul eder."
+    },
+    {
+      "q": "30 yaş üstü work and study yapabilir mi?",
+      "a": "Evet. Yaş vizeyi doğrudan engellemez; ancak vize değerlendirmesinde eğitim ve iş geçmişi, programın kariyere katkısı, Türkiye’ye bağlılık ve finansal kaynağın açıklığı daha dikkatli incelenir."
+    },
+    {
+      "q": "Working Holiday ile work and study arasındaki fark nedir?",
+      "a": "Work and study bir okula kayıtla yürür ve öğrenci vizesine dayanır. Working Holiday ise yaş sınırı ve ülkeler arası anlaşma gerektiren bir gençlik değişim vizesidir; Türkiye için Avustralya’nın Work and Holiday programı 18–30 yaş arasıdır."
+    },
+    {
+      "q": "Kanada’da dil okuluna giderken çalışabilir miyim?",
+      "a": "Hayır. IRCC’ye göre yalnızca İngilizce veya Fransızca ikinci dil programına kayıtlı öğrenciler kampüs dışında çalışamaz; çalışma hakkı en az 6 aylık diploma veya sertifika programıyla doğar."
+    }
+  ],
   "draft": false,
-  "readMin": 1,
-  "words": 91
+  "readMin": 5,
+  "words": 966
 }

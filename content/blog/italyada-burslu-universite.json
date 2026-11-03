@@ -1,18 +1,20 @@
 {
   "slug": "italyada-burslu-universite",
-  "title": "İtalya’da Burslu Üniversite: DSU Bursu ve Gelire Bağlı Harçlar",
-  "metaTitle": "",
-  "description": "İtalya’da burslu üniversite: devlet üniversitelerinde aile gelirine göre belirlenen harçlar, bölgesel DSU bursları, konaklama desteği ve başvuru süreci.",
+  "title": "İtalya’da Burslu Üniversite: DSU, Başarı Bursları ve Hükümet Bursu",
+  "metaTitle": "İtalya’da Burslu Üniversite 2027: DSU ve Burslar",
+  "description": "İtalya’da burslu üniversite: 2026/27 DSU eşikleri ve tutarları, gelire bağlı harç, başarı bursları, Invest Your Talent ve 2027 girişi için burs takvimi.",
   "category": "Üniversite",
   "date": "2026-06-25",
-  "updated": "2026-06-25",
+  "updated": "2026-11-03",
   "image": "/img/dest/italya.jpg",
-  "imageAlt": "İtalya’da Burslu Üniversite: DSU Bursu ve Gelire Bağlı Harçlar",
-  "focusKeyword": "italya dsu bursu",
+  "imageAlt": "İtalya’da burslu üniversite okuyan öğrenciler için tarihi kampüs manzarası",
+  "focusKeyword": "italya’da burslu üniversite",
   "keywords": [
-    "italya dsu bursu",
-    "italyada burslu okumak",
-    "italya üniversite"
+    "italya’da burslu üniversite",
+    "italya burslu okumak",
+    "italya dsu bursu 2026/27",
+    "invest your talent in italy",
+    "italya üniversite bursları"
   ],
   "countries": [
     "italya"
@@ -21,8 +23,29 @@
     "lisans",
     "yuksek-lisans"
   ],
-  "faqs": [],
+  "faqs": [
+    {
+      "q": "İtalya’da burslu üniversite okumak mümkün mü?",
+      "a": "Evet. Devlet üniversitelerinde gelire bağlı harç, bölgesel DSU bursu, üniversitelerin başarı bursları ve yüksek lisans için İtalya Dışişleri Bakanlığı’nın Invest Your Talent programı olmak üzere dört ayrı kaynak vardır. Her birinin başvurusu ve takvimi ayrıdır."
+    },
+    {
+      "q": "İtalya DSU bursu ne kadar?",
+      "a": "Tutar bölgeye ve gelir dilimine göre değişir. 2026/27’de EDISU Piemonte şehir dışından gelen öğrenciye en düşük gelir diliminde 8.096,78 €, Politecnico di Milano ise 7.419 € nakit artı günlük bir ücretsiz öğün öngörüyor."
+    },
+    {
+      "q": "DSU bursu için gelir sınırı nedir?",
+      "a": "Sınır her çağrıda ayrı belirlenir. 2026/27’de Politecnico di Milano’da ISEE üst sınırı 26.887,93 €, ISPE üst sınırı 58.452,06 €; EDISU Piemonte’de ise 26.306,25 € ve 57.187,53 €’dur."
+    },
+    {
+      "q": "Invest Your Talent in Italy lisans için geçerli mi?",
+      "a": "Hayır. Program mühendislik, mimarlık ve tasarım, ekonomi ve yönetim alanlarındaki İngilizce yüksek lisans ve ileri düzey programlar içindir ve İtalyan bir şirkette staj içerir. 2026–2027 çağrısının son günü 11 Mayıs 2026’ydı."
+    },
+    {
+      "q": "Burs alırsam vize için para göstermem gerekir mi?",
+      "a": "Evet. DSU sonuçları vizeden sonra açıklandığı için mali yeterlilik burstan bağımsız gösterilir. 2026/27 için asgari tutar ayda 783,06 €’dur."
+    }
+  ],
   "draft": false,
-  "readMin": 1,
-  "words": 102
+  "readMin": 6,
+  "words": 1002
 }

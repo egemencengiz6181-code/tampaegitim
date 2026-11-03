@@ -1,0 +1,46 @@
+{
+  "slug": "brighton-yaz-okulu",
+  "title": "Brighton Yaz Okulu: Bournemouth ve Eastbourne ile Karşılaştırma",
+  "metaTitle": "Brighton Yaz Okulu: Bournemouth, Eastbourne Kıyası",
+  "description": "Brighton yaz okulu mu, Bournemouth ya da Eastbourne mu? İngiltere'nin güney sahilinde yaz okulu: Londra'ya uzaklık, konaklama, geziler ve kime uygun.",
+  "category": "Yaz Okulu",
+  "date": "2026-11-03",
+  "updated": "2026-11-03",
+  "image": "/img/cities/bournemouth.jpg",
+  "imageAlt": "İngiltere'nin güney sahilinde kumsal ve yeşil kayalıklar",
+  "focusKeyword": "brighton yaz okulu",
+  "keywords": [
+    "brighton yaz okulu",
+    "bournemouth yaz okulu",
+    "eastbourne yaz okulu",
+    "ingiltere sahil yaz okulu",
+    "brighton yaz kampı"
+  ],
+  "countries": [
+    "ingiltere"
+  ],
+  "programs": [
+    "yaz"
+  ],
+  "faqs": [
+    {
+      "q": "Brighton Londra'ya ne kadar uzak?",
+      "a": "Brighton'dan Londra Victoria veya London Bridge'e trenle yaklaşık 1 saat sürer. Bu yüzden Brighton yaz okullarında Londra'ya günübirlik gezi kolayca planlanır."
+    },
+    {
+      "q": "Brighton mı Bournemouth mu?",
+      "a": "Brighton daha genç, canlı ve Londra'ya daha yakındır. Bournemouth ise daha sakin, kumsalı daha uzun ve doğa gezilerine daha yakındır; Londra'ya trenle yaklaşık 2 saat sürer."
+    },
+    {
+      "q": "Eastbourne yaz okulu küçük yaştaki öğrenciler için uygun mu?",
+      "a": "Eastbourne, güney sahilinin en sakin ve aile odaklı kasabasıdır; ilk kez yurt dışına çıkan öğrenciler için rahat bir ortam sunar. Konaklama ağırlıklı olarak aile yanı olduğu için çok küçük yaştaki çocuklarda kampüs programları ayrıca değerlendirilmelidir."
+    },
+    {
+      "q": "Sahil şehirlerindeki yaz okullarında konaklama nasıl?",
+      "a": "Bu şehirlerde aile yanı konaklama çok yaygındır; okula otobüsle genellikle 15–40 dakikada ulaşılır. Küçük yaş grupları için yatılı kampüs programları da bulunur."
+    }
+  ],
+  "draft": false,
+  "readMin": 6,
+  "words": 1034
+}
