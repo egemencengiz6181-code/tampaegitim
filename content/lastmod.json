@@ -1,7 +1,7 @@
 {
  "/": {
-  "h": "1497e8526dcd8640",
-  "d": "2026-11-03"
+  "h": "a8b65cff36058901",
+  "d": "2026-11-10"
  },
  "/yurtdisi-egitim": {
   "h": "16896be794554a34",
@@ -20,8 +20,8 @@
   "d": "2026-11-03"
  },
  "/lisans-programlari": {
-  "h": "5596d3aa5cae794f",
-  "d": "2026-11-03"
+  "h": "b9eb6ab9a25fae19",
+  "d": "2026-11-10"
  },
  "/yurtdisi-yuksek-lisans": {
   "h": "b06b45e9b860dec1",
@@ -32,596 +32,596 @@
   "d": "2026-11-03"
  },
  "/yurtdisi-dil-okullari/ingiltere": {
-  "h": "aef0b68d16b399fe",
-  "d": "2026-11-03"
+  "h": "20764e6af00ff6f9",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/amerika": {
-  "h": "61ea458c3ad3c1e6",
-  "d": "2026-11-03"
+  "h": "9704e7663fd6c626",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/kanada": {
-  "h": "d4e83e07a1581d7f",
-  "d": "2026-11-03"
+  "h": "997263d0809e6a82",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/avustralya": {
-  "h": "e4083f9433a2e495",
-  "d": "2026-11-03"
+  "h": "e2a0644ca1e75507",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/irlanda": {
-  "h": "9f57dda18d22302b",
-  "d": "2026-11-03"
+  "h": "fdc192359837fe1b",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/malta": {
-  "h": "78a2953b29da999a",
-  "d": "2026-11-03"
+  "h": "ee884ea3916ecd90",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/almanya": {
-  "h": "de7ac29045aca922",
-  "d": "2026-11-03"
+  "h": "526db12e3e271b94",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/avusturya": {
-  "h": "ac6bef2f284176c4",
-  "d": "2026-11-03"
+  "h": "40068c98718e1733",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/ispanya": {
-  "h": "61220788e95e49b7",
+  "h": "c64b7433a0e5a93d",
   "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/fransa": {
-  "h": "5ac7f51d6c727786",
-  "d": "2026-11-03"
+  "h": "94fa6dd50be7b403",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/italya": {
-  "h": "fa548a3b8c4d20ba",
-  "d": "2026-11-03"
+  "h": "5b6ded2d05d1a2a4",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/rusya": {
-  "h": "f7d0107319982afa",
-  "d": "2026-11-03"
+  "h": "362f576435a93ea5",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/yeni-zelanda": {
-  "h": "f48e85024d97a27b",
-  "d": "2026-11-03"
+  "h": "5628eae7c10d2d83",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/dubai": {
   "h": "0990a5c235b6a084",
   "d": "2026-11-03"
  },
  "/yurtdisi-dil-okullari/guney-amerika": {
-  "h": "dd67a95705df8efa",
-  "d": "2026-11-03"
+  "h": "76e836d0ea2128ad",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/arjantin": {
-  "h": "a8d5fbbe87536f89",
-  "d": "2026-11-03"
+  "h": "5f219f41e39e5cf8",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/japonya": {
-  "h": "7131ff8828bf0310",
-  "d": "2026-11-03"
+  "h": "2b5a98f48b6d7eb0",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/kore": {
   "h": "666fc55450397c0d",
   "d": "2026-11-03"
  },
  "/yurtdisi-dil-okullari/isvicre": {
-  "h": "a3bc29002844ae7e",
-  "d": "2026-11-03"
+  "h": "630b6fb0ee3a4db9",
+  "d": "2026-11-10"
  },
  "/yurtdisi-yaz-okullari/ingiltere": {
-  "h": "04c383e9c63e941b",
-  "d": "2026-11-03"
+  "h": "343d5b20e84a8554",
+  "d": "2026-11-10"
  },
  "/yurtdisi-yaz-okullari/amerika": {
-  "h": "ecb0fa15ae44d1d9",
-  "d": "2026-11-03"
+  "h": "19be1413268985e2",
+  "d": "2026-11-10"
  },
  "/yurtdisi-yaz-okullari/kanada": {
-  "h": "e49a2791823c667d",
-  "d": "2026-11-03"
+  "h": "f7850de0bfbfc67c",
+  "d": "2026-11-10"
  },
  "/yurtdisi-yaz-okullari/malta": {
-  "h": "00540bdcb4ccdcd3",
-  "d": "2026-11-03"
+  "h": "ac4dd0ac082d1fab",
+  "d": "2026-11-10"
  },
  "/yurtdisi-yaz-okullari/almanya": {
-  "h": "a45c39e8d106b355",
-  "d": "2026-11-03"
+  "h": "55e0d148a10dffce",
+  "d": "2026-11-10"
  },
  "/yurtdisi-yaz-okullari/avusturya": {
   "h": "81f075c95a7fb8f5",
   "d": "2026-11-03"
  },
  "/yurtdisi-yaz-okullari/ispanya": {
-  "h": "b4ecf090982a5578",
-  "d": "2026-11-03"
+  "h": "756ad7dff0755e21",
+  "d": "2026-11-10"
  },
  "/yurtdisi-yaz-okullari/fransa": {
   "h": "52585b309ba00b1b",
   "d": "2026-11-03"
  },
  "/yurtdisi-yaz-okullari/italya": {
-  "h": "20f017c5e0cf3731",
-  "d": "2026-11-03"
+  "h": "b8f3d33bc5385392",
+  "d": "2026-11-10"
  },
  "/yurtdisi-yaz-okullari/isvicre": {
-  "h": "14c239393b1f40c7",
-  "d": "2026-11-03"
+  "h": "2e23a4abd0b2b615",
+  "d": "2026-11-10"
  },
  "/yurtdisi-lise-egitimi/ingiltere": {
-  "h": "b56f90c96daca621",
-  "d": "2026-11-03"
+  "h": "c6dbfbc7f6bbb5f6",
+  "d": "2026-11-10"
  },
  "/yurtdisi-lise-egitimi/amerika": {
-  "h": "590155e90512138b",
-  "d": "2026-11-03"
+  "h": "62f3befc3e2acc2c",
+  "d": "2026-11-10"
  },
  "/yurtdisi-lise-egitimi/kanada": {
   "h": "8c10141be3e4d15b",
   "d": "2026-11-03"
  },
  "/yurtdisi-lise-egitimi/irlanda": {
-  "h": "0ecc2d047ff92bd1",
-  "d": "2026-11-03"
+  "h": "aa60df20ddc7e308",
+  "d": "2026-11-10"
  },
  "/yurtdisi-lise-egitimi/almanya": {
-  "h": "0749f075aed17dc4",
-  "d": "2026-11-03"
+  "h": "4a732f24a1c96f9b",
+  "d": "2026-11-10"
  },
  "/yurtdisi-lise-egitimi/ispanya": {
-  "h": "acc54ef422542123",
-  "d": "2026-11-03"
+  "h": "b03217006a67f590",
+  "d": "2026-11-10"
  },
  "/yurtdisi-lise-egitimi/fransa": {
-  "h": "e19068376900a568",
-  "d": "2026-11-03"
+  "h": "2c2dd61acb30f7b2",
+  "d": "2026-11-10"
  },
  "/yurtdisi-lise-egitimi/italya": {
   "h": "776d66232751f6bc",
   "d": "2026-11-03"
  },
  "/lisans-programlari/ingiltere": {
-  "h": "775fb7a2b731edd6",
-  "d": "2026-11-03"
+  "h": "a0d099a36d7c2845",
+  "d": "2026-11-10"
  },
  "/lisans-programlari/amerika": {
-  "h": "93d1837941196001",
-  "d": "2026-11-03"
+  "h": "5f7a1fc7463e0524",
+  "d": "2026-11-10"
  },
  "/lisans-programlari/kanada": {
-  "h": "279e5821a06f1e4d",
-  "d": "2026-11-03"
+  "h": "abb231c8e65f1b47",
+  "d": "2026-11-10"
  },
  "/lisans-programlari/avustralya": {
-  "h": "c2b185fc0ba87a66",
-  "d": "2026-11-03"
+  "h": "353e951baf54a634",
+  "d": "2026-11-10"
  },
  "/lisans-programlari/malta": {
-  "h": "37316cefe70f833c",
-  "d": "2026-11-03"
+  "h": "bfaf9caafa399913",
+  "d": "2026-11-10"
  },
  "/lisans-programlari/almanya": {
-  "h": "6b9606750b04f11f",
-  "d": "2026-11-03"
+  "h": "3173a80a87fe82c3",
+  "d": "2026-11-10"
  },
  "/lisans-programlari/ispanya": {
-  "h": "795f22ba2dea16ef",
+  "h": "dabab6df5cdb6cf5",
   "d": "2026-11-10"
  },
  "/lisans-programlari/fransa": {
-  "h": "00ce919e9eebbc75",
-  "d": "2026-11-03"
+  "h": "31d22456d129fea3",
+  "d": "2026-11-10"
  },
  "/lisans-programlari/italya": {
-  "h": "81483ff7e9864027",
-  "d": "2026-11-03"
+  "h": "4a987168ab4b8139",
+  "d": "2026-11-10"
  },
  "/lisans-programlari/dubai": {
-  "h": "b173f58ced90e834",
-  "d": "2026-11-03"
+  "h": "c5770829c7ab6d06",
+  "d": "2026-11-10"
  },
  "/lisans-programlari/arjantin": {
-  "h": "ae99a65d11434c8d",
-  "d": "2026-11-03"
+  "h": "b4541c72ad15c3d6",
+  "d": "2026-11-10"
  },
  "/lisans-programlari/japonya": {
-  "h": "bcc90d6eac3e111b",
-  "d": "2026-11-03"
+  "h": "b2d43b41cb54277e",
+  "d": "2026-11-10"
  },
  "/lisans-programlari/kore": {
-  "h": "03d7c4850d3cff70",
-  "d": "2026-11-03"
+  "h": "d9ccec8f3afc6ca1",
+  "d": "2026-11-10"
  },
  "/lisans-programlari/isvicre": {
-  "h": "2c01a87449283c72",
-  "d": "2026-11-03"
+  "h": "4fef1cc4b6f01cd1",
+  "d": "2026-11-10"
  },
  "/lisans-programlari/macaristan": {
-  "h": "7c07ba4ae7ed3438",
-  "d": "2026-11-03"
+  "h": "218da7c309fc10e2",
+  "d": "2026-11-10"
  },
  "/lisans-programlari/polonya": {
-  "h": "21b6819f590de455",
-  "d": "2026-11-03"
+  "h": "36e31aeb84af350b",
+  "d": "2026-11-10"
  },
  "/lisans-programlari/cekya": {
-  "h": "722a03eaddf7a1bc",
-  "d": "2026-11-03"
+  "h": "d0399d81b28df53b",
+  "d": "2026-11-10"
  },
  "/yurtdisi-yuksek-lisans/ingiltere": {
-  "h": "5abc4a8be214d2c6",
-  "d": "2026-11-03"
+  "h": "4f64423d4ecbcb95",
+  "d": "2026-11-10"
  },
  "/yurtdisi-yuksek-lisans/amerika": {
   "h": "b1d366a96bf0ed0d",
   "d": "2026-11-03"
  },
  "/yurtdisi-yuksek-lisans/kanada": {
-  "h": "100dcd0bcd6e5814",
-  "d": "2026-11-03"
+  "h": "e9936b7832e28048",
+  "d": "2026-11-10"
  },
  "/yurtdisi-yuksek-lisans/avustralya": {
-  "h": "35ee738b140a158b",
-  "d": "2026-11-03"
+  "h": "5e39e09ee31ea1b6",
+  "d": "2026-11-10"
  },
  "/yurtdisi-yuksek-lisans/irlanda": {
-  "h": "d2a0144a63d9c8da",
-  "d": "2026-11-03"
+  "h": "510c629c2118d431",
+  "d": "2026-11-10"
  },
  "/yurtdisi-yuksek-lisans/malta": {
-  "h": "591036953629803e",
-  "d": "2026-11-03"
+  "h": "c68a0965f73a6c36",
+  "d": "2026-11-10"
  },
  "/yurtdisi-yuksek-lisans/almanya": {
-  "h": "531b202dc6723711",
-  "d": "2026-11-03"
+  "h": "e0decfec489fa402",
+  "d": "2026-11-10"
  },
  "/yurtdisi-yuksek-lisans/avusturya": {
-  "h": "b1c91936bf758d41",
-  "d": "2026-11-03"
+  "h": "227c20761436e168",
+  "d": "2026-11-10"
  },
  "/yurtdisi-yuksek-lisans/ispanya": {
-  "h": "60cf80283ebc320d",
+  "h": "6b276238258d392f",
   "d": "2026-11-10"
  },
  "/yurtdisi-yuksek-lisans/fransa": {
-  "h": "4f1c4fb890b2a656",
-  "d": "2026-11-03"
+  "h": "0f639165b4c705ef",
+  "d": "2026-11-10"
  },
  "/yurtdisi-yuksek-lisans/italya": {
-  "h": "c1b7bff80dc57d3b",
-  "d": "2026-11-03"
+  "h": "704983cb5c5abb67",
+  "d": "2026-11-10"
  },
  "/yurtdisi-yuksek-lisans/dubai": {
-  "h": "108216aac96b1dd1",
-  "d": "2026-11-03"
+  "h": "e9871f45f7013e57",
+  "d": "2026-11-10"
  },
  "/yurtdisi-yuksek-lisans/macaristan": {
-  "h": "f2c4227adab3b9d6",
-  "d": "2026-11-03"
+  "h": "0ec20f0ac4eeeedd",
+  "d": "2026-11-10"
  },
  "/yurtdisi-yuksek-lisans/polonya": {
-  "h": "db4c820108b6f3cf",
-  "d": "2026-11-03"
+  "h": "d860b77fabf7bd7c",
+  "d": "2026-11-10"
  },
  "/yurtdisi-yuksek-lisans/cekya": {
-  "h": "1018c6df81fde1f9",
-  "d": "2026-11-03"
+  "h": "e97e8408f82b2aa8",
+  "d": "2026-11-10"
  },
  "/yurtdisi-yuksek-lisans/belcika": {
-  "h": "054e1a8756e17939",
-  "d": "2026-11-03"
+  "h": "04566a129633d6a0",
+  "d": "2026-11-10"
  },
  "/work-and-study/kanada": {
-  "h": "2087b5621dfe9cfc",
-  "d": "2026-11-03"
+  "h": "ea89b9a4de32b677",
+  "d": "2026-11-10"
  },
  "/work-and-study/avustralya": {
-  "h": "9b3c3dce37077126",
-  "d": "2026-11-03"
+  "h": "9ca1b1727d478ce8",
+  "d": "2026-11-10"
  },
  "/work-and-study/irlanda": {
-  "h": "82d7c84460dbe283",
-  "d": "2026-11-03"
+  "h": "ec33c0babee1d98b",
+  "d": "2026-11-10"
  },
  "/work-and-study/malta": {
-  "h": "e43affae2150d734",
-  "d": "2026-11-03"
+  "h": "6dbfe641ee2d1235",
+  "d": "2026-11-10"
  },
  "/work-and-study/dubai": {
-  "h": "daf8eb1689ef94a1",
-  "d": "2026-11-03"
+  "h": "72d1dec3778293e0",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/ingiltere/londra-dil-okullari": {
-  "h": "48911d59d6ccbaa1",
-  "d": "2026-10-24"
+  "h": "eb1ed290c144caa3",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/ingiltere/brighton-dil-okullari": {
-  "h": "71fa68cf2ddd5c5d",
-  "d": "2026-10-24"
+  "h": "e550e6ee1de487fe",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/ingiltere/oxford-dil-okullari": {
-  "h": "697d90a718556203",
-  "d": "2026-10-24"
+  "h": "4c8ae2807896c064",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/ingiltere/cambridge-dil-okullari": {
-  "h": "d16f95980017276e",
-  "d": "2026-10-24"
+  "h": "898ecc5c6d7bd380",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/ingiltere/manchester-dil-okullari": {
-  "h": "988c51750b956463",
-  "d": "2026-10-24"
+  "h": "184940d70beca9cb",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/ingiltere/bournemouth-dil-okullari": {
-  "h": "d3f5d71ab8be8955",
-  "d": "2026-10-24"
+  "h": "328f724cca1d8a36",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/ingiltere/liverpool-dil-okullari": {
-  "h": "1b07513b225d5cf5",
-  "d": "2026-10-24"
+  "h": "492a5be2fdaa0643",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/ingiltere/bristol-dil-okullari": {
-  "h": "7ffc859b934ebaf7",
-  "d": "2026-10-24"
+  "h": "f9193b2ea4fca3ef",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/ingiltere/bath-dil-okullari": {
-  "h": "5832007dc6d1fd44",
-  "d": "2026-10-24"
+  "h": "6556ad4d847b6576",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/ingiltere/edinburgh-dil-okullari": {
-  "h": "17681ac8d79afc00",
-  "d": "2026-10-24"
+  "h": "45107424f98c6e20",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/ingiltere/eastbourne-dil-okullari": {
-  "h": "68512f639cac80ce",
-  "d": "2026-10-24"
+  "h": "8778795f7283941a",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/ingiltere/york-dil-okullari": {
-  "h": "e8d32b889f7b0c26",
-  "d": "2026-10-24"
+  "h": "e83092fe408ee132",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/ingiltere/birmingham-dil-okullari": {
-  "h": "20451bf6c7efaa87",
-  "d": "2026-10-24"
+  "h": "52e1d4ca68985144",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/ingiltere/leeds-dil-okullari": {
-  "h": "4a60e323fa230176",
-  "d": "2026-10-24"
+  "h": "d43cae0277480d84",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/amerika/new-york-dil-okullari": {
-  "h": "3aeb8e735f82bb0c",
-  "d": "2026-10-24"
+  "h": "f24ec83bab96bde1",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/amerika/boston-dil-okullari": {
-  "h": "5f63f8e0a45ab087",
-  "d": "2026-10-24"
+  "h": "935263ce7ada7b31",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/amerika/los-angeles-dil-okullari": {
-  "h": "6ab9a7e602d0df7d",
-  "d": "2026-10-24"
+  "h": "e0fd87c2eb6785eb",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/amerika/san-francisco-dil-okullari": {
-  "h": "e2f19b50ce800b8b",
-  "d": "2026-10-24"
+  "h": "ff9aa70f3ecede15",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/amerika/san-diego-dil-okullari": {
-  "h": "68369ff435133417",
-  "d": "2026-10-24"
+  "h": "48a05125496b3f86",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/amerika/miami-dil-okullari": {
-  "h": "55671eb11bb5c57d",
-  "d": "2026-10-24"
+  "h": "e322e0848d5db817",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/amerika/chicago-dil-okullari": {
-  "h": "0cf2c3a74623e72a",
-  "d": "2026-10-24"
+  "h": "b70e9acff2bd7f75",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/amerika/washington-dc-dil-okullari": {
-  "h": "2fddfac3c98360e3",
-  "d": "2026-10-24"
+  "h": "bfd6759acd27bb63",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/kanada/toronto-dil-okullari": {
-  "h": "ecf6f659fc4d3cb7",
-  "d": "2026-10-24"
+  "h": "28fbdb699d69d284",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/kanada/vancouver-dil-okullari": {
-  "h": "3f88557fddb048a0",
-  "d": "2026-10-24"
+  "h": "f809b94e8bd103b5",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/kanada/montreal-dil-okullari": {
-  "h": "5b578c50d8c67767",
-  "d": "2026-10-24"
+  "h": "d67b4ec9b39b8ff6",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/kanada/calgary-dil-okullari": {
-  "h": "0a10dd8cb1fc0a61",
-  "d": "2026-10-24"
+  "h": "fd662a8639694ace",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/kanada/ottawa-dil-okullari": {
-  "h": "3878363f049111d3",
-  "d": "2026-10-24"
+  "h": "defaafd8ad221859",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/avustralya/sidney-dil-okullari": {
-  "h": "64ab943e50f77359",
-  "d": "2026-10-24"
+  "h": "5005c3fc3fc1782b",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/avustralya/melbourne-dil-okullari": {
-  "h": "6fb82dcfae2619c1",
-  "d": "2026-10-24"
+  "h": "a04b8a101b03f13c",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/avustralya/brisbane-dil-okullari": {
-  "h": "66d580024645dc7b",
-  "d": "2026-10-24"
+  "h": "b274d955edf09c04",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/avustralya/gold-coast-dil-okullari": {
-  "h": "834dc6a5a95b6f63",
-  "d": "2026-10-24"
+  "h": "24b9a5ce163477ec",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/avustralya/perth-dil-okullari": {
-  "h": "4310830d4ebd6e18",
-  "d": "2026-10-24"
+  "h": "30e4a36a6f2473da",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/irlanda/dublin-dil-okullari": {
-  "h": "b099f0fe8d1b045c",
-  "d": "2026-10-24"
+  "h": "0389134d97360beb",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/irlanda/cork-dil-okullari": {
-  "h": "152d0a7fc0b4c66f",
-  "d": "2026-10-24"
+  "h": "fcfbaefc8273c73d",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/irlanda/galway-dil-okullari": {
-  "h": "6900493d5764788c",
-  "d": "2026-10-24"
+  "h": "2967a7c3042839c6",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/irlanda/limerick-dil-okullari": {
-  "h": "b9e18e936884aa99",
-  "d": "2026-10-24"
+  "h": "8472db623ac582e2",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/malta/st-julians-dil-okullari": {
-  "h": "74e9d683768bf272",
-  "d": "2026-10-26"
+  "h": "7d76aa88b0e59e1f",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/malta/sliema-dil-okullari": {
-  "h": "2358edeac9286acf",
-  "d": "2026-10-26"
+  "h": "64618905b23188c0",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/malta/gozo-dil-okullari": {
-  "h": "af6f99b7103047ae",
-  "d": "2026-10-26"
+  "h": "3ccd3275fc84061d",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/yeni-zelanda/auckland-dil-okullari": {
   "h": "6492ccf01007686a",
   "d": "2026-10-24"
  },
  "/yurtdisi-dil-okullari/yeni-zelanda/wellington-dil-okullari": {
-  "h": "0be3c9d701279dc4",
-  "d": "2026-10-24"
+  "h": "4f10c8d78bcf56f1",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/dubai/dubai-dil-okullari": {
-  "h": "3847e85fd45978b6",
-  "d": "2026-10-24"
+  "h": "7a605e8a0bd89158",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/almanya/berlin-dil-okullari": {
-  "h": "91adb8bdc9836c3c",
-  "d": "2026-10-26"
+  "h": "308c97761af1d5c5",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/almanya/munih-dil-okullari": {
-  "h": "e661754273d2b460",
-  "d": "2026-10-24"
+  "h": "be9039bd28a9ae79",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/almanya/hamburg-dil-okullari": {
-  "h": "a55c58986c923ba7",
-  "d": "2026-10-24"
+  "h": "360126f870890212",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/almanya/frankfurt-dil-okullari": {
-  "h": "e43caf63b5ee95af",
-  "d": "2026-10-24"
+  "h": "2c62de72feea8830",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/almanya/koln-dil-okullari": {
-  "h": "d3b7d831255f4fe6",
-  "d": "2026-10-26"
+  "h": "fc86f69854bc540e",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/almanya/heidelberg-dil-okullari": {
-  "h": "3e6685726451d07a",
-  "d": "2026-10-24"
+  "h": "21455f063167c0d9",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/avusturya/viyana-dil-okullari": {
-  "h": "5b5828e68ee8868b",
-  "d": "2026-10-24"
+  "h": "a0c8097ac8c457b6",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/isvicre/zurih-dil-okullari": {
-  "h": "1669cee14a301f95",
-  "d": "2026-10-24"
+  "h": "04256df4128b6db8",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/isvicre/lozan-dil-okullari": {
-  "h": "923565ce26123044",
-  "d": "2026-10-24"
+  "h": "5c7c318b773074e8",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/isvicre/cenevre-dil-okullari": {
-  "h": "26c24c53f44f957f",
-  "d": "2026-10-24"
+  "h": "fbd1b13e910695f4",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/ispanya/madrid-dil-okullari": {
-  "h": "7155684c4484e5b3",
-  "d": "2026-10-24"
+  "h": "e595f924034a32c1",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/ispanya/barselona-dil-okullari": {
-  "h": "58eb8f67a5aeac7b",
-  "d": "2026-10-24"
+  "h": "3e0cbfcbd79088d5",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/ispanya/valensiya-dil-okullari": {
-  "h": "732fe42a71816127",
-  "d": "2026-10-24"
+  "h": "6abf900bfb2bf22b",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/ispanya/malaga-dil-okullari": {
-  "h": "0f13dbb6154852fe",
-  "d": "2026-10-24"
+  "h": "85faf217ce0052c3",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/ispanya/salamanca-dil-okullari": {
-  "h": "da194ec202ce4a26",
-  "d": "2026-10-24"
+  "h": "97da4985bb686cc1",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/fransa/paris-dil-okullari": {
-  "h": "a4bbf3a98b335ba3",
-  "d": "2026-10-24"
+  "h": "5516653f444d787b",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/fransa/nice-dil-okullari": {
-  "h": "bb03d84ab02e1f7b",
-  "d": "2026-10-24"
+  "h": "b0673ba0e9f328de",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/fransa/lyon-dil-okullari": {
-  "h": "784f548f8ad2564f",
-  "d": "2026-10-24"
+  "h": "a9ef6a9de5d072d3",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/fransa/montpellier-dil-okullari": {
-  "h": "10262c530e5ee097",
-  "d": "2026-10-24"
+  "h": "5c9b03726002a6c0",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/italya/roma-dil-okullari": {
-  "h": "6b264030b9d76eea",
-  "d": "2026-10-24"
+  "h": "993f41cdd4cc4e4c",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/italya/floransa-dil-okullari": {
-  "h": "e6ccf81bb3a49575",
-  "d": "2026-10-24"
+  "h": "ddbfcbb4f680b992",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/italya/milano-dil-okullari": {
-  "h": "e2a44209855ea79c",
-  "d": "2026-10-24"
+  "h": "5d51f47134f99541",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/japonya/tokyo-dil-okullari": {
-  "h": "1e65d72fb8fe639d",
-  "d": "2026-10-24"
+  "h": "2f2fa3bdebe6f590",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/japonya/osaka-dil-okullari": {
-  "h": "5599b06cda04b0cd",
-  "d": "2026-10-24"
+  "h": "a08048d5bab32f1b",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/japonya/kyoto-dil-okullari": {
-  "h": "cae2e9c64dbf503d",
-  "d": "2026-10-24"
+  "h": "807f59f8cc46ac7c",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/japonya/fukuoka-dil-okullari": {
   "h": "f1969c7c9643f340",
   "d": "2026-10-24"
  },
  "/yurtdisi-dil-okullari/kore/seul-dil-okullari": {
-  "h": "eba28b70de16a4ce",
-  "d": "2026-10-24"
+  "h": "aeaa8e38bdbfeae1",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/kore/busan-dil-okullari": {
-  "h": "5002dffdba7cf997",
-  "d": "2026-10-24"
+  "h": "481e693756c69792",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/rusya/moskova-dil-okullari": {
-  "h": "24e2a037f9fb8f1a",
-  "d": "2026-10-24"
+  "h": "1198c4cec3bf60f3",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/rusya/st-petersburg-dil-okullari": {
-  "h": "1d54971e06c39c52",
-  "d": "2026-10-24"
+  "h": "a80b6179d37b43b5",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/arjantin/buenos-aires-dil-okullari": {
-  "h": "8f6ed8560e629d63",
-  "d": "2026-10-24"
+  "h": "55abd79d4a616630",
+  "d": "2026-11-10"
  },
  "/fiyatlar": {
   "h": "ebed607a65f9c5ed",
@@ -632,548 +632,548 @@
   "d": "2026-10-24"
  },
  "/fiyatlar/polonya-universite-fiyatlari": {
-  "h": "317c7541eacb8d66",
-  "d": "2026-10-24"
+  "h": "3a78a3c739b331e9",
+  "d": "2026-11-10"
  },
  "/fiyatlar/cekya-universite-fiyatlari": {
-  "h": "b237e0c375307c21",
-  "d": "2026-10-24"
+  "h": "7894e33e70876ad1",
+  "d": "2026-11-10"
  },
  "/fiyatlar/ingiltere-universite-fiyatlari": {
-  "h": "d36cd4510f01dc13",
-  "d": "2026-10-24"
+  "h": "127401f122d8c6b6",
+  "d": "2026-11-10"
  },
  "/fiyatlar/irlanda-universite-fiyatlari": {
-  "h": "652416ad1d9f0271",
-  "d": "2026-10-24"
+  "h": "8c4aaff1e20c84b1",
+  "d": "2026-11-10"
  },
  "/fiyatlar/almanya-universite-fiyatlari": {
   "h": "d92f45e571ec0cee",
   "d": "2026-10-24"
  },
  "/fiyatlar/avusturya-universite-fiyatlari": {
-  "h": "924b341b40126e28",
-  "d": "2026-10-24"
+  "h": "bc675820651979ab",
+  "d": "2026-11-10"
  },
  "/fiyatlar/italya-universite-fiyatlari": {
-  "h": "50d30c8e66e9fbbe",
-  "d": "2026-10-24"
+  "h": "56730b5a3ce7fdc1",
+  "d": "2026-11-10"
  },
  "/fiyatlar/amerika-universite-fiyatlari": {
-  "h": "16561f981971493d",
-  "d": "2026-10-24"
+  "h": "42954359ec77e8b9",
+  "d": "2026-11-10"
  },
  "/fiyatlar/kanada-universite-fiyatlari": {
   "h": "05b5c5cdf181dc65",
   "d": "2026-10-24"
  },
  "/fiyatlar/avustralya-universite-fiyatlari": {
-  "h": "665da5952fa99784",
-  "d": "2026-10-24"
+  "h": "7ab478700aca0281",
+  "d": "2026-11-10"
  },
  "/fiyatlar/kore-universite-fiyatlari": {
-  "h": "92df329abea280ac",
-  "d": "2026-10-24"
+  "h": "ac27bf066f368247",
+  "d": "2026-11-10"
  },
  "/fiyatlar/japonya-universite-fiyatlari": {
   "h": "61e3a216ff7c5619",
   "d": "2026-10-24"
  },
  "/fiyatlar/ispanya-universite-fiyatlari": {
-  "h": "720529092a5fb103",
-  "d": "2026-11-03"
+  "h": "a3883468ab70e435",
+  "d": "2026-11-10"
  },
  "/fiyatlar/fransa-universite-fiyatlari": {
-  "h": "535bdc853ec5f1a8",
-  "d": "2026-10-24"
+  "h": "f82f0f8fffa01040",
+  "d": "2026-11-10"
  },
  "/fiyatlar/macaristan-tip-fakultesi-ucretleri": {
-  "h": "69bf7a12f4b4780f",
-  "d": "2026-10-24"
+  "h": "1c8995f2c1e8f212",
+  "d": "2026-11-10"
  },
  "/fiyatlar/polonya-tip-fakultesi-ucretleri": {
-  "h": "60db0710cc469fdd",
-  "d": "2026-10-24"
+  "h": "5e3045960e689456",
+  "d": "2026-11-10"
  },
  "/fiyatlar/cekya-tip-fakultesi-ucretleri": {
-  "h": "2fae548b3e2de472",
-  "d": "2026-10-24"
+  "h": "b5b8b214fd1b3005",
+  "d": "2026-11-10"
  },
  "/fiyatlar/italya-tip-fakultesi-ucretleri": {
-  "h": "40a815be5ea487b1",
-  "d": "2026-10-24"
+  "h": "4678dde32bc51d62",
+  "d": "2026-11-10"
  },
  "/universiteler": {
   "h": "2351944ded95f169",
   "d": "2026-10-24"
  },
  "/universiteler/ingiltere": {
-  "h": "ffdacdebf50dd588",
-  "d": "2026-10-24"
+  "h": "65434b3c179522bb",
+  "d": "2026-11-10"
  },
  "/universiteler/almanya": {
-  "h": "dc1b2aa8fb8105d5",
-  "d": "2026-10-24"
+  "h": "6ff0284bb54ee352",
+  "d": "2026-11-10"
  },
  "/universiteler/italya": {
-  "h": "ed68e964333fd0d8",
-  "d": "2026-10-24"
+  "h": "ea1864b78a8318bd",
+  "d": "2026-11-10"
  },
  "/universiteler/macaristan": {
-  "h": "4efad510f171185b",
-  "d": "2026-10-24"
+  "h": "6406acf951cae63b",
+  "d": "2026-11-10"
  },
  "/universiteler/polonya": {
-  "h": "17829b415dd2901b",
-  "d": "2026-10-24"
+  "h": "b57e32e409e0e930",
+  "d": "2026-11-10"
  },
  "/universiteler/avusturya": {
-  "h": "7c7fe82b621e6fd5",
-  "d": "2026-10-24"
+  "h": "0285c5aa8171f49d",
+  "d": "2026-11-10"
  },
  "/universiteler/kanada": {
-  "h": "eba7a451ac45113d",
-  "d": "2026-10-24"
+  "h": "67e2eeea7bcc77ae",
+  "d": "2026-11-10"
  },
  "/universiteler/amerika": {
   "h": "229d167a46bdc1c7",
   "d": "2026-10-24"
  },
  "/universiteler/kore": {
-  "h": "0e1dc75b1c187fb2",
-  "d": "2026-10-24"
+  "h": "696b480191859e3b",
+  "d": "2026-11-10"
  },
  "/universiteler/japonya": {
-  "h": "c06c4e7c6e7e65af",
-  "d": "2026-10-24"
+  "h": "81f077e37b0de115",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/university-college-london": {
-  "h": "5801357162a04867",
-  "d": "2026-10-24"
+  "h": "106d2a80bd0ae819",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/imperial-college-london": {
-  "h": "32d3116503b0ac09",
-  "d": "2026-10-24"
+  "h": "731221cc752f08b4",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/kings-college-london": {
-  "h": "6c3d228b2ecaf595",
-  "d": "2026-10-24"
+  "h": "ad24f685a863d86e",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/london-school-of-economics": {
-  "h": "f0fe8c02cf5eace9",
-  "d": "2026-10-24"
+  "h": "ab308b0d0be93544",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/queen-mary-university-of-london": {
-  "h": "d6ee2d33de21313a",
-  "d": "2026-10-24"
+  "h": "2e128e0781211ce1",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/city-st-georges-university-of-london": {
-  "h": "e8065cd416a4fc40",
-  "d": "2026-10-24"
+  "h": "ad18093157692844",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/royal-holloway-university-of-london": {
-  "h": "66d5f100ed7f220f",
-  "d": "2026-11-03"
+  "h": "1baae853c64ae84d",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/brunel-university-london": {
-  "h": "079a06fd8085109f",
-  "d": "2026-10-24"
+  "h": "2dcf140d88279dea",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/kingston-university": {
-  "h": "895fd33edf13d617",
-  "d": "2026-10-24"
+  "h": "ebdc7f3f3e2430ed",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/university-of-greenwich": {
-  "h": "350709cf2cebf59d",
-  "d": "2026-10-24"
+  "h": "8c5cd907939e04fc",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/university-of-westminster": {
-  "h": "8f054df0ae727e7e",
-  "d": "2026-10-24"
+  "h": "8a092bdd57aca967",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/middlesex-university": {
-  "h": "825d3751c07f5077",
-  "d": "2026-10-24"
+  "h": "85766d82a1085597",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/goldsmiths-university-of-london": {
-  "h": "a23fbad8adaa19c9",
-  "d": "2026-10-24"
+  "h": "abe8397b311f1948",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/university-of-manchester": {
   "h": "26c0de72b41fe63f",
   "d": "2026-10-24"
  },
  "/universiteler/ingiltere/manchester-metropolitan-university": {
-  "h": "55b7a7211dc82e96",
-  "d": "2026-10-24"
+  "h": "6547532f4ac462e3",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/university-of-liverpool": {
-  "h": "42c18af51ef30759",
-  "d": "2026-10-24"
+  "h": "36cfb302e3c86c8a",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/university-of-leeds": {
-  "h": "76d784809b9104b5",
-  "d": "2026-10-24"
+  "h": "af19694adca935ea",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/university-of-sheffield": {
   "h": "9646de75f6fc041d",
   "d": "2026-10-24"
  },
  "/universiteler/ingiltere/university-of-birmingham": {
-  "h": "c76b6eb46f48dda2",
-  "d": "2026-10-24"
+  "h": "38dca792548be2a7",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/university-of-nottingham": {
-  "h": "eb8543e111078111",
-  "d": "2026-10-24"
+  "h": "9d8806f24310e781",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/newcastle-university": {
-  "h": "fb7fc8ee33bc43cc",
-  "d": "2026-10-24"
+  "h": "41404bb56c3099ac",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/durham-university": {
-  "h": "a6250fe8b6370fbe",
-  "d": "2026-10-24"
+  "h": "f97c3768ae5e127b",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/university-of-bristol": {
-  "h": "35916007bc53fc33",
-  "d": "2026-10-24"
+  "h": "922ee35540bfd639",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/university-of-warwick": {
-  "h": "21ff33520a435472",
-  "d": "2026-10-24"
+  "h": "feb3e99d7f5b5773",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/coventry-university": {
-  "h": "481c125b9cec8f4c",
-  "d": "2026-10-24"
+  "h": "79042cc34d864e6e",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/university-of-edinburgh": {
-  "h": "2670fffb3ca3ac12",
-  "d": "2026-10-24"
+  "h": "2309d75ae0f9dcf4",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/university-of-glasgow": {
-  "h": "2a000e1e2984569e",
-  "d": "2026-10-24"
+  "h": "e137af09216c68da",
+  "d": "2026-11-10"
  },
  "/universiteler/ingiltere/university-of-sussex": {
   "h": "f67416d791aa90da",
   "d": "2026-10-24"
  },
  "/universiteler/ingiltere/university-of-kent": {
-  "h": "5e271a4cd0c414e9",
-  "d": "2026-10-24"
+  "h": "4a6c837413b15c83",
+  "d": "2026-11-10"
  },
  "/universiteler/almanya/munih-teknik-universitesi": {
-  "h": "71ec09d4c2427b61",
-  "d": "2026-10-24"
+  "h": "35f5dabfd5da04fd",
+  "d": "2026-11-10"
  },
  "/universiteler/almanya/ludwig-maximilian-universitesi": {
-  "h": "f8c8bf7436571bdf",
-  "d": "2026-10-24"
+  "h": "7333c7be19a557d9",
+  "d": "2026-11-10"
  },
  "/universiteler/almanya/heidelberg-universitesi": {
-  "h": "183877b59826f31b",
-  "d": "2026-10-24"
+  "h": "4f16827e7fb99f4b",
+  "d": "2026-11-10"
  },
  "/universiteler/almanya/berlin-humboldt-universitesi": {
-  "h": "61647fa9a039eb73",
-  "d": "2026-10-24"
+  "h": "cddf31445e9b7af7",
+  "d": "2026-11-10"
  },
  "/universiteler/almanya/berlin-ozgur-universitesi": {
-  "h": "3a4ec3d3f5279624",
-  "d": "2026-10-24"
+  "h": "856b1e25a8f0542c",
+  "d": "2026-11-10"
  },
  "/universiteler/almanya/berlin-teknik-universitesi": {
-  "h": "f4a8a8dec0ccecbc",
-  "d": "2026-10-24"
+  "h": "a524ceda29359722",
+  "d": "2026-11-10"
  },
  "/universiteler/almanya/rwth-aachen": {
-  "h": "4b366e09a79cfc69",
-  "d": "2026-10-24"
+  "h": "74aae371110ab6de",
+  "d": "2026-11-10"
  },
  "/universiteler/almanya/karlsruhe-teknoloji-enstitusu": {
-  "h": "30880a1c1db69e4c",
-  "d": "2026-10-24"
+  "h": "8f1d7ec8f7811610",
+  "d": "2026-11-10"
  },
  "/universiteler/almanya/hamburg-universitesi": {
-  "h": "7c5ea3a2269c0ce2",
-  "d": "2026-10-24"
+  "h": "1938e4f2df824f6e",
+  "d": "2026-11-10"
  },
  "/universiteler/almanya/koln-universitesi": {
   "h": "4f500a9919a4bd2b",
   "d": "2026-10-24"
  },
  "/universiteler/almanya/goethe-frankfurt-universitesi": {
-  "h": "3a3d84e13d7e32d6",
-  "d": "2026-10-24"
+  "h": "aa69f00b9b2b764b",
+  "d": "2026-11-10"
  },
  "/universiteler/almanya/stuttgart-universitesi": {
-  "h": "f44e1b6b30e4a3fe",
-  "d": "2026-10-24"
+  "h": "d5620438c4cb2f45",
+  "d": "2026-11-10"
  },
  "/universiteler/almanya/dresden-teknik-universitesi": {
-  "h": "9d5ec8c8280fda88",
-  "d": "2026-10-24"
+  "h": "7e4cce81cdfc0e41",
+  "d": "2026-11-10"
  },
  "/universiteler/almanya/bonn-universitesi": {
-  "h": "0c4f8dfe6a896370",
-  "d": "2026-10-24"
+  "h": "21cd5166051731fe",
+  "d": "2026-11-10"
  },
  "/universiteler/almanya/freiburg-universitesi": {
-  "h": "78dd7c57af24b92f",
-  "d": "2026-10-24"
+  "h": "5a88b62228e33844",
+  "d": "2026-11-10"
  },
  "/universiteler/almanya/mannheim-universitesi": {
-  "h": "020428dfcfc6b3d2",
-  "d": "2026-10-24"
+  "h": "0e7241d7ed5cb504",
+  "d": "2026-11-10"
  },
  "/universiteler/italya/milano-politeknik-universitesi": {
-  "h": "9c405a50e5fceb6a",
-  "d": "2026-10-24"
+  "h": "cb54608493a57489",
+  "d": "2026-11-10"
  },
  "/universiteler/italya/bologna-universitesi": {
-  "h": "331dc0d6d1ced88d",
-  "d": "2026-10-24"
+  "h": "cf8b6022a196d8a2",
+  "d": "2026-11-10"
  },
  "/universiteler/italya/roma-sapienza-universitesi": {
-  "h": "6edcd794950510c7",
-  "d": "2026-10-24"
+  "h": "46af63056351cc86",
+  "d": "2026-11-10"
  },
  "/universiteler/italya/padova-universitesi": {
-  "h": "6ff2dd8db03d5e62",
-  "d": "2026-10-24"
+  "h": "0df841426509a80a",
+  "d": "2026-11-10"
  },
  "/universiteler/italya/torino-politeknik-universitesi": {
-  "h": "0a9c274402febe7f",
-  "d": "2026-10-24"
+  "h": "8df8cfdd9906b52e",
+  "d": "2026-11-10"
  },
  "/universiteler/italya/milano-universitesi": {
-  "h": "8a791103e8bc1040",
-  "d": "2026-10-24"
+  "h": "1171ebe9b7ae517f",
+  "d": "2026-11-10"
  },
  "/universiteler/italya/pisa-universitesi": {
-  "h": "505f79598e8a4798",
-  "d": "2026-10-24"
+  "h": "57bd4fb8bd680bfd",
+  "d": "2026-11-10"
  },
  "/universiteler/italya/trento-universitesi": {
-  "h": "fe29e6996b3a5a19",
-  "d": "2026-10-24"
+  "h": "c4d724dfa1b2951f",
+  "d": "2026-11-10"
  },
  "/universiteler/italya/bocconi-universitesi": {
-  "h": "55d7ca92247432e0",
-  "d": "2026-10-24"
+  "h": "1fdb4639077eaafd",
+  "d": "2026-11-10"
  },
  "/universiteler/italya/ca-foscari-universitesi": {
-  "h": "c4d655af0f2c0e00",
-  "d": "2026-10-24"
+  "h": "fe570b8491ed7a15",
+  "d": "2026-11-10"
  },
  "/universiteler/macaristan/semmelweis-universitesi": {
-  "h": "63e8df3c35f610ad",
-  "d": "2026-10-24"
+  "h": "892f3793aef93676",
+  "d": "2026-11-10"
  },
  "/universiteler/macaristan/elte-universitesi": {
-  "h": "99fe7770487c1269",
-  "d": "2026-10-24"
+  "h": "0d69a0d889808f93",
+  "d": "2026-11-10"
  },
  "/universiteler/macaristan/debrecen-universitesi": {
-  "h": "6ea432dd08d54417",
-  "d": "2026-10-24"
+  "h": "829d51fd205b89f6",
+  "d": "2026-11-10"
  },
  "/universiteler/macaristan/pecs-universitesi": {
-  "h": "075ac14e9745bae7",
-  "d": "2026-10-24"
+  "h": "749851ac5b4af06a",
+  "d": "2026-11-10"
  },
  "/universiteler/macaristan/szeged-universitesi": {
-  "h": "e4232a8506b75a6c",
-  "d": "2026-10-24"
+  "h": "f4f848cb3270843d",
+  "d": "2026-11-10"
  },
  "/universiteler/macaristan/budapeste-teknik-universitesi": {
-  "h": "99740b0e7eac5bf4",
-  "d": "2026-10-24"
+  "h": "b68f554cf3187053",
+  "d": "2026-11-10"
  },
  "/universiteler/polonya/jagiellonian-universitesi": {
-  "h": "ee2e04c18cfe94ba",
-  "d": "2026-10-24"
+  "h": "13d6186a154b2c82",
+  "d": "2026-11-10"
  },
  "/universiteler/polonya/varsova-teknik-universitesi": {
-  "h": "750f862df6f77ec9",
-  "d": "2026-10-24"
+  "h": "3585dd279c5b320b",
+  "d": "2026-11-10"
  },
  "/universiteler/polonya/silezya-teknik-universitesi": {
-  "h": "bd08425e324ec53f",
-  "d": "2026-10-24"
+  "h": "955a089a3477ccb3",
+  "d": "2026-11-10"
  },
  "/universiteler/polonya/wroclaw-universitesi": {
-  "h": "52c0fbcedbca2f47",
-  "d": "2026-10-24"
+  "h": "143b1db1d14330d3",
+  "d": "2026-11-10"
  },
  "/universiteler/polonya/wroclaw-tip-universitesi": {
-  "h": "1227fc210c894e0b",
-  "d": "2026-10-24"
+  "h": "f46d550c6cb0235c",
+  "d": "2026-11-10"
  },
  "/universiteler/polonya/polonya-japon-bilgi-teknolojileri-akademisi": {
-  "h": "6c20853027f4afbe",
-  "d": "2026-10-24"
+  "h": "eb26bc5c633c9012",
+  "d": "2026-11-10"
  },
  "/universiteler/polonya/poznan-guzel-sanatlar-universitesi": {
-  "h": "b7ac645cce93e6eb",
-  "d": "2026-10-24"
+  "h": "8d2ea415a8b4e36f",
+  "d": "2026-11-10"
  },
  "/universiteler/polonya/kozminski-universitesi": {
-  "h": "0058583c69de0082",
-  "d": "2026-10-24"
+  "h": "fc7bbbd5d51a540a",
+  "d": "2026-11-10"
  },
  "/universiteler/polonya/collegium-civitas": {
-  "h": "41e4b193998f71b4",
-  "d": "2026-10-24"
+  "h": "24dd10d5a608166c",
+  "d": "2026-11-10"
  },
  "/universiteler/polonya/poznan-teknik-universitesi": {
-  "h": "48d1d1307d109a4d",
-  "d": "2026-10-24"
+  "h": "2f00fe49c049073b",
+  "d": "2026-11-10"
  },
  "/universiteler/avusturya/viyana-universitesi": {
-  "h": "bb82146a38575f24",
-  "d": "2026-10-24"
+  "h": "087e49f7bea4cb6c",
+  "d": "2026-11-10"
  },
  "/universiteler/avusturya/viyana-teknik-universitesi": {
-  "h": "e3eef6e5e2b56fce",
-  "d": "2026-10-24"
+  "h": "75bae4d6f860e238",
+  "d": "2026-11-10"
  },
  "/universiteler/avusturya/viyana-ekonomi-ve-isletme-universitesi": {
-  "h": "b9f0b13fd083648e",
-  "d": "2026-10-24"
+  "h": "75d2de60856c50fd",
+  "d": "2026-11-10"
  },
  "/universiteler/kanada/university-of-toronto": {
-  "h": "b3b8ac9762f48eea",
-  "d": "2026-10-24"
+  "h": "b6fbc3eddec8bc9f",
+  "d": "2026-11-10"
  },
  "/universiteler/kanada/university-of-british-columbia": {
-  "h": "47b899073c21b099",
-  "d": "2026-10-24"
+  "h": "dd47ae400fe57e00",
+  "d": "2026-11-10"
  },
  "/universiteler/kanada/mcgill-university": {
-  "h": "14bedb4d79fa623a",
-  "d": "2026-10-24"
+  "h": "9a369435694731c1",
+  "d": "2026-11-10"
  },
  "/universiteler/kanada/university-of-waterloo": {
-  "h": "6c4c78bbd2bf4cf5",
-  "d": "2026-10-24"
+  "h": "c6fe61cec558a053",
+  "d": "2026-11-10"
  },
  "/universiteler/kanada/mcmaster-university": {
-  "h": "a9a443a0413ab853",
-  "d": "2026-10-24"
+  "h": "f047cbb21a25afa7",
+  "d": "2026-11-10"
  },
  "/universiteler/kanada/university-of-alberta": {
-  "h": "57d0ad019a01f6f7",
-  "d": "2026-10-24"
+  "h": "3e6ef4c6863a25f0",
+  "d": "2026-11-10"
  },
  "/universiteler/kanada/university-of-ottawa": {
-  "h": "f77b7af0b248c41b",
-  "d": "2026-10-24"
+  "h": "577aa6171366cab1",
+  "d": "2026-11-10"
  },
  "/universiteler/kanada/concordia-university": {
   "h": "be8723f0eb5fc08e",
   "d": "2026-10-24"
  },
  "/universiteler/amerika/new-york-university": {
-  "h": "df89057f01578942",
-  "d": "2026-10-24"
+  "h": "d9075e6c605a8d61",
+  "d": "2026-11-10"
  },
  "/universiteler/amerika/boston-university": {
-  "h": "a4f85393ca5c0c3f",
-  "d": "2026-10-24"
+  "h": "d925c24ec50f9984",
+  "d": "2026-11-10"
  },
  "/universiteler/amerika/northeastern-university": {
-  "h": "418bd5298b4a7ecf",
-  "d": "2026-10-24"
+  "h": "d557a7ca6f88d067",
+  "d": "2026-11-10"
  },
  "/universiteler/amerika/arizona-state-university": {
   "h": "8d1891660bbbd442",
   "d": "2026-10-24"
  },
  "/universiteler/amerika/penn-state-university": {
-  "h": "8a637360a9af3123",
-  "d": "2026-10-24"
+  "h": "70fe9f26c03e8c69",
+  "d": "2026-11-10"
  },
  "/universiteler/amerika/ucla": {
-  "h": "934211a3dfc2676d",
-  "d": "2026-10-24"
+  "h": "2f168b4c00df3805",
+  "d": "2026-11-10"
  },
  "/universiteler/amerika/purdue-university": {
-  "h": "570fcd5184b71d0a",
-  "d": "2026-10-24"
+  "h": "748fc7fe523fd26e",
+  "d": "2026-11-10"
  },
  "/universiteler/amerika/university-of-illinois-urbana-champaign": {
-  "h": "af1dceabc7cd01ef",
-  "d": "2026-10-24"
+  "h": "4e1379d0e4890000",
+  "d": "2026-11-10"
  },
  "/universiteler/kore/seoul-national-university": {
-  "h": "151db4ad1f7d3005",
-  "d": "2026-10-24"
+  "h": "a39887f932747977",
+  "d": "2026-11-10"
  },
  "/universiteler/kore/yonsei-university": {
   "h": "1ac0c02f7a70a373",
   "d": "2026-10-24"
  },
  "/universiteler/kore/korea-university": {
-  "h": "b2f977fa4e3fbde7",
-  "d": "2026-10-24"
+  "h": "4d26290265da9b36",
+  "d": "2026-11-10"
  },
  "/universiteler/kore/kaist": {
-  "h": "f3b723b6510d1e6c",
-  "d": "2026-10-24"
+  "h": "05034baaba286a98",
+  "d": "2026-11-10"
  },
  "/universiteler/kore/sungkyunkwan-university": {
-  "h": "c396a8be46a078de",
-  "d": "2026-10-24"
+  "h": "cb4e645f6cafc062",
+  "d": "2026-11-10"
  },
  "/universiteler/kore/hanyang-university": {
-  "h": "83b9d09705faabe0",
-  "d": "2026-10-24"
+  "h": "2e8744ac9e5ad297",
+  "d": "2026-11-10"
  },
  "/universiteler/kore/kyung-hee-university": {
-  "h": "93aaee5e57e664b9",
-  "d": "2026-10-24"
+  "h": "dfb9568dc9a431c3",
+  "d": "2026-11-10"
  },
  "/universiteler/kore/pusan-national-university": {
   "h": "ef554f322a2714c5",
   "d": "2026-10-24"
  },
  "/universiteler/japonya/university-of-tokyo": {
-  "h": "ebeedba19a614d10",
-  "d": "2026-10-24"
+  "h": "42e7e89983427730",
+  "d": "2026-11-10"
  },
  "/universiteler/japonya/kyoto-university": {
   "h": "1fd7c39289b95195",
   "d": "2026-10-24"
  },
  "/universiteler/japonya/waseda-university": {
-  "h": "51622e20f8a90487",
-  "d": "2026-10-24"
+  "h": "9ac9412273636ac0",
+  "d": "2026-11-10"
  },
  "/universiteler/japonya/keio-university": {
-  "h": "a983ed2c2d72bec9",
-  "d": "2026-10-24"
+  "h": "b545cd6c649259eb",
+  "d": "2026-11-10"
  },
  "/universiteler/japonya/osaka-university": {
-  "h": "c93223ca8291e000",
-  "d": "2026-10-24"
+  "h": "17e79545de7a1b91",
+  "d": "2026-11-10"
  },
  "/universiteler/japonya/tohoku-university": {
   "h": "c10e392b11268bf5",
   "d": "2026-10-24"
  },
  "/universiteler/japonya/ritsumeikan-asia-pacific-university": {
-  "h": "ab54487157da5aec",
-  "d": "2026-10-24"
+  "h": "cf729323fb56f1bb",
+  "d": "2026-11-10"
  },
  "/ulkeler": {
   "h": "ed2900c81503451f",
   "d": "2026-10-22"
  },
  "/ulkeler/ingiltere": {
-  "h": "5fbba46f0f126226",
-  "d": "2026-11-03"
+  "h": "b6e44656f5252bf2",
+  "d": "2026-11-10"
  },
  "/ulkeler/amerika": {
   "h": "dfc10e0ace070cfd",
@@ -1264,20 +1264,20 @@
   "d": "2026-10-22"
  },
  "/her-sey-dahil-paketler": {
-  "h": "cb66755d407c7475",
-  "d": "2026-10-22"
+  "h": "c69e2903a5ba8003",
+  "d": "2026-11-10"
  },
  "/her-sey-dahil-paketler/londra": {
-  "h": "79107f8840a1d286",
-  "d": "2026-10-14"
+  "h": "5b03c4cb4fc43057",
+  "d": "2026-11-10"
  },
  "/her-sey-dahil-paketler/dubai": {
-  "h": "92bf2bfc475f2e92",
-  "d": "2026-10-14"
+  "h": "a6a0629c6b86f268",
+  "d": "2026-11-10"
  },
  "/her-sey-dahil-paketler/malta": {
-  "h": "85c35297ff12f539",
-  "d": "2026-10-14"
+  "h": "fbb30554f5ae384c",
+  "d": "2026-11-10"
  },
  "/online-egitim": {
   "h": "dbcb163180811853",
@@ -1288,8 +1288,8 @@
   "d": "2026-10-14"
  },
  "/online-egitim/ingiltere-online-lisans-yuksek-lisans": {
-  "h": "9c2f8f39459ba511",
-  "d": "2026-10-14"
+  "h": "7ef8b6ff0b69b0f2",
+  "d": "2026-11-10"
  },
  "/ogrenci-konaklama": {
   "h": "88b1162fe36bd73c",
@@ -1364,8 +1364,8 @@
   "d": "2026-10-22"
  },
  "/almanyadaki-ozel-universiteler": {
-  "h": "b0ff269eb83c089d",
-  "d": "2026-10-22"
+  "h": "befad47385e22d7f",
+  "d": "2026-11-10"
  },
  "/almanyadaki-ozel-universiteler/ue-university-of-europe-for-applied-sciences": {
   "h": "d6ba25fba71e6d7b",
@@ -1376,8 +1376,8 @@
   "d": "2026-10-14"
  },
  "/almanyadaki-ozel-universiteler/macromedia-university-of-applied-sciences": {
-  "h": "595d2fe807e97734",
-  "d": "2026-10-14"
+  "h": "4069355a0672c94d",
+  "d": "2026-11-10"
  },
  "/almanyadaki-ozel-universiteler/ism-international-school-of-management": {
   "h": "2a021b2da5112466",
@@ -1396,8 +1396,8 @@
   "d": "2026-10-14"
  },
  "/almanyadaki-ozel-universiteler/berlin-international-university-of-applied-sciences": {
-  "h": "e5a77aadcb64a40a",
-  "d": "2026-10-14"
+  "h": "6a2559838f128845",
+  "d": "2026-11-10"
  },
  "/cekya-universiteleri": {
   "h": "e99e1651365e0bab",
@@ -1436,28 +1436,28 @@
   "d": "2026-10-14"
  },
  "/hizmetler/vize-danismanligi": {
-  "h": "85c15c756134a1ed",
-  "d": "2026-10-14"
+  "h": "38c3ed6978023584",
+  "d": "2026-11-10"
  },
  "/hizmetler/egitim-danismanligi": {
   "h": "c13dd84cb88e69b9",
   "d": "2026-10-14"
  },
  "/hizmetler/konaklama": {
-  "h": "c90351e69c749259",
-  "d": "2026-10-14"
+  "h": "872ec424c73bb166",
+  "d": "2026-11-10"
  },
  "/hizmetler/sinav-hazirlik": {
-  "h": "bce788a4e500a646",
-  "d": "2026-10-14"
+  "h": "c239dea28255050d",
+  "d": "2026-11-10"
  },
  "/tampa-akademi": {
-  "h": "4eaaece651ae937b",
-  "d": "2026-10-22"
+  "h": "44ec4dab068d1c61",
+  "d": "2026-11-10"
  },
  "/blog": {
-  "h": "ed85afc9c13a1bec",
-  "d": "2026-11-03"
+  "h": "0e6cdfb49ca55cb1",
+  "d": "2026-11-10"
  },
  "/blog/kategori/yaz-okulu": {
   "h": "cdad875cbca92edf",
@@ -1468,8 +1468,8 @@
   "d": "2026-11-03"
  },
  "/blog/kategori/universite": {
-  "h": "0d3d4833b094d780",
-  "d": "2026-11-03"
+  "h": "87aac7be0129c582",
+  "d": "2026-11-10"
  },
  "/blog/kategori/yuksek-lisans": {
   "h": "8a1f3d77a8b0591f",
@@ -1491,6 +1491,18 @@
   "h": "990ae81843deebaf",
   "d": "2026-11-03"
  },
+ "/blog/ingiltere-universite-basvuru-sartlari": {
+  "h": "382dbb52b3c5d943",
+  "d": "2026-11-10"
+ },
+ "/blog/ingiltere-universite-basvurusu": {
+  "h": "3c25d50c8e3d6702",
+  "d": "2026-11-10"
+ },
+ "/blog/iskocyada-universite-okumak": {
+  "h": "5a10381da132756a",
+  "d": "2026-11-10"
+ },
  "/blog/brighton-yaz-okulu": {
   "h": "4ab9484fd4bd17b8",
   "d": "2026-11-03"
@@ -1504,15 +1516,15 @@
   "d": "2026-11-03"
  },
  "/blog/ingilterede-burslu-universite": {
-  "h": "651831a5a815c7a8",
+  "h": "200892bbb842c3f9",
   "d": "2026-11-03"
  },
  "/blog/ingilterede-tip-okumak": {
-  "h": "13b2f8388ca9754e",
+  "h": "c9fa2e762909f373",
   "d": "2026-11-03"
  },
  "/blog/ingilterenin-en-iyi-universiteleri": {
-  "h": "274a2b544f0208b6",
+  "h": "82cfa694651e0e0e",
   "d": "2026-11-03"
  },
  "/blog/ingiltere-yaz-okulu-konaklama": {
@@ -1520,7 +1532,7 @@
   "d": "2026-11-03"
  },
  "/blog/ingilterede-foundation-programi": {
-  "h": "66f51c64eea8c224",
+  "h": "5b5ebfec3ef13f64",
   "d": "2026-10-28"
  },
  "/blog/ingiltere-vizesi-izmir": {
@@ -1564,8 +1576,8 @@
   "d": "2026-10-28"
  },
  "/blog/ingilterede-universite-okumak": {
-  "h": "a957cc796aba5824",
-  "d": "2026-10-28"
+  "h": "890ac6b6e80f38f5",
+  "d": "2026-11-10"
  },
  "/blog/ingilterede-yuksek-lisans": {
   "h": "af27508651624018",
@@ -1576,7 +1588,7 @@
   "d": "2026-10-28"
  },
  "/blog/ispanyada-foundation-egitimi-ile-universiteye-gecis": {
-  "h": "d1563b1a74f38fc9",
+  "h": "bc03807b1cf8aa53",
   "d": "2026-11-10"
  },
  "/blog/ingiltere-yaz-okulu-kayit-takvimi": {
@@ -1596,7 +1608,7 @@
   "d": "2026-10-28"
  },
  "/blog/italyada-burslu-universite": {
-  "h": "1fdeb908b23a0f74",
+  "h": "36b133c510b3be00",
   "d": "2026-11-03"
  },
  "/blog/yetiskinler-icin-ingiltere-yaz-dil-programlari": {
@@ -1612,7 +1624,7 @@
   "d": "2026-10-28"
  },
  "/blog/yurtdisi-egitim-danismanligi-nasil-secilir": {
-  "h": "8131c185df8ed1fe",
+  "h": "ea13fe9cce987031",
   "d": "2026-11-03"
  },
  "/blog/ingilizce-ogrenme-suresi-kac-ay": {
@@ -2064,8 +2076,8 @@
   "d": "2026-10-22"
  },
  "/izmir-yurt-disi-egitim": {
-  "h": "13dfa23bd9c490e2",
-  "d": "2026-10-24"
+  "h": "c3026a8582d1f07c",
+  "d": "2026-11-10"
  },
  "/aydin-yurt-disi-egitim": {
   "h": "39c9c0e5e3eab408",
@@ -2076,8 +2088,8 @@
   "d": "2026-10-26"
  },
  "/site-haritasi": {
-  "h": "4b0ac2c8e54cc73f",
-  "d": "2026-11-03"
+  "h": "8dbe94484118ec6a",
+  "d": "2026-11-10"
  },
  "/kvkk": {
   "h": "0b337f4a448fcefa",

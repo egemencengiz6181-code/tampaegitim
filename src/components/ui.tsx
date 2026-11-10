@@ -5,6 +5,7 @@ import { site } from '../data/site'
 import type { Faq } from '../data/programs'
 import { titleNode } from '../lib/text'
 import { metaOverrides } from '../data/meta'
+import { heroFor } from '../data/heroImages'
 
 /* ---------- Button ---------- */
 type BtnProps = {
@@ -86,7 +87,8 @@ export function metaDescription(text: string, max = 160) {
 export function Seo({ title, description, path = '', image = '/img/brand/logo-full.jpg', imageAlt, type = 'website', published, modified, section, tags, jsonLd, noindex }: SeoProps) {
   const full = brandTitle(title)
   const url = `${site.url}${path === '/' ? '/' : path}`
-  const img = image.startsWith('http') ? image : `${site.url}${image}`
+  const ogImage = heroFor(path)?.src ?? image
+  const img = ogImage.startsWith('http') ? ogImage : `${site.url}${ogImage}`
   const desc = metaDescription(metaOverrides[path] ?? description)
   // SEO_LOG=1 npm run build: elle yazılması gereken (otomatik kısaltılan) açıklamaları listeler
   if (import.meta.env.SSR && !metaOverrides[path] && desc !== description.replace(/\s+/g, ' ').trim() && (globalThis as { process?: { env: Record<string, string | undefined> } }).process?.env.SEO_LOG) console.warn(`[meta] ${path}`)

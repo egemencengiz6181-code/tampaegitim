@@ -26,7 +26,12 @@ import { titleCase } from '../lib/text'
 /** Program × ülke sayfalarında öne çıkan ek bağlantılar (online programlar, fiyat listesi, konaklama). */
 const crossLinks: Record<string, { text: string; to: string; label: string }[]> = {
   'lise:kanada': [{ text: 'Türkiye’den ayrılmadan Kanada lise diploması almak ister misiniz?', to: '/online-egitim/kanada-online-lise-diplomasi', label: 'Kanada Online Lise Diploması (OSSD)' }],
-  'lisans:ingiltere': [{ text: 'İşinizi bırakmadan, %100 online İngiliz lisans diploması:', to: '/online-egitim/ingiltere-online-lisans-yuksek-lisans', label: 'İngiltere Online Lisans ve Top-up' }],
+  'lisans:ingiltere': [
+    { text: 'UCAS adımları, son tarihler ve ay ay takvim:', to: '/blog/ingiltere-universite-basvurusu', label: 'İngiltere Üniversite Başvurusu Rehberi' },
+    { text: 'Not, IELTS, personal statement ve belgeler:', to: '/blog/ingiltere-universite-basvuru-sartlari', label: 'İngiltere Üniversite Başvuru Şartları' },
+    { text: 'Dört yıllık lisans ve İskoç üniversiteleri:', to: '/blog/iskocyada-universite-okumak', label: 'İskoçya’da Üniversite Okumak' },
+    { text: 'İşinizi bırakmadan, %100 online İngiliz lisans diploması:', to: '/online-egitim/ingiltere-online-lisans-yuksek-lisans', label: 'İngiltere Online Lisans ve Top-up' },
+  ],
   'yuksek-lisans:ingiltere': [{ text: 'Çalışırken, vize gerektirmeden İngiliz yüksek lisans diploması:', to: '/online-egitim/ingiltere-online-lisans-yuksek-lisans', label: 'İngiltere Online MBA' }],
   'lisans:almanya': [{ text: 'YKS şartı olmadan, İngilizce eğitim veren akredite okullar:', to: '/almanyadaki-ozel-universiteler', label: 'Almanya’daki Özel Üniversiteler' }],
   'lisans:cekya': [{ text: 'Ücretler, nostrifikasyon, başvuru takvimi ve üniversite listesi:', to: '/cekya-universiteleri', label: 'Çekya Üniversiteleri Rehberi' }],

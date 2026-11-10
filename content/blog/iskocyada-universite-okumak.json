@@ -1,0 +1,46 @@
+{
+  "slug": "iskocyada-universite-okumak",
+  "title": "İskoçya’da Üniversite Okumak: 4 Yıllık Lisans, Üniversiteler ve Başvuru",
+  "metaTitle": "İskoçya’da Üniversite Okumak: Başvuru ve Ücretler",
+  "description": "İskoçya’da üniversite: 4 yıllık lisansın avantajı, Edinburgh, Glasgow, St Andrews ve diğer üniversiteler, UCAS başvurusu, ücretler ve yaşam maliyeti.",
+  "category": "Üniversite",
+  "date": "2026-11-10",
+  "updated": "2026-11-10",
+  "image": "/img/blog/iskocya-edinburgh-tepe.jpg",
+  "imageAlt": "Gün batımında Edinburgh’a tepeden bakan genç kadın",
+  "focusKeyword": "iskoçya’da üniversite okumak",
+  "keywords": [
+    "iskoçya’da üniversite okumak",
+    "iskoçya üniversite başvurusu",
+    "iskoçya üniversiteleri",
+    "edinburgh üniversitesi başvuru",
+    "iskoçya üniversite ücretleri"
+  ],
+  "countries": [
+    "ingiltere"
+  ],
+  "programs": [
+    "lisans"
+  ],
+  "faqs": [
+    {
+      "q": "İskoçya’da lisans kaç yıl sürer?",
+      "a": "İskoçya’da standart lisans (honours degree) dört yıldır. İngiltere, Galler ve Kuzey İrlanda’da ise genellikle üç yıldır. Güçlü A-Level veya IB sonuçlarına sahip öğrenciler bazı üniversitelerde ikinci yıldan başlayabilir."
+    },
+    {
+      "q": "Türk lise diplomasıyla İskoçya’da birinci yıla başlanabilir mi?",
+      "a": "Dört yıllık yapı nedeniyle bazı İskoç üniversiteleri yüksek ortalamalı Türk lise diplomasını birinci yıl için değerlendirir. Kural üniversite ve bölüme göre değişir; başvurudan önce üniversitenin Türkiye sayfası kontrol edilmelidir."
+    },
+    {
+      "q": "İskoçya’da üniversite ücretsiz mi?",
+      "a": "İskoç öğrenciler için lisans ücretsizdir ancak bu hak uluslararası öğrencileri kapsamaz. Türk öğrenciler için yıllık ücret modern üniversitelerde yaklaşık 15.000–20.000 £, araştırma üniversitelerinde 24.000–38.000 £ civarındadır."
+    },
+    {
+      "q": "İskoçya için ayrı vize mi gerekir?",
+      "a": "Hayır. İskoçya Birleşik Krallık’ın parçasıdır; aynı Student vizesiyle okunur. Çalışma hakkı ve mezuniyet sonrası Graduate Route da İngiltere ile aynıdır."
+    }
+  ],
+  "draft": false,
+  "words": 1032,
+  "readMin": 5
+}

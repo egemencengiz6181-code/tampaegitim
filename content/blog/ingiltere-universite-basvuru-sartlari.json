@@ -1,0 +1,50 @@
+{
+  "slug": "ingiltere-universite-basvuru-sartlari",
+  "title": "İngiltere Üniversite Başvuru Şartları ve Belgeleri: Türk Öğrenciler İçin Tam Liste",
+  "metaTitle": "İngiltere Üniversite Başvuru Şartları ve Belgeler",
+  "description": "İngiltere üniversite başvuru şartları: lise ortalaması, IB/A-Level karşılığı, IELTS, personal statement, referans, UCAT/LNAT ve hazırlanacak belgeler listesi.",
+  "category": "Üniversite",
+  "date": "2026-11-10",
+  "updated": "2026-11-10",
+  "image": "/img/blog/kisisel-beyan-yazimi.jpg",
+  "imageAlt": "Dolma kalemle el yazısıyla metin yazan bir el",
+  "focusKeyword": "ingiltere üniversite başvuru şartları",
+  "keywords": [
+    "ingiltere üniversite başvuru şartları",
+    "ingiltere üniversite başvuru belgeleri",
+    "ingiltere üniversite kabul şartları",
+    "ingiltere üniversite ielts şartı",
+    "personal statement"
+  ],
+  "countries": [
+    "ingiltere"
+  ],
+  "programs": [
+    "lisans"
+  ],
+  "faqs": [
+    {
+      "q": "İngiltere’de üniversite için YKS gerekir mi?",
+      "a": "Hayır. İngiliz üniversiteleri YKS puanı istemez; lise notlarınızı veya IB, A-Level, AP sonuçlarınızı, İngilizce yeterliliğinizi, kişisel beyanınızı ve referansınızı değerlendirir."
+    },
+    {
+      "q": "İngiltere üniversiteleri hangi IELTS puanını ister?",
+      "a": "Lisans için çoğunlukla IELTS 6.0–6.5 istenir. Hukuk, tıp ve iletişim gibi bölümlerde 7.0 ve üzeri, foundation programlarında ise 5.0–5.5 yeterli olabilir."
+    },
+    {
+      "q": "Başvuru için hangi belgeler gerekir?",
+      "a": "Pasaport, lise transkripti ve (mezunsanız) diploma ile İngilizce tercümeleri, varsa IB/A-Level/AP sonuçları, İngilizce sınav sonucu, kişisel beyan ve okulunuzdan bir akademik referans. Bazı bölümler portfolyo veya giriş sınavı sonucu da ister."
+    },
+    {
+      "q": "Personal statement kaç karakter olmalı?",
+      "a": "Yeni UCAS formatında üç soruya yanıt verilir ve toplam sınır 4.000 karakterdir."
+    },
+    {
+      "q": "Başvuru sırasında IELTS sonucum olmazsa başvurabilir miyim?",
+      "a": "Evet. İngilizce şartı çoğunlukla koşullu teklifin parçasıdır; skoru sonradan gönderebilirsiniz. CAS ve vize takvimi nedeniyle sonucu en geç haziran ayında almanız önerilir."
+    }
+  ],
+  "draft": false,
+  "words": 970,
+  "readMin": 5
+}

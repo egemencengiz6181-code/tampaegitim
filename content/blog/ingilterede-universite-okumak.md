@@ -48,6 +48,8 @@ Doğrudan lisans başvuruları UCAS üzerinden yapılır. Özetle:
 4. 2027 girişi için Oxford, Cambridge, tıp, diş hekimliği ve veterinerlikte son tarih 15 Ekim 2026’ydı. Diğer bölümlerde eşit değerlendirme son tarihi **13 Ocak 2027, 18.00 (İngiltere saati)**.
 5. Şubat–mayıs arasında koşullu veya koşulsuz teklifler gelir; birini “firm”, birini “insurance” olarak seçersiniz.
 
+Tüm adımları ay ay takvimle [İngiltere üniversite başvurusu](/blog/ingiltere-universite-basvurusu), gereken belgeleri [İngiltere üniversite başvuru şartları](/blog/ingiltere-universite-basvuru-sartlari) yazımızda anlattık. İskoçya’yı da düşünüyorsanız: [İskoçya’da üniversite okumak](/blog/iskocyada-universite-okumak).
+
 Foundation ve International Year One başvuruları çoğunlukla UCAS dışında, doğrudan üniversiteye ya da pathway koleje yapılır ve tarihleri daha esnektir. Sistemin ayrıntısı: [UCAS nedir?](/bilgi-bankasi/ucas-nedir)
 
 ## Adım 5: İngilizce şartını karşılayın

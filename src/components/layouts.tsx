@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { Link, Outlet, ScrollRestoration } from 'react-router-dom'
+import { Link, Outlet, ScrollRestoration, useLocation } from 'react-router-dom'
 import { Header } from './Header'
 import { Footer, MobileBar, WhatsAppFloat } from './Footer'
 import { Breadcrumbs, Btn, type Crumb } from './ui'
@@ -8,6 +8,7 @@ import { CookieBanner, ConsentLink } from './CookieBanner'
 import { site } from '../data/site'
 import { organizationLd, websiteLd, officesLd } from '../seo/schema'
 import { titleCase, titleNode } from '../lib/text'
+import { heroFor } from '../data/heroImages'
 
 export function SiteLayout() {
   return (
@@ -67,13 +68,19 @@ type HeroProps = {
   tone?: 'photo' | 'mist' | 'deep'
 }
 
-export function PageHero({ title, lead, crumbs, image, kicker, children, aside, tone = image ? 'photo' : 'mist' }: HeroProps) {
+export function PageHero({ title, lead, crumbs, image: imageProp, kicker, children, aside, tone = imageProp ? 'photo' : 'mist' }: HeroProps) {
+  // Sayfaya özel kapak görseli (src/data/heroImages.ts): aynı fotoğrafın birden çok sayfada tekrarlanmasını önler.
+  const hero = heroFor(useLocation().pathname)
+  const image = hero?.src ?? imageProp
   return (
     <section className={`phero phero--${tone}`}>
       {image && tone === 'photo' && (
         <div className="phero__bg" aria-hidden="true">
           <img src={image} alt="" fetchPriority="high" decoding="async" />
         </div>
+      )}
+      {hero?.credit && tone === 'photo' && (
+        <a className="phero__credit" href={hero.href} target="_blank" rel="noopener noreferrer">Fotoğraf: {hero.credit}</a>
       )}
       <div className="container phero__in">
         <div className="phero__main">

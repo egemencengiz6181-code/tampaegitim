@@ -1,0 +1,50 @@
+{
+  "slug": "ingiltere-universite-basvurusu",
+  "title": "İngiltere Üniversite Başvurusu 2027–2028: UCAS ile Adım Adım Rehber",
+  "metaTitle": "İngiltere Üniversite Başvurusu 2027: UCAS Adım Adım",
+  "description": "İngiltere üniversite başvurusu nasıl yapılır? İngiltere, İskoçya, Galler ve Kuzey İrlanda için UCAS adımları, son tarihler, teklif türleri ve ay ay takvim.",
+  "category": "Üniversite",
+  "date": "2026-11-10",
+  "updated": "2026-11-10",
+  "image": "/img/blog/basvuru-planlama.jpg",
+  "imageAlt": "Deftere başvuru kontrol listesi yazan öğrenci",
+  "focusKeyword": "ingiltere üniversite başvurusu",
+  "keywords": [
+    "ingiltere üniversite başvurusu",
+    "ingiltere üniversite başvuru",
+    "birleşik krallık üniversite başvurusu",
+    "ucas başvurusu nasıl yapılır",
+    "ingiltere üniversite başvuru tarihleri"
+  ],
+  "countries": [
+    "ingiltere"
+  ],
+  "programs": [
+    "lisans"
+  ],
+  "faqs": [
+    {
+      "q": "İngiltere üniversite başvurusu nereden yapılır?",
+      "a": "Lisans başvuruları İngiltere, İskoçya, Galler ve Kuzey İrlanda’daki tüm üniversiteler için UCAS üzerinden yapılır. Tek başvuruyla en fazla beş programa başvurulur. Foundation ve International Year One başvuruları ise çoğunlukla doğrudan üniversiteye ya da pathway koleje yapılır."
+    },
+    {
+      "q": "2027 girişi için İngiltere üniversite başvurusu son tarihi ne zaman?",
+      "a": "Oxford, Cambridge, tıp, diş hekimliği ve veteriner hekimliği için son tarih 15 Ekim 2026’ydı. Diğer bölümler için eşit değerlendirme son tarihi 13 Ocak 2027, 18.00 (İngiltere saati). Sonrasında başvurular 30 Haziran 2027’ye kadar yalnızca boş kontenjanı olan programlara yapılabilir."
+    },
+    {
+      "q": "Kaç üniversiteye başvurabilirim?",
+      "a": "Bir UCAS başvurusunda en fazla beş seçenek yapabilirsiniz. Aynı yıl Oxford ve Cambridge’den yalnızca birine başvurulabilir; tıp, diş hekimliği ve veterinerlik için en fazla dört seçenek kullanılır."
+    },
+    {
+      "q": "İskoçya’daki üniversitelere ayrı mı başvurulur?",
+      "a": "Hayır. İskoçya, Galler ve Kuzey İrlanda’daki üniversitelere de aynı UCAS hesabıyla başvurulur; beş seçeneğinizi bu ülkeler arasında dağıtabilirsiniz."
+    },
+    {
+      "q": "Firm ve insurance seçimi nedir?",
+      "a": "Tüm yanıtlar geldikten sonra bir teklifi ilk tercih (firm), bir teklifi de yedek (insurance) olarak kabul edersiniz. Yedek tercihin şartı genellikle ilk tercihten daha düşük olmalıdır."
+    }
+  ],
+  "draft": false,
+  "words": 1129,
+  "readMin": 6
+}
