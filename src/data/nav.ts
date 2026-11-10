@@ -16,6 +16,7 @@ const programLinks: Partial<Record<string, NavLink[]>> = {
     { label: 'Üniversite fiyatları', to: '/fiyatlar', note: '15 ülkede eğitim ve yaşam maliyeti' },
     { label: 'Almanya’daki özel üniversiteler', to: '/almanyadaki-ozel-universiteler', note: 'YKS’siz, İngilizce eğitim' },
     { label: 'Çekya üniversiteleri', to: '/cekya-universiteleri', note: 'Çekçe ücretsiz, İngilizce uygun ücretli' },
+    { label: 'Valensiya Politeknik Üniversitesi (UPV)', to: '/valensiya-politeknik-universitesi', note: 'İspanya, hazırlık yılıyla' },
   ],
 }
 

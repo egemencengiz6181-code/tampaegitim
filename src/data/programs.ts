@@ -11,6 +11,7 @@ export type Program = {
   trait: string
   image: string
   /** Ana sayfa program kartı için dikey görsel (opsiyonel) */
+  /** Ana sayfadaki program bulucuda gösterilen dikey görsel (programa özel, başka yerde kullanılmaz) */
   portrait?: string
   lead: string
   promise: string
@@ -40,8 +41,8 @@ export const programs: Program[] = [
     name: 'Yurtdışı Dil Okulları',
     short: 'Dil okulu',
     trait: 'Yenilikçi',
-    image: '/img/misc/language.jpg',
-    portrait: '/img/misc/london-portrait.jpg',
+    image: '/img/programs/dil.jpg',
+    portrait: '/img/finder/dil.jpg',
     lead: 'Yurtdışında dil eğitimi almak, yalnızca bir dili öğrenmenin ötesine geçerek, farklı kültürleri deneyimlemek ve global bir vizyon kazanmak için eşsiz bir fırsattır.',
     promise: 'Tampa Eğitim olarak, bu deneyimi sizin için unutulmaz ve verimli bir hale getirmek için buradayız.',
     intro: [
@@ -113,7 +114,8 @@ export const programs: Program[] = [
     name: 'Yurtdışı Yaz Okulları',
     short: 'Yaz okulu',
     trait: 'Dinamik',
-    image: '/img/misc/summer.jpg',
+    image: '/img/programs/yaz.jpg',
+    portrait: '/img/finder/yaz.jpg',
     lead: 'Yurtdışında yaz kampı deneyimi, yalnızca eğlenceli bir tatil değil, aynı zamanda farklı bir kültürü tanıma, yeni arkadaşlıklar kurma ve kendinizi geliştirmenin en etkili yollarından biridir.',
     promise: 'Her öğrenci için yaşına, İngilizce seviyesine ve karakterine uygun kampüsü birlikte seçiyor; kayıttan dönüşe kadar veliyle düzenli iletişimde kalıyoruz.',
     intro: [
@@ -177,7 +179,8 @@ export const programs: Program[] = [
     name: 'Yurtdışı Lise Eğitimi',
     short: 'Lise',
     trait: 'Güvenilir',
-    image: '/img/misc/student-bridge.jpg',
+    image: '/img/programs/lise.jpg',
+    portrait: '/img/finder/lise.jpg',
     lead: 'Kendine güvenen, bağımsız ve çok yönlü bireyler yetiştirmek için tasarlanan yurtdışı lise programları, geleceğinizi şekillendirecek en önemli adımlardan biridir.',
     promise: 'Şimdi, hayalinizdeki yurtdışı lise deneyimine ilk adımı atmaya hazır mısınız?',
     intro: [
@@ -232,7 +235,8 @@ export const programs: Program[] = [
     name: 'Yurtdışında Üniversite',
     short: 'Üniversite',
     trait: 'Modern',
-    image: '/img/misc/bachelor.jpg',
+    image: '/img/programs/lisans.jpg',
+    portrait: '/img/finder/lisans.jpg',
     lead: 'Hayalinizdeki kariyere bir adım daha yaklaşın!',
     promise: 'Tampa Eğitim olarak, prestijli üniversitelerin birbirinden çeşitli lisans programlarını sizlerle buluşturuyor, geleceğinize sağlam bir temel atmanız için rehberlik ediyoruz.',
     intro: [
@@ -289,7 +293,8 @@ export const programs: Program[] = [
     name: 'Yurtdışı Yüksek Lisans',
     short: 'Yüksek lisans',
     trait: 'Güçlü',
-    image: '/img/misc/masters.jpg',
+    image: '/img/programs/yuksek-lisans.jpg',
+    portrait: '/img/finder/yuksek-lisans.jpg',
     lead: 'Dünyanın dört bir yanında seçkin üniversitelerde yüksek lisans programlarına katılarak kariyerinizde bir adım öne çıkmaya hazır mısınız?',
     promise: 'Uzman danışmanlarımızla hayallerinizdeki eğitimi planlayın, akademik hedeflerinize ulaşın. Hangi alanda uzmanlaşmak istediğinize karar verin, biz sizin için en uygun üniversite ve programı bulalım.',
     intro: [
@@ -346,7 +351,8 @@ export const programs: Program[] = [
     name: 'Work and Study',
     short: 'Work & Study',
     trait: 'Sınır tanımayan',
-    image: '/img/misc/work-study.jpg',
+    image: '/img/programs/work-study.jpg',
+    portrait: '/img/finder/work-study.jpg',
     lead: 'Work and Study programı, yurt dışında eğitim alırken aynı zamanda yasal olarak çalışabilme fırsatı sunan en popüler sistemlerden biridir.',
     promise: 'Dil eğitimi alırken çalışarak hem bütçenizi destekleyin hem de uluslararası iş deneyimi kazanın.',
     intro: [

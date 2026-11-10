@@ -31,6 +31,12 @@ const crossLinks: Record<string, { text: string; to: string; label: string }[]> 
   'lisans:almanya': [{ text: 'YKS şartı olmadan, İngilizce eğitim veren akredite okullar:', to: '/almanyadaki-ozel-universiteler', label: 'Almanya’daki Özel Üniversiteler' }],
   'lisans:cekya': [{ text: 'Ücretler, nostrifikasyon, başvuru takvimi ve üniversite listesi:', to: '/cekya-universiteleri', label: 'Çekya Üniversiteleri Rehberi' }],
   'yuksek-lisans:cekya': [{ text: 'Ücretler, başvuru takvimi ve üniversite listesi:', to: '/cekya-universiteleri', label: 'Çekya Üniversiteleri Rehberi' }],
+  'lisans:ispanya': [
+    { text: 'Yıllık ~1.535 €’dan devlet üniversitesi, İspanyolca hazırlık yılıyla:', to: '/valensiya-politeknik-universitesi', label: 'Valensiya Politeknik Üniversitesi (UPV)' },
+    { text: 'Giriş puanınızı yükseltmek için:', to: '/valensiya-politeknik-universitesi/pce-universite-giris-kursu', label: 'UPV PCE Üniversite Giriş Kursu' },
+  ],
+  'yuksek-lisans:ispanya': [{ text: 'Valensiya’da İngilizce, 90 AKTS dijital iş ve pazarlama yüksek lisansları:', to: '/valensiya-politeknik-universitesi/yuksek-lisans', label: 'UPV’de Yüksek Lisans' }],
+  'dil:ispanya': [{ text: 'İspanyolcayı üniversite kampüsünde öğrenip lisansa geçmek isteyenler için:', to: '/valensiya-politeknik-universitesi/ispanyolca-hazirlik-programi', label: 'UPV İspanyolca Hazırlık Programı' }],
   'yuksek-lisans:almanya': [{ text: 'İngilizce yüksek lisans ve MBA programları için:', to: '/almanyadaki-ozel-universiteler', label: 'Almanya’daki Özel Üniversiteler' }],
   'dil:ingiltere': [
     { text: 'Okulları ve fiyatları şehir şehir karşılaştırın:', to: '/ingiltere-dil-okullari-fiyat-listesi', label: 'İngiltere Dil Okulları Fiyat Listesi' },

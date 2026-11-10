@@ -37,6 +37,7 @@ const extrasMod = () => import('./pages/Extras')
 const adminMod = () => import('./pages/admin/Admin')
 const germanyMod = () => import('./pages/Germany')
 const czechMod = () => import('./pages/Czech')
+const upvMod = () => import('./pages/Upv')
 const ukRepMod = () => import('./pages/UkRepresentation')
 const langCityMod = () => import('./pages/LanguageCity')
 const localMod = () => import('./pages/Local')
@@ -124,6 +125,11 @@ export const routes: RouteObject[] = [
       { path: 'almanyadaki-ozel-universiteler', ...page(germanyMod, 'GermanUnisHub') },
       { path: 'almanyadaki-ozel-universiteler/:slug', ...page(germanyMod, 'GermanUniPage') },
       { path: 'cekya-universiteleri', ...page(czechMod, 'CzechUnisHub') },
+      { path: 'valensiya-politeknik-universitesi', ...page(upvMod, 'UpvHub') },
+      { path: 'valensiya-politeknik-universitesi/ispanyolca-hazirlik-programi', ...page(upvMod, 'UpvFoundation') },
+      { path: 'valensiya-politeknik-universitesi/pce-universite-giris-kursu', ...page(upvMod, 'UpvPce') },
+      { path: 'valensiya-politeknik-universitesi/lisans-programlari', ...page(upvMod, 'UpvBachelors') },
+      { path: 'valensiya-politeknik-universitesi/yuksek-lisans', ...page(upvMod, 'UpvMasters') },
       { path: 'hizmetler', ...page(servicesMod, 'ServicesIndex') },
       ...serviceRoutes,
       { path: 'tampa-akademi', ...page(servicesMod, 'Academy') },

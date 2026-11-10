@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Seo, Btn, SectionHead, FaqList, Stars, RouteCode } from '../components/ui'
 import { Icon } from '../components/Icon'
@@ -294,11 +294,24 @@ export default function Home() {
 
 function ProgramFinder() {
   const [i, setI] = useState(0)
+  const preloaded = useRef(false)
   const p = programs[i]
   const list = countriesFor(p.key)
+  // Fare sekmelere ilk girdiğinde tüm program görsellerini önceden yükle; hover ile geçişte görsel beklemesin.
+  const preload = () => {
+    if (preloaded.current) return
+    preloaded.current = true
+    for (const pr of programs) {
+      const c = cardImg(pr.portrait ?? pr.image, '(max-width: 760px) 92vw, 460px')
+      const im = new Image()
+      if (c.sizes) im.sizes = c.sizes
+      if (c.srcSet) im.srcset = c.srcSet
+      im.src = c.src
+    }
+  }
   return (
     <div className="finder">
-      <div className="finder__tabs" role="tablist" aria-label="Programlar">
+      <div className="finder__tabs" role="tablist" aria-label="Programlar" onPointerEnter={preload}>
         {programs.map((pr, idx) => (
           <button
             key={pr.key}
@@ -309,6 +322,8 @@ function ProgramFinder() {
             tabIndex={idx === i ? 0 : -1}
             className={`finder__tab ${idx === i ? 'is-active' : ''}`}
             onClick={() => setI(idx)}
+            onMouseEnter={() => setI(idx)}
+            onFocus={() => setI(idx)}
             onKeyDown={(e) => {
               if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); setI((idx + 1) % programs.length) }
               if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); setI((idx - 1 + programs.length) % programs.length) }

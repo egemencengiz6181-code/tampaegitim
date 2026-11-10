@@ -42,6 +42,10 @@ Not: Bazı özerk bölgeler ve üniversiteler kendi kabul formüllerini uygular.
 | Özel üniversitenin hazırlık programı | Belirli bir lisansa bağlı dil ve akademik dersler | Hangi üniversite ve bölümü okuyacağı belli olan öğrenci |
 | Doğrudan İngilizce özel lisans | Hazırlık yerine kabul sırasında İngilizce belgesi | İngilizcesi yeterli, bütçesi özel üniversiteye uygun öğrenci |
 
+### Örnek: Valensiya Politeknik Üniversitesi (UPV)
+
+Devlet üniversitesine bağlı bir hazırlık yılının nasıl kurulduğunu görmek için UPV iyi bir örnek. UPV Gandia kampüsünde verilen [İspanyolca hazırlık programı](/valensiya-politeknik-universitesi/ispanyolca-hazirlik-programi) B1’den B2’ye çıkarır; program ücreti 9.500 €, 31 Aralık 2026’ya kadar tam ödemede %25 indirim uygulanıyor. B2’si olan öğrenciler için aynı kampüste 30 haftalık [PCE üniversite giriş kursu](/valensiya-politeknik-universitesi/pce-universite-giris-kursu) var. Hazırlık sonrası [UPV lisans programlarında](/valensiya-politeknik-universitesi/lisans-programlari) yıllık ücret 1.534,80 € ile 2.080,80 € arasında. Tüm seçenekleri [UPV rehberimizde](/valensiya-politeknik-universitesi) topladık.
+
 Hangi yolun mantıklı olduğunu üç soru belirler: hedef bölüm İspanyolca mı İngilizce mi, devlet mi özel mi, ve hedef bölümün kabul notu ne kadar yüksek? Tıp gibi bölümlerde devlet kontenjanları çok rekabetçidir ve PCE puanı belirleyicidir.
 
 ## Öğrenci vizesi: estancia por estudios

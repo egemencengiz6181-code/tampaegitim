@@ -1,3 +1,4 @@
+import { upvPaths } from '../data/upv'
 import { programs, countriesFor } from '../data/programs'
 import { countries } from '../data/countries'
 import { packages } from '../data/packages'
@@ -50,6 +51,7 @@ function allPaths(): SitePath[] {
     p('/almanyadaki-ozel-universiteler', 0.8),
     ...germanUnis.map((u) => p(`/almanyadaki-ozel-universiteler/${u.slug}`, 0.7)),
     p('/cekya-universiteleri', 0.8),
+    ...Object.values(upvPaths).map((u) => p(u, 0.8)),
     p('/hizmetler', 0.7),
     ...services.map((s) => p(s.path, 0.7)),
     p('/tampa-akademi', 0.6),

@@ -2898,3 +2898,171 @@ a.filter {
     grid-column: auto;
   }
 }
+
+/* ---------- UPV sayfaları ---------- */
+.upvnav {
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+.upvnav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.25rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin: 0;
+  padding: 0;
+}
+.upvnav a {
+  display: block;
+  padding: 0.9rem 1rem;
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--ink-2);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  border-bottom: 3px solid transparent;
+}
+.upvnav a:hover {
+  color: var(--teal-900);
+}
+.upvnav a.is-active {
+  color: var(--teal-900);
+  border-bottom-color: var(--bolt);
+}
+.upvpaths {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+.upvpath {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 0 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.upvpath:hover {
+  border-color: var(--teal);
+  transform: translateY(-2px);
+}
+.upvpath > :not(.upvpath__img) {
+  margin-inline: 1.15rem;
+}
+.upvpath__img {
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+.upvpath__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.upvpath__tag {
+  font-size: var(--fs-xs);
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.upvpath p {
+  color: var(--ink-2);
+  font-size: var(--fs-sm);
+  flex: 1;
+}
+.upvdegrees {
+  display: grid;
+  gap: 1.25rem;
+}
+.upvdegree {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: clamp(1.25rem, 1rem + 1vw, 2rem);
+  scroll-margin-top: 5rem;
+}
+.upvdegree h3 {
+  margin: 0.4rem 0 0.1rem;
+}
+.upvdegree__cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+.upvdegree h4 {
+  font-size: var(--fs-sm);
+  margin-bottom: 0.5rem;
+}
+.upvdegree__foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-size: var(--fs-sm);
+}
+.upvlead {
+  margin-top: 1.5rem;
+  padding: 1rem 1.2rem;
+  border-left: 3px solid var(--bolt);
+  background: var(--teal-50);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+}
+.upvlead__role {
+  font-size: var(--fs-xs);
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.upvlead__name {
+  font-weight: 650;
+  font-size: 1.1rem;
+}
+.upvmods {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+  margin: 1rem 0 1.25rem;
+}
+.upvmods li {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: start;
+}
+.upvmods span {
+  font-family: var(--f-mono);
+  background: var(--bolt);
+  color: #fff;
+  border-radius: var(--r-md);
+  text-align: center;
+  padding: 0.3rem 0;
+  font-size: 0.85rem;
+}
+.upvmods p {
+  color: var(--ink-2);
+  margin: 0.15rem 0 0;
+}
+.post--static {
+  cursor: default;
+}
+@media (max-width: 1080px) {
+  .upvpaths {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .upvpaths,
+  .upvdegree__cols {
+    grid-template-columns: 1fr;
+  }
+}

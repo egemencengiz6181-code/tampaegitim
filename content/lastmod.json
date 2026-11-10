@@ -64,8 +64,8 @@
   "d": "2026-11-03"
  },
  "/yurtdisi-dil-okullari/ispanya": {
-  "h": "467f36f83eda41e0",
-  "d": "2026-11-03"
+  "h": "61220788e95e49b7",
+  "d": "2026-11-10"
  },
  "/yurtdisi-dil-okullari/fransa": {
   "h": "5ac7f51d6c727786",
@@ -204,8 +204,8 @@
   "d": "2026-11-03"
  },
  "/lisans-programlari/ispanya": {
-  "h": "6b80b626cdd0a79b",
-  "d": "2026-11-03"
+  "h": "795f22ba2dea16ef",
+  "d": "2026-11-10"
  },
  "/lisans-programlari/fransa": {
   "h": "00ce919e9eebbc75",
@@ -280,8 +280,8 @@
   "d": "2026-11-03"
  },
  "/yurtdisi-yuksek-lisans/ispanya": {
-  "h": "27e6c2fc5be72778",
-  "d": "2026-11-03"
+  "h": "60cf80283ebc320d",
+  "d": "2026-11-10"
  },
  "/yurtdisi-yuksek-lisans/fransa": {
   "h": "4f1c4fb890b2a656",
@@ -1403,6 +1403,26 @@
   "h": "e99e1651365e0bab",
   "d": "2026-10-24"
  },
+ "/valensiya-politeknik-universitesi": {
+  "h": "dca16da3dfb834de",
+  "d": "2026-11-10"
+ },
+ "/valensiya-politeknik-universitesi/ispanyolca-hazirlik-programi": {
+  "h": "f613c641f6ec29ea",
+  "d": "2026-11-10"
+ },
+ "/valensiya-politeknik-universitesi/pce-universite-giris-kursu": {
+  "h": "1fc20ec2dfae57d1",
+  "d": "2026-11-10"
+ },
+ "/valensiya-politeknik-universitesi/lisans-programlari": {
+  "h": "6afd4ca412f9f2d9",
+  "d": "2026-11-10"
+ },
+ "/valensiya-politeknik-universitesi/yuksek-lisans": {
+  "h": "a358130e5ef4a1e0",
+  "d": "2026-11-10"
+ },
  "/hizmetler": {
   "h": "7d0da7b23294613d",
   "d": "2026-10-14"
@@ -1556,8 +1576,8 @@
   "d": "2026-10-28"
  },
  "/blog/ispanyada-foundation-egitimi-ile-universiteye-gecis": {
-  "h": "4e08d741dbf9f60e",
-  "d": "2026-11-03"
+  "h": "d1563b1a74f38fc9",
+  "d": "2026-11-10"
  },
  "/blog/ingiltere-yaz-okulu-kayit-takvimi": {
   "h": "f419469ef0299091",

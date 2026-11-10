@@ -4,6 +4,8 @@ import { universityList } from './universities/list'
 import { glossaryGuides } from './glossary'
 import { localPages } from './local'
 import { priceList } from './prices/list'
+import { posts } from './blog'
+import { programs } from './programs'
 import { languageCityRouting, universityRouting, glossaryRouting, localSlugs, priceRouting } from './routing'
 
 /** routing.ts (ana paketteki rota eşlemeleri) liste dosyalarıyla uyumlu mu? Boş dizi = sorun yok. */
@@ -21,5 +23,13 @@ export function routingMismatch(): string[] {
   if (ls !== rs) out.push('routing.ts > localSlugs local.ts ile uyuşmuyor')
   for (const p of priceList) if (priceRouting[p.slug]?.file !== p.file || priceRouting[p.slug]?.country !== p.country) out.push(`routing.ts > priceRouting: ${p.slug} eksik/farklı`)
   for (const s of Object.keys(priceRouting)) if (!priceList.some((p) => p.slug === s)) out.push(`routing.ts > priceRouting: ${s} fazla`)
+  // Görsel tekrarı: her blog kapağı tek bir yazıda kullanılmalı ve program görselleriyle çakışmamalı.
+  const seen = new Map<string, string>()
+  for (const pr of programs) for (const img of [pr.image, pr.portrait]) if (img) seen.set(img, `program:${pr.key}`)
+  for (const p of posts) {
+    const prev = seen.get(p.image)
+    if (prev) out.push(`blog kapağı tekrar ediyor: ${p.image} (${p.slug} ve ${prev})`)
+    seen.set(p.image, p.slug)
+  }
   return out
 }
