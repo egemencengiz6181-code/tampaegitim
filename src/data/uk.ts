@@ -118,10 +118,12 @@ export const ukProgramBlocks: Partial<Record<ProgramKey, ProgramBlocks>> = {
       { title: 'İlk yurt dışı deneyimi için uygun', text: `${ukSummer.ages} arası öğrenciler için ${ukSummer.supervision}, giriş kontrollü kampüsler ve deneyimli grup liderleri.` },
     ],
     cities: [
-      { name: 'Londra', text: 'Şehir merkezine yakın kampüsler; müze, tiyatro ve tarihi yapılarla dolu bir program. 13–17 yaş için daha uygundur.', tags: ['13–17 yaş', 'Şehir kampüsü'] },
-      { name: 'Oxford ve Cambridge', text: 'Tarihi kolej binalarında konaklama ve akademik ağırlıklı programlar; liderlik ve üniversite hazırlık seçenekleri.', tags: ['12–17 yaş', 'Kolej konaklaması'] },
-      { name: 'Brighton ve Bournemouth', text: 'Sahil kenarında daha sakin ve sosyal programlar; geniş aktivite alanları.', tags: ['10–17 yaş', 'Sahil'] },
-      { name: 'Kırsal kampüsler', text: 'Geniş spor alanlarına sahip yatılı okul kampüsleri; küçük yaş grupları için korunaklı, kapalı ortam.', tags: ['7–12 yaş', 'Kapalı kampüs'] },
+      // Yaş aralıkları kartlarda yazılmaz; tek kaynak deep.ts > 'yaz:ingiltere' > "Yaşa göre seçim" tablosu.
+      // TODO(Tampa): partner kampüs adları
+      { name: 'Londra', text: 'Şehir merkezine yakın kampüsler; müze, tiyatro ve tarihi yapılarla dolu bir program. Daha büyük yaş grupları için uygundur.', tags: ['Şehir kampüsü', 'Müze ve tiyatro'] },
+      { name: 'Oxford ve Cambridge', text: 'Tarihi kolej binalarında konaklama ve akademik ağırlıklı programlar; liderlik ve üniversite hazırlık seçenekleri.', tags: ['Kolej konaklaması', 'Akademik'] },
+      { name: 'Brighton ve Bournemouth', text: 'Sahil kenarında daha sakin ve sosyal programlar; geniş aktivite alanları.', tags: ['Sahil', 'Sosyal program'] },
+      { name: 'Kırsal kampüsler', text: 'Geniş spor alanlarına sahip yatılı okul kampüsleri; küçük yaş grupları için korunaklı, kapalı ortam.', tags: ['Küçük yaş grupları', 'Kapalı kampüs'] },
     ],
     popularCities: ['Londra', 'Oxford', 'Cambridge'],
     infoTitle: 'Vize, Güvenlik ve Seyahat',

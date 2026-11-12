@@ -3,6 +3,7 @@
 import type { Faq } from './programs'
 import { ukVisa, ukWork, ukSummer, ukUcas2027, ukMaintenance, ukTuitionRange, ukRepresentationPath } from './uk'
 import { site } from './site'
+import { ukApplyDeadline } from './adLanding'
 import { ukPriceCities } from './schoolPrices'
 
 export type DeepSection = {
@@ -27,6 +28,8 @@ export type Deep = {
   reviewProgram?: string
   sections: DeepSection[]
   faqs?: Faq[]
+  /** "Program Seçenekleri" maddelerini bu sayfa için değiştirir (programs.ts > features yerine) */
+  features?: { title: string; text: string }[]
 }
 
 const ukLanguageCityFit: Record<string, string> = {
@@ -87,12 +90,14 @@ export const deep: Record<string, Deep> = {
       },
       {
         h: 'Yaşa göre seçim',
+        // Sayfadaki tek yaş tablosu. Genel aralık ukSummer.ages (7–17); şehir kartlarında ayrı yaş yazılmaz.
+        // TODO(Tampa): partner kampüslerin kesin yaş aralıklarını teyit edin (ör. Oxford/Cambridge kampüsleri 12 mi 13 yaştan mı başlıyor?)
         table: {
           head: ['Yaş grubu', 'Önerilen program', 'Öne çıkan özellik'],
           rows: [
             ['7–12 yaş', 'Kırsal veya kapalı kampüs programları', 'Oyun temelli İngilizce, yüksek gözetmen oranı'],
             ['13–15 yaş', 'Kampüs + şehir gezileri', 'Proje çalışmaları, haftada 1–2 tam gün gezi'],
-            ['16–17 yaş', 'Londra, Oxford, Cambridge şehir kampüsleri', 'Akademik İngilizce, liderlik, sınav ve üniversite hazırlığı'],
+            ['16–17 yaş', 'Londra, Oxford ve Cambridge şehir kampüslerinde akademik programlar', 'Akademik İngilizce, liderlik, sınav ve üniversite hazırlığı'],
             ['18 yaş ve üzeri', 'Yetişkin dil okulları / Her Şey Dahil Londra paketi', 'Esnek süre, şehir hayatı'],
           ],
         },
@@ -100,8 +105,10 @@ export const deep: Record<string, Deep> = {
       },
       {
         h: 'Şehre göre seçim',
+        // TODO(Tampa): partner kampüs / okul adları (gerçek adlar gelince şehir maddelerine ve uk.ts > ukProgramBlocks.yaz.cities'e ekleyin)
+        p: ['Her şehirdeki kampüslerin kabul ettiği yaş aralığı farklıdır; yukarıdaki yaş tablosuna göre çocuğunuza uygun kampüsü birlikte seçiyoruz.'],
         list: [
-          '**Londra:** Müzeler, tarihi yapılar ve şehir enerjisi; 13–17 yaş için uygun. Ayrıntılar: [Londra yaz okulları](/blog/londra-yaz-okullari)',
+          '**Londra:** Müzeler, tarihi yapılar ve şehir enerjisi; daha büyük yaş grupları için uygun. Ayrıntılar: [Londra yaz okulları](/blog/londra-yaz-okullari)',
           '**Oxford ve Cambridge:** Tarihi kolej binalarında konaklama, akademik ağırlıklı programlar. Ayrıntılar: [Oxford ve Cambridge yaz okulları](/blog/oxford-cambridge-yaz-okulu)',
           '**Brighton ve Bournemouth:** Sahil kenarında daha sakin ve sosyal programlar.',
           '**Kırsal kampüsler:** Geniş spor alanları; küçük yaş grupları için korunaklı, kapalı ortam.',
@@ -123,7 +130,8 @@ export const deep: Record<string, Deep> = {
         h: 'İngiltere yaz okulunda bir gün',
         list: [
           '**08.00 – 09.00:** Kahvaltı',
-          '**09.00 – 12.30:** Seviyeye göre İngilizce dersleri (genellikle haftada 15 ders saati)',
+          // TODO(Tampa): haftalık ders saatini teyit edin (sayfada tek ifade: "haftada 15–20 ders saati")
+          '**09.00 – 12.30:** Seviyeye göre İngilizce dersleri (kampüse göre haftada 15–20 ders saati)',
           '**12.30 – 13.30:** Öğle yemeği',
           '**13.30 – 17.30:** Spor, sanat, drama, proje atölyeleri veya yarım gün gezi',
           '**18.00 – 19.00:** Akşam yemeği',
@@ -224,6 +232,23 @@ export const deep: Record<string, Deep> = {
         p: ['İngiltere’de lisans programları genellikle 3 yıl (İskoçya’da 4 yıl) sürer ve öğrenciler ilk yıldan itibaren seçtikleri alanda uzmanlaşır. Bazı programlar staj yılı (placement year) veya yurt dışında bir yıl seçenekleri sunar. **İngiltere üniversite başvurusu** YKS puanı istemez; lise notlarınız, İngilizce seviyeniz ve kişisel beyanınız değerlendirilir.'],
       },
       {
+        h: 'Ücretsiz başvuru hizmetimiz neleri kapsar?',
+        // TODO(Tampa): ücretsiz başvuru hizmetinin kesin kapsamını teyit edin (kişisel beyan desteği, CAS ve vize dosyası dahil mi?)
+        list: [
+          '**Profil analizi:** Notlarınız, İngilizce seviyeniz, hedef bölümünüz ve bütçenizle birebir değerlendirme',
+          '**Bölüm ve üniversite seçimi:** İngiltere, İskoçya, Galler ve Kuzey İrlanda’dan size uygun listeyi birlikte çıkarıyoruz',
+          '**Başvuru:** UCAS veya üniversiteye doğrudan başvurunun yapılması ve kabul sürecinin takibi; başvurularda öncelik',
+          '**Burslar:** Üniversitelerin mevcut burs ve harç indirimlerine başvuru',
+          '**Konaklama:** Kabul sonrası yurt ve öğrenci rezidansı seçenekleri',
+        ],
+        p: [`Bu hizmet için sizden danışmanlık ücreti almıyoruz. UCAS’ın kendi başvuru ücreti öğrenci tarafından ödenir; IELTS, vize ve sağlık katkı payı (IHS) gibi resmi ücretler de başvuru sahibine aittir. 2027 girişi için Tampa üzerinden son başvuru günü **${ukApplyDeadline}**.`],
+      },
+      {
+        h: 'İsteğe bağlı: ücretli mentörlük paketi',
+        // TODO(Tampa): mentörlük paketinin kapsamını ve İngiltere başvurusuyla ilişkisini teyit edin
+        p: ['Ücretsiz başvuru hizmetine ek olarak, daha yoğun birebir destek isteyen öğrenciler için ayrı ve ücretli bir mentörlük paketimiz var: her üniversiteye özel motivasyon mektubu, referans mektubu içerik desteği, uluslararası formatta CV, portfolyo düzenleme ve mülakat provaları. Paket, birden fazla ülkeye başvuracak öğrenciler için de kurgulanır. İngiltere üniversitelerine başvurmak için bu paketi almanız gerekmez. Ayrıntılar: [Üniversite Başvuru ve Mentörlük Paketi](/tampa-yurtdisi-egitim-universite-basvuru-ve-mentorluk-paketi).'],
+      },
+      {
         h: 'Türk lise mezunu için 3 yol',
         table: {
           head: ['Yol', 'Kimler için?', 'Süre', 'Nasıl işler?'],
@@ -233,7 +258,10 @@ export const deep: Record<string, Deep> = {
             ['International Year One', 'Notları güçlü, foundation’a ihtiyaç duymayan öğrenciler', '1 yıl + 2 yıl', 'Lisansın 1. yılı ek akademik destekle okunur; başarılı öğrenci 2. sınıfa geçer.'],
           ],
         },
-        p: ['Bazı üniversiteler yüksek not ortalaması ve AP gibi ek sınavlarla Türk lise diplomasını doğrudan kabul edebilir. Hangi yolun size uygun olduğunu notlarınıza ve hedef bölümünüze göre birlikte belirliyoruz. Foundation hakkında ayrıntılar: [Foundation nedir?](/bilgi-bankasi/foundation-nedir) ve şartlar, ücretler ve geçiş koşullarıyla [İngiltere foundation programı](/blog/ingilterede-foundation-programi) rehberimiz.'],
+        p: [
+          '**UCAS mı, doğrudan başvuru mu?** Lisansın 1. sınıfına (IB, A-Level veya güçlü bir lise diplomasıyla doğrudan giriş) başvurular UCAS üzerinden yapılır. Ayrı bir hazırlık yılı olarak okunan Foundation ve International Year One programlarına ise çoğunlukla UCAS’a girmeden, doğrudan üniversitenin ya da iş birliği yaptığı hazırlık kurumunun sistemi üzerinden başvurulur; tarihleri de bu yüzden daha esnektir. Yalnızca “foundation year dahil” 4 yıllık lisans programları UCAS’tan seçilir. Hangi yolda olursanız olun başvuruyu sizin için biz yürütürüz.',
+          'Bazı üniversiteler yüksek not ortalaması ve AP gibi ek sınavlarla Türk lise diplomasını doğrudan kabul edebilir. Hangi yolun size uygun olduğunu notlarınıza ve hedef bölümünüze göre birlikte belirliyoruz. Foundation hakkında ayrıntılar: [Foundation nedir?](/bilgi-bankasi/foundation-nedir) ve şartlar, ücretler ve geçiş koşullarıyla [İngiltere foundation programı](/blog/ingilterede-foundation-programi) rehberimiz.',
+        ],
       },
       {
         h: 'İngiltere üniversite şartları',
@@ -247,15 +275,17 @@ export const deep: Record<string, Deep> = {
       },
       {
         h: 'Başvuru takvimi (2027 girişi)',
+        // TODO(Tampa): 31 Ocak 2027'nin kapsamını teyit edin. UCAS'ın eşit değerlendirme tarihi 13 Ocak 2027 18.00 (ukUcas2027.equalConsideration);
+        // sayfada "son gün" olarak yalnızca 31 Ocak gösteriliyor, 13 Ocak doğrudan UCAS başvuruları için hedef tarih olarak anılıyor.
         list: [
-          `**${ukUcas2027.opens}:** UCAS başvuruları açılır`,
-          `**${ukUcas2027.earlyDeadline}:** Oxford, Cambridge, tıp, diş hekimliği ve veterinerlik için son tarih`,
-          `**${ukUcas2027.equalConsideration}:** Diğer bölümler için eşit değerlendirme son tarihi`,
+          `**${ukUcas2027.opens}:** 2027 girişi için başvurular açıldı`,
+          `**${ukApplyDeadline}:** Tampa üzerinden 2027 girişi için son başvuru günü`,
           '**Şubat – mayıs:** Üniversitelerden koşullu veya koşulsuz kabul teklifleri',
           '**Haziran – ağustos:** Koşulların tamamlanması, CAS ve Student vizesi başvurusu',
           '**Eylül 2027:** Dersler başlar',
+          `**Oxford, Cambridge, tıp, diş hekimliği ve veterinerlik:** 2027 girişi için başvurular ${ukUcas2027.earlyDeadline}’de kapandı. 2028 girişi için erken planlamaya şimdiden başlıyoruz.`,
         ],
-        p: ['Foundation programlarının çoğu UCAS dışında, doğrudan üniversiteye başvuruyla ve daha esnek tarihlerle alınır. UCAS adımlarının ayrıntısı: [İngiltere’de üniversite okumak](/blog/ingilterede-universite-okumak).'],
+        p: [`IB veya A-Level ile UCAS üzerinden doğrudan 1. sınıfa başvuracak öğrencilerin dosyasını, UCAS’ın eşit değerlendirme tarihi olan 13 Ocak’tan önce göndermeyi hedefliyoruz. Foundation başvurularında tarihler daha esnektir. UCAS adımlarının ayrıntısı: [İngiltere’de üniversite okumak](/blog/ingilterede-universite-okumak).`],
       },
       {
         h: 'Ücretler ve yaşam maliyeti',
@@ -269,7 +299,7 @@ export const deep: Record<string, Deep> = {
       },
       {
         h: 'YKS’siz İngiltere’de üniversite ve denklik',
-        p: ['İngiltere üniversiteleri YKS puanı istemez. Türkiye’ye dönüşte diplomanın tanınması için YÖK’ün denklik koşullarını program seçmeden önce birlikte kontrol ediyoruz.'],
+        p: ['YKS, İngiltere üniversitelerine kabul için gerekmez; ancak Türkiye’de diploma denkliği (YÖK) için bölüme ve üniversiteye göre YKS şartı aranabildiğinden, bölümü seçmeden önce bunu birlikte kontrol ediyoruz.'],
       },
       {
         h: 'İngiltere Üniversite Temsilciliği ile neler değişir?',
@@ -278,11 +308,22 @@ export const deep: Record<string, Deep> = {
           link: { label: 'İngiltere Üniversite Temsilciliği', to: ukRepresentationPath },
         },
       },
-      {
-        h: 'Çözüm ortaklarımızdan bazıları',
-        // TODO: Tampa'dan teyit: resmi anlaşmalı İngiltere üniversiteleri listesi (partner sayfaları bu listeye göre açılacak)
-        logos: ['Queen Mary University of London', 'Manchester Metropolitan University', 'University of Liverpool'],
-      },
+      // Çözüm ortağı logoları hero'nun altına taşındı (src/data/adLanding.ts > logos).
+      // TODO(Tampa): İngiltere üniversitesine giden öğrenci/veli yorumu yok. Gerçek yorumlar gelince social.ts > reviews'e
+      // program: 'Üniversite', country: 'İngiltere' ile ekleyip burada reviewProgram: 'Üniversite' açın.
+    ],
+    features: [
+      { title: 'Ücretsiz başvuru', text: 'Birleşik Krallık üniversitelerine başvurunuzu danışmanlık ücreti almadan yapıyoruz. UCAS’ın kendi başvuru ücreti öğrenci tarafından ödenir.' },
+      { title: 'Profil analizi', text: 'Notlarınıza, İngilizce seviyenize ve hedeflerinize göre bölüm ve üniversiteyi birlikte seçiyoruz.' },
+      { title: 'Foundation ve International Year One', text: 'Türk lise diplomasıyla doğrudan kabul alamayan öğrenciler için hazırlık yılı seçenekleri.' },
+      { title: 'Burslar', text: 'Üniversitelerin uluslararası öğrencilere sunduğu mevcut burs ve harç indirimlerinden faydalandırıyoruz.' },
+      { title: 'Konaklama', text: 'Üniversite yurdu ve özel öğrenci rezidansı seçenekleri.' },
+      { title: 'Ücretli mentörlük paketi (isteğe bağlı)', text: 'Motivasyon mektubu, CV, portfolyo ve mülakat provasında yoğun birebir destek isteyenler için ayrı paket.' },
+    ],
+    faqs: [
+      { q: 'İngiltere üniversite başvurusu ücretli mi?', a: 'Tampa, Birleşik Krallık üniversitelerine başvuru için danışmanlık ücreti almaz. UCAS’ın kendi başvuru ücreti ile IELTS, vize ve sağlık katkı payı gibi resmi ücretler öğrenci tarafından ödenir.' },
+      { q: 'İngiltere üniversiteleri için son başvuru tarihi ne zaman?', a: `2027 girişi için Tampa üzerinden son başvuru günü ${ukApplyDeadline}. Oxford, Cambridge ve tıp başvuruları ${ukUcas2027.earlyDeadline}’de kapandı; bu programlar için 2028 girişini planlıyoruz.` },
+      { q: 'YKS puanı gerekiyor mu?', a: 'YKS, İngiltere üniversitelerine kabul için gerekmez; ancak Türkiye’de diploma denkliği (YÖK) için bölüme ve üniversiteye göre YKS şartı aranabildiğinden bunu bölüm seçmeden önce birlikte kontrol ediyoruz.' },
     ],
   },
 

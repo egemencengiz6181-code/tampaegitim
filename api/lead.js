@@ -28,6 +28,9 @@ const SOURCE_LABELS = {
   'online-egitim': 'Online eğitim',
   online: 'Online eğitim',
   'fiyat-listesi': 'Dil okulu fiyat listesi',
+  fiyat: 'Fiyat sayfası',
+  fiyatlar: 'Fiyatlar',
+  universiteler: 'Üniversite listesi',
   'almanya-ozel-universiteler': 'Almanya özel üniversiteler',
   'almanya-ozel': 'Almanya özel üniversite',
   blog: 'Blog yazısı',
@@ -73,6 +76,12 @@ export default handle(async (req, res) => {
 
   const source = clean(body.source, 120) || 'bilinmiyor'
   const a = body.attribution && typeof body.attribution === 'object' ? body.attribution : {}
+  const budget = clean(body.budget, 60)
+  const studentStatus = clean(body.studentStatus, 80)
+  const childAge = clean(body.childAge, 10)
+  // Bütçe / durum / yaş ayrıca Mesaj'ın başına yazılır: Apps Script güncellenmeden de e-postada ve tabloda görünür.
+  const extra = [budget && `Planlanan bütçe: ${budget}`, studentStatus && `Öğrencinin durumu: ${studentStatus}`, childAge && `Çocuğun yaşı: ${childAge}`].filter(Boolean).join('\n')
+  const userMessage = cleanText(body.message, 3000)
   const lead = {
     date: new Date().toLocaleString('tr-TR', { timeZone: 'Europe/Istanbul' }),
     name,
@@ -80,7 +89,10 @@ export default handle(async (req, res) => {
     email,
     program: clean(body.program, 80),
     country: clean(body.country, 80),
-    message: cleanText(body.message, 3000),
+    message: [extra, userMessage].filter(Boolean).join('\n\n'),
+    budget,
+    student_status: studentStatus,
+    child_age: childAge,
     form: sourceLabel(source),
     source,
     page: `${SITE_URL}${clean(body.page, 300).startsWith('/') ? clean(body.page, 300) : '/'}`,

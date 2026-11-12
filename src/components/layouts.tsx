@@ -97,7 +97,7 @@ export function PageHero({ title, lead, crumbs, image: imageProp, kicker, childr
 }
 
 /* ---------- Closing call to action ---------- */
-export function CtaBand({ title = 'Yurtdışı eğitim planınızı birlikte kuralım.', text = 'Ücretsiz ön görüşmede hedefinizi dinleyelim, size uygun ülke, okul ve bütçe seçeneklerini yazılı olarak paylaşalım.' }: { title?: string; text?: string }) {
+export function CtaBand({ title = 'Yurtdışı eğitim planınızı birlikte kuralım.', text = 'Ücretsiz ön görüşmede hedefinizi dinleyelim, size uygun ülke, okul ve bütçe seçeneklerini yazılı olarak paylaşalım.', cta }: { title?: string; text?: string; cta?: { label: string; href: string; onClick?: (e: { preventDefault: () => void }) => void } }) {
   return (
     <section className="ctaband">
       <div className="container ctaband__in">
@@ -106,7 +106,7 @@ export function CtaBand({ title = 'Yurtdışı eğitim planınızı birlikte kur
           <p>{text}</p>
         </div>
         <div className="ctaband__actions">
-          <Btn to="/basvuru" size="lg" icon="arrow">Ücretsiz danışmanlık al</Btn>
+          {cta ? <Btn href={cta.href} onClick={cta.onClick} size="lg" icon="arrow">{cta.label}</Btn> : <Btn to="/basvuru" size="lg" icon="arrow">Ücretsiz danışmanlık al</Btn>}
           <Btn href={site.calendly} variant="light" size="lg" iconLeft="calendar">Online görüşme planla</Btn>
         </div>
         <svg className="ctaband__arc" viewBox="0 0 600 200" aria-hidden="true" preserveAspectRatio="none">

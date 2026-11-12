@@ -59,6 +59,10 @@ const SUTUNLAR = [
   ['source', 'Form kodu'],
   ['durum', 'Durum'],
   ['not', 'Danışman notu'],
+  // 2026-11: Google Ads lead kalitesi için eklendi. Mevcut tablolarda başlık otomatik eklenir (sayfa_ fonksiyonu).
+  ['budget', 'Planlanan bütçe'],
+  ['student_status', 'Öğrencinin durumu'],
+  ['child_age', 'Çocuğun yaşı'],
 ]
 
 /** Site bu adrese POST eder. */
@@ -118,6 +122,12 @@ function sayfa_() {
     const kural = SpreadsheetApp.newDataValidation().requireValueInList(['Yeni', 'Arandı', 'Ulaşılamadı', 'Görüşme yapıldı', 'Teklif verildi', 'Kayıt oldu', 'İlgilenmiyor'], true).build()
     sh.getRange(2, durumCol, 1000, 1).setDataValidation(kural)
   }
+  // Sonradan eklenen sütunların başlıklarını eski tablolara da yaz
+  if (sh.getLastColumn() < SUTUNLAR.length) {
+    const from = sh.getLastColumn() + 1
+    const eksik = SUTUNLAR.slice(from - 1).map((c) => c[1])
+    sh.getRange(1, from, 1, eksik.length).setValues([eksik]).setFontWeight('bold').setBackground('#0c3a46').setFontColor('#ffffff')
+  }
   return sh
 }
 
@@ -166,6 +176,9 @@ function bildirimGonder_(lead) {
     satir('E-posta', lead.email ? '<a href="mailto:' + esc_(lead.email) + '">' + esc_(lead.email) + '</a>' : '') +
     satir('Program', esc_(lead.program)) +
     satir('Ülke', esc_(lead.country)) +
+    satir('Planlanan bütçe', esc_(lead.budget)) +
+    satir('Öğrencinin durumu', esc_(lead.student_status)) +
+    satir('Çocuğun yaşı', esc_(lead.child_age)) +
     satir('Mesaj', esc_(lead.message).replace(/\n/g, '<br>')) +
     satir('Form', esc_(lead.form)) +
     satir('Sayfa', '<a href="' + esc_(lead.page) + '">' + esc_(lead.page) + '</a>') +

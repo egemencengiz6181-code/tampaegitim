@@ -4,6 +4,7 @@ import { Seo, Btn, FaqList, CheckList, RouteCode, SectionHead } from '../compone
 import { Icon } from '../components/Icon'
 import { PageHero, CtaBand } from '../components/layouts'
 import { LeadForm } from '../components/LeadForm'
+import { scrollToVisibleForm } from '../lib/analytics'
 import { Rich } from '../components/Rich'
 import { countryBySlug } from '../data/countries'
 import { priceList, pricePath } from '../data/prices/list'
@@ -95,7 +96,7 @@ export function PricePageView({ page, unis }: { page: PricePage; unis: Universit
           </div>
         }
       >
-        <Btn href="#form" size="lg" icon="arrow">Kişiye özel bütçe al</Btn>
+        <Btn href="#form" onClick={scrollToVisibleForm} size="lg" icon="arrow">Kişiye özel bütçe al</Btn>
       </PageHero>
 
       <section className="container snippet" aria-labelledby="ozet-h">
@@ -122,6 +123,11 @@ export function PricePageView({ page, unis }: { page: PricePage; unis: Universit
           <section className="dsec">
             {page.intro.map((p, i) => <p key={i} className={i === 0 ? 'lead-strong' : undefined}><Rich text={p} /></p>)}
           </section>
+
+          {/* Mobilde ilk fiyat tablosundan önce form (sitelink trafiği); masaüstünde yandaki form zaten üstte görünür */}
+          <div className="detail__topform">
+            <LeadForm variant="compact" anchor source={`fiyat:${page.slug}:ust`} defaultProgram="Üniversite" defaultCountry={c.name} title="Kişiye özel bütçe alın" note="Bölümünüze ve şehrinize göre yıllık toplam maliyeti ücretsiz hesaplayalım." />
+          </div>
 
           <section id="ucretler" className="dsec">
             <h2>{medical ? `${c.loc} Tıp Fakültesi Ücretleri` : `${c.loc} Üniversite Eğitim Ücretleri`}</h2>
@@ -192,7 +198,7 @@ export function PricePageView({ page, unis }: { page: PricePage; unis: Universit
 
         <aside className="detail__side" id="form">
           <div className="sticky">
-            <LeadForm variant="compact" source={`fiyat:${page.slug}`} defaultProgram="Üniversite" defaultCountry={c.name} title={`${c.loc} eğitim bütçenizi çıkaralım`} note="Bölümünüze ve şehrinize göre yıllık toplam maliyeti ücretsiz hesaplayalım." />
+            <LeadForm variant="compact" anchor source={`fiyat:${page.slug}`} defaultProgram="Üniversite" defaultCountry={c.name} title={`${c.loc} eğitim bütçenizi çıkaralım`} note="Bölümünüze ve şehrinize göre yıllık toplam maliyeti ücretsiz hesaplayalım." />
           </div>
         </aside>
       </div>

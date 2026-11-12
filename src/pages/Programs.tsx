@@ -5,6 +5,9 @@ import { Icon } from '../components/Icon'
 import { BoardingPass, RouteSteps, ReadMore } from '../components/signature'
 import { PageHero, CtaBand } from '../components/layouts'
 import { LeadForm } from '../components/LeadForm'
+import { AdHero } from '../components/AdHero'
+import { adLandings } from '../data/adLanding'
+import { scrollToVisibleForm } from '../lib/analytics'
 import { programs, programByKey, countriesFor, type Program } from '../data/programs'
 import { countries, countryBySlug, type Country, type ProgramKey } from '../data/countries'
 import { languageFromPrices, languageFromByCountry, languageFromLabel } from '../data/packages'
@@ -337,13 +340,17 @@ export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
   const otherPrograms = c.programs.filter((k) => k !== programKey).map((k) => programByKey[k])
   const path = `/${p.slug}/${c.slug}`
   const relGuides = [...guidesForCountry(c.slug), ...guidesForProgram(p.key)].filter((g, i, a) => a.findIndex((x) => x.slug === g.slug) === i).slice(0, 6)
+  // Google Ads landing page'i ise (src/data/adLanding.ts): dönüşüm odaklı hero + üstte form
+  const ad = adLandings[`${p.key}:${c.slug}`]
+  const crumbs = [{ label: p.name, to: `/${p.slug}` }, { label: c.name }]
+  const formSource = `program:${p.key}:${c.slug}`
 
   return (
     <>
       <Seo title={d?.seoTitle ?? p.countrySeoTitle(c)} description={d?.description ?? `${p.countryLead(c)} ${c.name} için vize, şehirler, yaşam maliyeti ve başvuru süreci.`} path={path} image={c.image} jsonLd={serviceLd(d?.h1 ?? title, d?.description ?? p.countryLead(c), path)} />
-      <PageHero
+      {ad ? <AdHero ad={ad} crumbs={crumbs} source={formSource} country={c.name} /> : <PageHero
         image={c.image}
-        crumbs={[{ label: p.name, to: `/${p.slug}` }, { label: c.name }]}
+        crumbs={crumbs}
         kicker={<RouteCode to={c.code} light />}
         title={d?.h1 ?? title}
         lead={d?.lead ?? p.countryLead(c)}
@@ -363,7 +370,7 @@ export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
         }
       >
         <Btn href="#form" size="lg" icon="arrow">Ücretsiz bilgi al</Btn>
-      </PageHero>
+      </PageHero>}
 
       {d?.summary && (
         <section className="container snippet" aria-labelledby="ozet-h">
@@ -391,7 +398,7 @@ export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
       <div className="container detail">
         <article className="detail__main">
           <section id="genel" className="dsec">
-            <h2>{c.loc} {p.short.toLowerCase()}</h2>
+            <h2>{ad && d?.h1 && d.h1 !== ad.h1 ? d.h1 : `${c.loc} ${p.short.toLowerCase()}`}</h2>
             <p className="lead-strong">{c.intro}</p>
             {note ? <p>{note}</p> : <p>{p.intro[0]}</p>}
             <p>{p.promise}</p>
@@ -418,7 +425,7 @@ export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
               {p.facts.map((f) => (<div key={f.label}><dt>{f.label}</dt><dd>{f.value}</dd></div>))}
             </dl>
             <ul className="optlist">
-              {p.features.map((f) => (<li key={f.title}><strong>{f.title}</strong><span>{f.text}</span></li>))}
+              {(d?.features ?? p.features).map((f) => (<li key={f.title}><strong>{f.title}</strong><span>{f.text}</span></li>))}
             </ul>
           </section>
 
@@ -507,9 +514,13 @@ export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
           </section>
         </article>
 
-        <aside className="detail__side" id="form">
+        <aside className="detail__side" id={ad ? 'form-alt' : 'form'}>
           <div className="sticky">
-            <LeadForm variant="compact" source={`program:${p.key}:${c.slug}`} defaultProgram={formProgram[p.key]} defaultCountry={c.name} title={`${title} için ücretsiz bilgi alın`} note="Formu doldurun, danışmanımız aynı gün içinde size dönsün." />
+            {ad ? (
+              <LeadForm kind={ad.form.kind} source={formSource} defaultProgram={ad.form.program} defaultCountry={c.name} title={ad.form.title} note={ad.form.note} submitLabel={ad.form.cta} />
+            ) : (
+              <LeadForm variant="compact" source={formSource} defaultProgram={formProgram[p.key]} defaultCountry={c.name} title={`${title} için ücretsiz bilgi alın`} note="Formu doldurun, danışmanımız aynı gün içinde size dönsün." />
+            )}
           </div>
         </aside>
       </div>
@@ -533,7 +544,7 @@ export function ProgramCountry({ programKey }: { programKey: ProgramKey }) {
           </div>
         </div>
       </section>
-      <CtaBand />
+      {ad ? <CtaBand cta={{ label: ad.form.cta, href: '#form', onClick: scrollToVisibleForm }} /> : <CtaBand />}
     </>
   )
 }

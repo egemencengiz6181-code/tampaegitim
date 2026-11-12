@@ -5,8 +5,32 @@ export type Lead = {
   program?: string
   country?: string
   message?: string
+  /** Planlanan yıllık bütçe (Ads lead kalitesi için) */
+  budget?: string
+  /** Üniversite formu: öğrencinin durumu */
+  studentStatus?: string
+  /** Yaz okulu formu: çocuğun yaşı */
+  childAge?: string
   source: string
 }
+
+/** Bütçe seçenekleri. Bildirim e-postasına ve E-Tablo'ya aynen yazılır. */
+export const budgetOptions = {
+  university: ['15.000 £ altı', '15.000 – 25.000 £', '25.000 – 40.000 £', '40.000 £ üzeri', 'Henüz belirlemedim'],
+  summer: ['3.000 £ altı', '3.000 – 6.000 £', '6.000 £ üzeri', 'Henüz belirlemedim'],
+} as const
+export type BudgetKind = keyof typeof budgetOptions
+
+/** Seçilen programa ve ülkeye göre bütçe alanı (yalnızca İngiltere ya da ülke seçilmemişken; aralıklar £ cinsinden). */
+export function budgetKindFor(program: string, country: string): BudgetKind | undefined {
+  if (country && country !== 'İngiltere') return undefined
+  if (program === 'Üniversite' || program === 'Yüksek lisans') return 'university'
+  if (program === 'Yaz okulu') return 'summer'
+  return undefined
+}
+
+export const studentStatusOptions = ['Lise 11. sınıf', 'Lise 12. sınıf', 'Lise mezunu', 'Üniversite öğrencisi / mezun', 'Veliyim, bilgi almak istiyorum']
+export const childAgeOptions = Array.from({ length: 11 }, (_, i) => String(i + 7))
 
 const ATTR_KEY = 'tampa:ilk-ziyaret'
 const ATTR_PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid', 'gbraid', 'wbraid'] as const

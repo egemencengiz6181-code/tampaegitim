@@ -1,5 +1,5 @@
-// GA4 olayları ve çerez onayı (Consent Mode v2). gtag index.html'de yüklenir; onay yoksa
-// GA4 çerez yazmaz, olaylar yalnızca çerezsiz (modellenmiş) ölçüme gider.
+// GA4 olayları ve çerez onayı (Consent Mode v2). gtag index.html'de yüklenir (G-QZ36BSRZ5V, GTM yok);
+// onay yoksa GA4 çerez yazmaz, olaylar yalnızca çerezsiz (modellenmiş) ölçüme gider.
 type Gtag = (...args: unknown[]) => void
 const gtag = (...args: unknown[]) => (globalThis as { gtag?: Gtag }).gtag?.(...args)
 
@@ -15,6 +15,10 @@ export function getConsent(): Consent | null {
   }
 }
 
+/**
+ * Kabul: dört sinyal de granted; Ret: dördü de denied. Tercih localStorage'a yazılır ve index.html'deki
+ * satır içi script sonraki her sayfa yüklemesinde `config`'ten ÖNCE `consent default` olarak uygular.
+ */
 export function setConsent(v: Consent) {
   try {
     localStorage.setItem(KEY, v)
@@ -31,13 +35,75 @@ export function track(name: string, params: Record<string, string | undefined> =
   gtag('event', name, { page_path: location.pathname, ...params })
 }
 
-/** Telefon, WhatsApp ve e-posta tıklamalarını tek dinleyiciyle ölçer. */
+/** Türkiye numaralarını E.164'e çevirir: "0530 123 45 67" → "+905301234567". Geçersizse undefined. */
+export function toE164(raw: string): string | undefined {
+  let d = raw.replace(/[^\d+]/g, '')
+  if (d.startsWith('+')) d = d.slice(1)
+  else if (d.startsWith('00')) d = d.slice(2)
+  else if (d.startsWith('0')) d = `90${d.slice(1)}`
+  else if (d.length === 10 && d.startsWith('5')) d = `90${d}`
+  d = d.replace(/\D/g, '')
+  return d.length >= 11 && d.length <= 15 ? `+${d}` : undefined
+}
+
+export type LeadEvent = {
+  form_program?: string
+  form_country?: string
+  form_budget?: string
+  student_status?: string
+  child_age?: string
+  form_source?: string
+}
+
+/**
+ * Ana dönüşüm. Yalnızca sunucu başarılı yanıt verdikten sonra, gönderim başına bir kez çağrılır (LeadForm).
+ * Çerezler kabul edildiyse (ad_user_data granted) önce gelişmiş dönüşümler için user_data gönderilir.
+ */
+export function trackLead(params: LeadEvent, contact: { phone: string; email?: string }) {
+  if (getConsent() === 'granted') {
+    const user: Record<string, string> = {}
+    const phone = toE164(contact.phone)
+    if (phone) user.phone_number = phone
+    const email = contact.email?.replace(/\s+/g, '').toLowerCase()
+    if (email) user.email = email
+    if (Object.keys(user).length) gtag('set', 'user_data', user)
+  }
+  const clean = Object.fromEntries(Object.entries(params).filter(([, v]) => v)) as Record<string, string>
+  track('generate_lead', clean)
+}
+
+/** Telefon, WhatsApp, Calendly ve e-posta tıklamalarını tek, delegasyonlu dinleyiciyle ölçer (sabit bar, header, footer, içerik). */
 export function trackContactClick(e: MouseEvent) {
-  const a = (e.target as Element | null)?.closest?.('a[href]')
+  const a = (e.target as Element | null)?.closest?.('a[href]') as HTMLAnchorElement | null
   if (!a) return
-  const href = a.getAttribute('href') ?? ''
-  const label = a.textContent?.trim().slice(0, 60)
-  if (href.startsWith('tel:')) track('phone_click', { phone: href.slice(4), link_text: label })
-  else if (/wa\.me|whatsapp\.com/.test(href)) track('whatsapp_click', { link_text: label })
+  const href = a.href || a.getAttribute('href') || ''
+  const label = a.textContent?.trim().slice(0, 60) || undefined
+  if (href.startsWith('tel:')) track('click_phone', { phone: href.slice(4), link_text: label })
+  else if (/wa\.me|whatsapp/i.test(href)) track('click_whatsapp', { link_text: label })
+  else if (href.includes('calendly.com')) track('click_calendly', { link_text: label })
   else if (href.startsWith('mailto:')) track('email_click', { link_text: label })
+}
+
+/** Calendly widget/popup içinde randevu tamamlandığında gelen postMessage → book_appointment. */
+export function trackCalendlyMessage(e: MessageEvent) {
+  if (!/(^|\.)calendly\.com$/.test(safeHost(e.origin))) return
+  const data = e.data as { event?: string } | null
+  if (data && typeof data === 'object' && data.event === 'calendly.event_scheduled') track('book_appointment', { method: 'calendly' })
+}
+
+function safeHost(origin: string) {
+  try {
+    return new URL(origin).hostname
+  } catch {
+    return ''
+  }
+}
+
+/** "#form" bağlantıları: sayfadaki ilk GÖRÜNÜR form çapasına kaydırır (mobilde üstteki, masaüstünde yandaki form). */
+export function scrollToVisibleForm(e: { preventDefault: () => void }) {
+  const el = Array.from(document.querySelectorAll<HTMLElement>('[data-form-anchor]')).find((x) => x.offsetParent !== null)
+  if (!el) return
+  e.preventDefault()
+  el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  el.querySelector<HTMLInputElement>('input:not([tabindex="-1"]), select')?.focus({ preventScroll: true })
 }

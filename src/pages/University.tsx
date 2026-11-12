@@ -253,12 +253,18 @@ export function UniversitiesCountry() {
         crumbs={[{ label: 'Üniversiteler', to: '/universiteler' }, { label: c.name }]}
         kicker={<RouteCode to={c.code} light />}
         title={`${c.name} Üniversiteleri`}
-        lead={`${c.loc} Türk öğrencilerin en çok tercih ettiği ${items.length} üniversite: kabul şartları, yaklaşık ücretler, bölümler ve başvuru takvimi.`}
+        lead={`${c.loc} Türk öğrencilerin en çok tercih ettiği ${items.length} üniversite. Her üniversitenin kabul şartları, yaklaşık ücretleri, bölümleri ve başvuru takvimi kendi sayfasında; ülke geneli ücretler ve başvuru süreci için aşağıdaki rehberlere bakın.`}
       >
         <Btn href="#form" size="lg" icon="arrow">Ücretsiz değerlendirme al</Btn>
       </PageHero>
       <section className="section">
         <div className="container">
+          {(c.programs.includes('lisans') || priceList.some((x) => x.country === c.slug)) && (
+            <ul className="chips unicountry__guides" aria-label={`${c.name} rehberleri`}>
+              {c.programs.includes('lisans') && <li><Link to={`/lisans-programlari/${c.slug}`}>{c.loc} üniversite başvurusu ve takvim</Link></li>}
+              {priceList.filter((x) => x.country === c.slug).map((x) => <li key={x.slug}><Link to={pricePath(x)}>{titleCase(x.label)}</Link></li>)}
+            </ul>
+          )}
           <UniCards items={items} />
           <p className="note"><Icon name="bolt" size={16} /> Ülke genelinde başvuru, vize ve yaşam bilgisi için: {c.programs.includes('lisans') && <><Link to={`/lisans-programlari/${c.slug}`}>{c.loc} lisans</Link>{' · '}</>}{c.programs.includes('yuksek-lisans') && <><Link to={`/yurtdisi-yuksek-lisans/${c.slug}`}>{c.loc} yüksek lisans</Link>{' · '}</>}<Link to={`/ulkeler/${c.slug}`}>{c.name} ülke rehberi</Link>{priceList.filter((x) => x.country === c.slug).map((x) => <span key={x.slug}>{' · '}<Link to={pricePath(x)}>{titleCase(x.label)}</Link></span>)}</p>
         </div>

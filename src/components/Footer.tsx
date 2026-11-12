@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
+import { adLandingPaths } from '../data/adLanding'
+import { scrollToVisibleForm } from '../lib/analytics'
 import { Icon } from './Icon'
 import { ConsentLink } from './CookieBanner'
 import { site, offices } from '../data/site'
@@ -100,11 +102,16 @@ export function Footer() {
 }
 
 export function MobileBar() {
+  const ad = adLandingPaths[useLocation().pathname.replace(/\/$/, '')]
   return (
     <div className="mbar" role="navigation" aria-label="Hızlı iletişim">
       <a href={site.phoneHref}><Icon name="phone" size={20} /><span>Ara</span></a>
       <a href={site.whatsapp} target="_blank" rel="noopener noreferrer"><Icon name="chat" size={20} /><span>WhatsApp</span></a>
-      <Link to="/basvuru" className="mbar__cta"><Icon name="bolt" size={18} /><span>Ücretsiz bilgi al</span></Link>
+      {ad ? (
+        <a href="#form" onClick={scrollToVisibleForm} className="mbar__cta mbar__cta--long"><span>{ad}</span></a>
+      ) : (
+        <Link to="/basvuru" className="mbar__cta"><Icon name="bolt" size={18} /><span>Ücretsiz bilgi al</span></Link>
+      )}
     </div>
   )
 }

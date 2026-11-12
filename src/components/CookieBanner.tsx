@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { CONSENT_OPEN_EVENT, getConsent, setConsent, trackContactClick, type Consent } from '../lib/analytics'
+import { CONSENT_OPEN_EVENT, getConsent, setConsent, trackCalendlyMessage, trackContactClick, type Consent } from '../lib/analytics'
 
 /**
  * KVKK çerez onayı. Prerender çıktısında görünmez (SSR'da tercih bilinmez); tercih yoksa
@@ -14,9 +14,11 @@ export function CookieBanner() {
     const reopen = () => setOpen(true)
     window.addEventListener(CONSENT_OPEN_EVENT, reopen)
     document.addEventListener('click', trackContactClick, true)
+    window.addEventListener('message', trackCalendlyMessage)
     return () => {
       window.removeEventListener(CONSENT_OPEN_EVENT, reopen)
       document.removeEventListener('click', trackContactClick, true)
+      window.removeEventListener('message', trackCalendlyMessage)
     }
   }, [])
 

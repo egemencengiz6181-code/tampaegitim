@@ -1103,3 +1103,11 @@
   text-decoration: underline;
   cursor: pointer;
 }
+@media (max-width: 900px) {
+  .mbar__cta--long {
+    font-size: 0.8rem !important;
+    line-height: 1.2;
+    text-align: center;
+    padding-inline: 0.5rem;
+  }
+}

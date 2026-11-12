@@ -17,7 +17,7 @@ type BtnProps = {
   icon?: string
   iconLeft?: string
   className?: string
-  onClick?: () => void
+  onClick?: (e: { preventDefault: () => void }) => void
   type?: 'button' | 'submit'
   disabled?: boolean
 }

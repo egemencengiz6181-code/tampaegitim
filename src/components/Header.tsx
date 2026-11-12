@@ -5,6 +5,8 @@ import { site } from '../data/site'
 import { programMenu, programExtras, countryMenu, serviceMenu, packageMenu, resourceMenu, corporateMenu } from '../data/nav'
 import { posts } from '../data/blog'
 import { ukRepresentationPath } from '../data/uk'
+import { adLandingPaths } from '../data/adLanding'
+import { scrollToVisibleForm } from '../lib/analytics'
 
 type MenuKey = 'programs' | 'countries' | 'packages' | 'services' | 'resources' | 'corporate'
 
@@ -264,7 +266,7 @@ export function Header() {
               <Icon name="phone" size={18} />
               <span><small>Bizi arayın</small>{site.phone}</span>
             </a>
-            <Link to="/basvuru" className="btn btn--coral btn--md header__cta">Ücretsiz danışmanlık</Link>
+            <HeaderCta />
             <button type="button" className="burger" aria-label="Menüyü aç" aria-expanded={drawer} onClick={() => setDrawer(true)}>
               <Icon name="menu" size={24} />
             </button>
@@ -339,4 +341,11 @@ function MobileDrawer({ open, onClose }: { open: boolean; onClose: () => void })
       </div>
     </div>
   )
+}
+
+/** Reklam landing page'lerinde birincil buton forma kaydırır ve sayfanın CTA metnini kullanır. */
+function HeaderCta() {
+  const ad = adLandingPaths[useLocation().pathname.replace(/\/$/, '')]
+  if (ad) return <a href="#form" onClick={scrollToVisibleForm} className="btn btn--coral btn--md header__cta">{ad}</a>
+  return <Link to="/basvuru" className="btn btn--coral btn--md header__cta">Ücretsiz danışmanlık</Link>
 }
