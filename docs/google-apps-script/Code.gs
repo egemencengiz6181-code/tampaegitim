@@ -4,17 +4,15 @@
  * Siteden gelen her başvuruyu bu Google E-Tablo'ya satır olarak ekler ve Gmail ile bildirim gönderir.
  * Kurulum adımları: depodaki docs/FORMLAR.md dosyası.
  *
- * YALNIZCA AŞAĞIDAKİ AYARLAR BÖLÜMÜNÜ DÜZENLEYİN.
+ * Gizli değerler Proje Ayarları > Script Properties'te tutulur: GIZLI_ANAHTAR, ALICILAR.
+ * Bu dosyada gerçek anahtar veya adres YOKTUR; dosyanın tamamı güvenle yeniden yapıştırılabilir.
+ * Diğer (gizli olmayan) ayarlar aşağıdaki AYARLAR bölümündedir.
  */
 
 // ======================= AYARLAR =======================
+// GIZLI_ANAHTAR (Vercel'deki LEAD_WEBHOOK_SECRET ile birebir aynı) ve ALICILAR (virgülle ayrılmış adresler)
+// burada DEĞİL, Script Properties'te tutulur. Bkz. ayar_().
 const AYARLAR = {
-  // Vercel'deki LEAD_WEBHOOK_SECRET ile birebir aynı olmalı (uzun, rastgele bir metin).
-  GIZLI_ANAHTAR: 'BURAYA-UZUN-RASTGELE-BIR-ANAHTAR-YAZIN',
-
-  // Tüm başvuruların gideceği adres(ler). Birden fazlaysa virgülle ayırın.
-  ALICILAR: 'info@tampaegitim.com.tr',
-
   // (İsteğe bağlı) Belirli formları ayrıca başka adreslere de gönder.
   // Anahtar: formun kaynağının başı. Ör. 'konaklama' → konaklama formları, 'lp' → reklam sayfaları.
   // Örnek: { konaklama: 'konaklama@tampaegitim.com.tr', lp: 'reklam@tampaegitim.com.tr' }
@@ -36,6 +34,23 @@ const AYARLAR = {
   SAYFA_ADI: 'Başvurular',
 }
 // ===================== AYARLAR SONU =====================
+
+/** Script Properties'ten zorunlu bir değeri okur; yoksa hata fırlatır. */
+function ayar_(ad) {
+  const deger = PropertiesService.getScriptProperties().getProperty(ad)
+  if (!deger) throw new Error('Script Property eksik: ' + ad)
+  return deger
+}
+
+/** GIZLI_ANAHTAR ve ALICILAR girilmiş mi? (değerleri döndürmez) */
+function ayarlarTamam_() {
+  const p = PropertiesService.getScriptProperties()
+  return !!p.getProperty('GIZLI_ANAHTAR') && !!p.getProperty('ALICILAR')
+}
+
+function alicilarListesi_() {
+  return ayar_('ALICILAR').split(',').map((s) => s.trim()).filter(Boolean)
+}
 
 const SUTUNLAR = [
   ['date', 'Tarih'],
@@ -68,8 +83,17 @@ const SUTUNLAR = [
 /** Site bu adrese POST eder. */
 function doPost(e) {
   try {
+    // Ayarlar eksikse kayıt yapmadan hata dön (sessizce başarılı görünmesin)
+    let gizli
+    try {
+      gizli = ayar_('GIZLI_ANAHTAR')
+      ayar_('ALICILAR')
+    } catch (err) {
+      console.error(String(err))
+      return yanit_({ ok: false, error: 'ayar eksik' })
+    }
     const body = JSON.parse((e && e.postData && e.postData.contents) || '{}')
-    if (!body.secret || body.secret !== AYARLAR.GIZLI_ANAHTAR) return yanit_({ ok: false, error: 'yetkisiz' })
+    if (!body.secret || body.secret !== gizli) return yanit_({ ok: false, error: 'yetkisiz' })
     const lead = body.lead || {}
     if (!lead.name || !lead.phone) return yanit_({ ok: false, error: 'eksik veri' })
 
@@ -103,7 +127,7 @@ function doPost(e) {
 
 /** Tarayıcıdan açıldığında çalıştığını gösterir. */
 function doGet() {
-  return yanit_({ ok: true, servis: 'Tampa form alıcısı çalışıyor' })
+  return yanit_({ ok: true, servis: 'Tampa form alıcısı çalışıyor', ayarlar: ayarlarTamam_() })
 }
 
 function sayfa_() {
@@ -147,7 +171,7 @@ function satirEkle_(lead) {
 }
 
 function alicilar_(lead) {
-  const list = AYARLAR.ALICILAR.split(',').map((s) => s.trim()).filter(Boolean)
+  const list = alicilarListesi_()
   const head = String(lead.source || '').split(':')[0]
   const ek = AYARLAR.EK_ALICILAR[head]
   if (ek) ek.split(',').map((s) => s.trim()).filter(Boolean).forEach((a) => list.indexOf(a) === -1 && list.push(a))
@@ -199,7 +223,7 @@ function otomatikYanit_(lead) {
   const ad = String(lead.name || '').split(' ')[0]
   MailApp.sendEmail(lead.email, AYARLAR.OTOMATIK_YANIT_KONU, AYARLAR.OTOMATIK_YANIT_METNI.replace('{ad}', ad), {
     name: 'Tampa Yurtdışı Eğitim',
-    replyTo: AYARLAR.ALICILAR.split(',')[0].trim(),
+    replyTo: alicilarListesi_()[0],
   })
 }
 

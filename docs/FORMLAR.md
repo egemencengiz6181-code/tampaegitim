@@ -26,12 +26,21 @@ Kurulum yaklaşık **10 dakika** sürer ve bir kez yapılır. Hiçbir şifre pay
 
 ## Adım 3 – Ayarları düzenleyin
 
-Kodun en üstündeki **AYARLAR** bölümünü düzenleyin:
+**Gizli değerler kodda değil, Script Properties’te tutulur.** Böylece kodun tamamı ileride yeniden yapıştırılsa bile anahtar ve adresler kaybolmaz.
+
+Apps Script editöründe soldaki **⚙️ Proje Ayarları** → en altta **Komut dosyası özellikleri (Script Properties)** → **Komut dosyası özelliği ekle**:
+
+| Özellik | Değer |
+|---|---|
+| `GIZLI_ANAHTAR` | Uzun, rastgele bir metin (en az 30 karakter, ör. `Tampa-2026-k7P9xQ2mVb4nZr8wLs1tYh6`). **Adım 5’te Vercel’e de aynısını yazacaksınız.** |
+| `ALICILAR` | Başvuruların gideceği adres(ler), virgülle ayrılmış: `info@tampaegitim.com.tr, ali@tampaegitim.com.tr` (tırnak yok) |
+
+**Komut dosyası özelliklerini kaydet**’e basın. İkisinden biri eksikse formlar hata verir; tarayıcıda web uygulaması adresini açınca yanıtta `"ayarlar":true` görünmelidir.
+
+Kodun en üstündeki **AYARLAR** bölümünde yalnızca gizli olmayan ayarlar vardır:
 
 | Ayar | Ne yazılacak |
 |---|---|
-| `GIZLI_ANAHTAR` | Uzun, rastgele bir metin (en az 30 karakter, ör. `Tampa-2026-k7P9xQ2mVb4nZr8wLs1tYh6`). **Adım 5’te Vercel’e de aynısını yazacaksınız.** |
-| `ALICILAR` | Başvuruların gideceği adres(ler). Birden fazlaysa virgülle: `'info@tampaegitim.com.tr, ali@tampaegitim.com.tr'` |
 | `EK_ALICILAR` | (İsteğe bağlı) Belirli formları ayrıca başka kişilere de gönderin. Ör. `{ konaklama: 'x@tampaegitim.com.tr', lp: 'reklam@tampaegitim.com.tr' }` |
 | `OTOMATIK_YANIT` | `true` yaparsanız e-posta adresini yazan başvurana otomatik “Başvurunuz bize ulaştı” e-postası gider. Metni hemen altındaki `OTOMATIK_YANIT_METNI`’nden düzenleyebilirsiniz. |
 
@@ -96,14 +105,15 @@ Ziyaretçi siteye bir reklam linkiyle geldiyse (Google Ads, Meta), hangi kaynak,
 Formlarda botları yakalayan görünmez bir tuzak alan ve süre kontrolü vardır; bu başvurular tabloya hiç yazılmaz. Aynı bağlantıdan kısa sürede çok sayıda gönderim de engellenir.
 
 **Script’i sonradan değiştirirsem?**
-Ayarları (ör. yeni alıcı) değiştirdikten sonra **Dağıt → Dağıtımları yönet → ✏️ Düzenle → Sürüm: Yeni sürüm → Dağıt** yapın. URL değişmez, Vercel’de bir şey yapmanız gerekmez.
+Yeni alıcı eklemek için yalnızca Script Properties’teki `ALICILAR`’ı değiştirin; yeni sürüm gerekmez. Kodu değiştirdikten sonra ise **Dağıt → Dağıtımları yönet → ✏️ Düzenle → Sürüm: Yeni sürüm → Dağıt** yapın. URL değişmez, Vercel’de bir şey yapmanız gerekmez.
 
 **Günlük gönderim sınırı var mı?**
 Google Workspace hesaplarında günde 1.500, kişisel Gmail hesaplarında 100 e-posta. Bildirim + otomatik yanıt her başvuruda 2 e-posta sayılır. Sınır aşılsa bile başvurular tabloya yazılmaya devam eder.
 
 **Form “gönderilemedi” hatası veriyor**
 - Vercel’deki `LEAD_WEBHOOK_URL` ve `LEAD_WEBHOOK_SECRET` doğru mu, ayardan sonra Redeploy yapıldı mı?
-- `LEAD_WEBHOOK_SECRET`, script’teki `GIZLI_ANAHTAR` ile birebir aynı mı (boşluk dahil)?
+- `LEAD_WEBHOOK_SECRET`, Script Properties’teki `GIZLI_ANAHTAR` ile birebir aynı mı (boşluk dahil)?
+- Web uygulaması adresini tarayıcıda açın: `"ayarlar":false` görünüyorsa `GIZLI_ANAHTAR` veya `ALICILAR` girilmemiş demektir.
 - Apps Script dağıtımında erişim “Herkes” mi?
 - İletilemeyen başvurular kaybolmaz: Vercel → proje → **Logs** bölümünde `İLETİLEMEYEN BAŞVURU` satırında tüm bilgileriyle görünür.
 
