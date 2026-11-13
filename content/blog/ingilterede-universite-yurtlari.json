@@ -1,0 +1,51 @@
+{
+  "slug": "ingilterede-universite-yurtlari",
+  "title": "İngiltere’de Üniversite Yurtları: Halls, Özel Yurt ve Ev Seçenekleri 2027",
+  "metaTitle": "İngiltere’de Üniversite Yurtları 2027: Türler ve Başvuru",
+  "description": "İngiltere’de üniversite yurtları: halls of residence, özel öğrenci yurtları ve ev paylaşımı; oda tipleri, sözleşme süresi, yurt garantisi ve başvuru takvimi.",
+  "category": "Üniversite",
+  "date": "2026-11-13",
+  "updated": "2026-11-13",
+  "image": "/img/blog/ingiltere-ogrenci-evleri.jpg",
+  "imageAlt": "Londra Kensington’da gün batımında tuğla sıra evlerin bulunduğu ağaçlı sokak",
+  "focusKeyword": "ingiltere üniversite yurtları",
+  "keywords": [
+    "ingiltere üniversite yurtları",
+    "ingiltere öğrenci yurtları",
+    "halls of residence",
+    "ingiltere öğrenci konaklama",
+    "en-suite oda"
+  ],
+  "countries": [
+    "ingiltere"
+  ],
+  "programs": [
+    "lisans",
+    "yuksek-lisans"
+  ],
+  "faqs": [
+    {
+      "q": "İngiltere’de üniversite yurdu garantili mi?",
+      "a": "Birçok üniversite, birinci sınıfa başlayan ve belirlenen tarihe kadar başvuru yapan uluslararası öğrencilere yurt garantisi verir. Garanti genellikle bir odada yer anlamına gelir; belirli bir bina, oda tipi veya fiyat garantisi değildir."
+    },
+    {
+      "q": "En-suite oda ne demek?",
+      "a": "En-suite, odanın içinde size ait duş ve tuvaletin bulunduğu oda tipidir. Mutfak ise diğer öğrencilerle ortak kullanılır."
+    },
+    {
+      "q": "İngiltere’de yurt sözleşmesi kaç hafta?",
+      "a": "Üniversite yurtlarında lisans öğrencileri için genellikle 38–44 hafta, 12 aylık yüksek lisans programları için çoğunlukla 50–51 haftalık sözleşmeler yapılır."
+    },
+    {
+      "q": "Yurt başvurusu ne zaman yapılır?",
+      "a": "Üniversite yurtlarına başvuru çoğunlukla teklifin kabul edilmesinden sonra, ilkbahar ile yaz arasında açılır. Garantinin son başvuru tarihi her üniversitede farklıdır."
+    },
+    {
+      "q": "İkinci yıl ev tutmak için kefil gerekir mi?",
+      "a": "Özel ev kiralamada uluslararası öğrencilerden çoğu zaman İngiltere’de yaşayan bir kefil istenir. Kefil yoksa bazı ev sahipleri birkaç aylık kirayı peşin ister veya ücretli kefillik hizmetlerini kabul eder."
+    }
+  ],
+  "draft": false,
+  "readMin": 5,
+  "words": 922
+}
