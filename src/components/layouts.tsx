@@ -66,14 +66,16 @@ type HeroProps = {
   children?: ReactNode
   aside?: ReactNode
   tone?: 'photo' | 'mist' | 'deep'
+  /** Sayfaya özel ek sınıf (ör. fiyat sayfalarında mobil form düzeni: phero--price) */
+  className?: string
 }
 
-export function PageHero({ title, lead, crumbs, image: imageProp, kicker, children, aside, tone = imageProp ? 'photo' : 'mist' }: HeroProps) {
+export function PageHero({ title, lead, crumbs, image: imageProp, kicker, children, aside, tone = imageProp ? 'photo' : 'mist', className }: HeroProps) {
   // Sayfaya özel kapak görseli (src/data/heroImages.ts): aynı fotoğrafın birden çok sayfada tekrarlanmasını önler.
   const hero = heroFor(useLocation().pathname)
   const image = hero?.src ?? imageProp
   return (
-    <section className={`phero phero--${tone}`}>
+    <section className={`phero phero--${tone}${className ? ` ${className}` : ''}`}>
       {image && tone === 'photo' && (
         <div className="phero__bg" aria-hidden="true">
           <img src={image} alt="" fetchPriority="high" decoding="async" />

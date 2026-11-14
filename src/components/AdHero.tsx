@@ -8,7 +8,7 @@ import { site } from '../data/site'
 import type { AdLanding } from '../data/adLanding'
 
 /**
- * Google Ads landing hero: başlık + son tarih bandı + vaatler solda, form sağda (mobilde hemen altta).
+ * Google Ads landing hero: başlık + son tarih bandı + vaatler solda, form sağda (mobilde başlık ve açıklamanın hemen altında).
  * Hero görseli lazy DEĞİL (LCP); AVIF/WebP, ekran genişliğine göre 800/1600 px.
  */
 export function AdHero({ ad, crumbs, source, country }: { ad: AdLanding; crumbs: Crumb[]; source: string; country: string }) {
@@ -32,6 +32,23 @@ export function AdHero({ ad, crumbs, source, country }: { ad: AdLanding; crumbs:
           <div className="adhero__crumbs"><Breadcrumbs items={crumbs} tone="light" /></div>
           <h1 className="adhero__title">{ad.h1}</h1>
           <p className="adhero__sub">{ad.sub}</p>
+          {/* Form DOM'da açıklamanın hemen ardından: mobilde (tek sütun) ilk ekrana girer. Masaüstünde
+              grid-column: 2 / grid-row: 1 / span 9 ile sağda durur; DOM sırası masaüstü düzenini değiştirmez. */}
+          <div className="adhero__form">
+            <LeadForm
+              id="form"
+              anchor
+              mobileSteps
+              titleAs="h2"
+              kind={ad.form.kind}
+              source={source}
+              defaultProgram={ad.form.program}
+              defaultCountry={country}
+              title={ad.form.title}
+              note={ad.form.note}
+              submitLabel={ad.form.cta}
+            />
+          </div>
           <p className="adband" role="note">
             <Icon name="calendar" size={18} />
             <span>{ad.band.label}: <strong>{ad.band.value}</strong></span>
@@ -42,19 +59,6 @@ export function AdHero({ ad, crumbs, source, country }: { ad: AdLanding; crumbs:
             ))}
           </ul>
           {ad.footnote && <p className="adhero__foot">* {ad.footnote}</p>}
-          <div className="adhero__form">
-            <LeadForm
-              id="form"
-              anchor
-              kind={ad.form.kind}
-              source={source}
-              defaultProgram={ad.form.program}
-              defaultCountry={country}
-              title={ad.form.title}
-              note={ad.form.note}
-              submitLabel={ad.form.cta}
-            />
-          </div>
           <p className="adhero__trust"><Stars /> <span>{ad.trust}</span></p>
           <p className="adhero__region"><Icon name="pin" size={16} /> <span>{ad.region}</span></p>
           <p className="adhero__alt">

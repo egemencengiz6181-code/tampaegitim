@@ -3238,10 +3238,11 @@ a.filter {
     grid-template-columns: 1fr;
     padding-block: 1rem 2rem;
   }
+  /* Tek sütun: form başlık + açıklamanın hemen altında (DOM sırası), son tarih bandı ve maddeler formun altında */
   .adhero__form {
     grid-column: 1;
     grid-row: auto;
-    margin-top: 1.25rem;
+    margin: 1.25rem 0 1.5rem;
   }
   .adhero__bg::after {
     background: linear-gradient(180deg, rgb(6 40 48 / 0.9), rgb(6 40 48 / 0.97) 60%);
@@ -3271,18 +3272,53 @@ a.filter {
     font-size: 0.95rem;
   }
   .adhero__form {
-    margin-top: 1rem;
+    margin-top: 0.75rem;
     margin-inline: calc(var(--gutter, 1rem) * -0.5);
   }
 }
-/* Fiyat sayfası: mobilde ilk fiyat tablosundan önce form (masaüstünde yandaki form zaten üstte) */
-.detail__topform {
+/* Fiyat sayfası hero'su: mobilde (≤ 1000 px) form başlık + kısa açıklamanın hemen altında, ilk ekranda.
+   Masaüstünde form gizli (yandaki .detail__side formu zaten ilk ekranda), hero butonu görünür. */
+.phero--price .phero__mform {
   display: none;
 }
 @media (max-width: 1000px) {
-  .detail__topform {
+  .phero--price .phero__desktopcta {
+    display: none;
+  }
+  .phero--price .phero__actions {
     display: block;
-    margin-bottom: 2.5rem;
+  }
+  .phero--price .phero__mform {
+    display: block;
+    color: var(--ink);
+  }
+  .phero--price .phero__actions {
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 560px) {
+  .phero--price .crumbs,
+  .phero--price .phero__kicker {
+    display: none;
+  }
+  .phero--price .phero__in {
+    padding-top: 1.25rem;
+  }
+  .phero--price .phero__title {
+    font-size: 1.7rem;
+    margin-bottom: 0.6rem;
+  }
+  /* Açıklamanın tamamı DOM'da (SEO), mobilde ilk iki satırı görünür */
+  .phero--price .phero__lead {
+    font-size: 0.98rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+  }
+  .phero--price .phero__mform {
+    margin-inline: calc(var(--gutter, 1rem) * -0.5);
   }
 }
 .unicountry__guides {

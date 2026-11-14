@@ -29,12 +29,19 @@ export function CookieBanner() {
   }
   return (
     <div className="cookiebar" role="dialog" aria-live="polite" aria-label="Çerez tercihleri">
+      {/* Mobilde (≤ 900 px) kısa, tek satırlık metin: bant formu örtmesin (en fazla ~110 px). */}
       <p>
-        Sitemizi geliştirmek ve kampanyalarımızı ölçmek için analitik ve pazarlama çerezlerini yalnızca onayınızla kullanıyoruz.
-        Zorunlu çerezler her durumda çalışır. Ayrıntılar: <Link to="/cerez-politikasi">Çerez politikası</Link>
+        <span className="cookiebar__long">
+          Sitemizi geliştirmek ve kampanyalarımızı ölçmek için analitik ve pazarlama çerezlerini yalnızca onayınızla kullanıyoruz.
+          Zorunlu çerezler her durumda çalışır. Ayrıntılar: <Link to="/cerez-politikasi">Çerez politikası</Link>
+        </span>
+        <span className="cookiebar__short">
+          Ölçüm ve reklam çerezleri onayınızla. <Link to="/cerez-politikasi">Ayrıntılar</Link>
+        </span>
       </p>
+      {/* Reddet ve Kabul et aynı boyut ve aynı görünümde (KVKK: ret, kabul kadar kolay olmalı) */}
       <div className="cookiebar__actions">
-        <button type="button" className="btn btn--line btn--sm" onClick={() => choose('denied')}>Reddet</button>
+        <button type="button" className="btn btn--teal btn--sm" onClick={() => choose('denied')}>Reddet</button>
         <button type="button" className="btn btn--teal btn--sm" onClick={() => choose('granted')}>Kabul et</button>
       </div>
     </div>

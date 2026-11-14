@@ -115,7 +115,11 @@ Google Workspace hesaplarında günde 1.500, kişisel Gmail hesaplarında 100 e-
 - `LEAD_WEBHOOK_SECRET`, Script Properties’teki `GIZLI_ANAHTAR` ile birebir aynı mı (boşluk dahil)?
 - Web uygulaması adresini tarayıcıda açın: `"ayarlar":false` görünüyorsa `GIZLI_ANAHTAR` veya `ALICILAR` girilmemiş demektir.
 - Apps Script dağıtımında erişim “Herkes” mi?
-- İletilemeyen başvurular kaybolmaz: Vercel → proje → **Logs** bölümünde `İLETİLEMEYEN BAŞVURU` satırında tüm bilgileriyle görünür.
+- İletilemeyen başvurular kaybolmaz: Vercel → proje → **Logs** bölümünde `İLETİLEMEYEN BAŞVURU` satırında tüm bilgileriyle ve hata nedeniyle (`yetkisiz` = gizli anahtar uyuşmuyor, `ayar eksik` = Script Property girilmemiş, `JSON olmayan yanıt` = URL/dağıtım hatalı) görünür. Başarılı her başvuru da `[lead] iletildi: <form kodu>` satırı bırakır (kişisel veri olmadan).
+- Kodu Script Properties’e taşıdıktan sonra **yeni sürüm dağıtmayı** unutmayın (Dağıt → Dağıtımları yönet → ✏️ → Yeni sürüm). Yeni bir *dağıtım* oluşturduysanız URL değişir; Vercel’deki `LEAD_WEBHOOK_URL`’i güncelleyip Redeploy yapın.
+
+**Tabloya yazılamayan başvuru için yedek e-posta (isteğe bağlı)**
+Apps Script hata verirse başvuruyu ayrıca e-postayla almak için [resend.com](https://resend.com)’da ücretsiz hesap açıp Vercel’e şu değişkenleri ekleyin: `RESEND_API_KEY`, `LEAD_ALERT_TO` (virgülle ayrılmış adresler), `LEAD_ALERT_FROM` (Resend’de doğrulanmış gönderen, ör. `Tampa Web Sitesi <form@tampaegitim.com.tr>`). Tanımlı değilse yalnızca Vercel loguna yazılır. Not: Resend yurt dışı bir hizmettir; KVKK aydınlatma metninde veri aktarımı olarak belirtilmesi gerekir.
 
 **KVKK**
 Formlar KVKK aydınlatma metni onayı olmadan gönderilemez. Tabloya erişimi yalnızca başvurularla ilgilenen kişilerle paylaşın.

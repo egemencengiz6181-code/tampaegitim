@@ -445,7 +445,12 @@
   padding: clamp(1.3rem, 1rem + 1.4vw, 2.1rem);
   box-shadow: var(--shadow-1);
 }
+/* Başlık h2 veya h3 olabilir (LeadForm titleAs); görünüm her iki durumda da h3 ile aynı */
 .lead__title {
+  font-family: var(--f-body);
+  font-weight: 650;
+  line-height: 1.28;
+  letter-spacing: -0.012em;
   font-size: var(--fs-h3);
   margin-bottom: 0.4rem;
 }
@@ -1161,4 +1166,23 @@
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+/* Mobil iki adımlı form (LeadForm mobileSteps): 1. adımda yalnızca Ad soyad + Telefon + "Devam".
+   Diğer alanlar DOM'da kalır, yalnızca gizlenir; masaüstünde form tek adımdır. */
+.lead__next {
+  display: none;
+  width: 100%;
+  margin-top: 1.1rem;
+}
+@media (max-width: 768px) {
+  .lead--step1 .lead__next {
+    display: inline-flex;
+  }
+  .lead--step1 .lead__grid > :nth-child(n + 3),
+  .lead--step1 .consent,
+  .lead--step1 .lead__kvkkerr,
+  .lead--step1 .lead__submit {
+    display: none;
+  }
 }

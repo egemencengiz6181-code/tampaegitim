@@ -24,17 +24,29 @@ type Props = {
   /** "#form" bağlantılarının kaydıracağı görünür form (scrollToVisibleForm) */
   anchor?: boolean
   id?: string
+  /**
+   * Mobilde (≤ 768 px) iki adım: 1) Ad soyad + Telefon + "Devam", 2) kalan alanlar + KVKK + Gönder.
+   * Tüm alanlar baştan DOM'da durur (yalnızca CSS ile gizlenir); başvuru tek seferde, 2. adımın sonunda gönderilir.
+   * Masaüstünde form tek adımdır.
+   */
+  mobileSteps?: boolean
+  /** Form başlığının seviyesi: H1'in hemen altındaki formlarda h2 (başlık sırası erişilebilirliği) */
+  titleAs?: 'h2' | 'h3'
 }
 
 type Errors = Partial<Record<'name' | 'phone' | 'email' | 'kvkk' | 'budget' | 'status' | 'age', string>>
 
 const phoneOk = (v: string) => v.replace(/\D/g, '').length >= 10
 
-export function LeadForm({ variant = 'full', source, defaultProgram = '', defaultCountry = '', title, note, tone = 'light', kind = 'default', submitLabel, anchor, id: formId }: Props) {
+export function LeadForm({ variant = 'full', source, defaultProgram = '', defaultCountry = '', title, note, tone = 'light', kind = 'default', submitLabel, anchor, id: formId, mobileSteps, titleAs: TitleTag = 'h3' }: Props) {
   const id = useId()
   const nav = useNavigate()
   const [errors, setErrors] = useState<Errors>({})
   const [status, setStatus] = useState<'idle' | 'sending' | 'error'>('idle')
+  const [step, setStep] = useState<1 | 2>(1)
+  const formRef = useRef<HTMLFormElement>(null)
+  const nextRef = useRef<HTMLButtonElement>(null)
+  const advanced = useRef(false)
   const [program, setProgram] = useState(defaultProgram)
   const [country, setCountry] = useState(defaultCountry)
   const ads = kind !== 'default'
@@ -48,9 +60,36 @@ export function LeadForm({ variant = 'full', source, defaultProgram = '', defaul
   useEffect(() => {
     shownAt.current = Date.now()
   }, [])
+  // 2. adıma geçince ilk yeni alana odaklan
+  useEffect(() => {
+    if (step !== 2 || !advanced.current) return
+    formRef.current?.querySelector<HTMLElement>('.lead__grid > :nth-child(n+3) :is(input, select, textarea)')?.focus()
+  }, [step])
+
+  /** Mobil 1. adım: yalnızca ad ve telefonu doğrular, geçerliyse kalan alanları açar. */
+  function next() {
+    const form = formRef.current
+    if (!form) return
+    const fd = new FormData(form)
+    const v = (k: string) => String(fd.get(k) ?? '').trim()
+    const errs: Errors = {}
+    if (v('name').length < 3) errs.name = 'Adınızı ve soyadınızı yazın.'
+    if (!phoneOk(v('phone'))) errs.phone = 'Size ulaşabilmemiz için 10 haneli telefon numaranızı yazın.'
+    setErrors(errs)
+    if (Object.keys(errs).length) {
+      form.querySelector<HTMLInputElement>(errs.name ? 'input[name="name"]' : 'input[name="phone"]')?.focus()
+      return
+    }
+    advanced.current = true
+    setStep(2)
+  }
+  // "Devam" yalnızca mobil CSS etkinken görünür; masaüstünde bu kontrol hiç devreye girmez
+  const inStep1 = () => mobileSteps && step === 1 && nextRef.current?.offsetParent != null
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
+    // Mobil 1. adımda klavyedeki "Git" tuşu formu göndermez, "Devam" gibi davranır
+    if (inStep1()) return next()
     const fd = new FormData(e.currentTarget)
     const v = (k: string) => String(fd.get(k) ?? '').trim()
     const errs: Errors = {}
@@ -101,8 +140,8 @@ export function LeadForm({ variant = 'full', source, defaultProgram = '', defaul
   const f = (k: string) => `${id}-${k}`
 
   return (
-    <form id={formId} className={`lead lead--${ads ? 'compact lead--ads' : variant} lead--${tone}`} onSubmit={onSubmit} noValidate data-form-anchor={anchor ? '' : undefined}>
-      {title && <h3 className="lead__title">{title}</h3>}
+    <form ref={formRef} id={formId} className={`lead lead--${ads ? 'compact lead--ads' : variant} lead--${tone}${mobileSteps ? ` lead--steps lead--step${step}` : ''}`} onSubmit={onSubmit} noValidate data-form-anchor={anchor ? '' : undefined}>
+      {title && <TitleTag className="lead__title">{title}</TitleTag>}
       {note && <p className="lead__note">{note}</p>}
       {/* Honeypot (bot tuzağı): ekran dışı, odaklanamaz, ekran okuyucu ve otomatik doldurma görmez.
           Doluysa sunucu başarı döner ama kaydetmez (api/lead.js). */}
@@ -177,8 +216,14 @@ export function LeadForm({ variant = 'full', source, defaultProgram = '', defaul
           <Link to="/kvkk" target="_blank">KVKK aydınlatma metnini</Link> okudum, benimle iletişime geçilmesini kabul ediyorum.
         </span>
       </label>
-      {errors.kvkk && <p className="field__err">{errors.kvkk}</p>}
+      {errors.kvkk && <p className="field__err lead__kvkkerr">{errors.kvkk}</p>}
       {status === 'error' && <p className="field__err" role="alert">Form şu anda gönderilemedi. Lütfen tekrar deneyin ya da bize <a href={site.whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp’tan yazın</a> veya <a href={site.phoneHref}>{site.phone}</a> numarasından arayın.</p>}
+      {mobileSteps && (
+        <button type="button" ref={nextRef} className="btn btn--coral btn--lg lead__next" onClick={next}>
+          <span>Devam</span>
+          <Icon name="arrow" size={18} />
+        </button>
+      )}
       <button type="submit" className="btn btn--coral btn--lg lead__submit" disabled={status === 'sending'}>
         <span>{status === 'sending' ? 'Gönderiliyor…' : submitLabel ?? 'Ücretsiz danışmanlık iste'}</span>
         {status !== 'sending' && <Icon name="arrow" size={18} />}

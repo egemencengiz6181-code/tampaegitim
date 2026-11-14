@@ -110,7 +110,8 @@ export function MobileBar() {
       {ad ? (
         <a href="#form" onClick={scrollToVisibleForm} className="mbar__cta mbar__cta--long"><span>{ad}</span></a>
       ) : (
-        <Link to="/basvuru" className="mbar__cta"><Icon name="bolt" size={18} /><span>Ücretsiz bilgi al</span></Link>
+        // Sayfada görünür form varsa ona kaydırır (scrollToVisibleForm preventDefault yapar, Link yönlenmez); yoksa /basvuru
+        <Link to="/basvuru" onClick={scrollToVisibleForm} className="mbar__cta"><Icon name="bolt" size={18} /><span>Ücretsiz bilgi al</span></Link>
       )}
     </div>
   )

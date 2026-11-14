@@ -84,6 +84,7 @@ export function PricePageView({ page, unis }: { page: PricePage; unis: Universit
     <>
       <Seo title={page.seoTitle} description={page.description} path={path} image={c.image} modified={page.updated} jsonLd={ld} />
       <PageHero
+        className="phero--price"
         image={c.image}
         crumbs={[{ label: 'Fiyatlar', to: '/fiyatlar' }, { label: page.label }]}
         kicker={<RouteCode to={c.code} light />}
@@ -96,7 +97,12 @@ export function PricePageView({ page, unis }: { page: PricePage; unis: Universit
           </div>
         }
       >
-        <Btn href="#form" onClick={scrollToVisibleForm} size="lg" icon="arrow">Kişiye özel bütçe al</Btn>
+        <span className="phero__desktopcta"><Btn href="#form" onClick={scrollToVisibleForm} size="lg" icon="arrow">Kişiye özel bütçe al</Btn></span>
+        {/* Mobilde (≤ 1000 px) form başlık ve açıklamanın hemen altında, ilk ekranda (Google Ads trafiği). Fiyat özeti kartı
+            formun altında. Masaüstünde gizli: yandaki form zaten ilk ekranda. */}
+        <div className="phero__mform">
+          <LeadForm variant="compact" anchor mobileSteps titleAs="h2" source={`fiyat:${page.slug}:ust`} defaultProgram="Üniversite" defaultCountry={c.name} title="Kişiye özel bütçe alın" note="Yıllık toplam maliyeti ücretsiz hesaplayalım." />
+        </div>
       </PageHero>
 
       <section className="container snippet" aria-labelledby="ozet-h">
@@ -123,11 +129,6 @@ export function PricePageView({ page, unis }: { page: PricePage; unis: Universit
           <section className="dsec">
             {page.intro.map((p, i) => <p key={i} className={i === 0 ? 'lead-strong' : undefined}><Rich text={p} /></p>)}
           </section>
-
-          {/* Mobilde ilk fiyat tablosundan önce form (sitelink trafiği); masaüstünde yandaki form zaten üstte görünür */}
-          <div className="detail__topform">
-            <LeadForm variant="compact" anchor source={`fiyat:${page.slug}:ust`} defaultProgram="Üniversite" defaultCountry={c.name} title="Kişiye özel bütçe alın" note="Bölümünüze ve şehrinize göre yıllık toplam maliyeti ücretsiz hesaplayalım." />
-          </div>
 
           <section id="ucretler" className="dsec">
             <h2>{medical ? `${c.loc} Tıp Fakültesi Ücretleri` : `${c.loc} Üniversite Eğitim Ücretleri`}</h2>

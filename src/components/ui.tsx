@@ -195,7 +195,7 @@ export function FaqList({ items, schema = true }: { items: Faq[]; schema?: boole
 /* ---------- Stars ---------- */
 export function Stars({ n = 5, size = 16 }: { n?: number; size?: number }) {
   return (
-    <span className="stars" aria-label={`${n} üzerinden ${n} yıldız`}>
+    <span className="stars" role="img" aria-label={`${n} üzerinden ${n} yıldız`}>
       {Array.from({ length: n }).map((_, i) => <Icon key={i} name="star" size={size} />)}
     </span>
   )

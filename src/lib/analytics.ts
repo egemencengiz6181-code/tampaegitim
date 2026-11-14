@@ -99,11 +99,16 @@ function safeHost(origin: string) {
   }
 }
 
-/** "#form" bağlantıları: sayfadaki ilk GÖRÜNÜR form çapasına kaydırır (mobilde üstteki, masaüstünde yandaki form). */
+/**
+ * "#form" bağlantıları ve mobil alt bar CTA'sı: sayfadaki ilk GÖRÜNÜR form çapasına yumuşak kaydırır ve ilk alana
+ * (Ad soyad) odaklanır. Görünür form yoksa hiçbir şey yapmaz; bağlantı normal davranışına (ör. /basvuru) devam eder.
+ */
 export function scrollToVisibleForm(e: { preventDefault: () => void }) {
   const el = Array.from(document.querySelectorAll<HTMLElement>('[data-form-anchor]')).find((x) => x.offsetParent !== null)
   if (!el) return
   e.preventDefault()
-  el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  el.querySelector<HTMLInputElement>('input:not([tabindex="-1"]), select')?.focus({ preventScroll: true })
+  const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+  el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' })
+  // Gizli alanlar (program/ülke) ve bot tuzağı atlanır; ilk gerçek alan Ad soyad'dır
+  el.querySelector<HTMLElement>('input:not([type="hidden"]):not([tabindex="-1"]), select, textarea')?.focus({ preventScroll: true })
 }

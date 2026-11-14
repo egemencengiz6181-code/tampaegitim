@@ -44,6 +44,34 @@ function sourceLabel(source) {
   return rest.length ? `${label} (${rest.join(' / ')})` : label
 }
 
+/**
+ * Apps Script'e iletilemeyen başvuru için yedek uyarı e-postası (Resend). İsteğe bağlıdır:
+ * RESEND_API_KEY ve LEAD_ALERT_TO tanımlı değilse hiçbir şey yapmaz; başvuru yine Vercel loglarında tam kayıt olarak kalır.
+ * LEAD_ALERT_FROM, Resend'de doğrulanmış bir gönderen adresi olmalıdır.
+ */
+async function alertFailedLead(lead, reason) {
+  const key = process.env.RESEND_API_KEY
+  const to = process.env.LEAD_ALERT_TO
+  if (!key || !to) return
+  const lines = Object.entries(lead).filter(([, v]) => v).map(([k, v]) => `${k}: ${v}`)
+  try {
+    const r = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        from: process.env.LEAD_ALERT_FROM || 'Tampa Web Sitesi <onboarding@resend.dev>',
+        to: to.split(',').map((x) => x.trim()).filter(Boolean),
+        subject: `TABLOYA YAZILAMAYAN BAŞVURU: ${lead.name} – ${lead.phone}`,
+        text: `Bu başvuru Google E-Tablo'ya iletilemedi (${reason}). Lütfen elle ekleyin ve başvuranı arayın.\n\n${lines.join('\n')}`,
+      }),
+      signal: AbortSignal.timeout(8_000),
+    })
+    if (!r.ok) console.error('[lead] Uyarı e-postası gönderilemedi:', r.status, await r.text().catch(() => ''))
+  } catch (e) {
+    console.error('[lead] Uyarı e-postası hatası:', e)
+  }
+}
+
 // IP başına 10 dakikada en fazla 6 başvuru (aynı sunucu örneği içinde)
 const hits = new Map()
 function rateLimit(ip) {
@@ -111,13 +139,16 @@ export default handle(async (req, res) => {
   if (!url) {
     if (process.env.VERCEL) {
       console.error('[lead] LEAD_WEBHOOK_URL tanımlı değil; başvuru kaydedilemedi:', JSON.stringify(lead))
+      await alertFailedLead(lead, 'LEAD_WEBHOOK_URL tanımlı değil')
       throw new HttpError(503, 'Form şu anda gönderilemedi.')
     }
     console.info('[lead:yerel] LEAD_WEBHOOK_URL yok, başvuru yalnızca konsola yazıldı:', lead)
     return send(res, 200, { ok: true, local: true })
   }
 
-  let lastStatus = 0
+  // Kullanıcıya başarı YALNIZCA Apps Script {ok:true} döndüğünde gösterilir (satır tabloya yazıldı demektir).
+  // Aksi halde 502: form hata mesajı gösterir, generate_lead tetiklenmez.
+  let reason = ''
   for (let attempt = 0; attempt < 2; attempt++) {
     try {
       const r = await fetch(url, {
@@ -127,15 +158,23 @@ export default handle(async (req, res) => {
         redirect: 'follow',
         signal: AbortSignal.timeout(15_000),
       })
-      lastStatus = r.status
       const out = await r.json().catch(() => null)
-      if (r.ok && out?.ok) return send(res, 200, { ok: true })
+      if (r.ok && out?.ok) {
+        // Kişisel veri yok: yalnızca sayım ve kaynak için
+        console.info('[lead] iletildi:', source)
+        return send(res, 200, { ok: true })
+      }
+      reason = `HTTP ${r.status}${out?.error ? ` / ${out.error}` : out ? '' : ' / JSON olmayan yanıt'}`
       console.error('[lead] Apps Script yanıtı:', r.status, out)
+      // Yapılandırma hatası (gizli anahtar uyuşmuyor, Script Property eksik): tekrar denemek işe yaramaz
+      if (out?.error === 'yetkisiz' || out?.error === 'ayar eksik') break
     } catch (e) {
+      reason = `ağ hatası: ${e instanceof Error ? e.message : String(e)}`
       console.error('[lead] Apps Script hatası:', e)
     }
   }
-  // Başvuru kaybolmasın: Vercel loglarında tam kayıt kalır
-  console.error('[lead] İLETİLEMEYEN BAŞVURU:', lastStatus, JSON.stringify(lead))
+  // Başvuru kaybolmasın: Vercel loglarında tam kayıt kalır ve (ayarlıysa) uyarı e-postası gider
+  console.error('[lead] İLETİLEMEYEN BAŞVURU:', reason, JSON.stringify(lead))
+  await alertFailedLead(lead, reason)
   throw new HttpError(502, 'Form şu anda gönderilemedi.')
 })
