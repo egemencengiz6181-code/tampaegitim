@@ -237,7 +237,7 @@ export const deep: Record<string, Deep> = {
         list: [
           '**Profil analizi:** Notlarınız, İngilizce seviyeniz, hedef bölümünüz ve bütçenizle birebir değerlendirme',
           '**Bölüm ve üniversite seçimi:** İngiltere, İskoçya, Galler ve Kuzey İrlanda’dan size uygun listeyi birlikte çıkarıyoruz',
-          '**Başvuru:** UCAS veya üniversiteye doğrudan başvurunun yapılması ve kabul sürecinin takibi; başvurularda öncelik',
+          '**Başvuru:** UCAS veya üniversiteye doğrudan başvurunun yapılması ve kabul sürecinin takibi; başvuru sürecinin her adımında yanınızdayız',
           '**Burslar:** Üniversitelerin mevcut burs ve harç indirimlerine başvuru',
           '**Konaklama:** Kabul sonrası yurt ve öğrenci rezidansı seçenekleri',
         ],

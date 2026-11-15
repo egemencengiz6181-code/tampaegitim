@@ -37,7 +37,7 @@ export const adLandings: Record<string, AdLanding> = {
       { icon: 'user', text: 'Profil analiziyle bölüm ve üniversiteyi birlikte seçiyoruz' },
       { icon: 'cap', text: 'Mevcut burslardan faydalandırıyoruz' },
       { icon: 'pin', text: 'Konaklama seçenekleri sunuyoruz' },
-      { icon: 'bolt', text: 'Başvurularda öncelik sağlıyoruz' },
+      { icon: 'bolt', text: 'Başvuru sürecinin her adımında yanınızdayız' },
     ],
     footnote: 'UCAS’ın kendi başvuru ücreti öğrenci tarafından ödenir.',
     trust,
