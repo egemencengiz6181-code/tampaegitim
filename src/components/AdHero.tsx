@@ -25,9 +25,6 @@ export function AdHero({ ad, crumbs, source, country }: { ad: AdLanding; crumbs:
             <img src={hero!.src} alt="" fetchPriority="high" decoding="async" width="1600" height="900" />
           </picture>
         )}
-        {hero?.credit && (
-          <a className="phero__credit" href={hero.href} target="_blank" rel="noopener noreferrer">Fotoğraf: {hero.credit}</a>
-        )}
         <div className="container adhero__in">
           <div className="adhero__crumbs"><Breadcrumbs items={crumbs} tone="light" /></div>
           <h1 className="adhero__title">{ad.h1}</h1>

@@ -81,9 +81,6 @@ export function PageHero({ title, lead, crumbs, image: imageProp, kicker, childr
           <img src={image} alt="" fetchPriority="high" decoding="async" />
         </div>
       )}
-      {hero?.credit && tone === 'photo' && (
-        <a className="phero__credit" href={hero.href} target="_blank" rel="noopener noreferrer">Fotoğraf: {hero.credit}</a>
-      )}
       <div className="container phero__in">
         <div className="phero__main">
           {crumbs && <Breadcrumbs items={crumbs} tone={tone === 'mist' ? 'dark' : 'light'} />}

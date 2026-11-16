@@ -12,7 +12,6 @@ import { services } from '../data/services'
 import { posts, formatDate } from '../data/blog'
 import { generalFaqs } from '../data/landings'
 import { cardImg } from '../lib/img'
-import { finderCredits } from '../data/heroImages'
 import { ukRepresentationPath } from '../data/uk'
 
 const featured = ['ingiltere', 'almanya', 'malta', 'amerika', 'irlanda', 'kanada', 'polonya', 'italya', 'dubai', 'ispanya']
@@ -338,7 +337,6 @@ function ProgramFinder() {
       <div className="finder__panel" role="tabpanel" id="finder-panel" aria-labelledby={`tab-${p.key}`} key={p.key}>
         <div className="finder__img">
           <img {...cardImg(p.portrait ?? p.image, '(max-width: 760px) 92vw, 460px')} alt="" loading="lazy" width="720" height="520" />
-          {finderCredits[p.key] && <a className="finder__credit" href={finderCredits[p.key].href} target="_blank" rel="noopener noreferrer">Fotoğraf: {finderCredits[p.key].credit}</a>}
         </div>
         <div className="finder__body">
           <h3>{p.name}</h3>
