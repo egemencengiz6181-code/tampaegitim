@@ -1,0 +1,51 @@
+{
+  "slug": "ingilterede-bolum-secimi",
+  "title": "İngiltere’de Hangi Bölüm Okunur? Bölüm Seçimi, Ders Şartları ve Staj Yılı",
+  "metaTitle": "İngiltere’de Bölüm Seçimi 2027: Ders Şartları ve Staj Yılı",
+  "description": "İngiltere’de bölüm seçimi: bölümlere göre ders şartları, BA/BSc/MEng farkı, joint honours, staj yılı ve Türk öğrencilerin sık yaptığı hatalar.",
+  "category": "Üniversite",
+  "date": "2026-11-18",
+  "updated": "2026-11-18",
+  "image": "/img/blog/bolum-secimi-ogrenciler.jpg",
+  "imageAlt": "Ahşap masada kitap okuyup not alan üniversite öğrencileri",
+  "focusKeyword": "ingiltere'de bölüm seçimi",
+  "keywords": [
+    "ingiltere'de bölüm seçimi",
+    "ingiltere'de hangi bölüm okunur",
+    "ingiltere lisans bölümleri",
+    "joint honours",
+    "integrated master",
+    "ingiltere staj yılı"
+  ],
+  "countries": [
+    "ingiltere"
+  ],
+  "programs": [
+    "lisans"
+  ],
+  "faqs": [
+    {
+      "q": "İngiltere’de üniversiteye girdikten sonra bölüm değiştirilebilir mi?",
+      "a": "Mümkündür ama kolay değildir. Genellikle ilk yılın başında, yeni bölümün giriş şartlarını karşılıyorsanız ve kontenjan varsa değişiklik yapılabilir. Student vizesiyle okuyan öğrencilerde bölüm değişikliği vize koşullarını da etkileyebileceği için üniversitenin uluslararası öğrenci ofisine danışmak gerekir."
+    },
+    {
+      "q": "UCAS’ta farklı bölümlere başvurabilir miyim?",
+      "a": "Teknik olarak evet, ama beş tercih için tek bir kişisel beyan yazıldığından birbirine yakın bölümleri seçmek gerekir. Birbirinden çok farklı bölümlere yapılan başvurularda kişisel beyan hiçbir bölüme tam uymaz."
+    },
+    {
+      "q": "Joint honours ile single honours arasındaki fark nedir?",
+      "a": "Single honours tek bir alanın okunduğu programdır. Joint honours ise iki alanı kabaca eşit ağırlıkta birleştirir. Joint honours için iki bölümün de giriş şartlarını karşılamak gerekir."
+    },
+    {
+      "q": "Staj yılı (placement year) zorunlu mu?",
+      "a": "Hayır. Birçok bölümde isteğe bağlıdır ve lisansı 3 yıldan 4 yıla çıkarır. Staj yılının harcı tam harçtan çok daha düşüktür ve staj programın parçası olduğu için Student vizesiyle yapılabilir."
+    },
+    {
+      "q": "MEng ile BEng arasında hangisini seçmeliyim?",
+      "a": "BEng 3 yıllık lisanstır, MEng ise lisans ve yüksek lisansı birleştiren 4 yıllık bir programdır. İngiltere’de chartered engineer olmayı hedefleyenler için akredite MEng daha doğrudan bir yoldur; ayrıca bir yüksek lisans yapmayı düşünenler BEng ile başlayabilir."
+    }
+  ],
+  "draft": false,
+  "readMin": 5,
+  "words": 1027
+}

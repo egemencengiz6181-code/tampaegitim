@@ -1,7 +1,7 @@
 {
  "/": {
-  "h": "c00cd0721bcf3722",
-  "d": "2026-11-16"
+  "h": "d5cd3238498d0006",
+  "d": "2026-11-17"
  },
  "/yurtdisi-egitim": {
   "h": "16896be794554a34",
@@ -12,20 +12,20 @@
   "d": "2026-11-03"
  },
  "/yurtdisi-yaz-okullari": {
-  "h": "154ebcc7433d65b6",
-  "d": "2026-11-03"
+  "h": "09479635f56bcb2f",
+  "d": "2026-11-17"
  },
  "/yurtdisi-lise-egitimi": {
   "h": "c4b20d59b9dddc32",
   "d": "2026-11-03"
  },
  "/lisans-programlari": {
-  "h": "0f50c611ad8bce4f",
-  "d": "2026-11-13"
+  "h": "d899abf67b2ca43c",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yuksek-lisans": {
-  "h": "66b5d8157a06a3d9",
-  "d": "2026-11-13"
+  "h": "d0e4331feceacb2a",
+  "d": "2026-11-17"
  },
  "/work-and-study": {
   "h": "f4ae479f16983c18",
@@ -108,44 +108,44 @@
   "d": "2026-11-16"
  },
  "/yurtdisi-yaz-okullari/ingiltere": {
-  "h": "90787e9ed5d8695f",
-  "d": "2026-11-16"
+  "h": "8bfa568f82cada58",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yaz-okullari/amerika": {
-  "h": "ecb0fa15ae44d1d9",
-  "d": "2026-11-16"
+  "h": "2f99fa860582ceb9",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yaz-okullari/kanada": {
-  "h": "e49a2791823c667d",
-  "d": "2026-11-16"
+  "h": "e495a999feb76272",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yaz-okullari/malta": {
-  "h": "00540bdcb4ccdcd3",
-  "d": "2026-11-16"
+  "h": "6e6f63fa4e6bfa78",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yaz-okullari/almanya": {
-  "h": "a45c39e8d106b355",
-  "d": "2026-11-16"
+  "h": "01a8f3152720f87e",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yaz-okullari/avusturya": {
-  "h": "81f075c95a7fb8f5",
-  "d": "2026-11-03"
+  "h": "a1785ce7f471dae7",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yaz-okullari/ispanya": {
-  "h": "b4ecf090982a5578",
-  "d": "2026-11-16"
+  "h": "a0d227462541ea6b",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yaz-okullari/fransa": {
-  "h": "52585b309ba00b1b",
-  "d": "2026-11-03"
+  "h": "712d18e4c82b439b",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yaz-okullari/italya": {
-  "h": "20f017c5e0cf3731",
-  "d": "2026-11-16"
+  "h": "712886fb3c3e1e5c",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yaz-okullari/isvicre": {
-  "h": "14c239393b1f40c7",
-  "d": "2026-11-16"
+  "h": "53070ff473ed9bbf",
+  "d": "2026-11-17"
  },
  "/yurtdisi-lise-egitimi/ingiltere": {
   "h": "b56f90c96daca621",
@@ -180,136 +180,136 @@
   "d": "2026-11-03"
  },
  "/lisans-programlari/ingiltere": {
-  "h": "fe4f393229b06979",
-  "d": "2026-11-16"
+  "h": "4a02509c6a5282a8",
+  "d": "2026-11-17"
  },
  "/lisans-programlari/amerika": {
-  "h": "a1d6ca63b3cf53bd",
-  "d": "2026-11-16"
+  "h": "a8888f818962daaa",
+  "d": "2026-11-17"
  },
  "/lisans-programlari/kanada": {
-  "h": "61e109369c98dc85",
-  "d": "2026-11-16"
+  "h": "1327a24b357278d9",
+  "d": "2026-11-17"
  },
  "/lisans-programlari/avustralya": {
-  "h": "4ebc6cfe05609797",
-  "d": "2026-11-16"
+  "h": "1e06bf8352a7fb62",
+  "d": "2026-11-17"
  },
  "/lisans-programlari/malta": {
-  "h": "643c93e50f0ec9d5",
-  "d": "2026-11-16"
+  "h": "96e3691e2bb0f5ef",
+  "d": "2026-11-17"
  },
  "/lisans-programlari/almanya": {
-  "h": "e71694ae4bcda1ef",
-  "d": "2026-11-16"
+  "h": "1a377b5e733f4d52",
+  "d": "2026-11-17"
  },
  "/lisans-programlari/ispanya": {
-  "h": "aff914ecd20fa0b8",
-  "d": "2026-11-13"
+  "h": "8f438436de9a6549",
+  "d": "2026-11-17"
  },
  "/lisans-programlari/fransa": {
-  "h": "ccced5539cae6e3c",
-  "d": "2026-11-16"
+  "h": "421a64e14b266877",
+  "d": "2026-11-17"
  },
  "/lisans-programlari/italya": {
-  "h": "3759f6ab3f08a6b2",
-  "d": "2026-11-16"
+  "h": "0938f78f49c5d969",
+  "d": "2026-11-17"
  },
  "/lisans-programlari/dubai": {
-  "h": "be1f3f46c80f56c6",
-  "d": "2026-11-16"
+  "h": "bb29b96f8cfcb444",
+  "d": "2026-11-17"
  },
  "/lisans-programlari/arjantin": {
-  "h": "5622474d8b8b8a86",
-  "d": "2026-11-16"
+  "h": "7610de30e92e849e",
+  "d": "2026-11-17"
  },
  "/lisans-programlari/japonya": {
-  "h": "df0babb08b201f6b",
-  "d": "2026-11-16"
+  "h": "f5bee1360227a229",
+  "d": "2026-11-17"
  },
  "/lisans-programlari/kore": {
-  "h": "ddd24111433383fa",
-  "d": "2026-11-16"
+  "h": "afe2e46ba74fc079",
+  "d": "2026-11-17"
  },
  "/lisans-programlari/isvicre": {
-  "h": "eb8c01c0356cdf42",
-  "d": "2026-11-16"
+  "h": "2f633d75b1ce315e",
+  "d": "2026-11-17"
  },
  "/lisans-programlari/macaristan": {
-  "h": "c81329ea77af7263",
-  "d": "2026-11-13"
+  "h": "7b8feb6333b9776e",
+  "d": "2026-11-17"
  },
  "/lisans-programlari/polonya": {
-  "h": "0eab895c32d989f8",
-  "d": "2026-11-16"
+  "h": "8e5437eb914bd1b1",
+  "d": "2026-11-17"
  },
  "/lisans-programlari/cekya": {
-  "h": "d0467b29f785abee",
-  "d": "2026-11-16"
+  "h": "240353e40226c6b9",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yuksek-lisans/ingiltere": {
-  "h": "37c9da6efe515b87",
-  "d": "2026-11-16"
+  "h": "2b40b0c0cbf7132c",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yuksek-lisans/amerika": {
-  "h": "48a44e6cceddef8e",
-  "d": "2026-11-13"
+  "h": "737cffc3303ac5be",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yuksek-lisans/kanada": {
-  "h": "12d4c47864823b93",
-  "d": "2026-11-16"
+  "h": "d35432def08b924e",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yuksek-lisans/avustralya": {
-  "h": "79df14d6e28c66dc",
-  "d": "2026-11-16"
+  "h": "51d1986639c0d067",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yuksek-lisans/irlanda": {
-  "h": "e971a4645cc45243",
-  "d": "2026-11-16"
+  "h": "46c8a2b627921b27",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yuksek-lisans/malta": {
-  "h": "797131d15cfd84dc",
-  "d": "2026-11-16"
+  "h": "b659d834f7c7b999",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yuksek-lisans/almanya": {
-  "h": "f32650d63a0c7766",
-  "d": "2026-11-16"
+  "h": "51f1425d8386b921",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yuksek-lisans/avusturya": {
-  "h": "71a79d5d500090a8",
-  "d": "2026-11-16"
+  "h": "1fcaf55855faa517",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yuksek-lisans/ispanya": {
-  "h": "f780e3d5b45cc967",
-  "d": "2026-11-16"
+  "h": "bdb52bd158016986",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yuksek-lisans/fransa": {
-  "h": "c9a12defb275a286",
-  "d": "2026-11-16"
+  "h": "554356d7ce7c61bf",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yuksek-lisans/italya": {
-  "h": "cff37a8dd08774ad",
-  "d": "2026-11-16"
+  "h": "39194f45b1adfb1e",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yuksek-lisans/dubai": {
-  "h": "1e3b93b483f15c37",
-  "d": "2026-11-16"
+  "h": "950c852e767d6dc1",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yuksek-lisans/macaristan": {
-  "h": "15ffb474486148ff",
-  "d": "2026-11-16"
+  "h": "9e3ba4e8887cdada",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yuksek-lisans/polonya": {
-  "h": "b42b8c94fe97e6fb",
-  "d": "2026-11-16"
+  "h": "1fefd7820a7b2391",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yuksek-lisans/cekya": {
-  "h": "ad7197fe410e011b",
-  "d": "2026-11-16"
+  "h": "5944f35df05fd8dc",
+  "d": "2026-11-17"
  },
  "/yurtdisi-yuksek-lisans/belcika": {
-  "h": "26435a7839e35cf2",
-  "d": "2026-11-16"
+  "h": "22d1ce4bca6056f7",
+  "d": "2026-11-17"
  },
  "/work-and-study/kanada": {
   "h": "2087b5621dfe9cfc",
@@ -1172,8 +1172,8 @@
   "d": "2026-10-22"
  },
  "/ulkeler/ingiltere": {
-  "h": "bde642315dc75200",
-  "d": "2026-11-13"
+  "h": "04a0d758d71e094a",
+  "d": "2026-11-17"
  },
  "/ulkeler/amerika": {
   "h": "dfc10e0ace070cfd",
@@ -1456,24 +1456,24 @@
   "d": "2026-11-16"
  },
  "/blog": {
-  "h": "37fffc2726b1e25a",
-  "d": "2026-11-13"
+  "h": "12e80a99333751fa",
+  "d": "2026-11-18"
  },
  "/blog/kategori/yaz-okulu": {
-  "h": "cdad875cbca92edf",
-  "d": "2026-11-03"
+  "h": "9fd9a96a035839a4",
+  "d": "2026-11-17"
  },
  "/blog/kategori/dil-okulu": {
   "h": "a3d709e04405dbdb",
   "d": "2026-11-03"
  },
  "/blog/kategori/universite": {
-  "h": "10f2b70e62ebb59a",
-  "d": "2026-11-13"
+  "h": "78199e931603d570",
+  "d": "2026-11-17"
  },
  "/blog/kategori/yuksek-lisans": {
-  "h": "8a1f3d77a8b0591f",
-  "d": "2026-11-03"
+  "h": "814f3ce0dd68f0ee",
+  "d": "2026-11-17"
  },
  "/blog/kategori/work-and-study": {
   "h": "351d80603d86be51",
@@ -1491,36 +1491,48 @@
   "h": "990ae81843deebaf",
   "d": "2026-11-03"
  },
+ "/blog/ingilterede-alan-disi-yuksek-lisans": {
+  "h": "5aa27fe7a1d23966",
+  "d": "2026-11-18"
+ },
+ "/blog/ingilterede-bolum-secimi": {
+  "h": "823c3bc4de797021",
+  "d": "2026-11-18"
+ },
+ "/blog/liseliler-icin-ingiltere-yaz-okulu": {
+  "h": "27f75c4cb2b22d86",
+  "d": "2026-11-18"
+ },
  "/blog/ingilterede-universite-veli-rehberi": {
-  "h": "459b3f8799163a4c",
+  "h": "afe942f570bdeeb2",
   "d": "2026-11-13"
  },
  "/blog/galler-ve-kuzey-irlandada-universite": {
-  "h": "9f07f8bb0eff22d8",
+  "h": "e8aea367da56957e",
   "d": "2026-11-13"
  },
  "/blog/ingilterede-universite-yurtlari": {
-  "h": "2a7daa0e2759486c",
+  "h": "2852bfc7706f2fd4",
   "d": "2026-11-13"
  },
  "/blog/ingiltere-universite-basvuru-sartlari": {
-  "h": "439347195445d426",
+  "h": "e937ba7342f10a18",
   "d": "2026-11-10"
  },
  "/blog/ingiltere-universite-basvurusu": {
-  "h": "112e2c16acb98cd7",
+  "h": "3491ee0d14a6d4ec",
   "d": "2026-11-10"
  },
  "/blog/iskocyada-universite-okumak": {
-  "h": "946f67ce76d18993",
+  "h": "5b344dddfdf50463",
   "d": "2026-11-10"
  },
  "/blog/brighton-yaz-okulu": {
-  "h": "4ab9484fd4bd17b8",
+  "h": "7af11f71f6504808",
   "d": "2026-11-03"
  },
  "/blog/cocuklar-icin-ingiltere-yaz-okulu": {
-  "h": "fa780d336d6d9c09",
+  "h": "567c3b93936b26d5",
   "d": "2026-11-03"
  },
  "/blog/ingilterede-6-ay-dil-okulu": {
@@ -1528,23 +1540,23 @@
   "d": "2026-11-03"
  },
  "/blog/ingilterede-burslu-universite": {
-  "h": "dcf3aa09eaa7bbb5",
+  "h": "3872597026f3995b",
   "d": "2026-11-03"
  },
  "/blog/ingilterede-tip-okumak": {
-  "h": "065c3f2a4e1b8b27",
+  "h": "062f0eb21289d18a",
   "d": "2026-11-03"
  },
  "/blog/ingilterenin-en-iyi-universiteleri": {
-  "h": "325461b8adedfb65",
+  "h": "4e42056f0bc791ae",
   "d": "2026-11-03"
  },
  "/blog/ingiltere-yaz-okulu-konaklama": {
-  "h": "9b9636523a843f40",
+  "h": "94d3d8383325034a",
   "d": "2026-11-03"
  },
  "/blog/ingilterede-foundation-programi": {
-  "h": "70c51b738f1154ab",
+  "h": "52d316a6a35c4f48",
   "d": "2026-10-28"
  },
  "/blog/ingiltere-vizesi-izmir": {
@@ -1552,7 +1564,7 @@
   "d": "2026-10-28"
  },
  "/blog/ingiltere-yaz-okulu-secerken-sorulacak-sorular": {
-  "h": "e769108bbb77dfdf",
+  "h": "39b514b64e9d8be2",
   "d": "2026-10-28"
  },
  "/blog/ingilterede-dil-okulu-okurken-calisma": {
@@ -1564,7 +1576,7 @@
   "d": "2026-11-03"
  },
  "/blog/ingiltere-yaz-okulu-rehberi": {
-  "h": "a89f7a088c9decd6",
+  "h": "b146a8e4295c6377",
   "d": "2026-10-02"
  },
  "/blog/ingilterede-dil-okulu-sehir-secimi": {
@@ -1572,11 +1584,11 @@
   "d": "2026-10-28"
  },
  "/blog/ingiltere-yaz-okulu-fiyatlari": {
-  "h": "79018a785887a19e",
+  "h": "1bdd2897bb72493e",
   "d": "2026-10-28"
  },
  "/blog/londra-yaz-okullari": {
-  "h": "883d271e78473f1c",
+  "h": "99748aec74af0021",
   "d": "2026-10-28"
  },
  "/blog/ingiltere-ogrenci-vizesi-rehberi": {
@@ -1584,35 +1596,35 @@
   "d": "2026-10-28"
  },
  "/blog/oxford-cambridge-yaz-okulu": {
-  "h": "2fba99b44997043d",
+  "h": "5358d6c8c4eb1039",
   "d": "2026-10-28"
  },
  "/blog/ingilterede-universite-okumak": {
-  "h": "2aad95efb2f5b683",
+  "h": "d4d91434788551b2",
   "d": "2026-11-10"
  },
  "/blog/ingilterede-yuksek-lisans": {
-  "h": "5187430867379ff9",
+  "h": "a9d147fb366184d6",
   "d": "2026-10-28"
  },
  "/blog/ingiltere-yaz-okulu-vize": {
-  "h": "b5f982a32b094a24",
+  "h": "cba71c78d5f4070d",
   "d": "2026-10-28"
  },
  "/blog/ispanyada-foundation-egitimi-ile-universiteye-gecis": {
-  "h": "6c562f76c4cacabc",
+  "h": "f21458a294af0e81",
   "d": "2026-11-10"
  },
  "/blog/ingiltere-yaz-okulu-kayit-takvimi": {
-  "h": "f419469ef0299091",
+  "h": "e49a98d0878652cb",
   "d": "2026-10-28"
  },
  "/blog/yaz-okulu-ingiltere-mi-malta-mi-irlanda-mi": {
-  "h": "5ccb12a32200c007",
+  "h": "6b7601b801dc0a2d",
   "d": "2026-10-28"
  },
  "/blog/ingiltere-yaz-okulu-valiz-listesi": {
-  "h": "894843d96ce95404",
+  "h": "079f04143e35df46",
   "d": "2026-10-28"
  },
  "/blog/ingilterede-ogrenci-yasam-maliyeti": {
@@ -1620,7 +1632,7 @@
   "d": "2026-10-28"
  },
  "/blog/italyada-burslu-universite": {
-  "h": "539b892b8c2052ff",
+  "h": "5c3055ef3dc64f36",
   "d": "2026-11-03"
  },
  "/blog/yetiskinler-icin-ingiltere-yaz-dil-programlari": {
@@ -1628,7 +1640,7 @@
   "d": "2026-10-28"
  },
  "/blog/ingiltere-mezuniyet-sonrasi-calisma": {
-  "h": "2b694682ab36d301",
+  "h": "8916597dbffd1036",
   "d": "2026-10-28"
  },
  "/blog/ielts-kac-puan-gerekir": {
@@ -1636,7 +1648,7 @@
   "d": "2026-10-28"
  },
  "/blog/yurtdisi-egitim-danismanligi-nasil-secilir": {
-  "h": "76f161beb98082bb",
+  "h": "ec439f7c7a1ef15c",
   "d": "2026-11-03"
  },
  "/blog/ingilizce-ogrenme-suresi-kac-ay": {
@@ -1644,7 +1656,7 @@
   "d": "2026-10-28"
  },
  "/blog/almanyada-yazilim-yuksek-lisansi-mediadesign": {
-  "h": "762a57f6bfcc8c66",
+  "h": "cd6b34cbf991f11a",
   "d": "2026-11-03"
  },
  "/blog/work-and-study-yas-siniri-var-mi": {
@@ -2100,8 +2112,8 @@
   "d": "2026-11-12"
  },
  "/site-haritasi": {
-  "h": "290ae11e0beed800",
-  "d": "2026-11-13"
+  "h": "006ea98f46d72e71",
+  "d": "2026-11-17"
  },
  "/kvkk": {
   "h": "0b337f4a448fcefa",
