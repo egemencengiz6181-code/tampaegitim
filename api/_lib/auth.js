@@ -4,7 +4,7 @@ import { HttpError, clientIp } from './http.js'
 
 const COOKIE = 'tampa_admin'
 const SESSION_HOURS = 12
-const isProd = () => process.env.VERCEL_ENV === 'production' || process.env.NODE_ENV === 'production'
+const isProd = () => process.env.NODE_ENV === 'production'
 
 function secret() {
   const s = process.env.ADMIN_SECRET || (process.env.ADMIN_PASSWORD ? `pw:${process.env.ADMIN_PASSWORD}:${process.env.GITHUB_TOKEN ?? ''}` : '')

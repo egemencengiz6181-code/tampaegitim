@@ -1,4 +1,4 @@
-// Vercel Node fonksiyonları ve yerel geliştirme (vite) için ortak HTTP yardımcıları.
+// Yerel geliştirme (vite) için ortak HTTP yardımcıları. Üretimdeki Pages Functions sürümü: functions/_lib/http.js
 
 export function send(res, status, data, headers = {}) {
   res.statusCode = status
@@ -17,7 +17,7 @@ export class HttpError extends Error {
   }
 }
 
-/** Gövdeyi JSON olarak okur (Vercel zaten ayrıştırdıysa onu kullanır). */
+/** Gövdeyi JSON olarak okur (gövde zaten ayrıştırıldıysa onu kullanır). */
 export async function readJson(req, limit = 4_500_000) {
   if (req.body !== undefined && req.body !== null && typeof req.body === 'object' && !Buffer.isBuffer(req.body)) return req.body
   if (typeof req.body === 'string') return JSON.parse(req.body || '{}')

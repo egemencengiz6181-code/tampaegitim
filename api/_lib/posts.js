@@ -2,7 +2,7 @@
 import fs from 'node:fs'
 import { HttpError } from './http.js'
 
-// Kategori listesi site ile ortak dosyadan okunur (vercel.json → functions.includeFiles)
+// Kategori listesi site ile ortak dosyadan okunur (üretimdeki Pages Functions sürümü bu dosyayı pakete dahil eder)
 const config = JSON.parse(fs.readFileSync(new URL('../../content/blog-config.json', import.meta.url), 'utf8'))
 
 export const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/

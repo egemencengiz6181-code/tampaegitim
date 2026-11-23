@@ -5,17 +5,19 @@ satırı, Open Graph/Twitter etiketleri ve JSON-LD adresleri tek bir sabitten ge
 [`content/site.json`](../content/site.json). Adres bir gün değişirse yalnızca bu dosya güncellenir.
 İç linkler göreli olduğu için ziyaretçinin girdiği host'ta kalır.
 
-## Durum: tamamlandı (20 Ekim 2026)
+## Durum: Cloudflare Pages'e taşındı (23 Kasım 2026)
 
-- `https://www.tampaegitim.com.tr/*` → **200**. Asıl adres.
-- `https://tampaegitim.com.tr/*` → **308** ile `https://www.tampaegitim.com.tr/*`. Yol ve sorgu dizesi korunuyor
-  (`/blog?x=1` → `https://www.tampaegitim.com.tr/blog?x=1`). Vercel'de “Valid Configuration”, sertifika geçerli.
-- `http://tampaegitim.com.tr/` → 308 `https://tampaegitim.com.tr/` → 308 `https://www.tampaegitim.com.tr/` (iki adım; Vercel'in standart davranışı).
-- Yönlendirme Vercel paneli (Settings → Domains) üzerinden yapıldı. vercel.json'da www/kök alan adı
-  yönlendirmesi **yok ve eklenmemeli**; panel ayarıyla çakışır.
+Site artık **Cloudflare Pages**'te yayınlanıyor. Hedef yapılandırma:
 
-Önceki durum (19 Ekim 2026): kök alan adı Vercel'e eklenmemişti, sertifika yalnızca `www` içindi ve
-`https://tampaegitim.com.tr` TLS hatası veriyordu.
+- `https://www.tampaegitim.com.tr/*` → **200**. Asıl adres; Pages projesine "custom domain" olarak eklenir
+  (Pages → proje → **Custom domains**). DNS Cloudflare'deyse kayıt otomatik oluşur.
+- `https://tampaegitim.com.tr/*` → **301/308** ile `https://www.tampaegitim.com.tr/*`. Kök alan adı da Pages'e
+  eklenir ve Cloudflare **Redirect Rules** (veya Pages panelindeki yönlendirme) ile www'ye kalıcı yönlendirilir.
+  Yol ve sorgu dizesi korunmalı (`/blog?x=1` → `https://www.tampaegitim.com.tr/blog?x=1`).
+- `http://` istekleri Cloudflare'in "Always Use HTTPS" ayarıyla otomatik https'e yükselir.
+
+Önceki durum (Vercel dönemi, Ekim 2026): yönlendirme Vercel paneli (Settings → Domains) üzerinden yapılmıştı;
+kök → www yönlendirmesi Vercel'de iki adımlı 308 olarak çalışıyordu.
 
 ## Test
 

@@ -8,26 +8,38 @@ import { requireAuth } from '../_lib/auth.js'
 import { getStore, paths } from '../_lib/store.js'
 import { normalizePost, normalizeUploads, SLUG_RE } from '../_lib/posts.js'
 
+const REDIRECTS_FILE = 'public/_redirects'
+
 /**
- * vercel.json yönlendirmelerini günceller: `add` ile kalıcı (301) yönlendirme ekler (eski adresin SEO değeri korunur),
- * `clear` ile artık gerçek bir yazıya ait olan adresteki eski yönlendirmeyi kaldırır.
+ * public/_redirects dosyasını günceller: `add` ile kalıcı (301) yönlendirme ekler (eski adresin SEO
+ * değeri korunur), `clear` ile artık gerçek bir yazıya ait olan adresteki eski yönlendirmeyi kaldırır.
+ * Dosya satır biçimi: `<kaynak>  <hedef>  301` (yorum ve diğer kurallar korunur).
  */
 async function redirectsUpdate(store, { add, clear }) {
-  const text = await store.readText('vercel.json')
-  if (!text) return null
-  const cfg = JSON.parse(text)
-  const before = JSON.stringify(cfg.redirects ?? [])
-  let redirects = (cfg.redirects ?? []).filter((r) => r.source !== clear)
+  const text = await store.readText(REDIRECTS_FILE)
+  if (text == null) return null
+  const lines = text.split('\n').map((raw) => {
+    const t = raw.trim()
+    if (!t || t.startsWith('#')) return { raw }
+    const [src, dest, code] = t.split(/\s+/)
+    return { raw, src, dest, code }
+  })
+  let out = lines.filter((r) => r.src !== clear)
   if (add) {
     const [from, to] = add
-    redirects = redirects.filter((r) => r.source !== from)
+    out = out.filter((r) => r.src !== from)
     // Zincirleri tek adıma indir: A→B varken B→C eklenirse A→C olur
-    for (const r of redirects) if (r.destination === from) r.destination = to
-    redirects.push({ source: from, destination: to, permanent: true })
+    for (const r of out) {
+      if (r.dest === from) {
+        r.dest = to
+        r.raw = `${r.src}  ${to}  ${r.code ?? '301'}`
+      }
+    }
+    out.push({ raw: `${from}  ${to}  301` })
   }
-  if (JSON.stringify(redirects) === before) return null
-  cfg.redirects = redirects
-  return { path: 'vercel.json', content: JSON.stringify(cfg, null, 2) + '\n' }
+  const next = out.map((r) => r.raw).join('\n')
+  if (next === text) return null
+  return { path: REDIRECTS_FILE, content: next }
 }
 
 export default handle(async (req, res) => {

@@ -1,5 +1,5 @@
 // Tampa blog yönetim paneli (/admin). Yalnızca blog yazılarını listeler, düzenler, yeni yazı ekler ve siler.
-// Kayıtlar /api/admin üzerinden GitHub'a yazılır; Vercel siteyi yeniden derler ve yazı statik, SEO uyumlu sayfa olarak yayınlanır.
+// Kayıtlar /api/admin üzerinden GitHub'a yazılır; Cloudflare Pages siteyi yeniden derler ve yazı statik, SEO uyumlu sayfa olarak yayınlanır.
 import { useCallback, useEffect, useMemo, useState, type FormEvent, type ReactNode } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Seo } from '../../components/ui'
@@ -29,7 +29,7 @@ export default function AdminApp() {
     api.me().then(setMe).catch((e: Error) => setError(e.message))
   }, [])
 
-  // Kayıttan sonra Vercel dağıtımını izle (GitHub Deployments API)
+  // Kayıttan sonra Pages dağıtımını izle (GitHub Deployments API)
   useEffect(() => {
     if (!watching || me?.storage !== 'github') return
     let stop = false
@@ -92,7 +92,7 @@ function SetupNeeded({ me }: { me: Me }) {
       <div className="adm-card adm-card--narrow">
         <img src="/img/brand/logo-wordmark.png" alt="Tampa Yurtdışı Eğitim" width="98" height="52" />
         <h1>Kurulum gerekli</h1>
-        <p>Blog yönetim panelinin çalışması için Vercel’de şu ortam değişkenleri tanımlanmalı:</p>
+        <p>Blog yönetim panelinin çalışması için Cloudflare Pages’te şu ortam değişkenleri tanımlanmalı:</p>
         <ul className="adm-list">
           <li className={me.configured ? 'is-ok' : ''}><code>ADMIN_PASSWORD</code> – panel şifresi</li>
           <li><code>ADMIN_SECRET</code> – oturum imzası için rastgele uzun değer</li>

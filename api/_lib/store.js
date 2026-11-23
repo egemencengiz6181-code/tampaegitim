@@ -1,5 +1,5 @@
-// İçerik deposu. Üretimde GitHub (her kayıt = tek commit → Vercel siteyi yeniden derler),
-// yerel geliştirmede (GITHUB_TOKEN yoksa) doğrudan proje klasörü kullanılır.
+// İçerik deposu (yerel geliştirme). Üretimdeki GitHub deposu sürümü (her kayıt = tek commit →
+// Cloudflare Pages siteyi yeniden derler) functions/_lib/store.js içindedir.
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -12,7 +12,6 @@ const branch = () => process.env.GITHUB_BRANCH || 'main'
 
 export function getStore() {
   if (process.env.GITHUB_TOKEN) return githubStore()
-  if (process.env.VERCEL) throw new HttpError(503, 'Yönetim paneli henüz yapılandırılmadı (GITHUB_TOKEN ortam değişkeni eksik).')
   return localStore()
 }
 
@@ -97,7 +96,7 @@ function githubStore() {
     return { sha: c.sha }
   }
 
-  /** Son commit için Vercel dağıtım durumu (GitHub Deployments API). */
+  /** Son commit için yayın durumu (GitHub Deployments API). */
   async function deployStatus() {
     const ref = await (await gh(`/repos/${owner}/${name}/git/ref/heads/${branch()}`)).json()
     const sha = ref.object?.sha

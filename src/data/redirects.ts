@@ -1,7 +1,7 @@
 // Kalıcı (301) yönlendirmelerin TEK listesi: eski adres -> yeni adres.
-// Router (istemci), prerender'ın ürettiği _redirects dosyası ve sitemap bu listeyi kullanır.
-// Vercel yönlendirmeleri vercel.json'dan okur; build, vercel.json'da eksik kayıt varsa hata verir.
-// Yeni bir 301 eklerken hem buraya hem vercel.json > redirects'e ekleyin; eski adrese giden
+// Router (istemci), prerender'ın doğruladığı public/_redirects dosyası ve sitemap bu listeyi kullanır.
+// Cloudflare Pages yönlendirmeleri public/_redirects'ten okur; build, public/_redirects'te eksik kayıt varsa hata verir.
+// Yeni bir 301 eklerken hem buraya hem public/_redirects'e ekleyin; eski adrese giden
 // iç linkleri de yeni adresle değiştirin (301 zinciri bırakmayın).
 export const redirects: Record<string, string> = {
   '/universite-basvuru-rehberi': '/bilgi-bankasi/universite-basvuru-rehberi',

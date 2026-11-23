@@ -4,7 +4,8 @@ import { pathToFileURL } from 'node:url'
 import path from 'node:path'
 
 /**
- * Yerel geliştirmede /api/admin/* ve /api/lead isteklerini Vercel fonksiyonlarıyla aynı kodla karşılar.
+ * Yerel geliştirmede /api/admin/* ve /api/lead isteklerini Cloudflare Pages Functions ile aynı işi yapan
+ * Node sürümleriyle (api/ klasörü) karşılar; üretimde bu yollar functions/ klasöründeki Pages Functions'a gider.
  * GITHUB_TOKEN tanımlı değilse yazılar doğrudan content/blog klasörüne kaydedilir;
  * LEAD_WEBHOOK_URL tanımlı değilse form başvuruları yalnızca konsola yazılır.
  */

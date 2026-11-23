@@ -1,0 +1,32 @@
+# Cloudflare Pages yönlendirmeleri (çıktı klasörü dist'e public/ üzerinden kopyalanır).
+# 301 listesi src/data/redirects.ts ile birebir aynı olmalı; build (scripts/prerender.mjs)
+# iki liste uyuşmazsa hata verir. /admin paneli yazı taşındığında/silindiğinde bu dosyaya
+# GitHub commit'i ile 301 ekler veya kaldırır.
+
+# Eski WordPress / birleştirilmiş blog adresleri → yeni adresler
+/universite-basvuru-rehberi  /bilgi-bankasi/universite-basvuru-rehberi  301
+/ornek-cv  /kaynaklar/ornek-cv  301
+/ornek-niyet-mektubu-2  /kaynaklar/ornek-niyet-mektubu  301
+/ornek-muvaffakatname  /kaynaklar/ornek-muvaffakatname  301
+/ornek-banka-mektubu  /kaynaklar/ornek-banka-mektubu  301
+/ornek-sponsor-mektubu  /kaynaklar/ornek-sponsor-mektubu  301
+/ornek-taahhutname  /kaynaklar/ornek-taahhutname  301
+/blog/amerika-yaz-okulu  /yurtdisi-yaz-okullari/amerika  301
+/blog/dubai-dil-okulu  /yurtdisi-dil-okullari/dubai  301
+/blog/malta-dil-okulu-rehberi  /yurtdisi-dil-okullari/malta  301
+/blog/brighton-dil-okulu  /yurtdisi-dil-okullari/ingiltere/brighton-dil-okullari  301
+/blog/polonyada-universite-okumak  /lisans-programlari/polonya  301
+/blog/almanyada-ucretsiz-universite  /lisans-programlari/almanya  301
+/blog/ingilterede-lise-egitimi  /yurtdisi-lise-egitimi/ingiltere  301
+/blog/irlanda-work-and-study-rehberi  /work-and-study/irlanda  301
+/blog/kanada-dil-okulu-ve-co-op  /work-and-study/kanada  301
+/blog/ingiltere-yaz-kamplari-ve-gencler-icin-firsatlar  /blog/ingiltere-yaz-okulu-rehberi  301
+/blog/cocuklar-icin-ingiltere-yaz-kampi  /blog/ingiltere-yaz-okulu-rehberi  301
+
+# Sonda eğik çizgiyle gelen istekler
+/lisans-programlari/  /lisans-programlari  301
+/her-sey-dahil-paketler/  /her-sey-dahil-paketler  301
+
+# Yönetim paneli: /admin altındaki istemci tarafı yollar admin.html'e proxy'lenir
+# (bilinmeyen diğer adresler Cloudflare Pages tarafından otomatik 404.html ile karşılanır)
+/admin/*  /admin.html  200

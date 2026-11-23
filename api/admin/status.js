@@ -1,4 +1,4 @@
-// GET /api/admin/status → son kaydın yayın (Vercel dağıtım) durumu
+// GET /api/admin/status → son kaydın yayın (dağıtım) durumu
 import { send, handle } from '../_lib/http.js'
 import { requireAuth } from '../_lib/auth.js'
 import { getStore } from '../_lib/store.js'

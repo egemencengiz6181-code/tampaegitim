@@ -1,8 +1,9 @@
-// POST /api/lead → Form başvurusunu doğrular ve Google Apps Script'e iletir.
+// POST /api/lead (yerel geliştirme) → Form başvurusunu doğrular ve Google Apps Script'e iletir.
+// Üretimdeki Cloudflare Pages Functions sürümü functions/api/lead.js içindedir.
 // Apps Script başvuruyu Google E-Tablo'ya yazar ve Gmail ile bildirim gönderir (docs/FORMLAR.md).
 // Ortam değişkenleri: LEAD_WEBHOOK_URL (Apps Script web uygulaması adresi), LEAD_WEBHOOK_SECRET (ortak gizli anahtar).
 import { send, readJson, handle, HttpError, clientIp } from './_lib/http.js'
-// Sitenin asıl adresi (content/site.json); statik import, Vercel paketine otomatik dahil olur
+// Sitenin asıl adresi (content/site.json)
 import siteConfig from '../content/site.json' with { type: 'json' }
 
 const SITE_URL = siteConfig.url
@@ -46,7 +47,7 @@ function sourceLabel(source) {
 
 /**
  * Apps Script'e iletilemeyen başvuru için yedek uyarı e-postası (Resend). İsteğe bağlıdır:
- * RESEND_API_KEY ve LEAD_ALERT_TO tanımlı değilse hiçbir şey yapmaz; başvuru yine Vercel loglarında tam kayıt olarak kalır.
+ * RESEND_API_KEY ve LEAD_ALERT_TO tanımlı değilse hiçbir şey yapmaz; başvuru yine konsolda tam kayıt olarak kalır.
  * LEAD_ALERT_FROM, Resend'de doğrulanmış bir gönderen adresi olmalıdır.
  */
 async function alertFailedLead(lead, reason) {
@@ -137,11 +138,6 @@ export default handle(async (req, res) => {
 
   const url = process.env.LEAD_WEBHOOK_URL
   if (!url) {
-    if (process.env.VERCEL) {
-      console.error('[lead] LEAD_WEBHOOK_URL tanımlı değil; başvuru kaydedilemedi:', JSON.stringify(lead))
-      await alertFailedLead(lead, 'LEAD_WEBHOOK_URL tanımlı değil')
-      throw new HttpError(503, 'Form şu anda gönderilemedi.')
-    }
     console.info('[lead:yerel] LEAD_WEBHOOK_URL yok, başvuru yalnızca konsola yazıldı:', lead)
     return send(res, 200, { ok: true, local: true })
   }
@@ -173,7 +169,7 @@ export default handle(async (req, res) => {
       console.error('[lead] Apps Script hatası:', e)
     }
   }
-  // Başvuru kaybolmasın: Vercel loglarında tam kayıt kalır ve (ayarlıysa) uyarı e-postası gider
+  // Başvuru kaybolmasın: konsolda tam kayıt kalır ve (ayarlıysa) uyarı e-postası gider
   console.error('[lead] İLETİLEMEYEN BAŞVURU:', reason, JSON.stringify(lead))
   await alertFailedLead(lead, reason)
   throw new HttpError(502, 'Form şu anda gönderilemedi.')

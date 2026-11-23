@@ -10,16 +10,16 @@ Adres: **https://www.tampaegitim.com.tr/admin**
 ## 1. Nasıl çalışır?
 
 ```
- /admin (tarayıcı)                 Vercel sunucu fonksiyonu            GitHub deposu                 Vercel
+ /admin (tarayıcı)                 Cloudflare Pages Function         GitHub deposu                 Cloudflare Pages
  ───────────────────               ────────────────────────            ──────────────               ──────────
  Yazıyı yaz → "Yayınla"  ──────▶   /api/admin/posts                    content/blog/<adres>.json     Site yeniden
                                    • şifreli oturum kontrolü   ──────▶ content/blog/<adres>.md   ──▶ derlenir (1–2 dk)
                                    • veri ve görsel doğrulama          public/img/blog/*.jpg         Yazı statik HTML
-                                   • tek commit olarak kaydet          (gerekirse vercel.json)       olarak yayına çıkar
+                                   • tek commit olarak kaydet          (gerekirse public/_redirects) olarak yayına çıkar
 ```
 
 - Her yazı iki dosyadan oluşur: `content/blog/<adres>.json` (başlık, açıklama, kategori, tarih, SEO alanları) ve `content/blog/<adres>.md` (yazı metni).
-- Panelde yapılan her kayıt GitHub’a **tek bir commit** olarak yazılır. Vercel bu commit’i görür ve siteyi yeniden derler.
+- Panelde yapılan her kayıt GitHub’a **tek bir commit** olarak yazılır. Cloudflare Pages bu commit’i görür ve siteyi yeniden derler.
 - Yazılar sunucuda tek tek üretilmiş **statik HTML sayfası** olarak yayınlanır. Google, sayfanın tüm içeriğini JavaScript çalıştırmadan görür; hız ve SEO açısından en iyi yöntem budur.
 - Yayın süresi: “Yayınla” veya “Güncelle”ye bastıktan sonra **yaklaşık 1–2 dakika**. Panelin üst çubuğundaki durum göstergesi (“Site yeniden derleniyor…”, sonra “Değişiklikler yayında”) bu süreci canlı takip eder.
 
@@ -27,7 +27,7 @@ Adres: **https://www.tampaegitim.com.tr/admin**
 
 ## 2. Tek seferlik kurulum
 
-Panelin çalışması için Vercel’de üç ortam değişkeni tanımlanmalıdır. Bu işlem bir kez yapılır.
+Panelin çalışması için Cloudflare Pages’te üç ortam değişkeni tanımlanmalıdır. Bu işlem bir kez yapılır.
 
 ### 2.1 GitHub erişim anahtarı (GITHUB_TOKEN)
 
@@ -48,9 +48,9 @@ Panel, yazıları GitHub deposuna bu anahtarla kaydeder.
 
 > Bu anahtar yalnızca bu depoya ve yalnızca dosya içeriğine erişebilir. Başka hiçbir hesaba veya depoya yetkisi yoktur.
 
-### 2.2 Vercel ortam değişkenleri
+### 2.2 Cloudflare Pages ortam değişkenleri
 
-Vercel → projeyi açın → **Settings** → **Environment Variables**. Aşağıdaki üç değişkeni **Production** ortamı için ekleyin:
+Cloudflare paneli → **Workers & Pages** → projeyi açın → **Settings** → **Environment variables**. Aşağıdaki üç değişkeni **Production** ortamı için ekleyin (şifre ve anahtarlar için “Encrypt” / gizli değişken türünü seçin):
 
 | Değişken | Değer | Açıklama |
 |---|---|---|
@@ -65,7 +65,7 @@ Vercel → projeyi açın → **Settings** → **Environment Variables**. Aşağ
 | `GITHUB_REPO` | `egemencengiz6181-code/tampaegitim` |
 | `GITHUB_BRANCH` | `main` |
 
-Kaydettikten sonra **Deployments** sekmesinden son dağıtımın yanındaki **⋯ → Redeploy** ile siteyi bir kez yeniden yayınlayın; ortam değişkenleri ancak yeni dağıtımda devreye girer.
+Kaydettikten sonra **Deployments** sekmesinden son dağıtımın yanındaki **⋯ → Retry deployment** ile siteyi bir kez yeniden yayınlayın (veya boş bir commit gönderin); ortam değişkenleri ancak yeni dağıtımda devreye girer.
 
 ### 2.3 Kontrol
 
@@ -73,7 +73,7 @@ Kaydettikten sonra **Deployments** sekmesinden son dağıtımın yanındaki **�
 2. Şifre ekranı geliyorsa kurulum tamamdır. “Kurulum gerekli” ekranı geliyorsa eksik değişkenler işaretlenmiş olarak listelenir.
 3. Giriş yapın; mevcut tüm blog yazılarının listesini görmelisiniz.
 
-> Vercel projesinin GitHub deposuna bağlı olması ve `main` dalına yapılan her commit’te otomatik yayın yapması gerekir (Vercel’in varsayılan ayarı). Panel bu otomatik yayına dayanır.
+> Cloudflare Pages projesinin GitHub deposuna bağlı olması ve `main` dalına yapılan her commit’te otomatik yayın yapması gerekir (Pages’in varsayılan ayarı). Panel bu otomatik yayına dayanır.
 
 ---
 
@@ -252,7 +252,7 @@ Yanında **Google önizlemesi** (arama sonucunda nasıl görüneceği) ve **sosy
 ## 6. Güvenlik
 
 - Panel ve API arama motorlarına kapalıdır (`noindex`, `robots.txt` → `Disallow: /admin`, `/api/`).
-- Şifre yalnızca Vercel ortam değişkeninde durur; kodda veya depoda yoktur. Karşılaştırma zamanlama saldırılarına karşı güvenli yapılır.
+- Şifre yalnızca Cloudflare Pages ortam değişkeninde durur; kodda veya depoda yoktur. Karşılaştırma zamanlama saldırılarına karşı güvenli yapılır.
 - Oturum, imzalı **HttpOnly + Secure + SameSite=Strict** çerezde tutulur; JavaScript ile okunamaz, başka sitelerden gönderilemez.
 - Değişiklik yapan tüm isteklerde ek CSRF başlığı (`X-Admin-Request`) aranır.
 - Sunucu, tarayıcıdan gelen her veriyi yeniden doğrular: adres biçimi, alan uzunlukları, kategori, tarih, görsel yolu, görsel türü (dosya imzası kontrolü), boyut sınırları. HTML/script içeren metin reddedilir.
@@ -277,13 +277,13 @@ Yanında **Google önizlemesi** (arama sonucunda nasıl görüneceği) ve **sosy
 
 | Belirti | Neden / Çözüm |
 |---|---|
-| “Kurulum gerekli” ekranı | Vercel’de `ADMIN_PASSWORD` veya `GITHUB_TOKEN` eksik. Ekledikten sonra **Redeploy** yapın. |
-| “GitHub erişimi reddedildi” | Anahtarın süresi dolmuş ya da izinleri eksik. Bölüm 2.1’deki izinlerle yeni anahtar oluşturup Vercel’de `GITHUB_TOKEN`’ı güncelleyin ve Redeploy yapın. |
+| “Kurulum gerekli” ekranı | Cloudflare Pages’te `ADMIN_PASSWORD` veya `GITHUB_TOKEN` eksik. Ekledikten sonra siteyi yeniden dağıtın (**Deployments → ⋯ → Retry deployment**). |
+| “GitHub erişimi reddedildi” | Anahtarın süresi dolmuş ya da izinleri eksik. Bölüm 2.1’deki izinlerle yeni anahtar oluşturup Pages’te `GITHUB_TOKEN`’ı güncelleyin ve yeniden dağıtın. |
 | “Oturumunuzun süresi doldu” | 12 saat geçti; sayfayı yenileyip tekrar giriş yapın. Yazınız tarayıcı yedeğinden geri yüklenebilir. |
 | “Bu yazı siz düzenlerken başka bir yerde değiştirildi” | Aynı yazı başka bir sekmede/kişi tarafından kaydedildi. Değişikliklerinizi kopyalayın, sayfayı yenileyin, tekrar uygulayın. |
 | “Bu adresle başka bir yazı zaten var” | Adresi (URL) değiştirin. |
 | “İstek çok büyük” | Bir kayıtta çok fazla/büyük görsel var. Görselleri birkaç kayda bölün. |
-| Kaydettim ama sitede görünmüyor | Yazı taslak olabilir (“Yayınla”ya basın). Yayındaysa 1–2 dakika bekleyin; üst çubuktaki durum “Değişiklikler yayında” olunca sayfayı yenileyin. “Yayın başarısız” görünüyorsa Vercel → Deployments’taki hata kaydına bakın. |
+| Kaydettim ama sitede görünmüyor | Yazı taslak olabilir (“Yayınla”ya basın). Yayındaysa 1–2 dakika bekleyin; üst çubuktaki durum “Değişiklikler yayında” olunca sayfayı yenileyin. “Yayın başarısız” görünüyorsa Cloudflare Pages → Deployments’taki hata kaydına bakın. |
 | Google’da hemen çıkmıyor | Normaldir. Google Search Console → URL Denetleme → “Dizine eklenmesini iste” ile hızlandırabilirsiniz. sitemap.xml ve RSS otomatik güncellenir. |
 
 ---
@@ -297,8 +297,9 @@ Yanında **Google önizlemesi** (arama sonucunda nasıl görüneceği) ve **sosy
 | `content/blog-config.json` | Blog kategorileri (site ve panel ortak kullanır) |
 | `public/img/blog/` | Panelden yüklenen görseller |
 | `src/pages/admin/` | Panel arayüzü (liste, editör, SEO analizi, görsel işleme) |
-| `api/admin/*.js` | Vercel sunucu fonksiyonları: `login`, `logout`, `me`, `posts`, `status` |
-| `api/_lib/` | Oturum, doğrulama ve GitHub/yerel depolama katmanı |
+| `functions/api/admin/*.js` | Cloudflare Pages Functions (üretim): `login`, `logout`, `me`, `posts`, `status` |
+| `functions/_lib/` | Üretimdeki oturum, doğrulama ve GitHub depolama katmanı (Web API) |
+| `api/admin/*.js`, `api/_lib/` | Aynı uçların yerel geliştirme (vite) sürümü |
 | `src/data/blog.ts` | Yazıları içerik klasöründen okuyup siteye sağlar |
 | `src/lib/markdown.ts`, `src/components/Markdown.tsx` | Güvenli Markdown işleme ve görüntüleme |
 | `scripts/prerender.mjs` | Statik HTML, sitemap.xml ve rss.xml üretimi |

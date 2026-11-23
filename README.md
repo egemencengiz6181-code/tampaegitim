@@ -27,8 +27,8 @@ Yeni bir ülke eklemek için `countries.ts`'ye bir kayıt eklemek yeterli; progr
 ## Blog yönetim paneli (`/admin`)
 
 Blog yazıları `content/blog/<adres>.json` + `<adres>.md` dosyalarında durur ve `/admin` panelinden eklenir, düzenlenir, silinir.
-Panel kayıtları Vercel fonksiyonları (`api/admin/*`) üzerinden GitHub'a commit eder; Vercel siteyi yeniden derler.
-Kurulum (Vercel ortam değişkenleri: `ADMIN_PASSWORD`, `ADMIN_SECRET`, `GITHUB_TOKEN`), kullanım ve SEO ayrıntıları: **[docs/ADMIN.md](docs/ADMIN.md)**.
+Panel kayıtları Cloudflare Pages Functions (`functions/api/admin/*`) üzerinden GitHub'a commit eder; Cloudflare Pages siteyi yeniden derler.
+Kurulum (Pages ortam değişkenleri: `ADMIN_PASSWORD`, `ADMIN_SECRET`, `GITHUB_TOKEN`), kullanım ve SEO ayrıntıları: **[docs/ADMIN.md](docs/ADMIN.md)**.
 
 ## Reklam landing page'leri
 
@@ -39,7 +39,7 @@ Başarılı form gönderimi `/tesekkurler` sayfasına yönlenir (Google Ads / Me
 ## Form entegrasyonu
 
 Tüm formlar `/api/lead` sunucu fonksiyonuna gider (doğrulama, bot koruması, reklam kaynağı bilgisi). Fonksiyon başvuruyu Google Apps Script'e iletir; script Google E-Tablo'ya satır ekler ve Gmail ile bildirim gönderir.
-Kurulum (Apps Script + Vercel'de `LEAD_WEBHOOK_URL`, `LEAD_WEBHOOK_SECRET`): **[docs/FORMLAR.md](docs/FORMLAR.md)**. Script: `docs/google-apps-script/Code.gs`.
+Kurulum (Apps Script + Cloudflare Pages'te `LEAD_WEBHOOK_URL`, `LEAD_WEBHOOK_SECRET`): **[docs/FORMLAR.md](docs/FORMLAR.md)**. Script: `docs/google-apps-script/Code.gs`.
 
 ## Yayına almadan önce
 
@@ -65,6 +65,9 @@ Kurulum (Apps Script + Vercel'de `LEAD_WEBHOOK_URL`, `LEAD_WEBHOOK_SECRET`): **[
 
 ## Yayın (hosting)
 
-- **Netlify:** build komutu `npm run build`, yayın klasörü `dist`. `_redirects` otomatik üretilir (eski WordPress adresleri 301, bilinmeyen adresler 404).
-- **Vercel:** kökteki `vercel.json` (cleanUrls, 301 yönlendirmeler) hazır.
+Site **Cloudflare Pages**'te yayınlanır:
+
+- **Build komutu:** `npm run build` · **Çıktı klasörü:** `dist` (kökteki `wrangler.toml` ve `.nvmrc` hazır; Node 22 kullanılır).
+- **301 yönlendirmeleri** `public/_redirects`, **yanıt başlıkları** `public/_headers` içindedir (build'de dist'e kopyalanır). Bilinmeyen adreslerde Pages otomatik olarak `404.html` sunar.
+- **API uçları** (`/api/lead`, `/api/admin/*`) kökteki `functions/` klasöründeki Pages Functions ile çalışır; ortam değişkenleri Pages panelinde tanımlanır (bkz. docs/ADMIN.md ve docs/FORMLAR.md).
 - Yayından sonra Google Search Console'a `https://www.tampaegitim.com.tr/sitemap.xml` gönderilmeli.

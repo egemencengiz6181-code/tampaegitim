@@ -26,12 +26,18 @@ function assemble(html) {
   return out
 }
 
-// vercel.json yönlendirmeleri src/data/redirects.ts ile aynı olmalı (Vercel 301'i vercel.json'dan yapar)
-const vercel = JSON.parse(fs.readFileSync(path.join(root, 'vercel.json'), 'utf8'))
-const vercelMap = new Map((vercel.redirects ?? []).map((r) => [r.source, r.destination]))
-const missing = Object.entries(redirects).filter(([a, b]) => vercelMap.get(a) !== b)
+// public/_redirects yönlendirmeleri src/data/redirects.ts ile aynı olmalı (Cloudflare Pages 301'i bu dosyadan yapar)
+const redirText = fs.readFileSync(path.join(root, 'public/_redirects'), 'utf8')
+const redirMap = new Map()
+for (const line of redirText.split('\n')) {
+  const t = line.trim()
+  if (!t || t.startsWith('#')) continue
+  const [src, dest, code] = t.split(/\s+/)
+  if (code === '301') redirMap.set(src, dest)
+}
+const missing = Object.entries(redirects).filter(([a, b]) => redirMap.get(a) !== b)
 if (missing.length) {
-  console.error('vercel.json > redirects eksik/farklı:\n' + missing.map(([a, b]) => `  ${a} -> ${b}`).join('\n'))
+  console.error('public/_redirects eksik/farklı:\n' + missing.map(([a, b]) => `  ${a} -> ${b}`).join('\n'))
   process.exit(1)
 }
 
@@ -53,8 +59,8 @@ function lastmodFor(pg, h) {
   const prev = manifest[pg.path]
   if (prev?.h === h) return prev.d
   if (pg.lastmod) return pg.lastmod
-  // Vercel'de (manifest güncellenmemişse): değişiklik admin panelinden gelen bir yazıdan kaynaklanıyorsa o yazının tarihi
-  if (process.env.VERCEL && prev && newestPost > prev.d) return newestPost
+  // CI'da (manifest güncellenmemişse): değişiklik admin panelinden gelen bir yazıdan kaynaklanıyorsa o yazının tarihi
+  if (process.env.CF_PAGES && prev && newestPost > prev.d) return newestPost
   return today
 }
 
@@ -64,7 +70,7 @@ let ok = 0
 for (const pg of pages) {
   const res = await render(pg.path)
   if (res.redirect) continue
-  // /blog -> dist/blog.html (Netlify, Vercel cleanUrls, GitHub Pages ve vite preview uzantısız servis eder)
+  // /blog -> dist/blog.html (Cloudflare Pages ve vite preview uzantısız servis eder)
   const file = pg.path === '/' ? path.join(dist, 'index.html') : path.join(dist, `${pg.path}.html`)
   fs.mkdirSync(path.dirname(file), { recursive: true })
   const out = assemble(res.html)
@@ -128,13 +134,7 @@ ${items}
 `,
 )
 
-// Barındırma yönlendirmeleri (Netlify vb. için _redirects): 301 listesi ve 404
-const legacy = {
-  ...redirects,
-  '/lisans-programlari/': '/lisans-programlari',
-  '/her-sey-dahil-paketler/': '/her-sey-dahil-paketler',
-}
-fs.writeFileSync(path.join(dist, '_redirects'), Object.entries(legacy).map(([a, b]) => `${a}  ${b}  301`).join('\n') + '\n/*  /404.html  404\n')
+// _redirects ve _headers public/ altında kaynak dosya olarak durur; vite build dist'e kopyalar.
 
 fs.rmSync(path.join(root, 'dist-ssr'), { recursive: true, force: true })
 console.log(`prerender: ${ok} sayfa, sitemap: ${urls.length} URL, RSS: ${feed.length} yazı`)

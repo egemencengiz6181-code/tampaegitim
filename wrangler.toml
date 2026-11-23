@@ -1,0 +1,5 @@
+# Cloudflare Pages yapılandırması (Git entegrasyonu ve `wrangler pages` komutları için).
+# Sayfa kuralları public/_redirects ve public/_headers içinde; API fonksiyonları functions/ altında.
+name = "tampaegitim"
+pages_build_output_dir = "dist"
+compatibility_date = "2025-11-21"

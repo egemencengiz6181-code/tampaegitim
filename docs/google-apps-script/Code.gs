@@ -10,7 +10,7 @@
  */
 
 // ======================= AYARLAR =======================
-// GIZLI_ANAHTAR (Vercel'deki LEAD_WEBHOOK_SECRET ile birebir aynı) ve ALICILAR (virgülle ayrılmış adresler)
+// GIZLI_ANAHTAR (Cloudflare Pages'teki LEAD_WEBHOOK_SECRET ile birebir aynı) ve ALICILAR (virgülle ayrılmış adresler)
 // burada DEĞİL, Script Properties'te tutulur. Bkz. ayar_().
 const AYARLAR = {
   // (İsteğe bağlı) Belirli formları ayrıca başka adreslere de gönder.

@@ -32,7 +32,7 @@ Apps Script editöründe soldaki **⚙️ Proje Ayarları** → en altta **Komut
 
 | Özellik | Değer |
 |---|---|
-| `GIZLI_ANAHTAR` | Uzun, rastgele bir metin (en az 30 karakter, ör. `Tampa-2026-k7P9xQ2mVb4nZr8wLs1tYh6`). **Adım 5’te Vercel’e de aynısını yazacaksınız.** |
+| `GIZLI_ANAHTAR` | Uzun, rastgele bir metin (en az 30 karakter, ör. `Tampa-2026-k7P9xQ2mVb4nZr8wLs1tYh6`). **Adım 5’te Cloudflare Pages’e de aynısını yazacaksınız.** |
 | `ALICILAR` | Başvuruların gideceği adres(ler), virgülle ayrılmış: `info@tampaegitim.com.tr, ali@tampaegitim.com.tr` (tırnak yok) |
 
 **Komut dosyası özelliklerini kaydet**’e basın. İkisinden biri eksikse formlar hata verir; tarayıcıda web uygulaması adresini açınca yanıtta `"ayarlar":true` görünmelidir.
@@ -79,16 +79,16 @@ Düzenledikten sonra **💾 Kaydet** simgesine (veya Ctrl/⌘ + S) basın.
 
 > “Herkes” erişimi gereklidir çünkü site sunucusu bu adrese giriş yapmadan istek gönderir. Adres gizli anahtar olmadan gelen hiçbir isteği kabul etmez.
 
-## Adım 5 – Vercel’e iki ayar ekleyin
+## Adım 5 – Cloudflare Pages’e iki ayar ekleyin
 
-Vercel → proje → **Settings → Environment Variables** → **Production** için:
+Cloudflare paneli → **Workers & Pages** → proje → **Settings → Environment variables** → **Production** için:
 
 | Değişken | Değer |
 |---|---|
 | `LEAD_WEBHOOK_URL` | Adım 4’te kopyaladığınız web uygulaması URL’si |
 | `LEAD_WEBHOOK_SECRET` | Adım 3’te `GIZLI_ANAHTAR`’a yazdığınız metnin **birebir aynısı** |
 
-Kaydedin ve **Deployments → son dağıtım → ⋯ → Redeploy** ile siteyi yeniden yayınlayın.
+Kaydedin ve **Deployments → son dağıtım → ⋯ → Retry deployment** ile siteyi yeniden yayınlayın.
 
 ## Adım 6 – Canlı test
 
@@ -105,21 +105,21 @@ Ziyaretçi siteye bir reklam linkiyle geldiyse (Google Ads, Meta), hangi kaynak,
 Formlarda botları yakalayan görünmez bir tuzak alan ve süre kontrolü vardır; bu başvurular tabloya hiç yazılmaz. Aynı bağlantıdan kısa sürede çok sayıda gönderim de engellenir.
 
 **Script’i sonradan değiştirirsem?**
-Yeni alıcı eklemek için yalnızca Script Properties’teki `ALICILAR`’ı değiştirin; yeni sürüm gerekmez. Kodu değiştirdikten sonra ise **Dağıt → Dağıtımları yönet → ✏️ Düzenle → Sürüm: Yeni sürüm → Dağıt** yapın. URL değişmez, Vercel’de bir şey yapmanız gerekmez.
+Yeni alıcı eklemek için yalnızca Script Properties’teki `ALICILAR`’ı değiştirin; yeni sürüm gerekmez. Kodu değiştirdikten sonra ise **Dağıt → Dağıtımları yönet → ✏️ Düzenle → Sürüm: Yeni sürüm → Dağıt** yapın. URL değişmez, Cloudflare Pages’te bir şey yapmanız gerekmez.
 
 **Günlük gönderim sınırı var mı?**
 Google Workspace hesaplarında günde 1.500, kişisel Gmail hesaplarında 100 e-posta. Bildirim + otomatik yanıt her başvuruda 2 e-posta sayılır. Sınır aşılsa bile başvurular tabloya yazılmaya devam eder.
 
 **Form “gönderilemedi” hatası veriyor**
-- Vercel’deki `LEAD_WEBHOOK_URL` ve `LEAD_WEBHOOK_SECRET` doğru mu, ayardan sonra Redeploy yapıldı mı?
+- Cloudflare Pages’teki `LEAD_WEBHOOK_URL` ve `LEAD_WEBHOOK_SECRET` doğru mu, ayardan sonra site yeniden dağıtıldı mı (Deployments → ⋯ → Retry deployment)?
 - `LEAD_WEBHOOK_SECRET`, Script Properties’teki `GIZLI_ANAHTAR` ile birebir aynı mı (boşluk dahil)?
 - Web uygulaması adresini tarayıcıda açın: `"ayarlar":false` görünüyorsa `GIZLI_ANAHTAR` veya `ALICILAR` girilmemiş demektir.
 - Apps Script dağıtımında erişim “Herkes” mi?
-- İletilemeyen başvurular kaybolmaz: Vercel → proje → **Logs** bölümünde `İLETİLEMEYEN BAŞVURU` satırında tüm bilgileriyle ve hata nedeniyle (`yetkisiz` = gizli anahtar uyuşmuyor, `ayar eksik` = Script Property girilmemiş, `JSON olmayan yanıt` = URL/dağıtım hatalı) görünür. Başarılı her başvuru da `[lead] iletildi: <form kodu>` satırı bırakır (kişisel veri olmadan).
-- Kodu Script Properties’e taşıdıktan sonra **yeni sürüm dağıtmayı** unutmayın (Dağıt → Dağıtımları yönet → ✏️ → Yeni sürüm). Yeni bir *dağıtım* oluşturduysanız URL değişir; Vercel’deki `LEAD_WEBHOOK_URL`’i güncelleyip Redeploy yapın.
+- İletilemeyen başvurular kaybolmaz: Cloudflare Pages → proje → **Observability / Logs** bölümünde `İLETİLEMEYEN BAŞVURU` satırında tüm bilgileriyle ve hata nedeniyle (`yetkisiz` = gizli anahtar uyuşmuyor, `ayar eksik` = Script Property girilmemiş, `JSON olmayan yanıt` = URL/dağıtım hatalı) görünür. Başarılı her başvuru da `[lead] iletildi: <form kodu>` satırı bırakır (kişisel veri olmadan).
+- Kodu Script Properties’e taşıdıktan sonra **yeni sürüm dağıtmayı** unutmayın (Dağıt → Dağıtımları yönet → ✏️ → Yeni sürüm). Yeni bir *dağıtım* oluşturduysanız URL değişir; Pages’teki `LEAD_WEBHOOK_URL`’i güncelleyip siteyi yeniden dağıtın.
 
 **Tabloya yazılamayan başvuru için yedek e-posta (isteğe bağlı)**
-Apps Script hata verirse başvuruyu ayrıca e-postayla almak için [resend.com](https://resend.com)’da ücretsiz hesap açıp Vercel’e şu değişkenleri ekleyin: `RESEND_API_KEY`, `LEAD_ALERT_TO` (virgülle ayrılmış adresler), `LEAD_ALERT_FROM` (Resend’de doğrulanmış gönderen, ör. `Tampa Web Sitesi <form@tampaegitim.com.tr>`). Tanımlı değilse yalnızca Vercel loguna yazılır. Not: Resend yurt dışı bir hizmettir; KVKK aydınlatma metninde veri aktarımı olarak belirtilmesi gerekir.
+Apps Script hata verirse başvuruyu ayrıca e-postayla almak için [resend.com](https://resend.com)’da ücretsiz hesap açıp Cloudflare Pages’e şu değişkenleri ekleyin: `RESEND_API_KEY`, `LEAD_ALERT_TO` (virgülle ayrılmış adresler), `LEAD_ALERT_FROM` (Resend’de doğrulanmış gönderen, ör. `Tampa Web Sitesi <form@tampaegitim.com.tr>`). Tanımlı değilse yalnızca Pages loguna yazılır. Not: Resend yurt dışı bir hizmettir; KVKK aydınlatma metninde veri aktarımı olarak belirtilmesi gerekir.
 
 **KVKK**
 Formlar KVKK aydınlatma metni onayı olmadan gönderilemez. Tabloya erişimi yalnızca başvurularla ilgilenen kişilerle paylaşın.
