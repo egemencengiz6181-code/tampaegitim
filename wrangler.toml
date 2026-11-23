@@ -1,6 +1,7 @@
 # Cloudflare Workers (static assets) yapılandırması: `npx wrangler deploy`.
-# Sayfa kuralları public/_redirects ve public/_headers içinde; /api/* istekleri worker/index.js üzerinden
-# functions/ altındaki işleyicilere gider. Sır değerleri (ADMIN_PASSWORD, GITHUB_TOKEN vb.) panelden tanımlanır.
+# /api/* istekleri functions/ altındaki işleyicilere gider; 301 yönlendirmeleri, /admin proxy'si ve özel
+# başlıklar worker/index.js içinde uygulanır (Workers statik varlıkları _redirects/_headers işlemez;
+# bu dosyalar Pages dağıtımı içindir). Sır değerleri (ADMIN_PASSWORD, GITHUB_TOKEN vb.) panelden tanımlanır.
 name = "tampaegitim"
 main = "worker/index.js"
 compatibility_date = "2025-11-21"
@@ -9,4 +10,5 @@ compatibility_date = "2025-11-21"
 directory = "./dist"
 binding = "ASSETS"
 not_found_handling = "404-page"
-run_worker_first = ["/api/*"]
+# Tüm istekler worker'dan geçer: 301'ler ve başlıklar ancak böyle uygulanır
+run_worker_first = true

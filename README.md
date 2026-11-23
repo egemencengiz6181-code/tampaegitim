@@ -65,9 +65,11 @@ Kurulum (Apps Script + Cloudflare Pages'te `LEAD_WEBHOOK_URL`, `LEAD_WEBHOOK_SEC
 
 ## Yayın (hosting)
 
-Site **Cloudflare Pages**'te yayınlanır:
+Site Cloudflare'de iki şekilde yayınlanabilir; ikisi de aynı `functions/` işleyicilerini kullanır:
 
-- **Build komutu:** `npm run build` · **Çıktı klasörü:** `dist` (kökteki `wrangler.toml` ve `.nvmrc` hazır; Node 22 kullanılır).
-- **301 yönlendirmeleri** `public/_redirects`, **yanıt başlıkları** `public/_headers` içindedir (build'de dist'e kopyalanır). Bilinmeyen adreslerde Pages otomatik olarak `404.html` sunar.
-- **API uçları** (`/api/lead`, `/api/admin/*`) kökteki `functions/` klasöründeki Pages Functions ile çalışır; ortam değişkenleri Pages panelinde tanımlanır (bkz. docs/ADMIN.md ve docs/FORMLAR.md).
-- Yayından sonra Google Search Console'a `https://www.tampaegitim.com.tr/sitemap.xml` gönderilmeli.
+- **Cloudflare Pages (Git entegrasyonu):** Build komutu `npm run build`, çıktı klasörü `dist`. 301 yönlendirmeleri `public/_redirects`, yanıt başlıkları `public/_headers` içindedir; `/api/*` uçları `functions/` klasöründeki Pages Functions ile çalışır. Bilinmeyen adreslerde Pages otomatik olarak `404.html` sunar.
+- **Cloudflare Workers (statik varlıklar):** `npx wrangler deploy`. `wrangler.toml` hazır; `worker/index.js` aynı API işleyicilerini çağırır ve 301'leri, `/admin` proxy'sini ve özel başlıkları kendisi uygular (Workers `_redirects`/`_headers` işlemez).
+
+Ortam değişkenleri her iki yolda da panelden tanımlanır (bkz. docs/ADMIN.md ve docs/FORMLAR.md). Yerel geliştirme `npm run dev` (vite, `api/` klasörü) ile değişmeden çalışır. Node 22 kullanılır (`.nvmrc`).
+
+Yayından sonra Google Search Console'a `https://www.tampaegitim.com.tr/sitemap.xml` gönderilmeli.
