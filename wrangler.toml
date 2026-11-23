@@ -1,5 +1,12 @@
-# Cloudflare Pages yapılandırması (Git entegrasyonu ve `wrangler pages` komutları için).
-# Sayfa kuralları public/_redirects ve public/_headers içinde; API fonksiyonları functions/ altında.
+# Cloudflare Workers (static assets) yapılandırması: `npx wrangler deploy`.
+# Sayfa kuralları public/_redirects ve public/_headers içinde; /api/* istekleri worker/index.js üzerinden
+# functions/ altındaki işleyicilere gider. Sır değerleri (ADMIN_PASSWORD, GITHUB_TOKEN vb.) panelden tanımlanır.
 name = "tampaegitim"
-pages_build_output_dir = "dist"
+main = "worker/index.js"
 compatibility_date = "2025-11-21"
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+not_found_handling = "404-page"
+run_worker_first = ["/api/*"]
