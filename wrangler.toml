@@ -5,6 +5,8 @@
 name = "tampaegitim"
 main = "worker/index.js"
 compatibility_date = "2025-11-21"
+# Panelden girilen değişkenler (LEAD_WEBHOOK_URL vb.) her `wrangler deploy` ile silinmesin
+keep_vars = true
 
 [assets]
 directory = "./dist"
