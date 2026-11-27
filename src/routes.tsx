@@ -39,6 +39,7 @@ const germanyMod = () => import('./pages/Germany')
 const czechMod = () => import('./pages/Czech')
 const upvMod = () => import('./pages/Upv')
 const ukRepMod = () => import('./pages/UkRepresentation')
+const ukApplyMod = () => import('./pages/UkApply')
 const langCityMod = () => import('./pages/LanguageCity')
 const localMod = () => import('./pages/Local')
 const uniMod = () => import('./pages/University')
@@ -140,6 +141,8 @@ export const routes: RouteObject[] = [
       { path: 'kariyer', ...page(corpMod, 'Careers') },
       { path: 'ofislerimiz', ...page(corpMod, 'Offices') },
       { path: 'ingiltere-universite-temsilciligi', ...page(ukRepMod, 'UkRepresentationPage') },
+      // Google Ads için eğitim odaklı sayfa: menüde yok, indekslenir
+      { path: 'ingiltere-universite-basvuru', ...page(ukApplyMod, 'UkApplyPage') },
       ...localSlugs.map((slug) => ({ path: slug, ...page(localMod, 'LocalPage', { slug }) })),
       { path: 'iletisim', ...page(corpMod, 'Contact') },
       { path: 'basvuru', ...page(corpMod, 'Apply') },

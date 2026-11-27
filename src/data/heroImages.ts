@@ -49,6 +49,7 @@ const entries: Record<string, Entry> = {
   "/lisans-programlari/dubai": ["lisans-programlari-dubai", "Ank Kumar / CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:Burj_Al_Arab_Hotel,_Dubai,_UAE_(Ank_Kumar,_Infosys)_07.jpg"],
   "/lisans-programlari/fransa": ["lisans-programlari-fransa", "Ank kumar / CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:Louvre_(Ank_kumar_Infosys)_05.jpg"],
   "/lisans-programlari/ingiltere": ["lisans-programlari-ingiltere", "Rafa Esteve / CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:St_Paul_Cathedral_-_Thames_Night_Long_Exposure_02.jpg"],
+  "/ingiltere-universite-basvuru": ["lisans-programlari-ingiltere", "Rafa Esteve / CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:St_Paul_Cathedral_-_Thames_Night_Long_Exposure_02.jpg"],
   "/lisans-programlari/ispanya": ["lisans-programlari-ispanya"],
   "/lisans-programlari/isvicre": ["lisans-programlari-isvicre", "Liridon / CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:Matterhorn,_March_2019_(01).jpg"],
   "/lisans-programlari/italya": ["lisans-programlari-italya", "Ingo Mehling / CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:Bologna_-_Piazza_Maggiore_from_Palazzo_Comunale.jpg"],

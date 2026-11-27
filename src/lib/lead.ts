@@ -30,6 +30,8 @@ export function budgetKindFor(program: string, country: string): BudgetKind | un
 }
 
 export const studentStatusOptions = ['Lise 11. sınıf', 'Lise 12. sınıf', 'Lise mezunu', 'Üniversite öğrencisi / mezun', 'Veliyim, bilgi almak istiyorum']
+/** Eğitim odaklı reklam sayfası formu (/ingiltere-universite-basvuru) */
+export const educationStatusOptions = ['Lise öğrencisi', 'Lise mezunu', 'Üniversite öğrencisi']
 export const childAgeOptions = Array.from({ length: 11 }, (_, i) => String(i + 7))
 
 const ATTR_KEY = 'tampa:ilk-ziyaret'

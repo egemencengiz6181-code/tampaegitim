@@ -66,6 +66,7 @@ function allPaths(): SitePath[] {
     ...['/hakkimizda', '/ekibimiz', '/ofislerimiz', '/musteri-yorumlari', '/kariyer', '/iletisim', '/basvuru'].map((x) => p(x, 0.6)),
     ...localPages.map((l) => p(`/${l.slug}`, 0.7)),
     p('/ingiltere-universite-temsilciligi', 0.8),
+    p('/ingiltere-universite-basvuru', 0.7),
     ...authors.filter((a) => a.ready).map((a) => p(`/ekibimiz/${a.slug}`, 0.5)),
     ...['/site-haritasi', '/kvkk', '/cerez-politikasi'].map((x) => p(x, 0.2, 'yearly')),
     // İndekslenmeyen ama prerender edilen sayfalar

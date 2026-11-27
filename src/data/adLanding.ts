@@ -16,7 +16,7 @@ export type AdLanding = {
   /** "15 yıllık deneyim · 5.000+ öğrenci · Google'da 5.0 (89 yorum)" */
   trust: string
   region: string
-  form: { kind: 'university' | 'summer'; title: string; note: string; cta: string; program: string }
+  form: { kind: 'university' | 'summer' | 'education'; title: string; note: string; cta: string; program: string }
   /** src/data/social.ts > universities içindeki adlar (form civarında logo şeridi) */
   logos?: string[]
 }
@@ -67,4 +67,6 @@ export const adLandings: Record<string, AdLanding> = {
 export const adLandingPaths: Record<string, string> = {
   '/lisans-programlari/ingiltere': adLandings['lisans:ingiltere'].form.cta,
   '/yurtdisi-yaz-okullari/ingiltere': adLandings['yaz:ingiltere'].form.cta,
+  // Eğitim odaklı Google Ads sayfası (src/pages/UkApply.tsx); metin ukApplyLanding.form.cta ile aynı
+  '/ingiltere-universite-basvuru': 'Ücretsiz danışmanlık al',
 }

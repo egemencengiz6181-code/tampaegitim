@@ -1,6 +1,6 @@
 import { useEffect, useId, useRef, useState, type FormEvent } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { submitLead, programOptions, budgetOptions, budgetKindFor, studentStatusOptions, childAgeOptions, type BudgetKind } from '../lib/lead'
+import { submitLead, programOptions, budgetOptions, budgetKindFor, studentStatusOptions, educationStatusOptions, childAgeOptions, type BudgetKind } from '../lib/lead'
 import { trackLead } from '../lib/analytics'
 import { countries } from '../data/countries'
 import { Icon } from './Icon'
@@ -18,8 +18,9 @@ type Props = {
    * Reklam landing page formları: program/ülke sabit (gizli alan), kısa alan seti.
    * university: Ad soyad · Telefon · Öğrencinin durumu · Bütçe · E-posta (isteğe bağlı) · KVKK
    * summer: Veli ad soyad · Telefon · Çocuğun yaşı · Bütçe · KVKK
+   * education: Ad soyad · Telefon · Eğitim durumu · E-posta (isteğe bağlı) · Not · KVKK (bütçe yok)
    */
-  kind?: 'default' | BudgetKind
+  kind?: 'default' | BudgetKind | 'education'
   submitLabel?: string
   /** "#form" bağlantılarının kaydıracağı görünür form (scrollToVisibleForm) */
   anchor?: boolean
@@ -52,7 +53,7 @@ export function LeadForm({ variant = 'full', source, defaultProgram = '', defaul
   const ads = kind !== 'default'
   const compact = variant === 'compact' && !ads
   // Bütçe alanı: landing formlarında sabit, diğer formlarda seçilen programa göre (İngiltere / ülke seçilmemiş)
-  const budgetKind: BudgetKind | undefined = ads ? kind : budgetKindFor(program, compact ? defaultCountry : country)
+  const budgetKind: BudgetKind | undefined = ads ? (kind === 'education' ? undefined : kind) : budgetKindFor(program, compact ? defaultCountry : country)
   // Tek gönderim: başarıdan sonra yönlendirme sürerken ikinci tıklama yeni olay üretmesin
   const sent = useRef(false)
   // Bot koruması: formun ekranda kalma süresi
@@ -98,6 +99,7 @@ export function LeadForm({ variant = 'full', source, defaultProgram = '', defaul
     if (!compact && v('email') && !/^\S+@\S+\.\S+$/.test(v('email'))) errs.email = 'E-posta adresi eksik veya hatalı görünüyor.'
     if (budgetKind && !v('budget')) errs.budget = 'Planladığınız bütçe aralığını seçin.'
     if (kind === 'university' && !v('status')) errs.status = 'Öğrencinin durumunu seçin.'
+    if (kind === 'education' && !v('status')) errs.status = 'Eğitim durumunuzu seçin.'
     if (kind === 'summer' && !v('age')) errs.age = 'Çocuğunuzun yaşını seçin.'
     if (!fd.get('kvkk')) errs.kvkk = 'Devam etmek için aydınlatma metnini onaylayın.'
     setErrors(errs)
@@ -165,6 +167,9 @@ export function LeadForm({ variant = 'full', source, defaultProgram = '', defaul
         {kind === 'university' && (
           <SelectField id={f('status')} name="status" label="Öğrencinin durumu" options={studentStatusOptions} error={errors.status} />
         )}
+        {kind === 'education' && (
+          <SelectField id={f('status')} name="status" label="Eğitim durumu" options={educationStatusOptions} error={errors.status} />
+        )}
         {kind === 'summer' && (
           <SelectField id={f('age')} name="age" label="Çocuğun yaşı" options={childAgeOptions} error={errors.age} />
         )}
@@ -203,7 +208,7 @@ export function LeadForm({ variant = 'full', source, defaultProgram = '', defaul
             {errors.email && <p className="field__err" id={f('email-e')}>{errors.email}</p>}
           </div>
         )}
-        {!compact && !ads && (
+        {!compact && (!ads || kind === 'education') && (
           <div className="field field--wide">
             <label htmlFor={f('message')}>Eklemek istedikleriniz <span className="field__opt">(isteğe bağlı)</span></label>
             <textarea id={f('message')} name="message" rows={3} />
